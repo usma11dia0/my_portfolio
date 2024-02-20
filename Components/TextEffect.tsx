@@ -1,0 +1,26 @@
+import { TypeAnimation } from 'react-type-animation';
+
+const TextEffect = () => {
+  return (
+    <TypeAnimation
+      sequence={[
+        // Same substring at the start will only be typed out once, initially
+        'Coder',
+        1500, // wait 1s before replacing "Mice" with "Hamsters"
+        'Web Developer',
+        1500,
+        'App Developer',
+        1500,
+        'Broker',
+        1500,
+        'Investor',
+        1500
+      ]}
+      wrapper="span"
+      className="text-[2rem] md:text-[3rem] text-[#55e6a5] font-bold uppercase"
+      repeat={Infinity}
+    />
+  );
+};
+
+export default TextEffect;
