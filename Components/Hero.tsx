@@ -6,9 +6,12 @@ import { ArrowDownTrayIcon, PlayCircleIcon } from '@heroicons/react/20/solid';
 
 const Hero = () => {
   return (
-    <div className="h-[88vh] bg-[url('/images/banner.jpg')] bg-cover bg-center">
+    <div className="h-[88vh] bg-[url('/images/banner.jpg')] mt-[10vh] bg-cover bg-center">
       <Particle />
-      <div className="w-[80%] grid-cols-1 mx-auto grid lg:grid-cols-2 gap-[3rem] h-[100%] items-center">
+      <div className="
+        w-[80%] h-[100%] mx-auto
+        grid-cols-1 grid gap-[3rem] items-center
+        lg:grid-cols-2">
         <div>
           <h1 className="text-[35px] md:text-[50px] text-white font-bold">
             Hi, I'm <span className="text-yellow-400">usma11dia0</span>
@@ -19,21 +22,35 @@ const Hero = () => {
             similique eum corrupti voluptate tempora dolorum maxime provident, 
             minima quo rem necessitatibus voluptatibus animi? Odio.
           </p>
-          <div className="mt-[2rem] flex-col space-y-6 sm:space-y-0 sm:flex sm:flex-row item-center sm:space-x-6">
-            <button className="px-[2rem] hover:bg-yellow-400 transition-all duration-200 py-[1rem] text-[18px] 
-              font-bold uppercase bg-[#55e6a5] text-black flex items-center space-x-2">
+          <div className="
+            mt-[2rem] flex-col space-y-6
+            sm:space-y-0 sm:flex sm:flex-row sm:space-x-6"
+            item-center
+          >
+            <button className="
+              px-[2rem] py-[1rem]
+              bg-[#55e6a5] hover:bg-yellow-400
+              text-[18px] font-bold uppercase text-black
+              flex items-center space-x-2
+              transition-all duration-200
+            ">
               <p>Download Cv</p>
-              <ArrowDownTrayIcon className="w-[1.6rem] h-[1.7rem] text-black" />
+            <ArrowDownTrayIcon className="w-[1.6rem] h-[1.7rem] text-black" />
             </button>
             <button className="flex items-center space-x-2">
-              <PlayCircleIcon className="w-[4rem] h-[4rem] hover:text-yellow-400 transition-all duration-200 text-[#55e6a5]" />
+              <PlayCircleIcon className="w-[4rem] h-[4rem] text-[#55e6a5] hover:text-yellow-400 transition-all duration-200" />
               <p className="text-[20px] font-semibold text-white">
                 Watch The Video
               </p>
             </button>
           </div>
         </div>
-        <div className="w-[500px] hidden bg-[#55e6a5] relative lg:flex items-center rounded-full h-[500px]">
+        <div className="
+          relative hidden
+          w-[500px] h-[500px] 
+          bg-[#55e6a5]
+          rounded-full 
+          lg:flex items-center ">
           <Image 
             src="/images/u1.jpg" 
             alt="user" 
