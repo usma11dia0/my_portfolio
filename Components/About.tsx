@@ -10,8 +10,12 @@ const About = () => {
           <h1 className="text-[20px] font-bold uppercase text-[#55e6a5] mb-[1rem]">
             ABOUT ME
           </h1>
-          <h2 className="text-[25px] md:text-[35px] lg:text-[45px] md:leading-[3rem] leading-[2rem] 
-           capitalize mb-[3rem] font-bold text-white">
+          <h2 className="
+            capitalize font-bold text-white
+            text-[25px] leading-[2rem] mb-[3rem]
+            md:text-[35px] md:leading-[3rem]
+            lg:text-[45px]
+          ">
             Transforming <span className="text-yellow-400">Visions</span>
           </h2>
           <div className="mb-[3rem] flex items-center md:space-x-10">
