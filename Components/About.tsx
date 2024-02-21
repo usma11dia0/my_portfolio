@@ -37,11 +37,12 @@ const About = () => {
               <ArrowDownTrayIcon className="w-[1.6rem] h-[1.7rem] text-black" />
             </button>
         </div>
-        <div className="
-          relative
-          w-[300px] h-[300px] mx-auto mt-[2rem]
-          md:mx-0
-          lg:w-[500px] lg:h-[500px] lg:mt-0
+        <div data-aos="fade-left"
+          className="
+            relative
+            w-[300px] h-[300px] mx-auto mt-[2rem]
+            md:mx-0
+            lg:w-[500px] lg:h-[500px] lg:mt-0
         ">
           <Image
             src="/images/about.jpg" 

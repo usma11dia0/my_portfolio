@@ -13,7 +13,7 @@ const Services = () => {
         w-[80%] mx-auto mt-[4rem] gap-[3rem]
         text-white"
       >
-        <div>
+        <div data-aos="fade-right">
           <div className="
             p-[2rem] text-center 
             bg-red-700  
@@ -32,7 +32,7 @@ const Services = () => {
             </p>
           </div>
         </div>
-        <div>
+        <div data-aos="zoom-in">
           <div className="
             p-[2rem] text-center 
             bg-orange-700  
@@ -51,7 +51,7 @@ const Services = () => {
             </p>
           </div>
         </div>
-        <div>
+        <div data-aos="fade-left" data-aos-delay="500">
           <div className="
             p-[2rem] text-center 
             bg-blue-700

@@ -12,7 +12,7 @@ const Projects = () => {
         md:grid-cols-2 
         lg:grid-cols-3
         w-[80%] pt-[2rem] mx-auto">
-          <div>
+          <div data-aos="fade-up">
             <div className="
               relative cursor-pointer
               w-[100%] h-[200px]
@@ -28,7 +28,7 @@ const Projects = () => {
               />
             </div>
           </div>
-          <div>
+          <div data-aos="fade-up" data-aos-delay="300">
             <div className="
               relative cursor-pointer
               w-[100%] h-[200px]
@@ -44,7 +44,7 @@ const Projects = () => {
               />
             </div>
           </div>
-          <div>
+          <div data-aos="fade-up" data-aos-delay="600">
             <div className="
               relative cursor-pointer
               w-[100%] h-[200px]
@@ -60,7 +60,7 @@ const Projects = () => {
               />
             </div>
           </div>
-          <div>
+          <div data-aos="fade-up" data-aos-delay="900">
             <div className="
               relative cursor-pointer
               w-[100%] h-[200px]
@@ -76,7 +76,7 @@ const Projects = () => {
               />
             </div>
           </div>
-          <div>
+          <div data-aos="fade-up" data-aos-delay="1200">
             <div className="
               relative cursor-pointer
               w-[100%] h-[200px]
@@ -92,7 +92,7 @@ const Projects = () => {
               />
             </div>
           </div>
-          <div>
+          <div data-aos="fade-up" data-aos-delay="1500">
             <div className="
               relative cursor-pointer
               w-[100%] h-[200px]
