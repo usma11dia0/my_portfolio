@@ -1,11 +1,17 @@
+import React, { useRef } from 'react'
 import { CodeBracketSquareIcon, CommandLineIcon, RocketLaunchIcon } from '@heroicons/react/20/solid';
-import React from 'react'
+import { motion, useInView } from "framer-motion";
+import { fadeIn } from "../variants"; 
 
 const Services = () => {
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true })
+
   return (
     <div className='pt-[4rem] pb-[5rem] bg-[#121212] md:pt-[8rem]'>
       <p className="heading">
-        My <span className="text-neon-blue">Services</span></p>
+        My<span className="text-[28px] sm:text-[33px] md:text-[45px] py-4 px-4 text-neon-blue">Services</span></p>
       <div className="
         grid grid-cols-1 items-center 
         md:grid-cols-2 
@@ -13,7 +19,15 @@ const Services = () => {
         w-[80%] mx-auto mt-[4rem] gap-[3rem]
         text-white"
       >
-        <div data-aos="fade-right">
+        <motion.div
+          ref={ref} 
+          variants={fadeIn('right', 0.2)}
+          initial='hidden'
+          animate= {isInView ? 'show' : 'hidden'}
+          exit='hidden'
+          transition={{duration: 1, ease: 'easeInOut'}}
+          className='div'
+        >
           <div className="
             p-[2rem] text-center 
             bg-red-700  
@@ -31,8 +45,16 @@ const Services = () => {
               Commodi assumenda tempore, ut ab rerum itaque molestiae. Quae, neque magni?
             </p>
           </div>
-        </div>
-        <div data-aos="zoom-in">
+        </motion.div>
+        <motion.div
+          ref={ref} 
+          variants={fadeIn('up', 0.2)}
+          initial='hidden'
+          animate= {isInView ? 'show' : 'hidden'}
+          exit='hidden'
+          transition={{duration: 1, ease: 'easeInOut'}}
+          className='div'
+        >
           <div className="
             p-[2rem] text-center 
             bg-orange-700  
@@ -50,8 +72,16 @@ const Services = () => {
               Commodi assumenda tempore, ut ab rerum itaque molestiae. Quae, neque magni?
             </p>
           </div>
-        </div>
-        <div data-aos="fade-left" data-aos-delay="500">
+        </motion.div>
+        <motion.div
+          ref={ref} 
+          variants={fadeIn('left', 0.2)}
+          initial='hidden'
+          animate= {isInView ? 'show' : 'hidden'}
+          exit='hidden'
+          transition={{duration: 1, ease: 'easeInOut'}}
+          className='div'
+        >
           <div className="
             p-[2rem] text-center 
             bg-blue-700
@@ -69,7 +99,7 @@ const Services = () => {
               Commodi assumenda tempore, ut ab rerum itaque molestiae. Quae, neque magni?
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

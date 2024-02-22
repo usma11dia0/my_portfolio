@@ -24,7 +24,7 @@ const Nav = ({openNav}:Props) => {
           text-white font-bold
           cursor-pointer">
           usma11dia0's
-          <span className='text-[25px] text-neon-blue'>PORTFOLIO</span>
+          <span className='text-[25px] py-4 px-2 text-neon-blue'>PORTFOLIO</span>
         </h1>
         <div className="nav-link">HOME</div>
         <div className="nav-link">SERVICES</div>

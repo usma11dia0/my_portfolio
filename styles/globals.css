@@ -32,7 +32,7 @@
   };
 
   .text-neon-blue {
-    @apply m-auto py-4 px-5 font-sans text-lg no-underline rounded-lg bg-transparent;
+    @apply m-auto font-sans text-lg no-underline rounded-lg bg-transparent;
     /* text-shadow: -2px 4px 4px #091243, 0 0 10px #00D0FF, inset 1px 1px 1px white; */
     text-shadow: -2px 3px 3px #091243, 0 0 2px #00D0FF, inset 1px 1px 1px white;
     color: #1FFFFF;

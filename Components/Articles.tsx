@@ -6,16 +6,17 @@ const Articles = () => {
   return (
     <div className="pt-[4rem] md:pt-[8rem] pb-[4rem] bg-[#02050a]">
       <h1 className="heading">
-        My <span className="text-neon-blue"> Articles</span>
+        My <span className="text-[28px] sm:text-[33px] md:text-[45px] text-neon-blue"> Articles</span>
       </h1>
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 w-[80%] mt-[4rem] gap-[3rem] mx-auto">
         <div>
           <div className="relative w-[100%] h-[400px]">
-            <Image 
+            <Image
+              fill
               src="/images/blog1.jpg" 
-              alt="blog" 
-              layout="fill" 
+              alt="blog"
               className="object-cover"
+              sizes="(min-width: 1280px) 33.3vw, (min-width: 1024px) 50vw, 100vw"
             />
           </div>
           <div className="relative text-center w-[90%] p-[2rem] mt-[-1rem] mx-auto bg-[#09101a]">
@@ -37,11 +38,12 @@ const Articles = () => {
         </div>
         <div>
           <div className="relative w-[100%] h-[400px]">
-            <Image 
+            <Image
+              fill
               src="/images/blog2.jpg" 
-              alt="blog" 
-              layout="fill" 
+              alt="blog"
               className="object-cover"
+              sizes="(min-width: 1280px) 33.3vw, (min-width: 1024px) 50vw, 100vw"
             />
           </div>
           <div className="relative text-center w-[90%] p-[2rem] mt-[-1rem] mx-auto bg-[#09101a]">
@@ -63,11 +65,12 @@ const Articles = () => {
         </div>
         <div>
           <div className="relative w-[100%] h-[400px]">
-            <Image 
+            <Image
+              fill
               src="/images/blog3.jpg" 
               alt="blog" 
-              layout="fill" 
               className="object-cover"
+              sizes="(min-width: 1280px) 33.3vw, (min-width: 1024px) 50vw, 100vw"
             />
           </div>
           <div className="relative text-center w-[90%] p-[2rem] mt-[-1rem] mx-auto bg-[#09101a]">

@@ -1,18 +1,32 @@
 import Image from 'next/image';
-import React from 'react'
+import React, { useRef } from 'react'
+import { motion, useInView } from "framer-motion";
+import { fadeIn } from "../variants"; 
 
 const Projects = () => {
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true })
+
   return (
     <div className="bg-[#02050a] pt-[4rem] pb-[1rem] md:pt-[8rem]">
       <h1 className="heading">
-        Pro<span className="text-neon-blue">Jects</span>
+        PRO<span className="text-[28px] sm:text-[33px] md:text-[45px] text-neon-blue">JECTS</span>
       </h1>
       <div className="
         grid grid-cols-1 gap-[2rem]
         md:grid-cols-2 
         lg:grid-cols-3
         w-[80%] pt-[2rem] mx-auto">
-          <div data-aos="fade-up">
+          <motion.div
+            ref={ref} 
+            variants={fadeIn('up', 0)}
+            initial='hidden'
+            animate= {isInView ? 'show' : 'hidden'}
+            exit='hidden'
+            transition={{duration: 1, ease: 'easeInOut'}}
+            className='div'
+          >
             <div className="
               relative cursor-pointer
               w-[100%] h-[200px]
@@ -21,14 +35,23 @@ const Projects = () => {
               md:h-[300px]
             ">
               <Image 
+                fill
                 src="/images/p1.jpg" 
-                alt="portfolio" 
-                layout="fill" 
+                alt="portfolio"  
                 className="object-contain"
+                sizes="(min-width: 1024px) 33.3vw, (min-width: 768px)"
               />
             </div>
-          </div>
-          <div data-aos="fade-up" data-aos-delay="300">
+          </motion.div>
+          <motion.div
+            ref={ref} 
+            variants={fadeIn('up', 0.2)}
+            initial='hidden'
+            animate= {isInView ? 'show' : 'hidden'}
+            exit='hidden'
+            transition={{duration: 1, ease: 'easeInOut'}}
+            className='div'
+          >
             <div className="
               relative cursor-pointer
               w-[100%] h-[200px]
@@ -37,14 +60,23 @@ const Projects = () => {
               md:h-[300px]
             ">
               <Image 
+                fill
                 src="/images/p2.jpg" 
-                alt="portfolio" 
-                layout="fill" 
+                alt="portfolio"
                 className="object-contain"
+                sizes="(min-width: 768px) 300px, 200px"
               />
             </div>
-          </div>
-          <div data-aos="fade-up" data-aos-delay="600">
+          </motion.div>
+          <motion.div
+            ref={ref} 
+            variants={fadeIn('up', 0.4)}
+            initial='hidden'
+            animate= {isInView ? 'show' : 'hidden'}
+            exit='hidden'
+            transition={{duration: 1, ease: 'easeInOut'}}
+            className='div'
+          >
             <div className="
               relative cursor-pointer
               w-[100%] h-[200px]
@@ -52,15 +84,24 @@ const Projects = () => {
               hover:-translate-y-6
               md:h-[300px]
             ">
-              <Image 
+              <Image
+                fill
                 src="/images/p3.jpg" 
-                alt="portfolio" 
-                layout="fill" 
+                alt="portfolio"
                 className="object-contain"
+                sizes="(min-width: 768px) 300px, 200px"
               />
             </div>
-          </div>
-          <div data-aos="fade-up" data-aos-delay="900">
+          </motion.div>
+          <motion.div
+            ref={ref} 
+            variants={fadeIn('up', 0.6)}
+            initial='hidden'
+            animate= {isInView ? 'show' : 'hidden'}
+            exit='hidden'
+            transition={{duration: 1, ease: 'easeInOut'}}
+            className='div'
+          >
             <div className="
               relative cursor-pointer
               w-[100%] h-[200px]
@@ -68,15 +109,24 @@ const Projects = () => {
               hover:-translate-y-6
               md:h-[300px]
             ">
-              <Image 
+              <Image
+                fill
                 src="/images/p4.jpg" 
-                alt="portfolio" 
-                layout="fill" 
+                alt="portfolio"
                 className="object-contain"
+                sizes="(min-width: 768px) 300px, 200px"
               />
             </div>
-          </div>
-          <div data-aos="fade-up" data-aos-delay="1200">
+          </motion.div>
+          <motion.div
+            ref={ref} 
+            variants={fadeIn('up', 0.8)}
+            initial='hidden'
+            animate= {isInView ? 'show' : 'hidden'}
+            exit='hidden'
+            transition={{duration: 1, ease: 'easeInOut'}}
+            className='div'
+          >
             <div className="
               relative cursor-pointer
               w-[100%] h-[200px]
@@ -84,15 +134,24 @@ const Projects = () => {
               hover:-translate-y-6
               md:h-[300px]
             ">
-              <Image 
+              <Image
+                fill
                 src="/images/p5.jpg" 
-                alt="portfolio" 
-                layout="fill" 
+                alt="portfolio"
                 className="object-contain"
+                sizes="(min-width: 768px) 300px, 200px"
               />
             </div>
-          </div>
-          <div data-aos="fade-up" data-aos-delay="1500">
+          </motion.div>
+          <motion.div
+            ref={ref} 
+            variants={fadeIn('up', 1.0)}
+            initial='hidden'
+            animate= {isInView ? 'show' : 'hidden'}
+            exit='hidden'
+            transition={{duration: 1, ease: 'easeInOut'}}
+            className='div'
+          >
             <div className="
               relative cursor-pointer
               w-[100%] h-[200px]
@@ -100,14 +159,15 @@ const Projects = () => {
               hover:-translate-y-6
               md:h-[300px]
             ">
-              <Image 
+              <Image
+                fill
                 src="/images/p2.jpg" 
-                alt="portfolio" 
-                layout="fill" 
+                alt="portfolio"
                 className="object-contain"
+                sizes="(min-width: 768px) 300px, 200px"
               />
             </div>
-          </div>
+          </motion.div>
       </div>
     </div>
   );

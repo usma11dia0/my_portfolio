@@ -1,18 +1,27 @@
 import React from 'react'
 import Particle from './Particle'
 import TextEffect from './TextEffect';
-import Image from 'next/image'
-import { ArrowDownTrayIcon, PlayCircleIcon } from '@heroicons/react/20/solid';
+import Image from 'next/image';
+import ProjectsBtn from './ProjectsBtn';
+import { motion } from "framer-motion";
+import { fadeIn } from "../variants"; 
 
 const Hero = () => {
   return (
-    <div className="h-[88vh] bg-[url('/images/banner.jpg')] mt-[10vh] bg-cover bg-center">
+    <div className="h-[88vh] bg-banner mt-[10vh] bg-cover bg-center">
       <Particle />
       <div className="
         w-[80%] h-[100%] mx-auto
         grid-cols-1 grid gap-[3rem] items-center
         lg:grid-cols-2">
-        <div>
+        <motion.div 
+          variants={fadeIn('up', 0.2)}
+          initial='hidden'
+          animate='show'
+          exit='hidden'
+          transition={{duration: 1, ease: 'easeInOut'}}
+          className='div'
+        >
           <h1 className="text-[35px] md:text-[50px] text-white font-bold">
             Hi, I'm <span className="text-[35px] md:text-[50px] text-[#1FFFFF]">usma11dia0</span>
           </h1>
@@ -21,43 +30,36 @@ const Hero = () => {
             Let me give you a quick introduction to who I am and share with you the fields I'm deeply passionate about working in.
           </p>
           <div className="
-            mt-[2rem] flex-col space-y-6
+            mt-[2rem] flex-col space-y-6 items-center justify-center
             sm:space-y-0 sm:flex sm:flex-row sm:space-x-6"
-            item-center
           >
-            {/* <button className="
-              px-[2rem] py-[1rem]
-              bg-[#55e6a5] hover:bg-yellow-400
-              text-[18px] font-bold uppercase text-black
-              flex items-center space-x-2
-              transition-all duration-200
-            ">
-              <p>Download Cv</p>
-            <ArrowDownTrayIcon className="w-[1.6rem] h-[1.7rem] text-black" />
-            </button>
-            <button className="flex items-center space-x-2">
-              <PlayCircleIcon className="w-[4rem] h-[4rem] text-[#55e6a5] hover:text-neon-blue transition-all duration-200" />
-              <p className="text-[20px] font-semibold text-white">
-                Watch The Video
-              </p>
-            </button> */}
+            <ProjectsBtn />
           </div>
-        </div>
-        <div className="
-            relative hidden
-            w-[500px] h-[500px] 
-            bg-[#55e6a5]
-            rounded-full 
-            lg:flex items-center
-          ">
-          <Image 
-            src="/images/u1.jpg" 
-            alt="user" 
-            layout="fill" 
-            className="object-cover rounded-full"
-            rounded-full 
-          />
-        </div>
+        </motion.div>
+        <motion.div 
+          variants={fadeIn('down', 0.2)}
+          initial='hidden'
+          animate='show'
+          exit='hidden'
+          transition={{duration: 1, ease: 'easeInOut'}}
+          className='div'
+          >
+          <div className="
+              relative hidden
+              w-[500px] h-[500px] 
+              bg-[#55e6a5]
+              rounded-full 
+              lg:flex items-center
+            ">
+            <Image
+              fill
+              src="/images/u1.jpg" 
+              alt="user" 
+              className="object-cover rounded-full"
+              sizes="(min-width: 500px) 100vw"
+            />
+          </div>
+        </motion.div>
       </div>
     </div>
   )

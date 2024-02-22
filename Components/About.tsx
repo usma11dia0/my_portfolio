@@ -1,12 +1,25 @@
-import { ArrowDownTrayIcon } from '@heroicons/react/20/solid'
-import React from 'react'
+import React, { useRef } from 'react'
 import Image from 'next/image'
+import { motion, useInView } from "framer-motion";
+import { fadeIn } from "../variants"; 
 
 const About = () => {
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true })
+
   return (
     <div className="bg-[#121121] pb-[3rem] pt-[4rem] md:pt-[8rem]">
       <div className="grid grid-cols-1 md:grid-cols-2 w-[80%] mx-auto gap-[3rem] items-center">
-        <div>
+        <motion.div
+          ref={ref} 
+          variants={fadeIn('right', 0.2)}
+          initial='hidden'
+          animate= {isInView ? 'show' : 'hidden'}
+          exit='hidden'
+          transition={{duration: 1, ease: 'easeInOut'}}
+          className='div'
+        >
           <h2 className="
             capitalize font-bold text-white
             text-[25px] leading-[2rem] mb-[3rem]
@@ -16,6 +29,7 @@ const About = () => {
             ABOUT
             <span className="
              text-[25px] text-neon-blue leading-[2rem] mb-[3rem]
+             py-4 px-4
              md:text-[35px] md:leading-[3rem]
              lg:text-[45px]"
             >
@@ -30,37 +44,35 @@ const About = () => {
               My expertise spans a broad array of areas, including API development with AWS Cloud, web scraping using Python, and mobile application development with Flutter.
             </p>
           </div>
-            <button className="
-              px-[2rem] py-[1rem]
-              bg-[#55e6a5] hover:bg-yellow-400
-              text-[18px] font-bold uppercase text-black
-              flex items-center space-x-2
-              transition-all duration-200
-            ">
-              <p>Download Cv</p>
-              <ArrowDownTrayIcon className="w-[1.6rem] h-[1.7rem] text-black" />
-            </button>
-        </div>
-        <div data-aos="fade-left"
-          className="
-            relative
-            w-[300px] h-[300px] mx-auto mt-[2rem]
-            md:mx-0
-            lg:w-[500px] lg:h-[500px] lg:mt-0
-        ">
-          <Image
-            src="/images/about.jpg" 
-            alt="user" 
-            layout="fill" 
-            objectFit="contain"
-            className="relative z-[11] w-[100%] h-[100%] object-contain" 
-          />
+        </motion.div>
+        <motion.div 
+          variants={fadeIn('left', 0.2)}
+          initial='hidden'
+          animate= {isInView ? 'show' : 'hidden'}
+          exit='hidden'
+          transition={{duration: 1, ease: 'easeInOut'}}
+          className='div'
+        >
           <div className="
-            absolute top-[-2rem] right-[-2rem]
-            w-[100%] h-[100%] z-[10] 
-            bg-[#55e6a5]
-          "></div>
-        </div>
+              relative
+              w-[300px] h-[300px] mx-auto mt-[2rem]
+              md:mx-0
+              lg:w-[500px] lg:h-[500px] lg:mt-0
+          ">
+            <Image
+              fill
+              src="/images/about.jpg" 
+              alt="user"
+              className="relative z-[11] w-[100%] h-[100%] object-contain"
+              sizes="(min-width: 1024px) 500px, 300px"
+            />
+            <div className="
+              absolute top-[-2rem] right-[-2rem]
+              w-[100%] h-[100%] z-[10] 
+              bg-[#55e6a5]
+            " />
+          </div>
+        </motion.div>
       </div>
     </div>
   )
