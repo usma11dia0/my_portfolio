@@ -11,8 +11,6 @@ const TextEffect = () => {
         1500,
         'App Developer',
         1500,
-        'Broker',
-        1500,
         'Investor',
         1500
       ]}

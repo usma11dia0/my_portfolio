@@ -5,7 +5,7 @@ const Projects = () => {
   return (
     <div className="bg-[#02050a] pt-[4rem] pb-[1rem] md:pt-[8rem]">
       <h1 className="heading">
-        Pro<span className="text-yellow-400">Jects</span>
+        Pro<span className="text-neon-blue">Jects</span>
       </h1>
       <div className="
         grid grid-cols-1 gap-[2rem]

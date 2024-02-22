@@ -24,7 +24,7 @@ const Nav = ({openNav}:Props) => {
           text-white font-bold
           cursor-pointer">
           usma11dia0's
-          <span className='text-yellow-300'> portfolio</span>
+          <span className='text-[25px] text-neon-blue'>PORTFOLIO</span>
         </h1>
         <div className="nav-link">HOME</div>
         <div className="nav-link">SERVICES</div>
@@ -35,7 +35,7 @@ const Nav = ({openNav}:Props) => {
         <div onClick={openNav}>
           <Bars3Icon className="
             w-[2rem] h-[2rem]
-            text-yellow-300
+            text-[#1FFFFF]
             cursor-pointer 
             md:hidden
           "/>

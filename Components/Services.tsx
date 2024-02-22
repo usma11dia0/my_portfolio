@@ -5,7 +5,7 @@ const Services = () => {
   return (
     <div className='pt-[4rem] pb-[5rem] bg-[#121212] md:pt-[8rem]'>
       <p className="heading">
-        My <span className="text-yellow-400">Services</span></p>
+        My <span className="text-neon-blue">Services</span></p>
       <div className="
         grid grid-cols-1 items-center 
         md:grid-cols-2 

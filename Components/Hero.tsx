@@ -14,20 +14,18 @@ const Hero = () => {
         lg:grid-cols-2">
         <div>
           <h1 className="text-[35px] md:text-[50px] text-white font-bold">
-            Hi, I'm <span className="text-yellow-400">usma11dia0</span>
+            Hi, I'm <span className="text-[35px] md:text-[50px] text-[#1FFFFF]">usma11dia0</span>
           </h1>
           <TextEffect />
           <p className="mt-[1.5rem] text-[18px] text-[#ffffff92]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id illum cum blanditiis ut, eligendi consectetur, 
-            similique eum corrupti voluptate tempora dolorum maxime provident, 
-            minima quo rem necessitatibus voluptatibus animi? Odio.
+            Let me give you a quick introduction to who I am and share with you the fields I'm deeply passionate about working in.
           </p>
           <div className="
             mt-[2rem] flex-col space-y-6
             sm:space-y-0 sm:flex sm:flex-row sm:space-x-6"
             item-center
           >
-            <button className="
+            {/* <button className="
               px-[2rem] py-[1rem]
               bg-[#55e6a5] hover:bg-yellow-400
               text-[18px] font-bold uppercase text-black
@@ -38,11 +36,11 @@ const Hero = () => {
             <ArrowDownTrayIcon className="w-[1.6rem] h-[1.7rem] text-black" />
             </button>
             <button className="flex items-center space-x-2">
-              <PlayCircleIcon className="w-[4rem] h-[4rem] text-[#55e6a5] hover:text-yellow-400 transition-all duration-200" />
+              <PlayCircleIcon className="w-[4rem] h-[4rem] text-[#55e6a5] hover:text-neon-blue transition-all duration-200" />
               <p className="text-[20px] font-semibold text-white">
                 Watch The Video
               </p>
-            </button>
+            </button> */}
           </div>
         </div>
         <div className="
