@@ -2,10 +2,14 @@
 #fontの設定方法：15:30～
 
 
-#Todo:文章の見直し
-　　　デザイン見直し
+#Todo:
+文章の見直し(Serviceの文言、skill,education,articles,AIイラスト)
+デザイン見直し
+Particle改良
+Skillのグラフ化
+メールや住所を削除？最後にありがとう
+デザイン参考：https://hodalab.com/portfolio/
 
-# aosを削除する　"aos": "^3.0.0-beta.6",
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).

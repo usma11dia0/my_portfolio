@@ -6,7 +6,7 @@ import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSli
 
 const Particle = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
-    console.log(engine);
+    // console.log(engine);
 
     // you can initialize the tsParticles instance (engine) here, adding custom shapes or presets
     // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
@@ -17,7 +17,7 @@ const Particle = () => {
 
   const particlesLoaded = useCallback(
     async (container: Container | undefined) => {
-      await console.log(container);
+      // await console.log(container);
     },
     []
   );
@@ -42,7 +42,7 @@ const Particle = () => {
                 mode: "push",
               },
               onHover: {
-                enable: true,
+                enable: false,
                 mode: "repulse",
               },
               resize: true,
@@ -59,14 +59,17 @@ const Particle = () => {
           },
           particles: {
             color: {
-              value: "#ffffff",
+              value: "#1FFFFF",
             },
             links: {
-              color: "#ffffff",
-              distance: 120,
+              color: "#1FFFFF",
+              distance: 150,
               enable: true,
-              opacity: 0.5,
+              opacity: 0.1,
               width: 1,
+            },
+            collisions: {
+              enable: true,
             },
             move: {
               direction: "none",
@@ -75,7 +78,7 @@ const Particle = () => {
                 default: "bounce",
               },
               random: false,
-              speed: 4,
+              speed: 1,
               straight: false,
             },
             number: {
@@ -83,16 +86,16 @@ const Particle = () => {
                 enable: true,
                 area: 800,
               },
-              value: 60,
+              value: 200,
             },
             opacity: {
-              value: 0.5,
+              value: 0.1,
             },
             shape: {
               type: "circle",
             },
             size: {
-              value: { min: 2, max: 5 },
+              value: { min: 1, max: 3 },
             },
           },
           detectRetina: true,

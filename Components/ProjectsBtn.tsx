@@ -15,7 +15,7 @@ const ProjectsBtn = () => {
         />
         <ArrowDownIcon 
           className="
-            absolute text-white
+            absolute svg-neon-blue
             group-hover:translate-y-2
             transition-all duration-300
           " 
