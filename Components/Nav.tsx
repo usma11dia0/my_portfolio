@@ -23,10 +23,10 @@ const Nav = ({openNav}:Props) => {
           text-[25px] 
           text-white font-bold
           cursor-pointer">
-          WEB
-          <span className='text-yellow-300'>DEV</span>
+          usma11dia0's
+          <span className='text-yellow-300'> portfolio</span>
         </h1>
-        <div className="nav-link">Home</div>
+        <div className="nav-link">HOME</div>
         <div className="nav-link">SERVICES</div>
         <div className="nav-link">ABOUT</div>
         <div className="nav-link">PROJECT</div>

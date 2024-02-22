@@ -2,11 +2,11 @@ import { ChatBubbleLeftRightIcon, UserCircleIcon } from '@heroicons/react/20/sol
 import Image from 'next/image'
 import React from 'react'
 
-const Blog = () => {
+const Articles = () => {
   return (
     <div className="pt-[4rem] md:pt-[8rem] pb-[4rem] bg-[#02050a]">
       <h1 className="heading">
-        My <span className="text-yellow-400"> BLOG</span>
+        My <span className="text-yellow-400"> Articles</span>
       </h1>
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 w-[80%] mt-[4rem] gap-[3rem] mx-auto">
         <div>
@@ -92,4 +92,4 @@ const Blog = () => {
   )
 }
 
-export default Blog
+export default Articles

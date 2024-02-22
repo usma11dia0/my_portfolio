@@ -1,5 +1,10 @@
 #参考URL：https://www.youtube.com/watch?v=6jFFkGU-ZBU
-続き:1:05:00～
+#fontの設定方法：15:30～
+
+
+#Todo:文章の見直し
+　　　デザイン見直し
+
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 

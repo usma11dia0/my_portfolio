@@ -10,8 +10,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        'bg-yellow-primary': 'bg-yellow-400',
+        'bg-black-primary': 'bg-[#09101a]',
+        'text-black-primary': 'text-black',
+        'text-white-primary': 'text-white',
+        'text-green-primary': 'text-[#55e6a5]',
+      },
       fontFamily: {
-        primary: ["Poppins"],
+        primary: ["Anta", "Poppins"],
       }
     },
   },
