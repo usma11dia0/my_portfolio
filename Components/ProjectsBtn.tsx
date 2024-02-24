@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import { ArrowDownIcon } from '@heroicons/react/20/solid'
+import { ChevronDoubleDownIcon } from '@heroicons/react/20/solid'
 
 const ProjectsBtn = () => {
   return (
@@ -13,9 +13,9 @@ const ProjectsBtn = () => {
           alt="my project icon"
           className="animate-spin-slow w-full h-full max-w-[141px] max-h-[148px]"
         />
-        <ArrowDownIcon 
+        <ChevronDoubleDownIcon 
           className="
-            absolute svg-neon-blue
+            absolute svg-neon-blue svg-neon-blue:hover
             group-hover:translate-y-2
             transition-all duration-300
           " 

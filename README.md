@@ -9,6 +9,7 @@ Particle改良
 Skillのグラフ化
 メールや住所を削除？最後にありがとう
 デザイン参考：https://hodalab.com/portfolio/
+https://goworkship.com/magazine/neon-effects-webdesign/
 
 
 

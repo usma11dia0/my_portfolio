@@ -55,6 +55,12 @@
     color: #1FFFFF;
     animation: svg-neon-flicker 6s infinite alternate;
   }
+
+  .svg-neon-blue:hover {
+    filter: drop-shadow(-2px 4px 4px #091243) drop-shadow(0 0 10px #00D0FF) drop-shadow(0 0 20px #00D0FF) drop-shadow(0 0 30px #00D0FF) drop-shadow(0 0 40px #00D0FF) drop-shadow(0 0 55px #00D0FF) drop-shadow(0 0 75px #00D0FF);
+    color: #1FFFFF;
+    animation: hover-neon-flicker 2s alternate; 
+  }
   
   @keyframes svg-neon-flicker {
     0%, 25% {
@@ -67,4 +73,13 @@
       filter: none;
     }
   }
+
+  @keyframes hover-neon-flicker {
+    0%  {
+        filter: drop-shadow(-2px 3px 3px #091243) drop-shadow(0 0 2px #00D0FF);
+    }
+    50%, 100% {
+        filter: drop-shadow(-2px 4px 4px #091243) drop-shadow(0 0 10px #00D0FF) drop-shadow(0 0 20px #00D0FF) drop-shadow(0 0 30px #00D0FF) drop-shadow(0 0 40px #00D0FF) drop-shadow(0 0 55px #00D0FF) drop-shadow(0 0 75px #00D0FF);
+    }
+}
 }
