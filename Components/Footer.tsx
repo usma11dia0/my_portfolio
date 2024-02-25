@@ -13,9 +13,9 @@ const Footer = () => {
           usma11dia0's portfolio | 2024 02/24 Updated 
         </div>
         <div className="flex items-center space-x-10">
-          <p className="text-[18px] text-white opacity-20">Terms ＆ Condition</p>
+          {/* <p className="text-[18px] text-white opacity-20">Terms ＆ Condition</p>
           <p className="text-[18px] text-white opacity-20">Terms ＆ Privacy Policy</p>
-          <p className="text-[18px] text-white opacity-20">Terms ＆ Sitemap</p>
+          <p className="text-[18px] text-white opacity-20">Terms ＆ Sitemap</p> */}
         </div>
       </div>
     </div>
