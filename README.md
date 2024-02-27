@@ -3,11 +3,12 @@
 
 
 #Todo:
-文章の見直し(Serviceの文言、skill,education,articles,AIイラスト)
-デザイン見直し
-Particle改良
-Skillのグラフ化
-メールや住所を削除？最後にありがとう
+各ヘッダーのリンク実装
+文章の見直し(Serviceの文言 education,articles,AIイラスト)
+Skills: Skillのグラフ化
+READMEの充実化
+デザイン見直し: 英語日本語切替対応
+
 デザイン参考：https://hodalab.com/portfolio/
 https://goworkship.com/magazine/neon-effects-webdesign/
 
