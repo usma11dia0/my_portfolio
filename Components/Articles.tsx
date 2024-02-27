@@ -6,7 +6,7 @@ const Articles = () => {
   return (
     <div className="pt-[4rem] md:pt-[8rem] pb-[4rem] bg-[#02050a]">
       <h1 className="heading">
-        My <span className="text-[28px] sm:text-[33px] md:text-[45px] text-neon-blue"> Articles</span>
+        Other <span className="text-[28px] sm:text-[33px] md:text-[45px] text-neon-blue"> Activities</span>
       </h1>
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 w-[80%] mt-[4rem] gap-[3rem] mx-auto">
         <div>
@@ -21,7 +21,7 @@ const Articles = () => {
           </div>
           <div className="relative text-center w-[90%] p-[2rem] mt-[-1rem] mx-auto bg-[#09101a]">
             <div className="relative px-[2rem] py-[1rem] mt-[-3rem] w-fit mx-auto text-[17px] bg-[#55e6a5] text-black font-semibold">
-              December 10, 2023
+              Articles in Zenn
             </div>
             <div className="flex flex-col justify-center md:flex-row items-center  mt-[1rem] space-x-4">
               <div className="flex items-center space-x-3">
@@ -48,7 +48,7 @@ const Articles = () => {
           </div>
           <div className="relative text-center w-[90%] p-[2rem] mt-[-1rem] mx-auto bg-[#09101a]">
             <div className="relative px-[2rem] py-[1rem] mt-[-3rem] w-fit mx-auto text-[17px] bg-[#55e6a5] text-black font-semibold">
-              December 10, 2023
+              AI Illustration
             </div>
             <div className="flex flex-col justify-center md:flex-row items-center  mt-[1rem] space-x-4">
               <div className="flex items-center space-x-3">
@@ -75,7 +75,7 @@ const Articles = () => {
           </div>
           <div className="relative text-center w-[90%] p-[2rem] mt-[-1rem] mx-auto bg-[#09101a]">
             <div className="relative px-[2rem] py-[1rem] mt-[-3rem] w-fit mx-auto text-[17px] bg-[#55e6a5] text-black font-semibold">
-              December 10, 2023
+              ???
             </div>
             <div className="flex flex-col justify-center md:flex-row items-center  mt-[1rem] space-x-4">
               <div className="flex items-center space-x-3">
