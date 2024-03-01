@@ -9,7 +9,7 @@ const Projects = () => {
   const isInView = useInView(ref, { once: true })
 
   return (
-    <div className="bg-[#02050a] pt-[4rem] pb-[1rem] md:pt-[8rem]">
+    <div id="section-projects" className="bg-[#02050a] pt-[4rem] pb-[1rem] md:pt-[8rem]">
       <h1 className="heading">
         PRO<span className="text-[28px] sm:text-[33px] md:text-[45px] text-neon-blue">JECTS</span>
       </h1>

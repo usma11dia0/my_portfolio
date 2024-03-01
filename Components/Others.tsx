@@ -2,11 +2,11 @@ import { ChatBubbleLeftRightIcon, UserCircleIcon } from '@heroicons/react/20/sol
 import Image from 'next/image'
 import React from 'react'
 
-const Articles = () => {
+const Others = () => {
   return (
-    <div className="pt-[4rem] md:pt-[8rem] pb-[4rem] bg-[#02050a]">
+    <div id="section-others" className="pt-[4rem] md:pt-[8rem] pb-[4rem] bg-[#02050a]">
       <h1 className="heading">
-        Other <span className="text-[28px] sm:text-[33px] md:text-[45px] text-neon-blue"> Activities</span>
+         <span className="text-[28px] sm:text-[33px] md:text-[45px] text-neon-blue"> Others</span>
       </h1>
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 w-[80%] mt-[4rem] gap-[3rem] mx-auto">
         <div>
@@ -95,4 +95,4 @@ const Articles = () => {
   )
 }
 
-export default Articles
+export default Others

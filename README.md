@@ -4,8 +4,9 @@
 
 #Todo:
 各ヘッダーのリンク実装
-文章の見直し(Serviceの文言 education,articles,AIイラスト)
 Skills: Skillのグラフ化
+文章の見直し(Serviceの文言 education,articles,AIイラスト)
+遷移後に画面内に次のタイトルが入り込まないようにする。
 READMEの充実化
 デザイン見直し: 英語日本語切替対応
 

@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import { ChevronDoubleDownIcon } from '@heroicons/react/20/solid'
+import { handleScroll } from '@/utils'
 
 const ProjectsBtn = () => {
   return (
@@ -13,14 +14,19 @@ const ProjectsBtn = () => {
           alt="my project icon"
           className="animate-spin-slow w-full h-full max-w-[141px] max-h-[148px]"
         />
-        <ChevronDoubleDownIcon 
-          className="
-            absolute svg-neon-blue svg-neon-blue:hover
-            group-hover:translate-y-2
-            transition-all duration-300
-          " 
-          width={48} 
-          height={48}/>
+        <a href="section-projects"
+          onClick={(e) => handleScroll(e, "section-projects")}
+          style={{ position: 'absolute'}}
+        >
+          <ChevronDoubleDownIcon
+            className="
+              svg-neon-blue svg-neon-blue:hover
+              group-hover:translate-y-2
+              transition-all duration-300
+            " 
+            width={48} 
+            height={48}/>
+        </a>
       </div>
     </div>
   )

@@ -9,7 +9,7 @@ const Services = () => {
   const isInView = useInView(ref, { once: true })
 
   return (
-    <div className='pt-[4rem] pb-[5rem] bg-[#121212] md:pt-[8rem]'>
+    <div id="section-services" className='pt-[4rem] pb-[5rem] bg-[#121212] md:pt-[8rem]'>
       <p className="heading">
         My<span className="text-[28px] sm:text-[33px] md:text-[45px] py-4 px-4 text-neon-blue">Services</span></p>
       <div className="
