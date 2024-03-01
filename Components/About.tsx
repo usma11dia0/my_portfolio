@@ -43,6 +43,12 @@ const About = () => {
               I made a career shift into the IT sector at the age of 30, coming from a non-technical background. 
               My expertise spans a broad array of areas, including API development with AWS Cloud, web scraping using Python, and mobile application development with Flutter.
             </p>
+            <p className="text-[19px] text-slate-300 w-[80%]">
+              Qualification
+              TOEIC 905
+              基本情報技術者
+              AWS Solution Architect
+            </p>
           </div>
         </motion.div>
         <motion.div 

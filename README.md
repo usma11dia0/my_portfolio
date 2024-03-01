@@ -1,14 +1,24 @@
 #参考URL：https://www.youtube.com/watch?v=6jFFkGU-ZBU
 #fontの設定方法：15:30～
 
+#react-chartjsにおけるレーダーチャートの描画方法
+https://www.youtube.com/watch?v=Hp3bS8sUSHY
+
+# Next.jsのディレクトリ構成ベストプラクティス
+https://www.youtube.com/watch?v=ekUQ043k2TQ
+
 
 #Todo:
-各ヘッダーのリンク実装
 Skills: Skillのグラフ化
+ディレクトリ構成見直し
 文章の見直し(Serviceの文言 education,articles,AIイラスト)
 遷移後に画面内に次のタイトルが入り込まないようにする。
 READMEの充実化
 デザイン見直し: 英語日本語切替対応
+
+# ARWES
+https://arwes.dev/play?code=&type=predefined&sandbox=Audio%20Design%7C%40arwes%2Fbleeps%7CcreateBleep%7Cbasic&explorer=true
+
 
 デザイン参考：https://hodalab.com/portfolio/
 https://goworkship.com/magazine/neon-effects-webdesign/

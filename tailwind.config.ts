@@ -10,6 +10,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        '3xl': '1820px',
+      },
       backgroundImage: {
         banner: 'url("/images/banner.jpg")',
         circles: 'url("/images/bg-circles.png")',
