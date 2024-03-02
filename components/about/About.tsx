@@ -50,9 +50,15 @@ const About = () => {
               <FrameNefrex>
                 <div className="p-8">
                   <div className="py-2 text-[20px] text-neon-blue-without-flicker">QUALIFICATIONS</div>
-                  <div className="py-2 text-[19px] text-sf-blue">- Fundamental Information Technology Engineer Examination (FE)</div>
-                  <div className="py-2 text-[19px] text-sf-blue">- AWS Solution Architect Associate</div>
-                  <div className="py-2 text-[19px] text-sf-blue">- TOEIC 905</div>
+                  <div className="py-2">
+                    <TextDecipher className="text-[19px] text-sf-blue">- Fundamental Information Technology Engineer Examination (FE)</TextDecipher>
+                  </div>
+                  <div className="py-2">
+                    <TextDecipher className="text-[19px] text-sf-blue">- AWS Solution Architect Associate</TextDecipher>
+                  </div>
+                  <div className="py-2">
+                    <TextDecipher className="text-[19px] text-sf-blue">- TOEIC 905</TextDecipher>
+                  </div>
                 </div>
               </FrameNefrex>
           </div>
