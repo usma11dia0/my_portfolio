@@ -1,12 +1,14 @@
+import Button from '@/components/elements/button/Button';
 import { handleScroll } from '@/utils';
+import { useBleeps } from '@arwes/react';
 import { Bars3Icon } from '@heroicons/react/20/solid';
-import React from 'react'
+import React, { ReactElement, ReactNode } from 'react'
 
 interface Props {
   openNav:()=> void;
 }
 
-const Nav = ({openNav}:Props) => {
+const Nav = ({openNav}:Props) => {  
   return (
     <div 
       className="
@@ -24,47 +26,59 @@ const Nav = ({openNav}:Props) => {
           flex-[0.6] 
           text-[25px] 
           text-white font-bold
-          cursor-pointer">
+          "
+        >
           usma11dia0's
           <span className='text-[25px] py-4 px-2 text-neon-blue'>PORTFOLIO</span>
         </h1>
-        <a href="#section-home"
-          className="nav-link"
-          onClick={(e) => handleScroll(e, "section-home")}
-        >
-          HOME
-        </a>
-        <a href="#section-about" 
-          className="nav-link"
-          onClick={(e) => handleScroll(e, "section-about")}
-        >
-          ABOUT
-        </a>
-        <a href="#section-services"
-          className="nav-link"
-          onClick={(e) => handleScroll(e, "section-services")}
-        >
-          SERVICES
-        </a>
-        <a href="#section-skills"
-          className="nav-link"
-          onClick={(e) => handleScroll(e, "section-skills")}
-        >
-          EDUCATION＆SKILLS
-        </a>
-        <a href="#section-projects"
-          className="nav-link"
-          onClick={(e) => handleScroll(e, "section-projects")}
-        >
-          PROJECTS
-        </a>
-        <a
-          href="#section-others"
-          className="nav-link"
-          onClick={(e) => handleScroll(e, "section-others")}
-        >
-          OTHERS
-        </a>
+        <Button name='intro'>
+          <a href="#section-home"
+            className="nav-link"
+            onClick={(e) => handleScroll(e, "section-home")}
+          >
+            HOME
+          </a>
+        </Button>
+        <Button name='intro'>
+          <a href="#section-about" 
+            className="nav-link"
+            onClick={(e) => handleScroll(e, "section-about")}
+          >
+            ABOUT
+          </a>
+        </Button>
+        <Button name='intro'>
+          <a href="#section-services"
+            className="nav-link"
+            onClick={(e) => handleScroll(e, "section-services")}
+          >
+            SERVICES
+          </a>
+        </Button>
+        <Button name='intro'>
+          <a href="#section-skills"
+            className="nav-link"
+            onClick={(e) => handleScroll(e, "section-skills")}
+          >
+            EDUCATION＆SKILLS
+          </a>
+        </Button>
+        <Button name='intro'>
+          <a href="#section-projects"
+            className="nav-link"
+            onClick={(e) => handleScroll(e, "section-projects")}
+          >
+            PROJECTS
+          </a>
+        </Button>
+        <Button name='intro'>
+          <a href="#section-others"
+            className="nav-link"
+            onClick={(e) => handleScroll(e, "section-others")}
+          >
+            OTHERS
+          </a>
+        </Button>
         <div onClick={openNav}>
           <Bars3Icon className="
             w-[2rem] h-[2rem]
