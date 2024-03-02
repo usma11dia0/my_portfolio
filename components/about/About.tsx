@@ -2,6 +2,8 @@ import React, { useRef } from 'react'
 import Image from 'next/image'
 import { motion, useInView } from "framer-motion";
 import { fadeIn } from "../../variants"; 
+import TextDecipher from '../elements/text/TextDecipher';
+import FrameNefrex from '../elements/frame/FrameNefrex';
 
 const About = () => {
 
@@ -10,13 +12,15 @@ const About = () => {
 
   return (
     <div id="section-about" className="bg-[#121121] pb-[3rem] pt-[4rem] md:pt-[8rem]">
-      <div className="grid grid-cols-1 md:grid-cols-2 w-[80%] mx-auto gap-[3rem] items-center">
+      <div className="
+        grid grid-cols-1 xl:grid-cols-2 
+        w-[80%] mx-auto gap-[3rem] items-center">
         <motion.div
           ref={ref} 
           variants={fadeIn('right', 0.2)}
           initial='hidden'
           animate= {isInView ? 'show' : 'hidden'}
-          exit='hidden'
+          exit='exit'
           transition={{duration: 1, ease: 'easeInOut'}}
           className='div'
         >
@@ -36,19 +40,21 @@ const About = () => {
               ME
             </span>
           </h2>
-          <div className="mb-[3rem] flex items-center md:space-x-10">
-            <span className="w-[100px] hidden md:block h-[5px] bg-slate-400 rounded-sm"></span>
-            <p className="text-[19px] text-slate-300 w-[80%]">
-              I'm a web developer from Osaka. Captivated by the realm of IT technology, 
-              I made a career shift into the IT sector at the age of 30, coming from a non-technical background. 
-              My expertise spans a broad array of areas, including API development with AWS Cloud, web scraping using Python, and mobile application development with Flutter.
-            </p>
-            <p className="text-[19px] text-slate-300 w-[80%]">
-              Qualification
-              TOEIC 905
-              基本情報技術者
-              AWS Solution Architect
-            </p>
+          <div className="mb-[3rem] flex-col items-center space-y-10">
+            <div className="flex items-center space-x-5">
+              <span className="w-[60px] hidden md:block h-[5px] bg-slate-400 rounded-sm"></span>
+              <TextDecipher className="text-[19px] text-slate-300 w-[100%]">
+                Web developer with several years of experience in building web applications, mobile applications, and web scraping. Proficient in leveraging latest technologies to create responsive, user-friendly, and scalable applications
+              </TextDecipher>
+            </div>
+              <FrameNefrex>
+                <div className="p-8">
+                  <div className="py-2 text-[20px] text-neon-blue-without-flicker">QUALIFICATIONS</div>
+                  <div className="py-2 text-[19px] text-sf-blue">- Fundamental Information Technology Engineer Examination (FE)</div>
+                  <div className="py-2 text-[19px] text-sf-blue">- AWS Solution Architect Associate</div>
+                  <div className="py-2 text-[19px] text-sf-blue">- TOEIC 905</div>
+                </div>
+              </FrameNefrex>
           </div>
         </motion.div>
         <motion.div 
@@ -60,10 +66,11 @@ const About = () => {
           className='div'
         >
           <div className="
-              relative
-              w-[300px] h-[300px] mx-auto mt-[2rem]
+              relative hidden
+              justify-center
+              mx-auto mt-[2rem]
               md:mx-0
-              lg:w-[500px] lg:h-[500px] lg:mt-0
+              xl:flex xl:w-[450px] xl:h-[450px] xl:mt-0
           ">
             <Image
               fill

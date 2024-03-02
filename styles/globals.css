@@ -32,11 +32,28 @@
   };
 
   .text-neon-blue {
-    @apply m-auto font-sans text-lg no-underline rounded-lg bg-transparent;
+    @apply m-auto text-lg no-underline rounded-lg bg-transparent;
     /* text-shadow: -2px 4px 4px #091243, 0 0 10px #00D0FF, inset 1px 1px 1px white; */
-    text-shadow: -2px 3px 3px #091243, 0 0 2px #00D0FF;
+    text-shadow: -4px 5px 5px #091243, 0 0 10px #00D0FF;
     color: #1FFFFF;
     animation: neon-flicker 1.5s infinite alternate;
+  }
+
+  .text-neon-blue-without-flicker {
+    @apply m-auto text-lg no-underline rounded-lg bg-transparent;
+    /* text-shadow: -2px 4px 4px #091243, 0 0 10px #00D0FF, inset 1px 1px 1px white; */
+    text-shadow: -2px 4px 4px #091243, 0 0 10px #00D0FF, 0 0 20px #00D0FF, 0 0 30px #00D0FF, 0 0 40px #00D0FF, 0 0 55px #00D0FF, 0 0 75px #00D0FF;
+    color: #1FFFFF;
+  }
+
+  .text-sf-blue {
+    @apply m-auto text-lg no-underline rounded-lg bg-transparent;
+    text-shadow: 
+        -2px 4px 5px #091243,
+        0 0 15px #00D0FF, 
+        0 0 25px #00D0FF, 
+        inset 0 0 2px white; 
+    color: #1FFFFF;
   }
 
   @keyframes neon-flicker {

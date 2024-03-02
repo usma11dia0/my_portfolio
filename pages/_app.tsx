@@ -16,8 +16,7 @@ const animatorsSettings: AnimatorGeneralProviderSettings = {
   // Durations in seconds.
   duration: {
     enter: 0.2,
-    exit: 0.2,
-    stagger: 0.04
+    stagger: 0.5
   }
 };
 
@@ -51,13 +50,13 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <AnimatorGeneralProvider {...animatorsSettings}>
-        <Animator combine manager='stagger' active={active}>
+      {/* <AnimatorGeneralProvider {...animatorsSettings}>
+        <Animator combine manager='stagger' active={active}> */}
           <BleepsProvider {...bleepsSettings}>
             <Component {...pageProps} />
           </BleepsProvider>
-        </Animator>
-      </AnimatorGeneralProvider>
+        {/* </Animator>
+      </AnimatorGeneralProvider> */}
     </>
   );
 }
