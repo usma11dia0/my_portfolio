@@ -1,6 +1,6 @@
   // チャートのデータとオプションの設定
 export const data_frontend = {
-  labels: ['HTML/CSS', 'JavaScript', 'TypeScript', 'React', 'NextJS', 'Dart/Flutter'],
+  labels: ['HTML/CSS', 'JavaScript', 'TypeScript', 'React', 'Next.js', 'Dart/Flutter'],
   datasets: [
     {
       label: 'Front-end',

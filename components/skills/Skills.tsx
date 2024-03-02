@@ -1,6 +1,6 @@
 import React from 'react'
 import RadarChart from './RadarChart'
-import { data_backend, data_devops, data_frontend, options } from '@/app/constants/chartConfig'
+import { data_backend, data_devops, data_frontend, options } from '@/components/skills/chartConfig'
 
 const Skills = () => {
 

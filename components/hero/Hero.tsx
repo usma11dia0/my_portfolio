@@ -4,7 +4,7 @@ import TextEffect from './TextEffect';
 import Image from 'next/image';
 import ProjectsBtn from './ProjectsBtn';
 import { motion } from "framer-motion";
-import { fadeIn } from "../variants"; 
+import { fadeIn } from "../../variants"; 
 
 const Hero = () => {
   return (

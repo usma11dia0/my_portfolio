@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import { CodeBracketSquareIcon, CommandLineIcon, RocketLaunchIcon } from '@heroicons/react/20/solid';
 import { motion, useInView } from "framer-motion";
-import { fadeIn } from "../variants"; 
+import { fadeIn } from "../../variants"; 
 
 const Services = () => {
 

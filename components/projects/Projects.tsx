@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React, { useRef } from 'react'
 import { motion, useInView } from "framer-motion";
-import { fadeIn } from "../variants"; 
+import { fadeIn } from "../../variants"; 
 
 const Projects = () => {
 

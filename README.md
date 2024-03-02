@@ -9,8 +9,8 @@ https://www.youtube.com/watch?v=ekUQ043k2TQ
 
 
 #Todo:
-Skills: Skillのグラフ化
 ディレクトリ構成見直し
+Arwesの使い方調査
 文章の見直し(Serviceの文言 education,articles,AIイラスト)
 遷移後に画面内に次のタイトルが入り込まないようにする。
 READMEの充実化
