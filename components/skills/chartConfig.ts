@@ -1,10 +1,20 @@
   // チャートのデータとオプションの設定
-export const data_frontend = {
+  export const dataInit = {
+    labels: [],
+    datasets: [
+      { 
+        label: '',
+        data: [],
+      },
+    ],
+  };
+
+  export const dataFrontend = {
   labels: ['HTML/CSS', 'JavaScript', 'TypeScript', 'React', 'Next.js', 'Dart/Flutter'],
   datasets: [
     {
       label: 'Front-end',
-      data: [4, 4, 2, 3, 2, 3],
+      data: [4, 4, 2, 3, 2, 4],
       backgroundColor: 'rgba(135, 206, 250, 0.2)', 
       borderColor: 'rgba(135, 206, 250, 1)', 
       borderWidth: 1, 
@@ -16,7 +26,7 @@ export const data_frontend = {
   ],
 };
 
-export const data_backend = {
+export const dataBackend = {
   labels: ['python', 'Django', 'Ruby', 'Ruby on Rails', 'NodeJS', 'Express'],
   datasets: [
     {
@@ -29,7 +39,7 @@ export const data_backend = {
   ],
 };
 
-export const data_devops = {
+export const dataDevOps = {
   labels: ['AWS', 'GCP', 'Azure', 'Docker', 'Git', 'Linux'],
   datasets: [
     {

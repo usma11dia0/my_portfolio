@@ -26,7 +26,7 @@ interface RadarProps {
 }
 
 const RadarChart: React.FC<RadarProps> = (props) => {
-  const {options, data} = props 
+  const {options, data} = props;
 
   return (
     <div style={{ width: 500, height: 500}}>
