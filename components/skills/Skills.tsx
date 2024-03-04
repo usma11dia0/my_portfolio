@@ -43,12 +43,12 @@ const Skills = () => {
     }
     // クリーンアップ関数
     return () => {
-      if (timerPlayId !== undefined) clearTimeout(timerPlayId);
-      if (timerStopId !== undefined) clearTimeout(timerStopId);
+      setActive(false);
       setChartFrontEndData(dataInit);
       setChartBackEndData(dataInit);
       setChartDevOpsData(dataInit);
-      setActive(false);
+      if (timerPlayId !== undefined) clearTimeout(timerPlayId);
+      if (timerStopId !== undefined) clearTimeout(timerStopId);
     };
   }, [isInView]);
 
@@ -76,7 +76,7 @@ const Skills = () => {
           <Animator active={active}>
             <FrameLines theme={'frontEnd'}>
               <div className="p-4 pl-16">
-                <TextBasic className="pb-2 text-[20px] text-neon-blue-without-flicker">Detail</TextBasic>
+                <TextBasic className="pb-2 text-[20px] text-neon-blue-without-flicker">Details</TextBasic>
                   <TextBasic className="text-white">
                     ■ HTML/CSS - 2 years of experience<br />
                     ■ JavaScript - 2 year of experience<br />
@@ -103,7 +103,7 @@ const Skills = () => {
           <Animator active={active}>
             <FrameLines theme={'backEnd'}>
               <div className="p-4 pl-16">
-                <TextBasic className="pb-2 text-[20px] text-neon-blue-without-flicker">Detail</TextBasic>
+                <TextBasic className="pb-2 text-[20px] text-neon-red-without-flicker">Details</TextBasic>
                   <TextBasic className="text-white">
                     ■ Python - 2 years of experiences<br />
                     ■ FastAPI - 1 years of Experiences<br />
@@ -130,7 +130,7 @@ const Skills = () => {
           <Animator active={active}>
             <FrameLines theme={'devOps'}>
               <div className="p-4 pl-16">
-                <TextBasic className="pb-2 text-[20px] text-neon-blue-without-flicker">Detail</TextBasic>
+                <TextBasic className="pb-2 text-[20px] text-neon-yellow-without-flicker">Details</TextBasic>
                   <TextBasic className="text-white">
                     ■ AWS - 1 year Experiences<br />
                     ■ GCP - a half year Experiences<br />

@@ -46,6 +46,18 @@
     color: #1FFFFF;
   }
 
+  .text-neon-red-without-flicker {
+    @apply m-auto text-lg no-underline rounded-lg bg-transparent;
+    text-shadow: -2px 4px 4px #b24562, 0 0 10px #FF6384, 0 0 20px #FF6384, 0 0 30px #FF6384, 0 0 40px #FF6384, 0 0 55px #FF6384, 0 0 75px #FF6384;
+    color: #FF6384; /* RGBA(255, 99, 132, 1) を16進数表記に変換 */
+  }
+
+  .text-neon-yellow-without-flicker {
+    @apply m-auto text-lg no-underline rounded-lg bg-transparent;
+    text-shadow: -2px 4px 4px #998a00, 0 0 10px #cccc00, 0 0 20px #cccc00, 0 0 30px #cccc00, 0 0 40px #cccc00, 0 0 55px #cccc00, 0 0 75px #cccc00;
+    color: #cccc00;
+  }
+
   .text-sf-blue {
     @apply m-auto text-lg no-underline rounded-lg bg-transparent;
     text-shadow: 
