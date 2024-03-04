@@ -47,20 +47,20 @@ const Nav = ({openNav}:Props) => {
             ABOUT
           </a>
         </Button>
-        <Button name='intro'>
+        {/* <Button name='intro'>
           <a href="#section-services"
             className="nav-link"
             onClick={(e) => handleScroll(e, "section-services")}
           >
             SERVICES
           </a>
-        </Button>
+        </Button> */}
         <Button name='intro'>
           <a href="#section-skills"
             className="nav-link"
             onClick={(e) => handleScroll(e, "section-skills")}
           >
-            EDUCATION＆SKILLS
+            SKILLS
           </a>
         </Button>
         <Button name='intro'>
