@@ -11,7 +11,7 @@ const About = () => {
   const isInView = useInView(ref, { once: true })
 
   return (
-    <div id="section-about" className="bg-[#121121] pb-[3rem] pt-[4rem] md:pt-[8rem]">
+    <div id="section-about" className="bg-[#121121] pb-[3rem] pt-[4rem] md:pt-[14rem]">
       <div className="
         grid grid-cols-1 xl:grid-cols-2 
         w-[80%] mx-auto gap-[3rem] items-center">

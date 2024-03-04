@@ -1,37 +1,33 @@
-  // チャートのデータとオプションの設定
-  export const dataInit = {
-    labels: [],
-    datasets: [
-      { 
-        label: '',
-        data: [],
-      },
-    ],
-  };
+// チャートのデータとオプションの設定
+export const dataInit = {
+  labels: [],
+  datasets: [
+    { 
+      label: '',
+      data: [],
+    },
+  ],
+};
 
-  export const dataFrontend = {
-  labels: ['HTML/CSS', 'JavaScript', 'TypeScript', 'React', 'Next.js', 'Dart/Flutter'],
+export const dataFrontend = {
+  labels: ['HTML/CSS', 'JS', 'TS', 'Dart/Flutter', 'React', 'Next.js'],
   datasets: [
     {
       label: 'Front-end',
-      data: [4, 4, 2, 3, 2, 4],
+      data: [4, 4, 3, 3, 3, 1],
       backgroundColor: 'rgba(135, 206, 250, 0.2)', 
       borderColor: 'rgba(135, 206, 250, 1)', 
       borderWidth: 1, 
-      pointBackgroundColor: 'rgba(135, 206, 250, 0.6)', 
-      pointBorderColor: 'rgba(135, 206, 250, 1)', 
-      pointHoverBackgroundColor: 'rgba(135, 206, 250, 1)', 
-      pointHoverBorderColor: 'rgba(135, 206, 250, 1)', 
     },
   ],
 };
 
 export const dataBackend = {
-  labels: ['python', 'Django', 'Ruby', 'Ruby on Rails', 'NodeJS', 'Express'],
+  labels: ['Python', 'FastAPI', 'Rust', 'PostgreSQL', 'Ruby', 'Node.js'],
   datasets: [
     {
       label: 'Back-end',
-      data: [4, 2, 2, 2, 3, 3], 
+      data: [4, 3, 1, 3, 2, 2], 
       backgroundColor: 'rgba(255, 99, 132, 0.6)',
       borderColor: 'rgba(255, 99, 132, 1)', 
       borderWidth: 1,
@@ -40,13 +36,13 @@ export const dataBackend = {
 };
 
 export const dataDevOps = {
-  labels: ['AWS', 'GCP', 'Azure', 'Docker', 'Git', 'Linux'],
+  labels: ['AWS', 'GCP', 'Azure', 'Docker', 'Git', 'Jira'],
   datasets: [
     {
       label: 'DevOps',
       data: [3, 2, 1, 3, 4, 3], 
-      backgroundColor: 'rgba(255, 165, 0, 0.2)',
-      borderColor: 'rgba(255, 165, 0, 1)',
+      backgroundColor: 'rgba(102, 102, 0, 0.2)',
+      borderColor: 'rgba(204, 204, 0, 1)',
       borderWidth: 1,
     },
   ],

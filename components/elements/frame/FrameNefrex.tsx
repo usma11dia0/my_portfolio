@@ -1,7 +1,6 @@
 /** @jsxImportSource @emotion/react */
-import { type ReactElement, useRef, useState, ReactNode, useEffect } from 'react';
-import { Animator } from '@arwes/react-animator';
-import { FrameSVGNefrex, useFrameSVGAssemblingAnimation } from '@arwes/react-frames';
+import { type ReactElement, ReactNode } from 'react';
+import { FrameSVGNefrex } from '@arwes/react-frames';
 
 interface FrameNefrexProps {
   children: ReactNode;

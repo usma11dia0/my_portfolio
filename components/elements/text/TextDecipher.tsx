@@ -13,7 +13,7 @@ const TextDecipher = ({children, className}: TextDecipherProps) => {
 
 
   return (
-    <Animator active={active} duration={{ enter: 3.5, exit: 1.5 }}>
+    <Animator active={active} duration={{enter: 3.5, exit: 1.5}}>
       <Text
         className={className}
         manager='decipher'
