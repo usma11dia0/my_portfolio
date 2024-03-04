@@ -29,7 +29,14 @@ const RadarChart: React.FC<RadarProps> = (props) => {
   const {options, data} = props;
 
   return (
-    <div style={{ width: 460, height: 460}}>
+    <div style={
+      {
+        width: 460, 
+        height: 460,
+        position: 'relative',
+        zIndex: 1,
+      }
+    }>
       <Radar 
         options={options}
         data={data} 

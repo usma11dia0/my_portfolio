@@ -8,6 +8,7 @@ import { Animator } from '@arwes/react-animator';
 import FrameLines from '../elements/frame/FrameLines';
 import TextBasic from '../elements/text/TextBasic';
 import { useBleeps } from '@arwes/react';
+import PuffsAndGridBG from '../elements/background/PuffsAndGridBG';
 
 type BleepsNames = 'looping';
 
@@ -53,9 +54,10 @@ const Skills = () => {
   }, [isInView]);
 
   return (
-    <div id="section-skills" className="pt-[4rem] pb-[5rem] md:pt-[8rem] bg-[#09101a]">
+    <div id="section-skills" className="pt-[4rem] pb-[5rem] md:pt-[8rem] bg-[#09101a] relative">
+      <PuffsAndGridBG zIndex={0}/>
       <h1 className="heading">
-        <span className="text-[28px] sm:text-[33px] md:text-[45px] py-1 px-2 text-neon-blue">Skills</span>
+        <span className="text-[28px] sm:text-[33px] md:text-[45px] py-1 px-2 text-neon-blue relative">Skills</span>
       </h1>
       <div className="
         w-[80%] pt-[4rem] mx-auto gap-[2rem] items-center
