@@ -7,27 +7,49 @@ import type { ChartData } from 'chart.js';
 import { Animator } from '@arwes/react-animator';
 import FrameLines from '../elements/frame/FrameLines';
 import TextBasic from '../elements/text/TextBasic';
+import { useBleeps } from '@arwes/react';
+
+type BleepsNames = 'looping';
 
 const Skills = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true })
+  const isInView = useInView(ref, { once: false })
   const [chartFrontEndData, setChartFrontEndData] = useState<ChartData<"radar", (number | null)[], unknown>>(dataInit);
   const [chartBackEndData, setChartBackEndData] = useState<ChartData<"radar", (number | null)[], unknown>>(dataInit);
   const [chartDevOpsData, setChartDevOpsData] = useState<ChartData<"radar", (number | null)[], unknown>>(dataInit);
-
   const [active, setActive] = useState(false);
+  const bleeps = useBleeps<BleepsNames>();
 
   useEffect(() => {
-    if(isInView) {
+    let timerPlayId: number;
+    let timerStopId: number;
+
+    if (isInView) {
       setTimeout(() => {
         setChartFrontEndData(dataFrontend);
         setChartBackEndData(dataBackend);
         setChartDevOpsData(dataDevOps);
-      }, 300)
+      }, 150);
       setTimeout(() => {
         setActive(true)
-      }, 900)
+      }, 900);
+      timerPlayId = window.setTimeout(() => {
+        bleeps.looping?.play();
+      }, 1300);
+      // play()から1秒後にbleepsをstop
+      timerStopId = window.setTimeout(() => {
+        bleeps.looping?.stop();
+      }, 2000);
     }
+    // クリーンアップ関数
+    return () => {
+      if (timerPlayId !== undefined) clearTimeout(timerPlayId);
+      if (timerStopId !== undefined) clearTimeout(timerStopId);
+      setChartFrontEndData(dataInit);
+      setChartBackEndData(dataInit);
+      setChartDevOpsData(dataInit);
+      setActive(false);
+    };
   }, [isInView]);
 
   return (

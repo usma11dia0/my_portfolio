@@ -24,6 +24,11 @@ const bleepsSettings: BleepsProviderSettings = {
       sources: [
         { src: 'https://arwes.dev/assets/sounds/error.mp3', type: 'audio/mp3' }
       ]
+    },
+    looping: {
+      sources: [
+        { src: 'https://arwes.dev/assets/sounds/type.mp3', type: 'audio/mpeg' }
+      ]
     }
   }
 };

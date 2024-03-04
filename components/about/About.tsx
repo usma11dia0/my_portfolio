@@ -54,7 +54,7 @@ const About = () => {
                     <TextDecipher className="text-[19px] text-sf-blue">- Fundamental Information Technology Engineer Examination (FE)</TextDecipher>
                   </div>
                   <div className="py-2">
-                    <TextDecipher className="text-[19px] text-sf-blue">- AWS Solution Architect Associate</TextDecipher>
+                    <TextDecipher className="text-[19px] text-sf-blue">- AWS Certified Solutions Architect - Associate</TextDecipher>
                   </div>
                   <div className="py-2">
                     <TextDecipher className="text-[19px] text-sf-blue">- TOEIC 905</TextDecipher>
