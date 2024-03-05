@@ -11,8 +11,6 @@ const TextEffect = () => {
         1500,
         'App Developer',
         1500,
-        'Investor',
-        1500
       ]}
       wrapper="span"
       className="text-[2rem] md:text-[3rem] text-[#55e6a5] font-bold uppercase"

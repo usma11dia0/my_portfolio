@@ -59,7 +59,7 @@ export const options = {
       },
       pointLabels: {
         font: {
-          size: 16, 
+          size: 14, 
         }
       },
       grid: {
@@ -80,7 +80,7 @@ export const options = {
       labels: {
         color: 'rgba(255, 255, 255, 0.8)',
         font: {
-          size: 18,
+          size: 16,
         },
       }
     },

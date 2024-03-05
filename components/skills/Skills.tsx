@@ -13,137 +13,193 @@ import PuffsAndGridBG from '../elements/background/PuffsAndGridBG';
 type BleepsNames = 'looping';
 
 const Skills = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: false })
-  const [chartFrontEndData, setChartFrontEndData] = useState<ChartData<"radar", (number | null)[], unknown>>(dataInit);
-  const [chartBackEndData, setChartBackEndData] = useState<ChartData<"radar", (number | null)[], unknown>>(dataInit);
+  const [chartFrontendData, setChartFrontendData] = useState<ChartData<"radar", (number | null)[], unknown>>(dataInit);
+  const [chartBackendData, setChartBackendData] = useState<ChartData<"radar", (number | null)[], unknown>>(dataInit);
   const [chartDevOpsData, setChartDevOpsData] = useState<ChartData<"radar", (number | null)[], unknown>>(dataInit);
-  const [active, setActive] = useState(false);
+  const [activeFrontend, setActiveFrontend] = useState<boolean>(false);
+  const [activeBackend, setActiveBackend] = useState<boolean>(false);
+  const [activeDevOps, setActiveDevOps] = useState<boolean>(false);
+
   const bleeps = useBleeps<BleepsNames>();
 
-  useEffect(() => {
-    let timerPlayId: number;
-    let timerStopId: number;
+  const refFrontend = useRef(null);
+  const isInViewFrontend = useInView(refFrontend, { once: false });
+  const refBackend = useRef(null);
+  const isInViewBackend = useInView(refBackend, { once: false });
+  const refDevOps = useRef(null);
+  const isInViewDevOps = useInView(refDevOps, { once: false });
 
-    if (isInView) {
-      setTimeout(() => {
-        setChartFrontEndData(dataFrontend);
-        setChartBackEndData(dataBackend);
-        setChartDevOpsData(dataDevOps);
-      }, 150);
-      setTimeout(() => {
-        setActive(true)
-      }, 900);
-      timerPlayId = window.setTimeout(() => {
-        bleeps.looping?.play();
-      }, 1300);
-      // play()から1秒後にbleepsをstop
-      timerStopId = window.setTimeout(() => {
-        bleeps.looping?.stop();
-      }, 2000);
+  const timerFrontendPlayId = useRef<number>();
+  const timerFrontendStopId = useRef<number>();
+  const timerBackendPlayId = useRef<number>();
+  const timerBackendStopId = useRef<number>();
+  const timerDevOpsPlayId = useRef<number>();
+  const timerDevOpsStopId = useRef<number>();
+
+  // Frontendの表示状態に応じた副作用
+  useEffect(() => {
+    if (isInViewFrontend) {
+      setTimeout(() => setChartFrontendData(dataFrontend), 150);
+      setTimeout(() => setActiveFrontend(true), 900);
+      timerFrontendPlayId.current = window.setTimeout(() => bleeps.looping?.play(), 1300);
+      timerFrontendStopId.current = window.setTimeout(() => bleeps.looping?.stop(), 2300);
     }
-    // クリーンアップ関数
+
     return () => {
-      setActive(false);
-      setChartFrontEndData(dataInit);
-      setChartBackEndData(dataInit);
-      setChartDevOpsData(dataInit);
-      if (timerPlayId !== undefined) clearTimeout(timerPlayId);
-      if (timerStopId !== undefined) clearTimeout(timerStopId);
+      setActiveFrontend(false);
+      setChartFrontendData(dataInit);
+      clearTimeout(timerFrontendPlayId.current);
+      clearTimeout(timerFrontendStopId.current);
     };
-  }, [isInView]);
+  }, [isInViewFrontend]);
+
+  // Backendの表示状態に応じた副作用
+  useEffect(() => {
+    if (isInViewBackend) {
+      setTimeout(() => setChartBackendData(dataBackend), 150);
+      setTimeout(() => setActiveBackend(true), 900);
+      timerBackendPlayId.current = window.setTimeout(() => bleeps.looping?.play(), 1300);
+      timerBackendStopId.current = window.setTimeout(() => bleeps.looping?.stop(), 2300);
+    }
+
+    return () => {
+      setActiveBackend(false);
+      setChartBackendData(dataInit);
+      clearTimeout(timerBackendPlayId.current);
+      clearTimeout(timerBackendStopId.current);
+    };
+  }, [isInViewBackend]);
+
+  // DevOpsの表示状態に応じた副作用
+  useEffect(() => {
+    if (isInViewDevOps) {
+      setTimeout(() => setChartDevOpsData(dataDevOps), 150);
+      setTimeout(() => setActiveDevOps(true), 900);
+      timerDevOpsPlayId.current = window.setTimeout(() => bleeps.looping?.play(), 1300);
+      timerDevOpsStopId.current = window.setTimeout(() => bleeps.looping?.stop(), 2300);
+    }
+
+    return () => {
+      setActiveDevOps(false);
+      setChartDevOpsData(dataInit);
+      clearTimeout(timerDevOpsPlayId.current);
+      clearTimeout(timerDevOpsStopId.current);
+    };
+  }, [isInViewDevOps]);
 
   return (
-    <div id="section-skills" className="pt-[4rem] pb-[5rem] md:pt-[8rem] bg-[#09101a] relative">
+    <div id="section-skills" className="pt-[4rem] pb-[5rem] md:pt-[8.5rem] bg-[#09101a] relative">
       <PuffsAndGridBG zIndex={0}/>
       <h1 className="heading">
         <span className="text-[28px] sm:text-[33px] md:text-[45px] py-1 px-2 text-neon-blue relative">Skills</span>
       </h1>
       <div className="
         w-[80%] pt-[4rem] mx-auto gap-[2rem] items-center
-        grid grid-cols-1 
-        md:pt-[1rem] 3xl:grid-cols-3"
+        grid grid-cols-1 2xl:grid-cols-3
+        md:pt-[1rem] 
+        "
       >
+        {/* Frontend Skill */}
         <motion.div
-          ref={ref} 
+          ref={refFrontend} 
           variants={fadeIn('up', 0)}
           initial='hidden'
-          animate= {isInView ? 'show' : 'hidden'}
+          animate= {isInViewFrontend ? 'show' : 'hidden'}
           exit='show'
           transition={{duration: 1, ease: 'easeInOut'}}
           className='div'
         >
-          <RadarChart options={options} data={chartFrontEndData}/>
-          <div className="p-2" />
-          <Animator active={active}>
-            <FrameLines theme={'frontEnd'}>
-              <div className="p-4 pl-16">
-                <TextBasic className="pb-2 text-[20px] text-neon-blue-without-flicker">Details</TextBasic>
-                  <TextBasic className="text-white">
-                    ■ HTML/CSS - 2 years of experience<br />
-                    ■ JavaScript - 2 year of experience<br />
-                    ■ TypeScript - 1 year of experience<br />
-                    ■ Dart/Flutter - 1 year of experience<br />
-                    ■ React - 1 year of experience<br />
-                    ■ Next.js - ※currently studying<br />
-                  </TextBasic>
-              </div>
-            </FrameLines>
-          </Animator>
+          <div className="
+            flex flex-col items-center
+            lg:flex-row lg:items-center lg:justify-center
+            2xl:flex-col"
+          >
+            <RadarChart options={options} data={chartFrontendData}/>
+            <div className="p-3" />
+            <Animator active={activeFrontend}>
+              <FrameLines theme={'frontEnd'}>
+                <div className="p-4 pl-6">
+                  {/* <TextBasic className="pb-4 text-[20px] text-neon-blue-without-flicker">Details</TextBasic> */}
+                    <TextBasic className="text-white">
+                      ■ HTML/CSS - 2 years of experience<br />
+                      ■ JavaScript - 2 year of experience<br />
+                      ■ TypeScript - 1 year of experience<br />
+                      ■ Dart/Flutter - 1 year of experience<br />
+                      ■ React - 1 year of experience<br />
+                      ■ Next.js - ※currently studying<br />
+                    </TextBasic>
+                </div>
+              </FrameLines>
+            </Animator>
+          </div>
         </motion.div>
+        {/* Backend Skill */}
         <motion.div
-          ref={ref} 
+          ref={refBackend} 
           variants={fadeIn('up', 0)}
           initial='hidden'
-          animate= {isInView ? 'show' : 'hidden'}
+          animate= {isInViewBackend ? 'show' : 'hidden'}
           exit='show'
           transition={{duration: 1, ease: 'easeInOut'}}
           className='div'
         >
-          <RadarChart options={options} data={chartBackEndData}/>
-          <div className="p-2" />
-          <Animator active={active}>
-            <FrameLines theme={'backEnd'}>
-              <div className="p-4 pl-16">
-                <TextBasic className="pb-2 text-[20px] text-neon-red-without-flicker">Details</TextBasic>
-                  <TextBasic className="text-white">
-                    ■ Python - 2 years of experiences<br />
-                    ■ FastAPI - 1 years of Experiences<br />
-                    ■ Rust - ※currently studying<br />
-                    ■ PostgreSQL - 1 year Experiences<br />
-                    ■ Ruby - a half year Experiences<br />
-                    ■ Node.js - a half year Experiences<br />
-                  </TextBasic>
-              </div>
-            </FrameLines>
-          </Animator>
+          <div className="
+            flex flex-col items-center
+            lg:flex-row  lg:items-center lg:justify-center
+            2xl:flex-col"
+          >
+            <RadarChart options={options} data={chartBackendData}/>
+            <div className="p-3" />
+            <Animator active={activeBackend}>
+              <FrameLines theme={'backEnd'}>
+                <div className="p-4 pl-6">
+                  {/* <TextBasic className="pb-4 text-[20px] text-neon-red-without-flicker">Details</TextBasic> */}
+                    <TextBasic className="text-white">
+                      ■ Python - 2 years of experience<br />
+                      ■ FastAPI - 1 years of Experience<br />
+                      ■ Rust - ※currently studying<br />
+                      ■ PostgreSQL - 1 year Experience<br />
+                      ■ Ruby - a half year Experience<br />
+                      ■ Node.js - a half year Experience<br />
+                    </TextBasic>
+                </div>
+              </FrameLines>
+            </Animator>
+            </div>
         </motion.div>
+        {/* DevOps Skill */}
         <motion.div
-          ref={ref} 
+          ref={refDevOps} 
           variants={fadeIn('up', 0)}
           initial='hidden'
-          animate= {isInView ? 'show' : 'hidden'}
+          animate= {isInViewDevOps ? 'show' : 'hidden'}
           exit='show'
           transition={{duration: 1, ease: 'easeInOut'}}
           className='div'
         >
-          <RadarChart options={options} data={chartDevOpsData}/>
-          <div className="p-2" />
-          <Animator active={active}>
-            <FrameLines theme={'devOps'}>
-              <div className="p-4 pl-16">
-                <TextBasic className="pb-2 text-[20px] text-neon-yellow-without-flicker">Details</TextBasic>
-                  <TextBasic className="text-white">
-                    ■ AWS - 1 year Experiences<br />
-                    ■ GCP - a half year Experiences<br />
-                    ■ Azure - ※currently studying<br />
-                    ■ Docker - 1 year Experiences<br />
-                    ■ Git- 2 year Experiences<br />
-                    ■ Jira - 1 year Experiences<br />
-                  </TextBasic>
-              </div>
-            </FrameLines>
-          </Animator>
+          <div className="
+            flex flex-col items-center
+            lg:flex-row lg:items-center lg:justify-center
+            2xl:flex-col"
+          >
+            <RadarChart options={options} data={chartDevOpsData}/>
+            <div className="p-3" />
+            <Animator active={activeDevOps}>
+              <FrameLines theme={'devOps'}>
+                <div className="p-4 pl-6">
+                  {/* <TextBasic className="pb-4 text-[20px] text-neon-yellow-without-flicker">Details</TextBasic> */}
+                    <TextBasic className="text-white">
+                      ■ AWS - 1 year Experience<br />
+                      ■ GCP - a half year Experience<br />
+                      ■ Azure - ※currently studying<br />
+                      ■ Docker - 1 year Experience<br />
+                      ■ Git- 2 year Experience<br />
+                      ■ Jira - 1 year Experience<br />
+                    </TextBasic>
+                </div>
+              </FrameLines>
+            </Animator>
+          </div>
         </motion.div>
       </div>
     </div>
