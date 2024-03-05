@@ -10,7 +10,6 @@ https://www.youtube.com/watch?v=ekUQ043k2TQ
 
 #Todo:
 文章の見直し(Serviceの文言 education,articles,AIイラスト)
-NavBarの画面遷移実装
 遷移後に画面内に次のタイトルが入り込まないようにする。
 READMEの充実化
 デザイン見直し: 英語日本語切替対応
