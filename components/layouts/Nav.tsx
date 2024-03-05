@@ -79,14 +79,16 @@ const Nav = ({openNav}:Props) => {
             OTHERS
           </a>
         </Button>
-        <div onClick={openNav}>
-          <Bars3Icon className="
-            w-[2rem] h-[2rem]
-            text-[#1FFFFF]
-            cursor-pointer 
-            xl:hidden
-          "/>
-        </div>
+        <Button name='intro'>
+          <div onClick={openNav}>
+            <Bars3Icon className="
+              w-[2rem] h-[2rem]
+              text-[#1FFFFF]
+              cursor-pointer 
+              xl:hidden
+            "/>
+          </div>
+        </Button>
       </div>
     </div>      
   );

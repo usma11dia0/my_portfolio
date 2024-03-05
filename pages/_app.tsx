@@ -6,14 +6,12 @@ import {
 } from '@arwes/react';
 
 const bleepsSettings: BleepsProviderSettings = {
-  master: {
-    volume: 0.75
-  },
   bleeps: {
     intro: {
       sources: [
         { src: 'https://arwes.dev/assets/sounds/intro.mp3', type: 'audio/mpeg' }
-      ]
+      ],
+      volume: 0.1,
     },
     click: {
       sources: [
@@ -23,12 +21,14 @@ const bleepsSettings: BleepsProviderSettings = {
     error: {
       sources: [
         { src: 'https://arwes.dev/assets/sounds/error.mp3', type: 'audio/mp3' }
-      ]
+      ],
+      volume: 0.5,
     },
     looping: {
       sources: [
         { src: 'https://arwes.dev/assets/sounds/type.mp3', type: 'audio/mpeg' }
-      ]
+      ],
+      volume: 0.2,
     }
   }
 };
