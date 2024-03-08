@@ -37,7 +37,7 @@ const FrameCorners = ({children}: FrameCornersProps): ReactElement => {
     >
       <FrameSVGCorners
         strokeWidth={1.5}
-        cornerLength={70}
+        cornerLength={50}
         elementRef={svgRef}
         onRender={onRender}
       />

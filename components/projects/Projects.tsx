@@ -6,6 +6,7 @@ import FrameCorners from '../elements/frame/FrameCorners';
 import { Animator, useBleeps} from '@arwes/react';
 import MovingLinesBG from '../elements/background/MovingLinesBG';
 import Button from '../elements/button/Button';
+import ProjectModal from './ProjectModal'; 
 
 type BleepsNames = 'expand';
 
@@ -15,6 +16,7 @@ const Projects = () => {
   const isInView = useInView(ref, { once: false })
   const [animationPlayed, setAnimationPlayed] = useState(false);
   const [active, setActive] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const bleeps = useBleeps<BleepsNames>();
   const timerPlayId = useRef<number>();
@@ -39,6 +41,10 @@ const Projects = () => {
     }
   }, [isInView]);
 
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen)
+  }
+
   return (
     <div id="section-projects" className="bg-[#09101a] pt-[4rem] pb-[1rem] md:pt-[8rem] relative">
       <MovingLinesBG zIndex={0}/>
@@ -62,13 +68,12 @@ const Projects = () => {
           >
             <div className="
               relative cursor-pointer
-              w-[100%] h-[200px]
-              transform transition-all duration-200 
+              w-[100%] h-[200px] 
               md:h-[300px]
             ">
               <Animator active={active}>
                 <FrameCorners>
-                  <Button name='transmission'>
+                  <Button name='transmission' onClick={toggleModal}>
                     <Image
                       fill
                       src="/images/p1.jpg" 
@@ -78,6 +83,7 @@ const Projects = () => {
                     />
                   </Button>
                 </FrameCorners>
+                <ProjectModal isOpen={isModalOpen} onClose={toggleModal} />
               </Animator>
             </div>
           </motion.div>
@@ -93,7 +99,6 @@ const Projects = () => {
             <div className="
               relative cursor-pointer
               w-[100%] h-[200px]
-              transform transition-all duration-200 
               md:h-[300px]
             ">
               <Animator active={active}>
@@ -123,7 +128,6 @@ const Projects = () => {
             <div className="
               relative cursor-pointer
               w-[100%] h-[200px]
-              transform transition-all duration-200 
               md:h-[300px]
             ">
               <Animator active={active}>
@@ -153,7 +157,6 @@ const Projects = () => {
             <div className="
               relative cursor-pointer
               w-[100%] h-[200px]
-              transform transition-all duration-200 
               md:h-[300px]
             ">
               <Animator active={active}>
@@ -183,7 +186,6 @@ const Projects = () => {
             <div className="
               relative cursor-pointer
               w-[100%] h-[200px]
-              transform transition-all duration-200 
               md:h-[300px]
             ">
               <Animator active={active}>
@@ -213,7 +215,6 @@ const Projects = () => {
             <div className="
               relative cursor-pointer
               w-[100%] h-[200px]
-              transform transition-all duration-200 
               md:h-[300px]
             ">
               <Animator active={active}>

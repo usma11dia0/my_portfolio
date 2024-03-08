@@ -11,6 +11,14 @@ https://www.youtube.com/watch?v=ekUQ043k2TQ
 #Todo:
 文章の見直し(Serviceの文言 education,articles,AIイラスト)
 projects選択時のmodal画面追加
+候補：Animated Modal Box　7:02
+
+Line Animated Modal
+https://codepen.io/TomJ1588/full/LENExG
+
+Animated Modal Box
+https://codepen.io/lefoy/full/aOGGRe
+
 READMEの充実化
 デザイン見直し: 英語日本語切替対応
 

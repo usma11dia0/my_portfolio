@@ -7,18 +7,24 @@ type BleepsNames
 interface ButtonProps {
   name: BleepsNames
   children: ReactNode
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void
 }
 
 const Button = (props: ButtonProps): ReactElement => {
-  const { name, children } = props;
+  const { name, children, onClick } = props;
   const bleeps = useBleeps<BleepsNames>();
-  const onClick = (): void => bleeps[name]?.play();
+  const onClickHandler = (e: React.MouseEvent<HTMLButtonElement>): void => {
+    bleeps[name]?.play();
+    if (onClick) {
+      onClick(e);
+    }
+  }
   const onMouseEnter = (): void => {
     bleeps.hover?.play();
   };
   
 
-  return <button onClick={onClick} onMouseEnter={onMouseEnter}>{children}</button>;
+  return <button onClick={onClickHandler} onMouseEnter={onMouseEnter}>{children}</button>;
 };
 
 export default Button
