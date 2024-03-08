@@ -17,6 +17,7 @@ const Projects = () => {
   const [animationPlayed, setAnimationPlayed] = useState(false);
   const [active, setActive] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [imageOpacity, setImageOpacity] = useState(1);
 
   const bleeps = useBleeps<BleepsNames>();
   const timerPlayId = useRef<number>();
@@ -42,8 +43,29 @@ const Projects = () => {
   }, [isInView]);
 
   const toggleModal = () => {
-    setIsModalOpen(!isModalOpen)
+    // モーダルを開く時は点滅 + 待機
+    if (!isModalOpen) {
+      blinkImage(2);
+      setTimeout(
+        () => setIsModalOpen(!isModalOpen), 
+        600
+      );
+    } else {
+      setIsModalOpen(!isModalOpen)
+    }
   }
+
+  const blinkImage = (times: number, interval = 80) => {
+    let count = 0;
+    const blink = () => {
+      setImageOpacity(prev => prev === 1 ? 0 : 1); // 透明度を切り替える
+      count += 1;
+      if (count < times * 2) {
+        setTimeout(blink, interval); // 指定した間隔で点滅を繰り返す
+      }
+    };
+    blink();
+  };
 
   return (
     <div id="section-projects" className="bg-[#09101a] pt-[4rem] pb-[1rem] md:pt-[8rem] relative">
@@ -80,6 +102,10 @@ const Projects = () => {
                       alt="portfolio"  
                       className="object-contain p-3"
                       sizes="(min-width: 768px) 300px, 200px"
+                      style={{ 
+                        opacity: imageOpacity, 
+                        transition: 'opacity 0.5s',
+                      }} 
                     />
                   </Button>
                 </FrameCorners>

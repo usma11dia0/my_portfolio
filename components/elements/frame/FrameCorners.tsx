@@ -21,13 +21,14 @@ const FrameCorners = ({children}: FrameCornersProps): ReactElement => {
       alignItems: 'center',
       border: '5px solid transparent',
       ':hover': {
+        filter: 'brightness(1.2)',
         border: '1px dotted hsl(180, 75%, 30%)',
         '[data-name=bg]': {
           color: 'hsl(180, 75%, 7%)'
         }
       },
       '[data-name=bg]': {
-        // color: 'hsl(180, 75%, 7%)'
+        // color: 'hsl(180, 75%, 10%)'
         color: 'hsla(0, 50%, 10%, 0.5)'
       },
       '[data-name=line]': {
@@ -36,8 +37,8 @@ const FrameCorners = ({children}: FrameCornersProps): ReactElement => {
     }}
     >
       <FrameSVGCorners
-        strokeWidth={1.5}
-        cornerLength={50}
+        strokeWidth={2}
+        cornerLength={15}
         elementRef={svgRef}
         onRender={onRender}
       />
