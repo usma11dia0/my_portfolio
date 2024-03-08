@@ -22,6 +22,9 @@ const FrameCorners = ({children}: FrameCornersProps): ReactElement => {
       border: '5px solid transparent',
       ':hover': {
         border: '1px dotted hsl(180, 75%, 30%)',
+        '[data-name=bg]': {
+          color: 'hsl(180, 75%, 7%)'
+        }
       },
       '[data-name=bg]': {
         // color: 'hsl(180, 75%, 7%)'

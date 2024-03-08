@@ -1,7 +1,8 @@
 import { useBleeps } from "@arwes/react";
 import { ReactElement, ReactNode } from "react";
 
-type BleepsNames = 'click' | 'intro' | 'error';
+type BleepsNames 
+  = 'click' | 'intro' | 'error' | 'transmission' | 'expand' | 'hover';
 
 interface ButtonProps {
   name: BleepsNames
@@ -13,7 +14,7 @@ const Button = (props: ButtonProps): ReactElement => {
   const bleeps = useBleeps<BleepsNames>();
   const onClick = (): void => bleeps[name]?.play();
   const onMouseEnter = (): void => {
-    bleeps.click?.play();
+    bleeps.hover?.play();
   };
   
 

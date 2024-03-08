@@ -5,6 +5,7 @@ import { fadeIn } from "../../variants";
 import FrameCorners from '../elements/frame/FrameCorners';
 import { Animator, useBleeps} from '@arwes/react';
 import MovingLinesBG from '../elements/background/MovingLinesBG';
+import Button from '../elements/button/Button';
 
 type BleepsNames = 'looping';
 
@@ -55,13 +56,15 @@ const Projects = () => {
             ">
               <Animator active={active}>
                 <FrameCorners>
-                  <Image
-                    fill
-                    src="/images/p1.jpg" 
-                    alt="portfolio"  
-                    className="object-contain p-3"
-                    sizes="(min-width: 768px) 300px, 200px"
-                  />
+                  <Button name='transmission'>
+                    <Image
+                      fill
+                      src="/images/p1.jpg" 
+                      alt="portfolio"  
+                      className="object-contain p-3"
+                      sizes="(min-width: 768px) 300px, 200px"
+                    />
+                  </Button>
                 </FrameCorners>
               </Animator>
             </div>
@@ -83,13 +86,15 @@ const Projects = () => {
             ">
               <Animator active={active}>
                 <FrameCorners>
-                  <Image
-                    fill
-                    src="/images/p5.jpg" 
-                    alt="portfolio"  
-                    className="object-contain p-3"
-                    sizes="(min-width: 768px) 300px, 200px"
-                  />
+                  <Button name='transmission'>
+                    <Image
+                      fill
+                      src="/images/p5.jpg" 
+                      alt="portfolio"  
+                      className="object-contain p-3"
+                      sizes="(min-width: 768px) 300px, 200px"
+                    />
+                  </Button>
                 </FrameCorners>
               </Animator>
             </div>
@@ -109,15 +114,17 @@ const Projects = () => {
               transform transition-all duration-200 
               md:h-[300px]
             ">
-             <Animator active={active}>
+              <Animator active={active}>
                 <FrameCorners>
-                  <Image
-                    fill
-                    src="/images/p5.jpg" 
-                    alt="portfolio"  
-                    className="object-contain p-3"
-                    sizes="(min-width: 768px) 300px, 200px"
-                  />
+                  <Button name='transmission'>
+                    <Image
+                      fill
+                      src="/images/p5.jpg" 
+                      alt="portfolio"  
+                      className="object-contain p-3"
+                      sizes="(min-width: 768px) 300px, 200px"
+                    />
+                  </Button>
                 </FrameCorners>
               </Animator>
             </div>
@@ -139,13 +146,15 @@ const Projects = () => {
             ">
               <Animator active={active}>
                 <FrameCorners>
-                  <Image
-                    fill
-                    src="/images/p5.jpg" 
-                    alt="portfolio"  
-                    className="object-contain p-3"
-                    sizes="(min-width: 768px) 300px, 200px"
-                  />
+                  <Button name='transmission'>
+                    <Image
+                      fill
+                      src="/images/p5.jpg" 
+                      alt="portfolio"  
+                      className="object-contain p-3"
+                      sizes="(min-width: 768px) 300px, 200px"
+                    />
+                  </Button>
                 </FrameCorners>
               </Animator>
             </div>
@@ -167,13 +176,15 @@ const Projects = () => {
             ">
               <Animator active={active}>
                 <FrameCorners>
-                  <Image
-                    fill
-                    src="/images/p5.jpg" 
-                    alt="portfolio"  
-                    className="object-contain p-3"
-                    sizes="(min-width: 768px) 300px, 200px"
-                  />
+                  <Button name='transmission'>
+                    <Image
+                      fill
+                      src="/images/p5.jpg" 
+                      alt="portfolio"  
+                      className="object-contain p-3"
+                      sizes="(min-width: 768px) 300px, 200px"
+                    />
+                  </Button>
                 </FrameCorners>
               </Animator>
             </div>
@@ -193,15 +204,17 @@ const Projects = () => {
               transform transition-all duration-200 
               md:h-[300px]
             ">
-             <Animator active={active}>
+              <Animator active={active}>
                 <FrameCorners>
-                  <Image
-                    fill
-                    src="/images/p5.jpg" 
-                    alt="portfolio"  
-                    className="object-contain p-3"
-                    sizes="(min-width: 768px) 300px, 200px"
-                  />
+                  <Button name='transmission'>
+                    <Image
+                      fill
+                      src="/images/p5.jpg" 
+                      alt="portfolio"  
+                      className="object-contain p-3"
+                      sizes="(min-width: 768px) 300px, 200px"
+                    />
+                  </Button>
                 </FrameCorners>
               </Animator>
             </div>
