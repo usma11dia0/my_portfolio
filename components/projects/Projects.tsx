@@ -7,12 +7,13 @@ import { Animator, useBleeps} from '@arwes/react';
 import MovingLinesBG from '../elements/background/MovingLinesBG';
 import Button from '../elements/button/Button';
 
-type BleepsNames = 'looping';
+type BleepsNames = 'expand';
 
 const Projects = () => {
 
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true })
+  const isInView = useInView(ref, { once: false })
+  const [animationPlayed, setAnimationPlayed] = useState(false);
   const [active, setActive] = useState(false);
 
   const bleeps = useBleeps<BleepsNames>();
@@ -20,10 +21,21 @@ const Projects = () => {
   const timerStopId = useRef<number>();
 
   useEffect(() => {
-    if (isInView) {
+    if (isInView && !animationPlayed) {
+      setAnimationPlayed(true);
+    }
+  }, [isInView, animationPlayed]);
+
+  useEffect(() => {
+    if (isInView && !active) {
       setTimeout(() => setActive(true), 2000);
-      timerPlayId.current = window.setTimeout(() => bleeps.looping?.play(), 2000);
-      timerStopId.current = window.setTimeout(() => bleeps.looping?.stop(), 2400);
+      timerPlayId.current = window.setTimeout(() => bleeps.expand?.play(), 2100);
+      timerStopId.current = window.setTimeout(() => bleeps.expand?.stop(), 2400);
+    }
+    
+    return () => {
+      clearTimeout(timerPlayId.current);
+      clearTimeout(timerStopId.current);
     }
   }, [isInView]);
 
@@ -31,7 +43,7 @@ const Projects = () => {
     <div id="section-projects" className="bg-[#09101a] pt-[4rem] pb-[1rem] md:pt-[8rem] relative">
       <MovingLinesBG zIndex={0}/>
       <h1 className="heading relative">
-        PRO<span className="text-[28px] sm:text-[33px] md:text-[45px] text-neon-blue">JECTS</span>
+        <span className="text-[28px] sm:text-[33px] md:text-[45px] text-neon-blue">PROJECTS</span>
       </h1>
       <div className="
         grid grid-cols-1 gap-[2rem]
@@ -43,8 +55,8 @@ const Projects = () => {
             ref={ref} 
             variants={fadeIn('up', 0)}
             initial='hidden'
-            animate= {isInView ? 'show' : 'hidden'}
-            exit='hidden'
+            animate= {animationPlayed ? 'show' : 'hidden'}
+            exit='show'
             transition={{duration: 1, ease: 'easeInOut'}}
             className='div'
           >
@@ -73,8 +85,8 @@ const Projects = () => {
             ref={ref} 
             variants={fadeIn('up', 0.2)}
             initial='hidden'
-            animate= {isInView ? 'show' : 'hidden'}
-            exit='hidden'
+            animate= {animationPlayed ? 'show' : 'hidden'}
+            exit='show'
             transition={{duration: 1, ease: 'easeInOut'}}
             className='div'
           >
@@ -103,8 +115,8 @@ const Projects = () => {
             ref={ref} 
             variants={fadeIn('up', 0.4)}
             initial='hidden'
-            animate= {isInView ? 'show' : 'hidden'}
-            exit='hidden'
+            animate= {animationPlayed ? 'show' : 'hidden'}
+            exit='show'
             transition={{duration: 1, ease: 'easeInOut'}}
             className='div'
           >
@@ -133,8 +145,8 @@ const Projects = () => {
             ref={ref} 
             variants={fadeIn('up', 0.6)}
             initial='hidden'
-            animate= {isInView ? 'show' : 'hidden'}
-            exit='hidden'
+            animate= {animationPlayed ? 'show' : 'hidden'}
+            exit='show'
             transition={{duration: 1, ease: 'easeInOut'}}
             className='div'
           >
@@ -163,8 +175,8 @@ const Projects = () => {
             ref={ref} 
             variants={fadeIn('up', 0.8)}
             initial='hidden'
-            animate= {isInView ? 'show' : 'hidden'}
-            exit='hidden'
+            animate= {animationPlayed ? 'show' : 'hidden'}
+            exit='show'
             transition={{duration: 1, ease: 'easeInOut'}}
             className='div'
           >
@@ -193,8 +205,8 @@ const Projects = () => {
             ref={ref} 
             variants={fadeIn('up', 1.0)}
             initial='hidden'
-            animate= {isInView ? 'show' : 'hidden'}
-            exit='hidden'
+            animate= {animationPlayed ? 'show' : 'hidden'}
+            exit='show'
             transition={{duration: 1, ease: 'easeInOut'}}
             className='div'
           >
