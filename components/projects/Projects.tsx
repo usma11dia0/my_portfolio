@@ -8,7 +8,7 @@ import MovingLinesBG from '../elements/background/MovingLinesBG';
 import Button from '../elements/button/Button';
 import ProjectModal from './ProjectModal'; 
 
-type BleepsNames = 'expand';
+type BleepsNames = 'expand' | 'fade' | 'transmission' | 'typing';
 
 const Projects = () => {
 
@@ -48,7 +48,19 @@ const Projects = () => {
       blinkImage(2);
       setTimeout(
         () => setIsModalOpen(!isModalOpen), 
-        600
+        400
+      );
+      setTimeout(
+        () => bleeps.transmission?.play(),
+        450
+      );
+      setTimeout(
+        () => bleeps.typing?.play(),
+        550
+      );
+      setTimeout(
+        () => bleeps.expand?.play(),
+        700
       );
     } else {
       setIsModalOpen(!isModalOpen)
@@ -95,7 +107,7 @@ const Projects = () => {
             ">
               <Animator active={active}>
                 <FrameCorners>
-                  <Button name='transmission' onClick={toggleModal}>
+                  <Button name='fade' onClick={toggleModal}>
                     <Image
                       fill
                       src="/images/p1.jpg" 

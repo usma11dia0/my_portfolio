@@ -1,7 +1,10 @@
 'use client';
 
+import Image from 'next/image';
 import { useCallback, useEffect, useState } from "react";
-import { XMarkIcon } from "@heroicons/react/20/solid";
+import FrameUnderline from "../elements/frame/FrameUnderLine";
+import TextDecipher from '../elements/text/TextDecipher';
+import { Animator } from '@arwes/react';
 
 interface ModalProps {
   isOpen?: boolean;
@@ -10,6 +13,7 @@ interface ModalProps {
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   const [showModal, setShowModal] = useState(isOpen);
+  const [active, setActive] = useState(true);
 
   useEffect(() => {
     setShowModal(isOpen);
@@ -44,92 +48,28 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
         "
         onClick={handleClose}
       >
+        {/*body*/}
         <div className="
           relative 
-          w-full
-          md:w-4/6
-          lg:w-3/6
-          xl:w-2/5
-          my-6
-          mx-auto 
-          h-full 
-          lg:h-auto
-          md:h-auto
+          pt-24 pl-0
+          flex-auto
+          w-[100%] h-[90%]
+          flex justify-center items-center
           "
         >
-          {/*content*/}
-          <div className={`
-            translate
-            duration-300
-            h-full
-            ${showModal ? 'translate-y-0' : 'translate-y-full'}
-            ${showModal ? 'opacity-100' : 'opacity-0'}
-          `}>
-            <div className="
-              translate
-              h-full
-              lg:h-auto
-              md:h-auto
-              border-0 
-              rounded-lg 
-              shadow-lg 
-              relative 
-              flex 
-              flex-col 
-              w-full 
-              bg-white 
-              outline-none 
-              focus:outline-none
-            "
-            >
-              {/*header*/}
-              <div className="
-                flex 
-                items-center 
-                p-6
-                rounded-t
-                justify-center
-                relative
-                border-b-[1px]
-                "
-              >
-                <button
-                  className="
-                    p-1
-                    border-0 
-                    hover:opacity-70
-                    transition
-                    absolute
-                    left-9
-                  "
-                  onClick={handleClose}
-                >
-                  <XMarkIcon />
-                </button>
-                <div className="text-lg font-semibold">
-                  title
-                </div>
-              </div>
-              {/*body*/}
-              <div className="relative p-6 flex-auto">
-                body
-              </div>
-              {/*footer*/}
-              <div className="flex flex-col gap-2 p-6">
-                <div 
-                  className="
-                    flex 
-                    flex-row 
-                    items-center 
-                    gap-4 
-                    w-full
-                  "
-                >
-                </div>
-                footer
-              </div>
-            </div>
-          </div>
+          <Animator active={active}>
+            <FrameUnderline>
+              <Image
+                fill
+                src="/images/p1.jpg" 
+                alt="portfolio"  
+                className="object-contain p-20"
+              />
+              <TextDecipher className="text-[19px] text-sf-blue">
+                - Fundamental Information Technology Engineer Examination (FE)
+              </TextDecipher>
+            </FrameUnderline>
+          </Animator>
         </div>
       </div>
     </>

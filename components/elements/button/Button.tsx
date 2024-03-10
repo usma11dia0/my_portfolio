@@ -2,7 +2,7 @@ import { useBleeps } from "@arwes/react";
 import { ReactElement, ReactNode } from "react";
 
 type BleepsNames 
-  = 'click' | 'intro' | 'error' | 'transmission' | 'expand' | 'hover';
+  = 'click' | 'intro' | 'error' | 'transmission' | 'expand' | 'hover' | 'fade';
 
 interface ButtonProps {
   name: BleepsNames

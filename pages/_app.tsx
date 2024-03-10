@@ -47,6 +47,18 @@ const bleepsSettings: BleepsProviderSettings = {
         { src: '/sounds/hover.mp3', type:'audio/mp3' }
       ],
       volume: 0.8,
+    },
+    fade: {
+      sources: [
+        { src: '/sounds/fade.mp3', type:'audio/mp3' }
+      ],
+      volume: 0.8,
+    },
+    typing: {
+      sources: [
+        { src: '/sounds/typing.mp3', type:'audio/mp3' }
+      ],
+      volume: 0.8,
     }
   }
 };
