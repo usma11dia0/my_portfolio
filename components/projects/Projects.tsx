@@ -8,7 +8,7 @@ import MovingLinesBG from '../elements/background/MovingLinesBG';
 import Button from '../elements/button/Button';
 import ProjectModal from './ProjectModal'; 
 
-type BleepsNames = 'expand' | 'fade' | 'transmission' | 'typing';
+type BleepsNames = 'expand' | 'fade' | 'transmission' | 'typing' | 'error' | 'click' | 'hover';
 
 const Projects = () => {
 
@@ -45,39 +45,40 @@ const Projects = () => {
   const toggleModal = () => {
     // モーダルを開く時は点滅 + 待機
     if (!isModalOpen) {
-      blinkImage(2);
+      // blinkImage(2);
       setTimeout(
         () => setIsModalOpen(!isModalOpen), 
-        400
+        50
       );
       setTimeout(
         () => bleeps.transmission?.play(),
-        450
+        50
       );
       setTimeout(
         () => bleeps.typing?.play(),
-        550
+        450
       );
       setTimeout(
         () => bleeps.expand?.play(),
-        700
+        450
       );
     } else {
       setIsModalOpen(!isModalOpen)
+      bleeps.hover?.play()
     }
   }
 
-  const blinkImage = (times: number, interval = 80) => {
-    let count = 0;
-    const blink = () => {
-      setImageOpacity(prev => prev === 1 ? 0 : 1); // 透明度を切り替える
-      count += 1;
-      if (count < times * 2) {
-        setTimeout(blink, interval); // 指定した間隔で点滅を繰り返す
-      }
-    };
-    blink();
-  };
+  // const blinkImage = (times: number, interval = 80) => {
+  //   let count = 0;
+  //   const blink = () => {
+  //     setImageOpacity(prev => prev === 1 ? 0 : 1); // 透明度を切り替える
+  //     count += 1;
+  //     if (count < times * 2) {
+  //       setTimeout(blink, interval); // 指定した間隔で点滅を繰り返す
+  //     }
+  //   };
+  //   blink();
+  // };
 
   return (
     <div id="section-projects" className="bg-[#09101a] pt-[4rem] pb-[1rem] md:pt-[8rem] relative">
@@ -107,7 +108,7 @@ const Projects = () => {
             ">
               <Animator active={active}>
                 <FrameCorners>
-                  <Button name='fade' onClick={toggleModal}>
+                  <Button name='click' onClick={toggleModal}>
                     <Image
                       fill
                       src="/images/p1.jpg" 

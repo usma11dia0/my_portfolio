@@ -1,12 +1,12 @@
 /** @jsxImportSource @emotion/react */
 import { type ReactElement, useRef, ReactNode } from 'react';
-import { FrameSVGUnderline, useFrameSVGAssemblingAnimation } from '@arwes/react-frames';
+import {  FrameSVGKranox, useFrameSVGAssemblingAnimation } from '@arwes/react-frames';
 
-interface FrameUnderLineProps {
+interface FrameKranoxProps {
   children: ReactNode;
 }
 
-const FrameUnderline = ({children}: FrameUnderLineProps): ReactElement => {
+const FrameKranox = ({children}: FrameKranoxProps): ReactElement => {
   const svgRef = useRef<SVGSVGElement | null>(null);
   const { onRender } = useFrameSVGAssemblingAnimation(svgRef);
 
@@ -19,21 +19,26 @@ const FrameUnderline = ({children}: FrameUnderLineProps): ReactElement => {
 
       '[data-name=bg]': {
         // color: 'hsl(180, 75%, 10%)'
-        color: 'hsla(0, 50%, 10%, 0.7)'
+        color: 'hsla(0, 50%, 10%, 0.7)',
+        filter: 'drop-shadow(0 0 4px hsl(60, 75%, 10%))'
       },
       '[data-name=line]': {
-        color: 'hsl(180, 75%, 50%)'
+        color: 'hsl(180, 75%, 50%)',
+        filter: 'drop-shadow(0 0 4px hsl(60, 75%, 50%))'
       }
     }}>
-      <FrameSVGUnderline
+      <FrameSVGKranox
         elementRef={svgRef}
         onRender={onRender}
-        squareSize={32}
+        padding={0}
         strokeWidth={3}
+        squareSize={12}
+        smallLineLength={12}
+        largeLineLength={48}
       />
       {children}
     </div>
   );
 };
 
-export default FrameUnderline
+export default FrameKranox

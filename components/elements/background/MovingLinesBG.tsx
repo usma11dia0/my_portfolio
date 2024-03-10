@@ -3,7 +3,6 @@ import { Animator } from '@arwes/react-animator';
 import { GridLines, Dots, MovingLines } from '@arwes/react-bgs';
 
 interface MovingLinesBGProps {
-  children?: ReactNode;
   zIndex: number;
 }
 

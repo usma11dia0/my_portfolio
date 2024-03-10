@@ -4,7 +4,6 @@ import { GridLines, Dots } from '@arwes/react-bgs';
 import { Puffs } from '@arwes/react';
 
 interface PuffsAndGridBGProps {
-  children?: ReactNode;
   zIndex: number;
 }
 

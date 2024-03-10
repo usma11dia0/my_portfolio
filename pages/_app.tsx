@@ -58,7 +58,7 @@ const bleepsSettings: BleepsProviderSettings = {
       sources: [
         { src: '/sounds/typing.mp3', type:'audio/mp3' }
       ],
-      volume: 0.8,
+      volume: 0.3,
     }
   }
 };

@@ -5,6 +5,8 @@ import { useCallback, useEffect, useState } from "react";
 import FrameUnderline from "../elements/frame/FrameUnderLine";
 import TextDecipher from '../elements/text/TextDecipher';
 import { Animator } from '@arwes/react';
+import DotsVariationBG from '../elements/background/DotsVariationBG';
+import FrameKranox from '../elements/frame/FrameKranox';
 
 interface ModalProps {
   isOpen?: boolean;
@@ -58,17 +60,19 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
           "
         >
           <Animator active={active}>
-            <FrameUnderline>
-              <Image
-                fill
-                src="/images/p1.jpg" 
-                alt="portfolio"  
-                className="object-contain p-20"
-              />
-              <TextDecipher className="text-[19px] text-sf-blue">
-                - Fundamental Information Technology Engineer Examination (FE)
-              </TextDecipher>
-            </FrameUnderline>
+            <FrameKranox>
+              <DotsVariationBG active={active}>
+                <Image
+                  fill
+                  src="/images/p1.jpg" 
+                  alt="portfolio"  
+                  className="object-contain p-20"
+                />
+                <TextDecipher className="text-[19px] text-sf-blue">
+                  - Fundamental Information Technology Engineer Examination (FE)
+                </TextDecipher>
+              </DotsVariationBG>
+            </FrameKranox>
           </Animator>
         </div>
       </div>
