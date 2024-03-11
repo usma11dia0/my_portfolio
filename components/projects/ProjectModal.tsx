@@ -2,11 +2,11 @@
 
 import Image from 'next/image';
 import { useCallback, useEffect, useState } from "react";
-import FrameUnderline from "../elements/frame/FrameUnderLine";
 import TextDecipher from '../elements/text/TextDecipher';
 import { Animator } from '@arwes/react';
 import DotsVariationBG from '../elements/background/DotsVariationBG';
 import FrameKranox from '../elements/frame/FrameKranox';
+import TextBasic from '../elements/text/TextBasic';
 
 interface ModalProps {
   isOpen?: boolean;
@@ -53,25 +53,39 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
         {/*body*/}
         <div className="
           relative 
-          pt-24 pl-0
-          flex-auto
+          pt-24
           w-[100%] h-[90%]
           flex justify-center items-center
           "
         >
           <Animator active={active}>
             <FrameKranox>
-              <DotsVariationBG active={active}>
-                <Image
-                  fill
-                  src="/images/p1.jpg" 
-                  alt="portfolio"  
-                  className="object-contain p-20"
-                />
-                <TextDecipher className="text-[19px] text-sf-blue">
-                  - Fundamental Information Technology Engineer Examination (FE)
-                </TextDecipher>
-              </DotsVariationBG>
+                <DotsVariationBG active={active}>
+                  <div className="grid grid-cols-2 gap-20">
+                    {/* Left Side */}
+                    <div>
+                      <Image
+                        src="/images/projects/portfolio/portfolio_main.png" 
+                        alt="portfolio"
+                        width={800} 
+                        height={800}
+                        className="object-contain z-[1] relative"
+                      />
+                    </div>
+                    {/* Right Side */}
+                    <div>
+                      <TextBasic className="text-[19px] text-sf-blue">
+                        - Japanese Prononciation Quiz App
+                      </TextBasic>
+                      <TextBasic className="text-[19px] text-sf-blue">
+                        - 日本語の同音異義語を判別するクイズアプリです。
+                      </TextBasic>
+                      <TextBasic className="text-[19px] text-sf-blue">
+                        - 使用技術 -
+                      </TextBasic>
+                    </div>
+                  </div>
+                </DotsVariationBG>
             </FrameKranox>
           </Animator>
         </div>

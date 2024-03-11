@@ -111,14 +111,10 @@ const Projects = () => {
                   <Button name='click' onClick={toggleModal}>
                     <Image
                       fill
-                      src="/images/p1.jpg" 
+                      src="/images/projects/portfolio/portfolio_main.png" 
                       alt="portfolio"  
                       className="object-contain p-3"
                       sizes="(min-width: 768px) 300px, 200px"
-                      style={{ 
-                        opacity: imageOpacity, 
-                        transition: 'opacity 0.5s',
-                      }} 
                     />
                   </Button>
                 </FrameCorners>
