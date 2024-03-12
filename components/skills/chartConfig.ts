@@ -1,5 +1,5 @@
 // チャートのデータとオプションの設定
-export const dataInit = {
+export const DATA_INIT = {
   labels: [],
   datasets: [
     { 
@@ -9,7 +9,7 @@ export const dataInit = {
   ],
 };
 
-export const dataFrontend = {
+export const DATA_FRONTEND = {
   labels: ['HTML/CSS', 'JS', 'TS', 'Dart/Flutter', 'React', 'Next.js'],
   datasets: [
     {
@@ -22,7 +22,7 @@ export const dataFrontend = {
   ],
 };
 
-export const dataBackend = {
+export const DATA_BACKEND = {
   labels: ['Python', 'FastAPI', 'Rust', 'PostgreSQL', 'Ruby', 'Node.js'],
   datasets: [
     {
@@ -35,7 +35,7 @@ export const dataBackend = {
   ],
 };
 
-export const dataDevOps = {
+export const DATA_DEVOPS = {
   labels: ['AWS', 'GCP', 'Azure', 'Docker', 'Git', 'Jira'],
   datasets: [
     {

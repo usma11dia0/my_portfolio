@@ -1,21 +1,33 @@
-'use client';
-
 import Image from 'next/image';
 import { useCallback, useEffect, useState } from "react";
-import TextDecipher from '../elements/text/TextDecipher';
 import { Animator } from '@arwes/react';
+import { ProjectImageSetType } from '@/components/projects/projectConfig';
 import DotsVariationBG from '../elements/background/DotsVariationBG';
 import FrameKranox from '../elements/frame/FrameKranox';
 import TextBasic from '../elements/text/TextBasic';
+import Button from '../elements/button/Button';
+import ModalSubImage from './ModalSubImage';
 
 interface ModalProps {
   isOpen?: boolean;
   onClose: () => void;
+  imgSet: ProjectImageSetType[string];
 }
 
-const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
+const ProjectModal: React.FC<ModalProps> = ({ 
+  isOpen, 
+  onClose, 
+  imgSet,
+}) => {
   const [showModal, setShowModal] = useState(isOpen);
   const [active, setActive] = useState(true);
+  const [mainImagePath, setMainImagePath] =useState<string>(imgSet['mainImageSrc']);
+
+  // 各画像のパス
+  const mainImageSrc = imgSet['mainImageSrc'];
+  const subImageSrc1 = imgSet['subImageSrc1'];
+  const subImageSrc2 = imgSet['subImageSrc2'];
+  const subImageSrc3 = imgSet['subImageSrc3'];
 
   useEffect(() => {
     setShowModal(isOpen);
@@ -25,8 +37,14 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
     setShowModal(false);
     setTimeout(() => {
       onClose();
-    }, 300)
+      setMainImagePath(mainImagePath);
+    }, 0)
   }, [onClose]);
+
+  // モーダル内側がクリックされた際は、イベントの伝播を停止
+  const handleInsideClick = useCallback((e: React.MouseEvent) => {
+    e.stopPropagation(); 
+  }, []);
 
   if (!isOpen) {
     return null;
@@ -36,41 +54,54 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
     <>
       <div
         className="
-          justify-center 
-          items-center 
-          flex 
-          overflow-x-hidden 
-          overflow-y-auto 
-          fixed 
-          inset-0 
-          z-50 
-          outline-none 
-          focus:outline-none
+          fixed inset-0 z-50 
+          flex justify-center  items-center  
+          overflow-x-hidden overflow-y-auto 
+          outline-none focus:outline-none
           bg-neutral-800/70
         "
         onClick={handleClose}
       >
         {/*body*/}
         <div className="
-          relative 
+          relative flex justify-center items-center
           pt-24
           w-[100%] h-[90%]
-          flex justify-center items-center
           "
         >
           <Animator active={active}>
             <FrameKranox>
                 <DotsVariationBG active={active}>
-                  <div className="grid grid-cols-2 gap-20">
+                  <div className="grid grid-cols-2 gap-20" onClick={handleInsideClick}>
                     {/* Left Side */}
-                    <div>
+                    <div className="transform translate-x-10 translate-y-10">
+                      {/* Main Image */}
                       <Image
-                        src="/images/projects/portfolio/portfolio_main.png" 
+                        src={mainImagePath}
                         alt="portfolio"
                         width={800} 
                         height={800}
-                        className="object-contain z-[1] relative"
+                        className="
+                          object-contain z-[1] relative 
+                          filter border border-dotted border-[hsl(180,75%,30%)]
+                        " 
+                        style={{ filter: 'brightness(1.3)' }}
                       />
+                      {/* Sub Image */}
+                      <div className="pt-10 grid grid-cols-2 gap-4" style={{ paddingLeft: '3rem' }}>
+                        <Button name="hover" onClick={() => setMainImagePath(mainImageSrc)}>
+                          <ModalSubImage src={mainImageSrc}/>
+                        </Button>
+                        <Button name="hover" onClick={() => setMainImagePath(subImageSrc1)}>
+                          <ModalSubImage src={subImageSrc1}/>
+                        </Button>
+                        <Button name="hover" onClick={() => setMainImagePath(subImageSrc2)}>
+                          <ModalSubImage src={subImageSrc2}/>
+                        </Button>
+                        <Button name="hover" onClick={() => setMainImagePath(subImageSrc3)}>
+                          <ModalSubImage src={subImageSrc3}/>
+                        </Button>
+                      </div>
                     </div>
                     {/* Right Side */}
                     <div>
@@ -94,4 +125,4 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   );
 }
 
-export default Modal;
+export default ProjectModal;

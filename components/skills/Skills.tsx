@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import RadarChart from './RadarChart';
-import { dataInit, dataBackend, dataDevOps, dataFrontend, options } from '@/components/skills/chartConfig';
+import { DATA_INIT, DATA_BACKEND, DATA_DEVOPS, DATA_FRONTEND, options } from '@/components/skills/chartConfig';
 import { motion, useInView } from 'framer-motion';
 import { fadeIn } from '@/variants';
 import type { ChartData } from 'chart.js';
@@ -13,9 +13,9 @@ import PuffsAndGridBG from '../elements/background/PuffsAndGridBG';
 type BleepsNames = 'looping';
 
 const Skills = () => {
-  const [chartFrontendData, setChartFrontendData] = useState<ChartData<"radar", (number | null)[], unknown>>(dataInit);
-  const [chartBackendData, setChartBackendData] = useState<ChartData<"radar", (number | null)[], unknown>>(dataInit);
-  const [chartDevOpsData, setChartDevOpsData] = useState<ChartData<"radar", (number | null)[], unknown>>(dataInit);
+  const [chartFrontendData, setChartFrontendData] = useState<ChartData<"radar", (number | null)[], unknown>>(DATA_INIT);
+  const [chartBackendData, setChartBackendData] = useState<ChartData<"radar", (number | null)[], unknown>>(DATA_INIT);
+  const [chartDevOpsData, setChartDevOpsData] = useState<ChartData<"radar", (number | null)[], unknown>>(DATA_INIT);
   const [activeFrontend, setActiveFrontend] = useState<boolean>(false);
   const [activeBackend, setActiveBackend] = useState<boolean>(false);
   const [activeDevOps, setActiveDevOps] = useState<boolean>(false);
@@ -39,7 +39,7 @@ const Skills = () => {
   // Frontendの表示状態に応じた副作用
   useEffect(() => {
     if (isInViewFrontend) {
-      setTimeout(() => setChartFrontendData(dataFrontend), 150);
+      setTimeout(() => setChartFrontendData(DATA_FRONTEND), 150);
       setTimeout(() => setActiveFrontend(true), 900);
       timerFrontendPlayId.current = window.setTimeout(() => bleeps.looping?.play(), 1300);
       timerFrontendStopId.current = window.setTimeout(() => bleeps.looping?.stop(), 2300);
@@ -47,7 +47,7 @@ const Skills = () => {
 
     return () => {
       setActiveFrontend(false);
-      setChartFrontendData(dataInit);
+      setChartFrontendData(DATA_INIT);
       clearTimeout(timerFrontendPlayId.current);
       clearTimeout(timerFrontendStopId.current);
     };
@@ -56,7 +56,7 @@ const Skills = () => {
   // Backendの表示状態に応じた副作用
   useEffect(() => {
     if (isInViewBackend) {
-      setTimeout(() => setChartBackendData(dataBackend), 150);
+      setTimeout(() => setChartBackendData(DATA_BACKEND), 150);
       setTimeout(() => setActiveBackend(true), 900);
       timerBackendPlayId.current = window.setTimeout(() => bleeps.looping?.play(), 1300);
       timerBackendStopId.current = window.setTimeout(() => bleeps.looping?.stop(), 2300);
@@ -64,7 +64,7 @@ const Skills = () => {
 
     return () => {
       setActiveBackend(false);
-      setChartBackendData(dataInit);
+      setChartBackendData(DATA_INIT);
       clearTimeout(timerBackendPlayId.current);
       clearTimeout(timerBackendStopId.current);
     };
@@ -73,7 +73,7 @@ const Skills = () => {
   // DevOpsの表示状態に応じた副作用
   useEffect(() => {
     if (isInViewDevOps) {
-      setTimeout(() => setChartDevOpsData(dataDevOps), 150);
+      setTimeout(() => setChartDevOpsData(DATA_DEVOPS), 150);
       setTimeout(() => setActiveDevOps(true), 900);
       timerDevOpsPlayId.current = window.setTimeout(() => bleeps.looping?.play(), 1300);
       timerDevOpsStopId.current = window.setTimeout(() => bleeps.looping?.stop(), 2300);
@@ -81,7 +81,7 @@ const Skills = () => {
 
     return () => {
       setActiveDevOps(false);
-      setChartDevOpsData(dataInit);
+      setChartDevOpsData(DATA_INIT);
       clearTimeout(timerDevOpsPlayId.current);
       clearTimeout(timerDevOpsStopId.current);
     };

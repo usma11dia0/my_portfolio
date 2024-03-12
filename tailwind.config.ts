@@ -10,6 +10,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      brightness: {
+        '60': '0.6',
+      },
       screens: {
         '3xl': '1820px',
       },

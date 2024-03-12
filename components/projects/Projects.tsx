@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React, { useEffect, useRef, useState } from 'react'
 import { motion, useInView } from "framer-motion";
+import { PROJECT_IMAGE_SET } from '@/components/projects/projectConfig';
 import { fadeIn } from "../../variants"; 
 import FrameCorners from '../elements/frame/FrameCorners';
 import { Animator, useBleeps} from '@arwes/react';
@@ -11,13 +12,11 @@ import ProjectModal from './ProjectModal';
 type BleepsNames = 'expand' | 'fade' | 'transmission' | 'typing' | 'error' | 'click' | 'hover';
 
 const Projects = () => {
-
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false })
   const [animationPlayed, setAnimationPlayed] = useState(false);
   const [active, setActive] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [imageOpacity, setImageOpacity] = useState(1);
 
   const bleeps = useBleeps<BleepsNames>();
   const timerPlayId = useRef<number>();
@@ -43,42 +42,20 @@ const Projects = () => {
   }, [isInView]);
 
   const toggleModal = () => {
-    // モーダルを開く時は点滅 + 待機
     if (!isModalOpen) {
-      // blinkImage(2);
-      setTimeout(
-        () => setIsModalOpen(!isModalOpen), 
-        50
-      );
-      setTimeout(
-        () => bleeps.transmission?.play(),
-        50
-      );
-      setTimeout(
-        () => bleeps.typing?.play(),
-        450
-      );
-      setTimeout(
-        () => bleeps.expand?.play(),
-        450
-      );
+      setTimeout(() => {
+        setIsModalOpen(!isModalOpen);
+        bleeps.transmission?.play();
+      }, 50);
+      setTimeout(() => {
+        bleeps.typing?.play();
+        bleeps.expand?.play();
+      }, 450);
     } else {
       setIsModalOpen(!isModalOpen)
       bleeps.hover?.play()
     }
   }
-
-  // const blinkImage = (times: number, interval = 80) => {
-  //   let count = 0;
-  //   const blink = () => {
-  //     setImageOpacity(prev => prev === 1 ? 0 : 1); // 透明度を切り替える
-  //     count += 1;
-  //     if (count < times * 2) {
-  //       setTimeout(blink, interval); // 指定した間隔で点滅を繰り返す
-  //     }
-  //   };
-  //   blink();
-  // };
 
   return (
     <div id="section-projects" className="bg-[#09101a] pt-[4rem] pb-[1rem] md:pt-[8rem] relative">
@@ -111,14 +88,18 @@ const Projects = () => {
                   <Button name='click' onClick={toggleModal}>
                     <Image
                       fill
-                      src="/images/projects/portfolio/portfolio_main.png" 
+                      src={PROJECT_IMAGE_SET['portfolio']['mainImageSrc']}
                       alt="portfolio"  
                       className="object-contain p-3"
                       sizes="(min-width: 768px) 300px, 200px"
                     />
                   </Button>
                 </FrameCorners>
-                <ProjectModal isOpen={isModalOpen} onClose={toggleModal} />
+                <ProjectModal 
+                  isOpen={isModalOpen} 
+                  onClose={toggleModal} 
+                  imgSet={PROJECT_IMAGE_SET['portfolio']} 
+                />
               </Animator>
             </div>
           </motion.div>
