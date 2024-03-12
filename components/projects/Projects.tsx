@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React, { useEffect, useRef, useState } from 'react'
-import { motion, useInView } from "framer-motion";
+import { useInView } from "framer-motion";
 import { PROJECT_IMAGE_SET } from '@/components/projects/projectConfig';
 import { fadeIn } from "../../variants"; 
 import FrameCorners from '../elements/frame/FrameCorners';
@@ -8,6 +8,7 @@ import { Animator, useBleeps} from '@arwes/react';
 import MovingLinesBG from '../elements/background/MovingLinesBG';
 import Button from '../elements/button/Button';
 import ProjectModal from './ProjectModal'; 
+import ProjectCard from './ProjectCard';
 
 type BleepsNames = 'expand' | 'fade' | 'transmission' | 'typing' | 'error' | 'click' | 'hover';
 
@@ -22,41 +23,6 @@ const Projects = () => {
   const timerPlayId = useRef<number>();
   const timerStopId = useRef<number>();
 
-  useEffect(() => {
-    if (isInView && !animationPlayed) {
-      setAnimationPlayed(true);
-    }
-  }, [isInView, animationPlayed]);
-
-  useEffect(() => {
-    if (isInView && !active) {
-      setTimeout(() => setActive(true), 2000);
-      timerPlayId.current = window.setTimeout(() => bleeps.expand?.play(), 2100);
-      timerStopId.current = window.setTimeout(() => bleeps.expand?.stop(), 2400);
-    }
-    
-    return () => {
-      clearTimeout(timerPlayId.current);
-      clearTimeout(timerStopId.current);
-    }
-  }, [isInView]);
-
-  const toggleModal = () => {
-    if (!isModalOpen) {
-      setTimeout(() => {
-        setIsModalOpen(!isModalOpen);
-        bleeps.transmission?.play();
-      }, 50);
-      setTimeout(() => {
-        bleeps.typing?.play();
-        bleeps.expand?.play();
-      }, 450);
-    } else {
-      setIsModalOpen(!isModalOpen)
-      bleeps.hover?.play()
-    }
-  }
-
   return (
     <div id="section-projects" className="bg-[#09101a] pt-[4rem] pb-[1rem] md:pt-[8rem] relative">
       <MovingLinesBG zIndex={0}/>
@@ -69,185 +35,30 @@ const Projects = () => {
         xl:grid-cols-3
         w-[50%] pt-[2rem] mx-auto lg:w-[80%]"
         >
-          <motion.div
-            ref={ref} 
-            variants={fadeIn('up', 0)}
-            initial='hidden'
-            animate= {animationPlayed ? 'show' : 'hidden'}
-            exit='show'
-            transition={{duration: 1, ease: 'easeInOut'}}
-            className='div'
-          >
-            <div className="
-              relative cursor-pointer
-              w-[100%] h-[200px] 
-              md:h-[300px]
-            ">
-              <Animator active={active}>
-                <FrameCorners>
-                  <Button name='click' onClick={toggleModal}>
-                    <Image
-                      fill
-                      src={PROJECT_IMAGE_SET['portfolio']['mainImageSrc']}
-                      alt="portfolio"  
-                      className="object-contain p-3"
-                      sizes="(min-width: 768px) 300px, 200px"
-                    />
-                  </Button>
-                </FrameCorners>
-                <ProjectModal 
-                  isOpen={isModalOpen} 
-                  onClose={toggleModal} 
-                  imgSet={PROJECT_IMAGE_SET['portfolio']} 
-                />
-              </Animator>
-            </div>
-          </motion.div>
-          <motion.div
-            ref={ref} 
-            variants={fadeIn('up', 0.2)}
-            initial='hidden'
-            animate= {animationPlayed ? 'show' : 'hidden'}
-            exit='show'
-            transition={{duration: 1, ease: 'easeInOut'}}
-            className='div'
-          >
-            <div className="
-              relative cursor-pointer
-              w-[100%] h-[200px]
-              md:h-[300px]
-            ">
-              <Animator active={active}>
-                <FrameCorners>
-                  <Button name='transmission'>
-                    <Image
-                      fill
-                      src="/images/p5.jpg" 
-                      alt="portfolio"  
-                      className="object-contain p-3"
-                      sizes="(min-width: 768px) 300px, 200px"
-                    />
-                  </Button>
-                </FrameCorners>
-              </Animator>
-            </div>
-          </motion.div>
-          <motion.div
-            ref={ref} 
-            variants={fadeIn('up', 0.4)}
-            initial='hidden'
-            animate= {animationPlayed ? 'show' : 'hidden'}
-            exit='show'
-            transition={{duration: 1, ease: 'easeInOut'}}
-            className='div'
-          >
-            <div className="
-              relative cursor-pointer
-              w-[100%] h-[200px]
-              md:h-[300px]
-            ">
-              <Animator active={active}>
-                <FrameCorners>
-                  <Button name='transmission'>
-                    <Image
-                      fill
-                      src="/images/p5.jpg" 
-                      alt="portfolio"  
-                      className="object-contain p-3"
-                      sizes="(min-width: 768px) 300px, 200px"
-                    />
-                  </Button>
-                </FrameCorners>
-              </Animator>
-            </div>
-          </motion.div>
-          <motion.div
-            ref={ref} 
-            variants={fadeIn('up', 0.6)}
-            initial='hidden'
-            animate= {animationPlayed ? 'show' : 'hidden'}
-            exit='show'
-            transition={{duration: 1, ease: 'easeInOut'}}
-            className='div'
-          >
-            <div className="
-              relative cursor-pointer
-              w-[100%] h-[200px]
-              md:h-[300px]
-            ">
-              <Animator active={active}>
-                <FrameCorners>
-                  <Button name='transmission'>
-                    <Image
-                      fill
-                      src="/images/p5.jpg" 
-                      alt="portfolio"  
-                      className="object-contain p-3"
-                      sizes="(min-width: 768px) 300px, 200px"
-                    />
-                  </Button>
-                </FrameCorners>
-              </Animator>
-            </div>
-          </motion.div>
-          <motion.div
-            ref={ref} 
-            variants={fadeIn('up', 0.8)}
-            initial='hidden'
-            animate= {animationPlayed ? 'show' : 'hidden'}
-            exit='show'
-            transition={{duration: 1, ease: 'easeInOut'}}
-            className='div'
-          >
-            <div className="
-              relative cursor-pointer
-              w-[100%] h-[200px]
-              md:h-[300px]
-            ">
-              <Animator active={active}>
-                <FrameCorners>
-                  <Button name='transmission'>
-                    <Image
-                      fill
-                      src="/images/p5.jpg" 
-                      alt="portfolio"  
-                      className="object-contain p-3"
-                      sizes="(min-width: 768px) 300px, 200px"
-                    />
-                  </Button>
-                </FrameCorners>
-              </Animator>
-            </div>
-          </motion.div>
-          <motion.div
-            ref={ref} 
-            variants={fadeIn('up', 1.0)}
-            initial='hidden'
-            animate= {animationPlayed ? 'show' : 'hidden'}
-            exit='show'
-            transition={{duration: 1, ease: 'easeInOut'}}
-            className='div'
-          >
-            <div className="
-              relative cursor-pointer
-              w-[100%] h-[200px]
-              md:h-[300px]
-            ">
-              <Animator active={active}>
-                <FrameCorners>
-                  <Button name='transmission'>
-                    <Image
-                      fill
-                      src="/images/p5.jpg" 
-                      alt="portfolio"  
-                      className="object-contain p-3"
-                      sizes="(min-width: 768px) 300px, 200px"
-                    />
-                  </Button>
-                </FrameCorners>
-              </Animator>
-            </div>
-          </motion.div>
+          <ProjectCard 
+            projectName='portfolio'
+            fadeInSec={0}
+          />
+          <ProjectCard 
+            projectName='portfolio'
+            fadeInSec={0.2}
+          />
+          <ProjectCard 
+            projectName='portfolio'
+            fadeInSec={0.4}
+          />
+          <ProjectCard 
+            projectName='portfolio'
+            fadeInSec={0.6}
+          />
+          <ProjectCard 
+            projectName='portfolio'
+            fadeInSec={0.8}
+          />
+          <ProjectCard 
+            projectName='portfolio'
+            fadeInSec={1}
+          />
       </div>
     </div>
   );
