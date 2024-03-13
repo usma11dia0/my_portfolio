@@ -120,7 +120,7 @@ const Skills = () => {
               <FrameLines theme={'frontEnd'}>
                 <div className="p-4 pl-6">
                   {/* <TextBasic className="pb-4 text-[20px] text-neon-blue-without-flicker">Details</TextBasic> */}
-                    <TextBasic className="text-white">
+                    <TextBasic className="text-white" enterSec={0.8}>
                       ■ HTML/CSS - 2 years of experience<br />
                       ■ JavaScript - 2 year of experience<br />
                       ■ TypeScript - 1 year of experience<br />
@@ -154,7 +154,7 @@ const Skills = () => {
               <FrameLines theme={'backEnd'}>
                 <div className="p-4 pl-6">
                   {/* <TextBasic className="pb-4 text-[20px] text-neon-red-without-flicker">Details</TextBasic> */}
-                    <TextBasic className="text-white">
+                    <TextBasic className="text-white" enterSec={0.8}>
                       ■ Python - 2 years of experience<br />
                       ■ FastAPI - 1 years of Experience<br />
                       ■ Rust - ※currently studying<br />
@@ -188,7 +188,7 @@ const Skills = () => {
               <FrameLines theme={'devOps'}>
                 <div className="p-4 pl-6">
                   {/* <TextBasic className="pb-4 text-[20px] text-neon-yellow-without-flicker">Details</TextBasic> */}
-                    <TextBasic className="text-white">
+                    <TextBasic className="text-white" enterSec={0.8}>
                       ■ AWS - 1 year Experience<br />
                       ■ GCP - a half year Experience<br />
                       ■ Azure - ※currently studying<br />

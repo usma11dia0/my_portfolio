@@ -15,6 +15,10 @@ module.exports = {
       },
       screens: {
         '3xl': '1820px',
+        '4xl': '1960px',
+      },
+      spacing: {
+        '15': '60px',
       },
       backgroundImage: {
         banner: 'url("/images/banner.jpg")',

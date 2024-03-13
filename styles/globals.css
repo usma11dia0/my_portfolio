@@ -59,7 +59,7 @@
   }
 
   .text-sf-blue {
-    @apply m-auto text-lg no-underline rounded-lg bg-transparent;
+    @apply text-lg no-underline rounded-lg bg-transparent;
     text-shadow: 
         -2px 4px 5px #091243,
         0 0 15px #00D0FF, 

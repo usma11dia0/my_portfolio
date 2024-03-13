@@ -5,13 +5,14 @@ import { Text } from '@arwes/react-text';
 interface TextBasicProps {
   children: ReactNode;
   className: string;
+  enterSec: number;
 }
 
-const TextBasic = ({children, className}: TextBasicProps): ReactElement => {
+const TextBasic = ({children, className, enterSec}: TextBasicProps): ReactElement => {
   const [active, setActive] = useState(true);
 
   return (
-    <Animator active={active} duration={{enter: 0.8}}>
+    <Animator active={active} duration={{enter: enterSec}}>
       <Text 
         className={className}
         as='p'
