@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { fadeIn } from '@/variants';
 import { Animator, useBleeps } from '@arwes/react';
 import { motion, useInView } from 'framer-motion';
-import { PROJECT_IMAGE_SET } from '@/components/projects/projectConfig';
+import { PROJECT_PUBLIC_SET } from '@/components/projects/projectConfig';
 import React, { useEffect, useRef, useState } from 'react'
 import FrameCorners from '../elements/frame/FrameCorners';
 import Button from '../elements/button/Button';
@@ -39,6 +39,9 @@ const ProjectCard = ({
         bleeps.typing?.play();
         bleeps.expand?.play();
       }, 450);
+      setTimeout(() => {
+        bleeps.typing?.stop();
+      }, 800);
     } else {
       setIsModalOpen(!isModalOpen)
       bleeps.hover?.play()
@@ -84,7 +87,7 @@ const ProjectCard = ({
             <Button name='click' onClick={toggleModal}>
               <Image
                 fill
-                src={PROJECT_IMAGE_SET[projectName]['mainImageSrc']}
+                src={PROJECT_PUBLIC_SET[projectName]['image']['mainImageSrc']}
                 alt="portfolio"  
                 className="object-contain p-3"
                 sizes="(min-width: 768px) 300px, 200px"
@@ -94,7 +97,7 @@ const ProjectCard = ({
           <ProjectModal 
             isOpen={isModalOpen} 
             onClose={toggleModal} 
-            imgSet={PROJECT_IMAGE_SET[projectName]} 
+            projectPublicSet={PROJECT_PUBLIC_SET[projectName]} 
           />
         </Animator>
       </div>

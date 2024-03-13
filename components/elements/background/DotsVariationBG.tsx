@@ -16,7 +16,7 @@ const DotsVariationBG = ({active, children}: DotsVariationBGProps): ReactElement
       left: '1%', 
       width: '98%', 
       height: '98%', 
-      position: 'relative', // Dotsが正しく配置されるように
+      position: 'relative',
     }}>
       <Animator active={active} duration={{ enter: 0, exit: 1 }}>
         <Dots

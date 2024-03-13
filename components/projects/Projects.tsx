@@ -1,28 +1,8 @@
-import Image from 'next/image';
-import React, { useEffect, useRef, useState } from 'react'
-import { useInView } from "framer-motion";
-import { PROJECT_IMAGE_SET } from '@/components/projects/projectConfig';
-import { fadeIn } from "../../variants"; 
-import FrameCorners from '../elements/frame/FrameCorners';
-import { Animator, useBleeps} from '@arwes/react';
+import React from 'react'
 import MovingLinesBG from '../elements/background/MovingLinesBG';
-import Button from '../elements/button/Button';
-import ProjectModal from './ProjectModal'; 
 import ProjectCard from './ProjectCard';
 
-type BleepsNames = 'expand' | 'fade' | 'transmission' | 'typing' | 'error' | 'click' | 'hover';
-
 const Projects = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: false })
-  const [animationPlayed, setAnimationPlayed] = useState(false);
-  const [active, setActive] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const bleeps = useBleeps<BleepsNames>();
-  const timerPlayId = useRef<number>();
-  const timerStopId = useRef<number>();
-
   return (
     <div id="section-projects" className="bg-[#09101a] pt-[4rem] pb-[1rem] md:pt-[8rem] relative">
       <MovingLinesBG zIndex={0}/>

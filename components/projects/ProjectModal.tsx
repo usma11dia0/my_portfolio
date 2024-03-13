@@ -1,38 +1,45 @@
 import Image from 'next/image';
 import { useCallback, useEffect, useState } from "react";
 import { Animator } from '@arwes/react';
-import { ProjectImageSetType } from '@/components/projects/projectConfig';
+import { ProjectPublicSetType } from '@/components/projects/projectConfig';
 import DotsVariationBG from '../elements/background/DotsVariationBG';
 import FrameKranox from '../elements/frame/FrameKranox';
 import TextBasic from '../elements/text/TextBasic';
 import Button from '../elements/button/Button';
 import ModalSubImage from './ModalSubImage';
 import FrameLines from '../elements/frame/FrameLines';
-import { VideoCameraIcon } from '@heroicons/react/20/solid';
+import { LinkIcon, VideoCameraIcon } from '@heroicons/react/20/solid';
 import FrameUnderline from '../elements/frame/FrameUnderLine';
-import FrameCorners from '../elements/frame/FrameCorners';
-import FrameNefrex from '../elements/frame/FrameNefrex';
 
 interface ModalProps {
   isOpen?: boolean;
   onClose: () => void;
-  imgSet: ProjectImageSetType[string];
+  projectPublicSet: ProjectPublicSetType[string];
 }
 
 const ProjectModal: React.FC<ModalProps> = ({ 
   isOpen, 
   onClose, 
-  imgSet,
+  projectPublicSet,
 }) => {
+  // 各画像のパス
+  const mainImageSrc = projectPublicSet['image']['mainImageSrc'];
+  const subImageSrc1 = projectPublicSet['image']['subImageSrc1'];
+  const subImageSrc2 = projectPublicSet['image']['subImageSrc2'];
+  const subImageSrc3 = projectPublicSet['image']['subImageSrc3'];
+
+  // Projectのテキスト
+  const projectName = projectPublicSet['text']['projectName'];
+  const projectSummary = projectPublicSet['text']['projectSummary'];
+  const projectDetails = projectPublicSet['text']['projectDetails'];
+  const projectURLLink = projectPublicSet['text']['projectURLLink'];
+  const projectDemoLink = projectPublicSet['text']['projectDemoLink'];
+  const projectGithubLink = projectPublicSet['text']['projectGithubLink'];
+  const projectSkills = projectPublicSet['text']['projectSkills'];
+   
   const [showModal, setShowModal] = useState(isOpen);
   const [active, setActive] = useState(true);
-  const [mainImagePath, setMainImagePath] =useState<string>(imgSet['mainImageSrc']);
-
-  // 各画像のパス
-  const mainImageSrc = imgSet['mainImageSrc'];
-  const subImageSrc1 = imgSet['subImageSrc1'];
-  const subImageSrc2 = imgSet['subImageSrc2'];
-  const subImageSrc3 = imgSet['subImageSrc3'];
+  const [mainImagePath, setMainImagePath] =useState<string>(mainImageSrc);
 
   useEffect(() => {
     setShowModal(isOpen);
@@ -100,77 +107,109 @@ const ProjectModal: React.FC<ModalProps> = ({
                           4xl:gap-2 4xl:pt-6 4xl:pl-10
                         "
                       >
-                        <Button name="hover" onClick={() => setMainImagePath(mainImageSrc)}>
+                        <Button name="click" onClick={() => setMainImagePath(mainImageSrc)}>
                           <ModalSubImage src={mainImageSrc}/>
                         </Button>
-                        <Button name="hover" onClick={() => setMainImagePath(subImageSrc1)}>
+                        <Button name="click" onClick={() => setMainImagePath(subImageSrc1)}>
                           <ModalSubImage src={subImageSrc1}/>
                         </Button>
-                        <Button name="hover" onClick={() => setMainImagePath(subImageSrc2)}>
+                        <Button name="click" onClick={() => setMainImagePath(subImageSrc2)}>
                           <ModalSubImage src={subImageSrc2}/>
                         </Button>
-                        <Button name="hover" onClick={() => setMainImagePath(subImageSrc3)}>
+                        <Button name="click" onClick={() => setMainImagePath(subImageSrc3)}>
                           <ModalSubImage src={subImageSrc3}/>
                         </Button>
                       </div>
                     </div>
                     {/* Right Side */}
-                    <div className="pt-10" style={{ paddingLeft: '3rem', paddingRight: '3rem' }}>
+                    <div className="pt-10" style={{ paddingLeft: '3rem', paddingRight: '3rem'}}>
                       <TextBasic className="text-[36px] text-neon-blue-without-flicker" enterSec={5}>
-                        Japanese Prononciation Quiz App
+                        {projectName}
                       </TextBasic>
                       <TextBasic className="text-[22px] pt-10 pb-5 text-sf-blue" enterSec={5}>
-                        日本語の同音異義語を判別するクイズアプリ
+                        {projectSummary}
                       </TextBasic>
-                      <TextBasic className="text-[16px] text-sf-blue" enterSec={5}>
-                        発音された同音異義語を当てる問題と、発生した発音が正確かどうかを判定する問題の二つを用意しています。
-                        自分の声を用いてモデルの学習から作成しており、発音の判定は自分の声以外だと精度が低いです。
+                      <TextBasic className="text-[16px] text-sf-blue min-h-[140px]" enterSec={5}>
+                        {projectDetails}
                       </TextBasic>
-                      <TextBasic className="text-[19px] pt-15 pb-3 text-sf-blue" enterSec={5}>
+                      {/* Link */}
+                      <TextBasic className="text-[19px] pt-5 pb-2 text-sf-blue" enterSec={5}>
                         - Links -
                       </TextBasic>
-                      <div className="flex items-center justify-start pt-1 pl-4">
-                        
-                        <FrameUnderline>
-                          <div className="flex items-center pl-2">
-                            <VideoCameraIcon
-                              className="pl-0"
-                              color='white'
-                              style={{ width: "20px", height: "20px" }}
-                            />
-                            <TextBasic className="text-[16px] p-2 text-sf-blue" enterSec={5}>
-                              DEMO
-                            </TextBasic>
-                          </div>
+                      <div className="flex items-center justify-start pt-0 pl-4">
+                        <FrameUnderline link={projectURLLink}>
+                          <a 
+                            href={projectURLLink ? projectURLLink : "javascript:void(0);"}  
+                            target={projectURLLink ? "_blank" : "_self"} //_blankのままだとjavascript:voidが適用されないため、_selfに変換'
+                            rel="noopener noreferrer"
+                          >
+                            <div className="flex items-center pl-2">
+                              <LinkIcon
+                                className="pl-0"
+                                color='white'
+                                style={{ width: "20px", height: "20px" }}
+                              />
+                              <TextBasic className="text-[16px] p-2 text-sf-blue" enterSec={5}>
+                                URL
+                              </TextBasic>
+                            </div>
+                          </a>
                         </FrameUnderline>
                         <div className='pl-8'/>
-                        <FrameUnderline>
-                          <div className="flex items-center pl-2">
-                            <Image
-                              src="/images/github-mark-white.svg" // publicフォルダからの相対パス
-                              alt="GitHub"
-                              width={20} // 幅を24ピクセルに設定
-                              height={20} // 高さを24ピクセルに設定
-                            />
-                            <TextBasic className="text-[16px] p-2 text-sf-blue" enterSec={5}>
-                              GITHUB
-                            </TextBasic>
-                          </div>
+                        <FrameUnderline link={projectDemoLink}>
+                          <a 
+                            href={projectDemoLink ? projectDemoLink : "javascript:void(0);"} 
+                            target={projectDemoLink ? "_blank" : "_self"} //_blankのままだとjavascript:voidが適用されないため、_selfに変換'
+                            rel="noopener noreferrer"
+                          >
+                            <div className="flex items-center pl-2">
+                              <VideoCameraIcon
+                                className="pl-0"
+                                color='white'
+                                style={{ width: "20px", height: "20px" }}
+                              />
+                              <TextBasic className="text-[16px] p-2 text-sf-blue" enterSec={5}>
+                                DEMO
+                              </TextBasic>
+                            </div>
+                          </a>
+                        </FrameUnderline>
+                        <div className='pl-8'/>
+                        <FrameUnderline link={projectGithubLink}>
+                          <a 
+                            href={projectGithubLink ? projectGithubLink : "javascript:void(0);"}
+                            target={projectGithubLink ? "_blank" : "_self"} //_blankのままだとjavascript:voidが適用されないため、_selfに変換'
+                            rel="noopener noreferrer"
+                          >
+                            <div className="flex items-center pl-2">
+                              <Image
+                                src="/images/github-mark-white.svg"
+                                alt="GitHub"
+                                width={20}
+                                height={20}
+                              />
+                              <TextBasic className="text-[16px] p-2 text-sf-blue" enterSec={5}>
+                                GITHUB
+                              </TextBasic>
+                            </div>
+                          </a>
                         </FrameUnderline>
                       </div>
-                      <div className="pt-11"/>
+                      <div className="pt-10"/>
+                      {/* 主な使用技術 */}
                       <FrameLines theme={'frontEnd'}>
-                        <div className="p-4 pt-6 pb-6">
+                        <div className="p-8 pt-6 pb-6">
                           {/* <TextBasic className="pb-4 text-[20px] text-neon-blue-without-flicker">Details</TextBasic> */}
-                            <TextBasic className="text-sf-blue" enterSec={5}>
-                              - 使用技術 - <br />
-                              ■ HTML/CSS - 2 years of experience<br />
-                              ■ JavaScript - 2 year of experience<br />
-                              ■ TypeScript - 1 year of experience<br />
-                              ■ Dart/Flutter - 1 year of experience<br />
-                              ■ React - 1 year of experience<br />
-                              ■ Next.js - ※currently studying<br />
+                            <TextBasic className="pb-3 text-neon-blue" enterSec={5}>
+                              - 主な使用技術 - 
                             </TextBasic>
+                            <div className="grid grid-cols-2 pl-12">
+                            {projectSkills.map((skill, index) => (
+                              <TextBasic key={index} className="text-sf-blue" enterSec={5}>
+                                ■ {skill}
+                              </TextBasic>
+                            ))}
+                            </div>
                         </div>
                       </FrameLines>
                     </div>

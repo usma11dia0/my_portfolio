@@ -12,7 +12,7 @@ const TextBasic = ({children, className, enterSec}: TextBasicProps): ReactElemen
   const [active, setActive] = useState(true);
 
   return (
-    <Animator active={active} duration={{enter: enterSec}}>
+    <Animator active={active} duration={{ enter: enterSec }}>
       <Text 
         className={className}
         as='p'
