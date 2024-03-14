@@ -10,6 +10,7 @@ import ModalSubImage from './ModalSubImage';
 import FrameLines from '../elements/frame/FrameLines';
 import { LinkIcon, VideoCameraIcon } from '@heroicons/react/20/solid';
 import FrameUnderline from '../elements/frame/FrameUnderLine';
+import ImageMotion from './ImageMotion';
 
 interface ModalProps {
   isOpen?: boolean;
@@ -83,11 +84,12 @@ const ProjectModal: React.FC<ModalProps> = ({
         >
           <Animator active={active}>
             <FrameKranox>
-                <DotsVariationBG active={active}>
-                  <div className="grid grid-cols-2 gap-10" onClick={handleInsideClick}>
-                    {/* Left Side */}
-                    <div className="transform translate-x-10 translate-y-10">
-                      {/* Main Image */}
+              <DotsVariationBG active={active}>
+                <div className="grid grid-cols-2 gap-10" onClick={handleInsideClick}>
+                  {/* Left Side */}
+                  <div className="transform translate-x-10 translate-y-15">
+                    {/* Main Image */}
+                    <ImageMotion active={active}>
                       <Image
                         src={mainImagePath}
                         alt="portfolio"
@@ -99,6 +101,7 @@ const ProjectModal: React.FC<ModalProps> = ({
                         " 
                         style={{ filter: 'brightness(1.3)' }}
                       />
+                    
                       {/* Sub Image */}
                       <div 
                         className="
@@ -120,101 +123,102 @@ const ProjectModal: React.FC<ModalProps> = ({
                           <ModalSubImage src={subImageSrc3}/>
                         </Button>
                       </div>
-                    </div>
-                    {/* Right Side */}
-                    <div className="pt-10" style={{ paddingLeft: '3rem', paddingRight: '3rem'}}>
-                      <TextBasic className="text-[36px] text-neon-blue-without-flicker" enterSec={5}>
-                        {projectName}
-                      </TextBasic>
-                      <TextBasic className="text-[22px] pt-10 pb-5 text-sf-blue" enterSec={5}>
-                        {projectSummary}
-                      </TextBasic>
-                      <TextBasic className="text-[16px] text-sf-blue min-h-[140px]" enterSec={5}>
-                        {projectDetails}
-                      </TextBasic>
-                      {/* Link */}
-                      <TextBasic className="text-[19px] pt-5 pb-2 text-sf-blue" enterSec={5}>
-                        - Links -
-                      </TextBasic>
-                      <div className="flex items-center justify-start pt-0 pl-4">
-                        <FrameUnderline link={projectURLLink}>
-                          <a 
-                            href={projectURLLink ? projectURLLink : "javascript:void(0);"}  
-                            target={projectURLLink ? "_blank" : "_self"} //_blankのままだとjavascript:voidが適用されないため、_selfに変換'
-                            rel="noopener noreferrer"
-                          >
-                            <div className="flex items-center pl-2">
-                              <LinkIcon
-                                className="pl-0"
-                                color='white'
-                                style={{ width: "20px", height: "20px" }}
-                              />
-                              <TextBasic className="text-[16px] p-2 text-sf-blue" enterSec={5}>
-                                URL
-                              </TextBasic>
-                            </div>
-                          </a>
-                        </FrameUnderline>
-                        <div className='pl-8'/>
-                        <FrameUnderline link={projectDemoLink}>
-                          <a 
-                            href={projectDemoLink ? projectDemoLink : "javascript:void(0);"} 
-                            target={projectDemoLink ? "_blank" : "_self"} //_blankのままだとjavascript:voidが適用されないため、_selfに変換'
-                            rel="noopener noreferrer"
-                          >
-                            <div className="flex items-center pl-2">
-                              <VideoCameraIcon
-                                className="pl-0"
-                                color='white'
-                                style={{ width: "20px", height: "20px" }}
-                              />
-                              <TextBasic className="text-[16px] p-2 text-sf-blue" enterSec={5}>
-                                DEMO
-                              </TextBasic>
-                            </div>
-                          </a>
-                        </FrameUnderline>
-                        <div className='pl-8'/>
-                        <FrameUnderline link={projectGithubLink}>
-                          <a 
-                            href={projectGithubLink ? projectGithubLink : "javascript:void(0);"}
-                            target={projectGithubLink ? "_blank" : "_self"} //_blankのままだとjavascript:voidが適用されないため、_selfに変換'
-                            rel="noopener noreferrer"
-                          >
-                            <div className="flex items-center pl-2">
-                              <Image
-                                src="/images/github-mark-white.svg"
-                                alt="GitHub"
-                                width={20}
-                                height={20}
-                              />
-                              <TextBasic className="text-[16px] p-2 text-sf-blue" enterSec={5}>
-                                GITHUB
-                              </TextBasic>
-                            </div>
-                          </a>
-                        </FrameUnderline>
-                      </div>
-                      <div className="pt-10"/>
-                      {/* 主な使用技術 */}
-                      <FrameLines theme={'frontEnd'}>
-                        <div className="p-8 pt-6 pb-6">
-                          {/* <TextBasic className="pb-4 text-[20px] text-neon-blue-without-flicker">Details</TextBasic> */}
-                            <TextBasic className="pb-3 text-neon-blue" enterSec={5}>
-                              - 主な使用技術 - 
-                            </TextBasic>
-                            <div className="grid grid-cols-2 pl-12">
-                            {projectSkills.map((skill, index) => (
-                              <TextBasic key={index} className="text-sf-blue" enterSec={5}>
-                                ■ {skill}
-                              </TextBasic>
-                            ))}
-                            </div>
-                        </div>
-                      </FrameLines>
-                    </div>
+                    </ImageMotion>
                   </div>
-                </DotsVariationBG>
+                  {/* Right Side */}
+                  <div className="pt-10" style={{ paddingLeft: '3rem', paddingRight: '3rem'}}>
+                    <TextBasic className="text-[36px] text-neon-blue-without-flicker" enterSec={5}>
+                      {projectName}
+                    </TextBasic>
+                    <TextBasic className="text-[22px] pt-10 pb-5 text-sf-blue" enterSec={5}>
+                      {projectSummary}
+                    </TextBasic>
+                    <TextBasic className="text-[16px] text-sf-blue min-h-[140px]" enterSec={5}>
+                      {projectDetails}
+                    </TextBasic>
+                    {/* Link */}
+                    <TextBasic className="text-[19px] pt-5 pb-2 text-sf-blue" enterSec={5}>
+                      - Links -
+                    </TextBasic>
+                    <div className="flex items-center justify-start pt-0 pl-4">
+                      <FrameUnderline link={projectURLLink}>
+                        <a 
+                          href={projectURLLink ? projectURLLink : "javascript:void(0);"}  
+                          target={projectURLLink ? "_blank" : "_self"} //_blankのままだとjavascript:voidが適用されないため、_selfに変換'
+                          rel="noopener noreferrer"
+                        >
+                          <div className="flex items-center pl-2">
+                            <LinkIcon
+                              className="pl-0"
+                              color='white'
+                              style={{ width: "20px", height: "20px" }}
+                            />
+                            <TextBasic className="text-[16px] p-2 text-sf-blue" enterSec={5}>
+                              URL
+                            </TextBasic>
+                          </div>
+                        </a>
+                      </FrameUnderline>
+                      <div className='pl-8'/>
+                      <FrameUnderline link={projectDemoLink}>
+                        <a 
+                          href={projectDemoLink ? projectDemoLink : "javascript:void(0);"} 
+                          target={projectDemoLink ? "_blank" : "_self"} //_blankのままだとjavascript:voidが適用されないため、_selfに変換'
+                          rel="noopener noreferrer"
+                        >
+                          <div className="flex items-center pl-2">
+                            <VideoCameraIcon
+                              className="pl-0"
+                              color='white'
+                              style={{ width: "20px", height: "20px" }}
+                            />
+                            <TextBasic className="text-[16px] p-2 text-sf-blue" enterSec={5}>
+                              DEMO
+                            </TextBasic>
+                          </div>
+                        </a>
+                      </FrameUnderline>
+                      <div className='pl-8'/>
+                      <FrameUnderline link={projectGithubLink}>
+                        <a 
+                          href={projectGithubLink ? projectGithubLink : "javascript:void(0);"}
+                          target={projectGithubLink ? "_blank" : "_self"} //_blankのままだとjavascript:voidが適用されないため、_selfに変換'
+                          rel="noopener noreferrer"
+                        >
+                          <div className="flex items-center pl-2">
+                            <Image
+                              src="/images/github-mark-white.svg"
+                              alt="GitHub"
+                              width={20}
+                              height={20}
+                            />
+                            <TextBasic className="text-[16px] p-2 text-sf-blue" enterSec={5}>
+                              GITHUB
+                            </TextBasic>
+                          </div>
+                        </a>
+                      </FrameUnderline>
+                    </div>
+                    <div className="pt-10"/>
+                    {/* 主な使用技術 */}
+                    <FrameLines theme={'frontEnd'}>
+                      <div className="p-8 pt-6 pb-6">
+                        {/* <TextBasic className="pb-4 text-[20px] text-neon-blue-without-flicker">Details</TextBasic> */}
+                          <TextBasic className="pb-3 text-neon-blue" enterSec={5}>
+                            - 主な使用技術 - 
+                          </TextBasic>
+                          <div className="grid grid-cols-2 pl-12">
+                          {projectSkills.map((skill, index) => (
+                            <TextBasic key={index} className="text-sf-blue" enterSec={5}>
+                              ■ {skill}
+                            </TextBasic>
+                          ))}
+                          </div>
+                      </div>
+                    </FrameLines>
+                  </div>
+                </div>
+              </DotsVariationBG>
             </FrameKranox>
           </Animator>
         </div>
