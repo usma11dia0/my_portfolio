@@ -19,6 +19,7 @@ module.exports = {
       },
       spacing: {
         '15': '60px',
+        '75': '300px',
         '120': '480px'
       },
       backgroundImage: {

@@ -68,7 +68,7 @@ const ProjectModal: React.FC<ModalProps> = ({
       <div
         className="
           fixed inset-0 z-50 
-          flex justify-center  items-center  
+          flex justify-center  items-center
           overflow-x-hidden overflow-y-auto 
           outline-none focus:outline-none
           bg-neutral-800/70
@@ -77,36 +77,45 @@ const ProjectModal: React.FC<ModalProps> = ({
       >
         {/*body*/}
         <div className="
-          relative flex justify-center items-center
-          pt-24
-          w-[100%] h-[90%]
+          relative flex justify-center items-center z-[0]
+          pt-[800px] pb-[50px] h-[240%]
+          lg:pt-24 lg:w-[100%] lg:h-[90%]
           "
         >
           <Animator active={active}>
             <FrameKranox>
               <DotsVariationBG active={active}>
-                <div className="grid grid-cols-2 gap-10" onClick={handleInsideClick}>
+                <div className="
+                  grid grid-cols-1 gap-10
+                  lg:grid-cols-2
+                  "
+                  onClick={handleInsideClick}
+                >
                   {/* Left Side */}
-                  <div className="transform translate-x-10 translate-y-6">
-                    {/* Main Image */}
+                  <div className="
+                    order-2 z-[0] transform translate-x-12 translate-y-75
+                    lg:order-1 lg:translate-x-10 lg:translate-y-6
+                  ">
                     <ImageMotion active={active}>
+                      {/* Main Image */}
                       <Image
                         src={mainImagePath}
                         alt="portfolio"
                         width={800} 
                         height={800}
                         className="
-                          object-contain z-[1] relative 
+                          object-contain relative 
                           filter border border-dotted border-[hsl(180,75%,30%)]
+                          w-[85%] h-full
+                          lg:w-[100%]
                         " 
                         style={{ filter: 'brightness(1.3)' }}
                       />
-                    
                       {/* Sub Image */}
                       <div 
                         className="
                           grid grid-cols-2 gap-4
-                          pt-10 pl-16
+                          pt-10 pl-0 w-[85%]
                           4xl:gap-2 4xl:pt-6 4xl:pl-10
                         "
                       >
@@ -126,14 +135,19 @@ const ProjectModal: React.FC<ModalProps> = ({
                     </ImageMotion>
                   </div>
                   {/* Right Side */}
-                  <div className="pt-8" style={{ paddingLeft: '3rem', paddingRight: '3rem'}}>
+                  <div className="
+                    pt-8 z-[0] order-1
+                    lg:order-2
+                    " 
+                    style={{ paddingLeft: '3rem', paddingRight: '3rem'}}
+                  >
                     <TextBasic className="text-[36px] text-neon-blue-without-flicker" enterSec={5}>
                       {projectName}
                     </TextBasic>
                     <TextBasic className="text-[22px] pt-10 pb-5 text-sf-blue" enterSec={5}>
                       {projectSummary}
                     </TextBasic>
-                    <TextBasic className="text-[16px] text-sf-blue min-h-[140px]" enterSec={5}>
+                    <TextBasic className="text-[16px] text-sf-blue min-h-[120px] lg:min-h-[140px]" enterSec={5}>
                       {projectDetails}
                     </TextBasic>
                     {/* Link */}
