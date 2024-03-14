@@ -23,7 +23,6 @@ const ImageMotion = ({children, active}: ImageMotionProps): ReactElement => {
             scaleX: 0,
             scaleY: 0,
             width: "100%",
-            // height: "100px",
           }}
           exit={{
             opacity: 0,
@@ -32,9 +31,8 @@ const ImageMotion = ({children, active}: ImageMotionProps): ReactElement => {
           }}
           animate={{
             opacity: 1,
-            scaleX: [0, 1.3, 0.1, 1, 1], // 最初に横に伸び、その後元に戻る
+            scaleX: [0, 1.3, 0.1, 1.0, 1.0], // 最初に横に伸び、その後元に戻る
             scaleY: [0, 0.001, 1.0, 1.0, 1.0], // scaleYのアニメーションはscaleXの後に実行
-            boxShadow: "1px 1px 10px rgba(0, 0, 0, 0.3)",
           }}
           transition={{
             duration: 0.4,

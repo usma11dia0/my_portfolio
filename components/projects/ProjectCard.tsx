@@ -85,6 +85,12 @@ const ProjectCard = ({
         <Animator active={active}>
           <FrameCorners>
             <Button name='click' onClick={toggleModal}>
+              <div className="
+                relative 
+                w-[45vw] h-[25vh]
+                lg:w-[35vw] lg:h-[25vh]
+                xl:w-[25vw] xl:h-[25vh]  
+              ">
               <Image
                 fill
                 src={PROJECT_PUBLIC_SET[projectName]['image']['mainImageSrc']}
@@ -92,6 +98,7 @@ const ProjectCard = ({
                 className="object-contain p-3"
                 sizes="(min-width: 768px) 300px, 200px"
               />
+              </div>
             </Button>
           </FrameCorners>
           <ProjectModal 

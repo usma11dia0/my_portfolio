@@ -33,7 +33,7 @@ const FrameLines = ({children, theme}: FrameLinesProps): ReactElement => {
       position: 'relative',
       zIndex: 1,
       '[data-name=bg]': {
-        color: 'hsla(0, 50%, 10%, 0.5)'
+        color: 'hsla(0, 50%, 10%, 0.3)'
       },
       '[data-name=line]': {
         color: currentTheme.color,

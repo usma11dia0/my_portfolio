@@ -15,16 +15,14 @@ const ModalSubImage = ({src}: SubImageProps) => {
       <Image
         src={src}
         alt="portfolio"
-        layout="responsive"
-        width={25} 
-        height={40}
+        width={250} 
+        height={400}
         className="
           object-contain z-[1]
           filter border border-dotted border-[hsl(180,75%,30%)]
           brightness-60
           group-hover:brightness-100 group-hover:border-dotted group-hover:border-[hsl(180,75%,60%)]
         " 
-        // style={{ filter: 'brightness(0.6)'}}
       />
     </div>
   )

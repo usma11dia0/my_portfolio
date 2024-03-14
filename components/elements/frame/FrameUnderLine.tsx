@@ -21,10 +21,10 @@ const FrameUnderline = ({children, link}: FrameUnderLineProps): ReactElement => 
       ...(link !== "" && {
         ':hover': {
           filter: 'brightness(1.6)',
-          'border-top': '1px dotted hsl(180, 75%, 30%)',
-          'border-left': '1px dotted hsl(180, 75%, 30%)',
-          'border-bottom': 'none',
-          'border-right': 'none',
+          'borderTop': '1px dotted hsl(180, 75%, 30%)',
+          'borderLeft': '1px dotted hsl(180, 75%, 30%)',
+          'borderBottom': 'none',
+          'borderRight': 'none',
           position: 'relative',
           '&:after': {
             content: '""',

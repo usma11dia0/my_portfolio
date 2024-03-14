@@ -19,6 +19,7 @@ module.exports = {
       },
       spacing: {
         '15': '60px',
+        '120': '480px'
       },
       backgroundImage: {
         banner: 'url("/images/banner.jpg")',

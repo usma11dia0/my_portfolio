@@ -87,7 +87,7 @@ const ProjectModal: React.FC<ModalProps> = ({
               <DotsVariationBG active={active}>
                 <div className="grid grid-cols-2 gap-10" onClick={handleInsideClick}>
                   {/* Left Side */}
-                  <div className="transform translate-x-10 translate-y-15">
+                  <div className="transform translate-x-10 translate-y-6">
                     {/* Main Image */}
                     <ImageMotion active={active}>
                       <Image
@@ -126,7 +126,7 @@ const ProjectModal: React.FC<ModalProps> = ({
                     </ImageMotion>
                   </div>
                   {/* Right Side */}
-                  <div className="pt-10" style={{ paddingLeft: '3rem', paddingRight: '3rem'}}>
+                  <div className="pt-8" style={{ paddingLeft: '3rem', paddingRight: '3rem'}}>
                     <TextBasic className="text-[36px] text-neon-blue-without-flicker" enterSec={5}>
                       {projectName}
                     </TextBasic>
@@ -143,8 +143,13 @@ const ProjectModal: React.FC<ModalProps> = ({
                     <div className="flex items-center justify-start pt-0 pl-4">
                       <FrameUnderline link={projectURLLink}>
                         <a 
-                          href={projectURLLink ? projectURLLink : "javascript:void(0);"}  
-                          target={projectURLLink ? "_blank" : "_self"} //_blankのままだとjavascript:voidが適用されないため、_selfに変換'
+                          href={projectURLLink || "#"} 
+                          onClick={(e) => {
+                            if (!projectURLLink) {
+                              e.preventDefault();
+                            }
+                          }}
+                          target="_blank"
                           rel="noopener noreferrer"
                         >
                           <div className="flex items-center pl-2">
@@ -162,8 +167,13 @@ const ProjectModal: React.FC<ModalProps> = ({
                       <div className='pl-8'/>
                       <FrameUnderline link={projectDemoLink}>
                         <a 
-                          href={projectDemoLink ? projectDemoLink : "javascript:void(0);"} 
-                          target={projectDemoLink ? "_blank" : "_self"} //_blankのままだとjavascript:voidが適用されないため、_selfに変換'
+                          href={projectDemoLink || "#"} 
+                          onClick={(e) => {
+                            if (!projectDemoLink) {
+                              e.preventDefault();
+                            }
+                          }}
+                          target="_blank"
                           rel="noopener noreferrer"
                         >
                           <div className="flex items-center pl-2">
@@ -181,8 +191,13 @@ const ProjectModal: React.FC<ModalProps> = ({
                       <div className='pl-8'/>
                       <FrameUnderline link={projectGithubLink}>
                         <a 
-                          href={projectGithubLink ? projectGithubLink : "javascript:void(0);"}
-                          target={projectGithubLink ? "_blank" : "_self"} //_blankのままだとjavascript:voidが適用されないため、_selfに変換'
+                          href={projectGithubLink || "#"} 
+                          onClick={(e) => {
+                            if (!projectGithubLink) {
+                              e.preventDefault();
+                            }
+                          }}
+                          target="_blank"
                           rel="noopener noreferrer"
                         >
                           <div className="flex items-center pl-2">
@@ -199,10 +214,10 @@ const ProjectModal: React.FC<ModalProps> = ({
                         </a>
                       </FrameUnderline>
                     </div>
-                    <div className="pt-10"/>
+                    <div className="pt-14"/>
                     {/* 主な使用技術 */}
                     <FrameLines theme={'frontEnd'}>
-                      <div className="p-8 pt-6 pb-6">
+                      <div className="p-8 pt-8 pb-6 min-h-[230px]">
                         {/* <TextBasic className="pb-4 text-[20px] text-neon-blue-without-flicker">Details</TextBasic> */}
                           <TextBasic className="pb-3 text-neon-blue" enterSec={5}>
                             - 主な使用技術 - 
