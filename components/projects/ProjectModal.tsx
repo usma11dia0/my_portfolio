@@ -93,7 +93,7 @@ const ProjectModal: React.FC<ModalProps> = ({
                 >
                   {/* Left Side */}
                   <div className="
-                    order-2 z-[0] transform translate-x-12 translate-y-75
+                    order-1 z-[1] transform translate-x-12 translate-y-145
                     lg:order-1 lg:translate-x-10 lg:translate-y-6
                   ">
                     <ImageMotion active={active}>
@@ -136,7 +136,7 @@ const ProjectModal: React.FC<ModalProps> = ({
                   </div>
                   {/* Right Side */}
                   <div className="
-                    pt-8 z-[0] order-1
+                    pt-2 z-[0] order-2
                     lg:order-2
                     " 
                     style={{ paddingLeft: '3rem', paddingRight: '3rem'}}
@@ -147,11 +147,11 @@ const ProjectModal: React.FC<ModalProps> = ({
                     <TextBasic className="text-[22px] pt-10 pb-5 text-sf-blue" enterSec={5}>
                       {projectSummary}
                     </TextBasic>
-                    <TextBasic className="text-[16px] text-sf-blue min-h-[120px] lg:min-h-[140px]" enterSec={5}>
+                    <TextBasic className="text-[16px] text-sf-blue min-h-[680px] lg:min-h-[140px]" enterSec={5}>
                       {projectDetails}
                     </TextBasic>
                     {/* Link */}
-                    <TextBasic className="text-[19px] pt-5 pb-2 text-sf-blue" enterSec={5}>
+                    <TextBasic className="text-[19px] pt-10 pb-5 text-sf-blue" enterSec={5}>
                       - Links -
                     </TextBasic>
                     <div className="flex items-center justify-start pt-0 pl-4">
@@ -172,9 +172,19 @@ const ProjectModal: React.FC<ModalProps> = ({
                               color='white'
                               style={{ width: "20px", height: "20px" }}
                             />
-                            <TextBasic className="text-[16px] p-2 text-sf-blue" enterSec={5}>
-                              URL
-                            </TextBasic>
+                            {
+                              projectURLLink ? (
+                                <Button name='fade'>
+                                  <TextBasic className="text-[16px] p-2 text-sf-blue" enterSec={5}>
+                                    URL
+                                  </TextBasic>
+                                </Button>
+                              ) : (
+                                <TextBasic className="text-[16px] p-2 text-sf-blue" enterSec={5}>
+                                  URL
+                                </TextBasic>
+                              )
+                            }
                           </div>
                         </a>
                       </FrameUnderline>
@@ -196,9 +206,19 @@ const ProjectModal: React.FC<ModalProps> = ({
                               color='white'
                               style={{ width: "20px", height: "20px" }}
                             />
-                            <TextBasic className="text-[16px] p-2 text-sf-blue" enterSec={5}>
-                              DEMO
-                            </TextBasic>
+                            {
+                              projectDemoLink ? (
+                                <Button name='fade'>
+                                  <TextBasic className="text-[16px] p-2 text-sf-blue" enterSec={5}>
+                                    DEMO
+                                  </TextBasic>
+                                </Button>
+                              ) : (
+                                <TextBasic className="text-[16px] p-2 text-sf-blue" enterSec={5}>
+                                  DEMO
+                                </TextBasic>
+                              )
+                            }
                           </div>
                         </a>
                       </FrameUnderline>
@@ -221,9 +241,19 @@ const ProjectModal: React.FC<ModalProps> = ({
                               width={20}
                               height={20}
                             />
-                            <TextBasic className="text-[16px] p-2 text-sf-blue" enterSec={5}>
-                              GITHUB
-                            </TextBasic>
+                            {
+                              projectGithubLink ? (
+                                <Button name='fade'>
+                                  <TextBasic className="text-[16px] p-2 text-sf-blue" enterSec={5}>
+                                    GITHUB
+                                  </TextBasic>
+                                </Button>
+                              ) : (
+                                <TextBasic className="text-[16px] p-2 text-sf-blue" enterSec={5}>
+                                  GITHUB
+                                </TextBasic>
+                              )
+                            }
                           </div>
                         </a>
                       </FrameUnderline>
