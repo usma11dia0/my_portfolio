@@ -89,7 +89,7 @@ const Skills = () => {
 
   return (
     <div id="section-skills" className="
-      relative bg-[#09101a] pt-[2.5rem] pb-[5rem] 
+      relative bg-[#09101a] pt-[4rem] pb-[5rem] 
       md:pt-[8.5rem]
     ">
       <PuffsAndGridBG zIndex={0}/>

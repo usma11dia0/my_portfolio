@@ -13,7 +13,7 @@ const About = () => {
   return (
     <div id="section-about" className="
       bg-[#121121] 
-      pt-[3rem] 
+      pt-[4rem] 
       sm:pt-[10rem] 
       md:pt-[14rem]
     ">
@@ -47,7 +47,10 @@ const About = () => {
           <div className="flex-col items-center space-y-10">
             <div className="flex items-center space-x-5">
               <span className="w-[60px] hidden md:block h-[5px] bg-slate-400 rounded-sm"></span>
-              <TextDecipher className="text-[16px] text-slate-300 w-[100%]">
+              <TextDecipher className="
+                text-[16px] text-slate-300 w-[100%] min-h-[180px]
+                
+              ">
                 Web developer with several years of experience in building web applications, mobile applications, and web scraping. Proficient in leveraging latest technologies to create responsive, user-friendly, and scalable applications
               </TextDecipher>
             </div>

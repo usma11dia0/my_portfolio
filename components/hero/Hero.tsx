@@ -9,7 +9,7 @@ import { fadeIn } from "../../variants";
 const Hero = () => {
   return (
     <div 
-      className="h-[88vh] bg-banner mt-[10vh] bg-cover bg-center"
+      className="h-[90vh] bg-banner mt-[10vh] bg-cover bg-center"
     >
       <Particle />
       <div className="

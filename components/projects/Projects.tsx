@@ -5,7 +5,7 @@ import ProjectCard from './ProjectCard';
 const Projects = () => {
   return (
     <div id="section-projects" className="
-      relative bg-[#09101a] pt-[2.5rem] pb-[1rem] 
+      relative bg-[#09101a] pt-[4rem] pb-[1rem] 
       md:pt-[8rem] 
     ">
       <MovingLinesBG zIndex={0}/>
