@@ -77,8 +77,8 @@ const ProjectModal: React.FC<ModalProps> = ({
       >
         {/*body*/}
         <div className="
-          relative flex justify-center items-center z-[0]
-          pt-[800px] pb-[50px] h-[240%]
+          relative flex justify-center items-center z-[0] pt-[850px] pb-[50px] h-[325%]
+          sm:h-[240%] sm:pt-[580px] sm:pb-[50px]
           lg:pt-24 lg:w-[100%] lg:h-[90%]
           "
         >
@@ -93,7 +93,8 @@ const ProjectModal: React.FC<ModalProps> = ({
                 >
                   {/* Left Side */}
                   <div className="
-                    order-1 z-[1] transform translate-x-12 translate-y-145
+                    order-1 z-[1] transform translate-x-10 translate-y-140
+                    sm:translate-x-12 sm:translate-y-145
                     lg:order-1 lg:translate-x-10 lg:translate-y-6
                   ">
                     <ImageMotion active={active}>
@@ -106,7 +107,8 @@ const ProjectModal: React.FC<ModalProps> = ({
                         className="
                           object-contain relative 
                           filter border border-dotted border-[hsl(180,75%,30%)]
-                          w-[85%] h-full
+                          w-[75%] h-full
+                          sm:w-[85%]
                           lg:w-[100%]
                         " 
                         style={{ filter: 'brightness(1.3)' }}
@@ -115,7 +117,9 @@ const ProjectModal: React.FC<ModalProps> = ({
                       <div 
                         className="
                           grid grid-cols-2 gap-4
-                          pt-10 pl-0 w-[85%]
+                          pt-6 pl-1 pb-5 w-[75%]
+                          sm:w-[85%] sm:pt-10 sm:pl-0
+                          md:pl-6 md:w-[88%]
                           4xl:gap-2 4xl:pt-6 4xl:pl-10
                         "
                       >
@@ -136,25 +140,47 @@ const ProjectModal: React.FC<ModalProps> = ({
                   </div>
                   {/* Right Side */}
                   <div className="
-                    pt-2 z-[0] order-2
+                    order-2 pt-0 z-[0] pl-12 pr-12
+                    sm:pt-2
                     lg:order-2
-                    " 
-                    style={{ paddingLeft: '3rem', paddingRight: '3rem'}}
+                    "
                   >
-                    <TextBasic className="text-[36px] text-neon-blue-without-flicker" enterSec={5}>
+                    <TextBasic className="
+                      text-neon-blue-without-flicker text-[30px] leading-10
+                      sm:text-[36px]
+                      "
+                      enterSec={5}
+                    >
                       {projectName}
                     </TextBasic>
-                    <TextBasic className="text-[22px] pt-10 pb-5 text-sf-blue" enterSec={5}>
+                    <TextBasic className="
+                      text-sf-blue text-[20px] pt-8 pb-5 
+                      "
+                      enterSec={5}
+                    >
                       {projectSummary}
                     </TextBasic>
-                    <TextBasic className="text-[16px] text-sf-blue min-h-[680px] lg:min-h-[140px]" enterSec={5}>
+                    <TextBasic className="
+                      text-[16px] text-sf-blue min-h-[440px]
+                      md:min-h-[680px] 
+                      lg:min-h-[140px]
+                      " 
+                      enterSec={5}
+                    >
                       {projectDetails}
                     </TextBasic>
                     {/* Link */}
-                    <TextBasic className="text-[19px] pt-10 pb-5 text-sf-blue" enterSec={5}>
+                    <TextBasic className="
+                      text-[19px] pt-10 pb-5 text-sf-blue
+                      " 
+                      enterSec={5}
+                    >
                       - Links -
                     </TextBasic>
-                    <div className="flex items-center justify-start pt-0 pl-4">
+                    <div className="
+                      grid grid-cols-2 gap-6 justify-start
+                      sm:pl-4
+                    ">
                       <FrameUnderline link={projectURLLink}>
                         <a 
                           href={projectURLLink || "#"} 
@@ -175,12 +201,22 @@ const ProjectModal: React.FC<ModalProps> = ({
                             {
                               projectURLLink ? (
                                 <Button name='fade'>
-                                  <TextBasic className="text-[16px] p-2 text-sf-blue" enterSec={5}>
+                                  <TextBasic className="
+                                    text-[14px] p-2 text-sf-blue
+                                    sm:text-[16px]
+                                    " 
+                                    enterSec={5}
+                                  >
                                     URL
                                   </TextBasic>
                                 </Button>
                               ) : (
-                                <TextBasic className="text-[16px] p-2 text-sf-blue" enterSec={5}>
+                                <TextBasic className="
+                                  text-[14px] p-2 text-sf-blue
+                                  sm:text-[16px]
+                                " 
+                                enterSec={5}
+                                >
                                   URL
                                 </TextBasic>
                               )
@@ -188,7 +224,7 @@ const ProjectModal: React.FC<ModalProps> = ({
                           </div>
                         </a>
                       </FrameUnderline>
-                      <div className='pl-8'/>
+                      {/* <div className='pl-8'/> */}
                       <FrameUnderline link={projectDemoLink}>
                         <a 
                           href={projectDemoLink || "#"} 
@@ -209,12 +245,22 @@ const ProjectModal: React.FC<ModalProps> = ({
                             {
                               projectDemoLink ? (
                                 <Button name='fade'>
-                                  <TextBasic className="text-[16px] p-2 text-sf-blue" enterSec={5}>
+                                  <TextBasic className="
+                                    text-[14px] p-2 text-sf-blue
+                                    sm:text-[16px]
+                                    "
+                                    enterSec={5}
+                                  >
                                     DEMO
                                   </TextBasic>
                                 </Button>
                               ) : (
-                                <TextBasic className="text-[16px] p-2 text-sf-blue" enterSec={5}>
+                                <TextBasic className="
+                                  text-[14px] p-2 text-sf-blue
+                                  sm:text-[16px]
+                                  " 
+                                  enterSec={5}
+                                >
                                   DEMO
                                 </TextBasic>
                               )
@@ -222,7 +268,7 @@ const ProjectModal: React.FC<ModalProps> = ({
                           </div>
                         </a>
                       </FrameUnderline>
-                      <div className='pl-8'/>
+                      {/* <div className='pl-8'/> */}
                       <FrameUnderline link={projectGithubLink}>
                         <a 
                           href={projectGithubLink || "#"} 
@@ -244,12 +290,21 @@ const ProjectModal: React.FC<ModalProps> = ({
                             {
                               projectGithubLink ? (
                                 <Button name='fade'>
-                                  <TextBasic className="text-[16px] p-2 text-sf-blue" enterSec={5}>
+                                  <TextBasic className="
+                                    text-[12px] p-2 text-sf-blue
+                                    sm:text-[16px]
+                                  " enterSec={5}
+                                  >
                                     GITHUB
                                   </TextBasic>
                                 </Button>
                               ) : (
-                                <TextBasic className="text-[16px] p-2 text-sf-blue" enterSec={5}>
+                                <TextBasic className="
+                                  text-[12px] p-2 text-sf-blue
+                                  sm:text-[16px]
+                                " 
+                                enterSec={5}
+                                >
                                   GITHUB
                                 </TextBasic>
                               )
@@ -261,12 +316,18 @@ const ProjectModal: React.FC<ModalProps> = ({
                     <div className="pt-14"/>
                     {/* 主な使用技術 */}
                     <FrameLines theme={'frontEnd'}>
-                      <div className="p-8 pt-8 pb-6 min-h-[230px]">
+                      <div className="
+                        p-4 pt-8 pb-6 min-h-[230px]
+                        sm:p-8
+                      ">
                         {/* <TextBasic className="pb-4 text-[20px] text-neon-blue-without-flicker">Details</TextBasic> */}
                           <TextBasic className="pb-3 text-neon-blue" enterSec={5}>
                             - 主な使用技術 - 
                           </TextBasic>
-                          <div className="grid grid-cols-2 pl-12">
+                          <div className="
+                            grid grid-cols-1 pl-0
+                            sm:grid-cols-2 sm:pl-12
+                          ">
                           {projectSkills.map((skill, index) => (
                             <TextBasic key={index} className="text-sf-blue" enterSec={5}>
                               ■ {skill}

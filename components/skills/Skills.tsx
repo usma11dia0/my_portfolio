@@ -88,13 +88,22 @@ const Skills = () => {
   }, [isInViewDevOps]);
 
   return (
-    <div id="section-skills" className="pt-[4rem] pb-[5rem] md:pt-[8.5rem] bg-[#09101a] relative">
+    <div id="section-skills" className="
+      relative bg-[#09101a] pt-[2.5rem] pb-[5rem] 
+      md:pt-[8.5rem]
+    ">
       <PuffsAndGridBG zIndex={0}/>
       <h1 className="heading">
-        <span className="text-[28px] sm:text-[33px] md:text-[45px] py-1 px-2 text-neon-blue relative">Skills</span>
+        <span className="
+          relative text-neon-blue text-[28px] px-2 
+          sm:text-[33px] 
+          md:text-[45px]
+        ">
+          Skills
+        </span>
       </h1>
       <div className="
-        w-[80%] pt-[4rem] mx-auto gap-[2rem] items-center
+        w-[80%] pt-[1rem] mx-auto gap-[2rem] items-center
         grid grid-cols-1 2xl:grid-cols-3
         md:pt-[1rem] 
         "
@@ -119,15 +128,19 @@ const Skills = () => {
             <Animator active={activeFrontend}>
               <FrameLines theme={'frontEnd'}>
                 <div className="p-4 pl-6">
-                  {/* <TextBasic className="pb-4 text-[20px] text-neon-blue-without-flicker">Details</TextBasic> */}
-                    <TextBasic className="text-white" enterSec={0.8}>
-                      ■ HTML/CSS - 2 years of experience<br />
-                      ■ JavaScript - 2 year of experience<br />
-                      ■ TypeScript - 1 year of experience<br />
-                      ■ Dart/Flutter - 1 year of experience<br />
-                      ■ React - 1 year of experience<br />
-                      ■ Next.js - ※currently studying<br />
-                    </TextBasic>
+                  <TextBasic className="
+                    text-white text-[14px]
+                    sm:text-[16px]
+                    " 
+                    enterSec={0.8}
+                  >
+                    ■ HTML/CSS - 2 years of experience<br />
+                    ■ JavaScript - 2 year of experience<br />
+                    ■ TypeScript - 1 year of experience<br />
+                    ■ Dart/Flutter - 1 year of experience<br />
+                    ■ React - 1 year of experience<br />
+                    ■ Next.js - ※currently studying<br />
+                  </TextBasic>
                 </div>
               </FrameLines>
             </Animator>
@@ -153,15 +166,19 @@ const Skills = () => {
             <Animator active={activeBackend}>
               <FrameLines theme={'backEnd'}>
                 <div className="p-4 pl-6">
-                  {/* <TextBasic className="pb-4 text-[20px] text-neon-red-without-flicker">Details</TextBasic> */}
-                    <TextBasic className="text-white" enterSec={0.8}>
-                      ■ Python - 2 years of experience<br />
-                      ■ FastAPI - 1 years of Experience<br />
-                      ■ Rust - ※currently studying<br />
-                      ■ PostgreSQL - 1 year Experience<br />
-                      ■ Ruby - a half year Experience<br />
-                      ■ Node.js - a half year Experience<br />
-                    </TextBasic>
+                  <TextBasic className="
+                    text-white text-[14px]
+                    sm:text-[16px]
+                    " 
+                    enterSec={0.8}
+                  >
+                    ■ Python - 2 years of experience<br />
+                    ■ FastAPI - 1 years of Experience<br />
+                    ■ Rust - ※currently studying<br />
+                    ■ PostgreSQL - 1 year Experience<br />
+                    ■ Ruby - a half year Experience<br />
+                    ■ Node.js - a half year Experience<br />
+                  </TextBasic>
                 </div>
               </FrameLines>
             </Animator>
@@ -187,15 +204,19 @@ const Skills = () => {
             <Animator active={activeDevOps}>
               <FrameLines theme={'devOps'}>
                 <div className="p-4 pl-6">
-                  {/* <TextBasic className="pb-4 text-[20px] text-neon-yellow-without-flicker">Details</TextBasic> */}
-                    <TextBasic className="text-white" enterSec={0.8}>
-                      ■ AWS - 1 year Experience<br />
-                      ■ GCP - a half year Experience<br />
-                      ■ Azure - ※currently studying<br />
-                      ■ Docker - 1 year Experience<br />
-                      ■ Git- 2 year Experience<br />
-                      ■ Jira - 1 year Experience<br />
-                    </TextBasic>
+                <TextBasic className="
+                    text-white text-[14px]
+                    sm:text-[16px]
+                    " 
+                    enterSec={0.8}
+                  >
+                    ■ AWS - 1 year Experience<br />
+                    ■ GCP - a half year Experience<br />
+                    ■ Azure - ※currently studying<br />
+                    ■ Docker - 1 year Experience<br />
+                    ■ Git- 2 year Experience<br />
+                    ■ Jira - 1 year Experience<br />
+                  </TextBasic>
                 </div>
               </FrameLines>
             </Animator>

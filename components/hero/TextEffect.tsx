@@ -13,7 +13,7 @@ const TextEffect = () => {
         1500,
       ]}
       wrapper="span"
-      className="text-[2rem] md:text-[3rem] text-[#55e6a5] font-bold uppercase"
+      className="text-[2rem] sm:text-[2rem] md:text-[3rem] text-[#55e6a5] font-bold uppercase"
       repeat={Infinity}
     />
   );

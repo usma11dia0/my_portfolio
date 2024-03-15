@@ -1,8 +1,7 @@
 import Button from '@/components/elements/button/Button';
 import { handleScroll } from '@/utils';
-import { useBleeps } from '@arwes/react';
 import { Bars3Icon } from '@heroicons/react/20/solid';
-import React, { ReactElement, ReactNode } from 'react'
+import React from 'react'
 
 interface Props {
   openNav:()=> void;
@@ -23,13 +22,14 @@ const Nav = ({openNav}:Props) => {
         mx-auto
       ">
         <h1 className="
-          flex-[0.6] 
-          text-[25px] 
+          flex-[0.6]
+          text-[20px] 
+          sm:text-[25px] 
           text-white font-bold
           "
         >
           usma11dia0's
-          <span className='text-[25px] py-4 px-2 text-neon-blue'>PORTFOLIO</span>
+          <span className='text-[20px] sm:text-[25px] py-4 px-2 text-neon-blue'>PORTFOLIO</span>
         </h1>
         <Button name='intro'>
           <a href="#section-home"

@@ -24,16 +24,16 @@ const Hero = () => {
           transition={{duration: 1, ease: 'easeInOut'}}
           className='div'
         >
-          <h1 className="text-[35px] md:text-[50px] text-white font-bold">
-            Hi, I'm <span className="text-[35px] md:text-[50px] text-[#1FFFFF]">usma11dia0</span>
+          <h1 className="text-[30px] mt-[3.5rem] md:text-[50px] text-white font-bold">
+            Hi, I'm <span className="text-[30px] sm:text-[35px] md:text-[50px] text-[#1FFFFF]">usma11dia0</span>
           </h1>
           <TextEffect />
-          <p className="mt-[1.5rem] text-[18px] text-[#ffffff92]">
+          <p className="mt-[1.5rem] text-[16px] text-[#ffffff92]">
             Let me give you a quick introduction to who I am and share with you the fields I'm deeply passionate about working in.
           </p>
           <div className="
-            mt-[2rem] flex-col space-y-6 items-center justify-center
-            sm:space-y-0 sm:flex sm:flex-row sm:space-x-6"
+            mt-[2rem] flex flex-row space-y-6 items-center justify-center
+            sm:space-y-0 sm:mt-[5rem] sm:flex sm:flex-row sm:space-x-6"
           >
             <ProjectsBtn />
           </div>

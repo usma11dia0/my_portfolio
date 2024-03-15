@@ -33,7 +33,6 @@
 
   .text-neon-blue {
     @apply m-auto text-lg no-underline rounded-lg bg-transparent;
-    /* text-shadow: -2px 4px 4px #091243, 0 0 10px #00D0FF, inset 1px 1px 1px white; */
     text-shadow: -4px 5px 5px #091243, 0 0 10px #00D0FF;
     color: #1FFFFF;
     animation: neon-flicker 1.5s infinite alternate;
@@ -41,7 +40,6 @@
 
   .text-neon-blue-without-flicker {
     @apply m-auto text-lg no-underline rounded-lg bg-transparent;
-    /* text-shadow: -2px 4px 4px #091243, 0 0 10px #00D0FF, inset 1px 1px 1px white; */
     text-shadow: -2px 4px 4px #091243, 0 0 10px #00D0FF, 0 0 20px #00D0FF, 0 0 30px #00D0FF, 0 0 40px #00D0FF, 0 0 55px #00D0FF, 0 0 75px #00D0FF;
     color: #1FFFFF;
   }

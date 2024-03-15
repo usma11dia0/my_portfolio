@@ -11,10 +11,16 @@ const About = () => {
   const isInView = useInView(ref, { once: true })
 
   return (
-    <div id="section-about" className="bg-[#121121] pb-[10rem] pt-[4rem] md:pt-[14rem]">
+    <div id="section-about" className="
+      bg-[#121121] 
+      pt-[3rem] 
+      sm:pt-[10rem] 
+      md:pt-[14rem]
+    ">
       <div className="
         grid grid-cols-1 xl:grid-cols-2 
         w-[80%] mx-auto gap-[3rem] items-center">
+        {/* Left Side */}
         <motion.div
           ref={ref} 
           variants={fadeIn('right', 0.2)}
@@ -26,24 +32,22 @@ const About = () => {
         >
           <h2 className="
             capitalize font-bold text-white
-            text-[25px] leading-[2rem] mb-[3rem]
-            md:text-[35px] md:leading-[3rem]
-            lg:text-[45px]
+            text-[25px] leading-[2rem] mb-[1.5rem]
+            md:text-[45px] md:leading-[3rem] md:mb-[2rem]
           ">
             ABOUT
             <span className="
-             text-[25px] text-neon-blue leading-[2rem] mb-[3rem]
+             text-[25px] text-neon-blue
              py-4 px-4
-             md:text-[35px] md:leading-[3rem]
-             lg:text-[45px]"
-            >
+             md:text-[45px] md:leading-[3rem]
+            ">
               ME
             </span>
           </h2>
-          <div className="mb-[3rem] flex-col items-center space-y-10">
+          <div className="flex-col items-center space-y-10">
             <div className="flex items-center space-x-5">
               <span className="w-[60px] hidden md:block h-[5px] bg-slate-400 rounded-sm"></span>
-              <TextDecipher className="text-[19px] text-slate-300 w-[100%]">
+              <TextDecipher className="text-[16px] text-slate-300 w-[100%]">
                 Web developer with several years of experience in building web applications, mobile applications, and web scraping. Proficient in leveraging latest technologies to create responsive, user-friendly, and scalable applications
               </TextDecipher>
             </div>
@@ -51,18 +55,19 @@ const About = () => {
                 <div className="p-8">
                   <div className="py-2 text-[20px] text-neon-blue-without-flicker">QUALIFICATIONS</div>
                   <div className="py-2">
-                    <TextDecipher className="text-[19px] text-sf-blue">- Fundamental Information Technology Engineer Examination (FE)</TextDecipher>
+                    <TextDecipher className="text-[16px] text-sf-blue">- Fundamental Information Technology Engineer Examination (FE)</TextDecipher>
                   </div>
                   <div className="py-2">
-                    <TextDecipher className="text-[19px] text-sf-blue">- AWS Certified Solutions Architect - Associate</TextDecipher>
+                    <TextDecipher className="text-[16px] text-sf-blue">- AWS Certified Solutions Architect - Associate</TextDecipher>
                   </div>
                   <div className="py-2">
-                    <TextDecipher className="text-[19px] text-sf-blue">- TOEIC 905</TextDecipher>
+                    <TextDecipher className="text-[16px] text-sf-blue">- TOEIC 905</TextDecipher>
                   </div>
                 </div>
               </FrameNefrex>
           </div>
         </motion.div>
+        {/* Right Side */}
         <motion.div 
           variants={fadeIn('left', 0.2)}
           initial='hidden'

@@ -4,11 +4,17 @@ import React from 'react'
 
 const Others = () => {
   return (
-    <div id="section-others" className="pt-[4rem] md:pt-[8rem] pb-[4rem] bg-[#02050a]">
+    <div id="section-others" className="
+      pt-[2.5rem] pb-[4rem] bg-[#02050a]
+      md:pt-[8rem]
+    ">
       <h1 className="heading">
          <span className="text-[28px] sm:text-[33px] md:text-[45px] text-neon-blue"> Others</span>
       </h1>
-      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 w-[80%] mt-[4rem] gap-[3rem] mx-auto">
+      <div className="
+        grid grid-cols-1 w-[80%] mt-[2.5rem] gap-[3rem] mx-auto 
+        lg:grid-cols-2 
+        xl:grid-cols-3">
         <div>
           <div className="relative w-[100%] h-[400px]">
             <Image

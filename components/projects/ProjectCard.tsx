@@ -86,10 +86,9 @@ const ProjectCard = ({
           <FrameCorners>
             <Button name='click' onClick={toggleModal}>
               <div className="
-                relative 
-                w-[45vw] h-[25vh]
+                relative w-[70vw] h-[20vh]
                 lg:w-[35vw] lg:h-[25vh]
-                xl:w-[25vw] xl:h-[25vh]  
+                xl:w-[25vw] xl:h-[25vh]
               ">
               <Image
                 fill

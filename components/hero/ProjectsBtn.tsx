@@ -6,7 +6,7 @@ import Button from '../elements/button/Button'
 
 const ProjectsBtn = () => {
   return (
-    <div className="mx-auto xl:mx-0">
+    <div className="mx-auto mt-15 xl:mx-0">
       <div className="relative w-[185px] h-[185px] flex justify-center items-center bg-circleStar bg-cover bg-no-repeat group">
         <Image
           src={"/images/rounded-text.jpg"} 
