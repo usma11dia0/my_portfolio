@@ -11,6 +11,7 @@ import FrameLines from '../elements/frame/FrameLines';
 import { LinkIcon, VideoCameraIcon } from '@heroicons/react/20/solid';
 import FrameUnderline from '../elements/frame/FrameUnderLine';
 import ImageMotion from './ImageMotion';
+import { calculateScrollPosition } from '@/utils';
 
 interface ModalProps {
   isOpen?: boolean;
@@ -63,6 +64,10 @@ const ProjectModal: React.FC<ModalProps> = ({
     return null;
   }
 
+  const section = document.getElementById("section-projects");
+  const sectionTop = section!.getBoundingClientRect().top;
+  console.log(sectionTop);
+
   return (
     <>
       <div
@@ -77,9 +82,12 @@ const ProjectModal: React.FC<ModalProps> = ({
       >
         {/*body*/}
         <div className="
-          relative flex justify-center items-center z-[0] pt-[850px] pb-[50px] h-[325%]
+          relative flex justify-center items-center z-[0] pt-[850px] pb-[50px] h-[2150px]
           sm:h-[240%] sm:pt-[580px] sm:pb-[50px]
           lg:pt-24 lg:w-[100%] lg:h-[90%]
+          mdh:pt-[770px] mdh:h-[2090px]
+          lgh:pt-[720px] lgh:h-[2200px]
+          xlh:pt-[600px]
           "
         >
           <Animator active={active}>

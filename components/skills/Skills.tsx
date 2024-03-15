@@ -23,11 +23,11 @@ const Skills = () => {
   const bleeps = useBleeps<BleepsNames>();
 
   const refFrontend = useRef(null);
-  const isInViewFrontend = useInView(refFrontend, { once: false });
+  const isInViewFrontend = useInView(refFrontend, { once: false,  amount: 0.2 });
   const refBackend = useRef(null);
-  const isInViewBackend = useInView(refBackend, { once: false });
+  const isInViewBackend = useInView(refBackend, { once: false,  amount: 0.2 });
   const refDevOps = useRef(null);
-  const isInViewDevOps = useInView(refDevOps, { once: false });
+  const isInViewDevOps = useInView(refDevOps, { once: false,  amount: 0.2 });
 
   const timerFrontendPlayId = useRef<number>();
   const timerFrontendStopId = useRef<number>();
@@ -89,7 +89,7 @@ const Skills = () => {
 
   return (
     <div id="section-skills" className="
-      relative bg-[#09101a] pt-[4rem] pb-[5rem] 
+      relative bg-[#09101a] pt-[3rem] pb-[5rem] 
       md:pt-[8.5rem]
     ">
       <PuffsAndGridBG zIndex={0}/>
@@ -103,7 +103,7 @@ const Skills = () => {
         </span>
       </h1>
       <div className="
-        w-[80%] pt-[1rem] mx-auto gap-[2rem] items-center
+        w-[80%] pt-[2rem] mx-auto gap-[2rem] items-center
         grid grid-cols-1 2xl:grid-cols-3
         md:pt-[1rem] 
         "

@@ -14,6 +14,7 @@ module.exports = {
         '60': '0.6',
       },
       screens: {
+        // 幅に基づくブレークポイント
         'sm': '640px',
         'md': '768px',
         'lg': '1024px',
@@ -21,6 +22,12 @@ module.exports = {
         '2xl': '1536px',
         '3xl': '1820px',
         '4xl': '1960px',
+        // 高さに基づくブレークポイント
+        'smh': {'raw': '(min-height: 640px)'},
+        'mdh': {'raw': '(min-height: 768px)'},
+        'lgh': {'raw': '(min-height: 900px)'},
+        'xlh': {'raw': '(min-height: 1280px)'},
+        '2xlh': {'raw': '(min-height: 1536px)'},
       },
       spacing: {
         '15': '60px',

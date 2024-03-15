@@ -1,15 +1,26 @@
 import Button from '@/components/elements/button/Button';
 import { handleScroll } from '@/utils';
 import { Bars3Icon } from '@heroicons/react/20/solid';
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 interface Props {
   openNav:()=> void;
 }
 
 const Nav = ({openNav}:Props) => {  
+  const navRef = useRef<HTMLDivElement>(null);
+  const [navHeight, setNavHeight] = useState(0);
+  
+  useEffect(() => {
+    if (navRef.current) {
+      const rect = navRef.current.getBoundingClientRect();
+      setNavHeight(rect.height);
+    }
+  }, []);
+  
   return (
-    <div 
+    <div
+      ref={navRef} 
       className="
         fixed  z-[10000] top-0
         w-[100%] h-[12vh]
@@ -34,7 +45,7 @@ const Nav = ({openNav}:Props) => {
         <Button name='intro'>
           <a href="#section-home"
             className="nav-link"
-            onClick={(e) => handleScroll(e, "section-home")}
+            onClick={(e) => handleScroll(e, "section-home", navHeight)}
           >
             HOME
           </a>
@@ -42,7 +53,7 @@ const Nav = ({openNav}:Props) => {
         <Button name='intro'>
           <a href="#section-about" 
             className="nav-link"
-            onClick={(e) => handleScroll(e, "section-about")}
+            onClick={(e) => handleScroll(e, "section-about", navHeight)}
           >
             ABOUT
           </a>
@@ -58,7 +69,7 @@ const Nav = ({openNav}:Props) => {
         <Button name='intro'>
           <a href="#section-skills"
             className="nav-link"
-            onClick={(e) => handleScroll(e, "section-skills")}
+            onClick={(e) => handleScroll(e, "section-skills", navHeight)}
           >
             SKILLS
           </a>
@@ -66,7 +77,7 @@ const Nav = ({openNav}:Props) => {
         <Button name='intro'>
           <a href="#section-projects"
             className="nav-link"
-            onClick={(e) => handleScroll(e, "section-projects")}
+            onClick={(e) => handleScroll(e, "section-projects", navHeight)}
           >
             PROJECTS
           </a>
@@ -74,7 +85,7 @@ const Nav = ({openNav}:Props) => {
         <Button name='intro'>
           <a href="#section-others"
             className="nav-link"
-            onClick={(e) => handleScroll(e, "section-others")}
+            onClick={(e) => handleScroll(e, "section-others", navHeight)}
           >
             OTHERS
           </a>

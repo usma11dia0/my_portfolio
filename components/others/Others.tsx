@@ -5,7 +5,7 @@ import React from 'react'
 const Others = () => {
   return (
     <div id="section-others" className="
-      pt-[4rem] pb-[4rem] bg-[#02050a]
+      pt-[3rem] pb-[4rem] bg-[#02050a]
       md:pt-[8rem]
     ">
       <h1 className="heading">

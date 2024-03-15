@@ -1,5 +1,5 @@
 import { XMarkIcon } from '@heroicons/react/20/solid'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Button from '../elements/button/Button';
 import { handleScroll } from '@/utils';
 
@@ -10,6 +10,11 @@ interface Props {
 
 const MobileNav = ({nav, closeNav}:Props) => {
   const navAnimation = nav ? 'translate-x-0' :'translate-x-[-100%]';
+  const [navHeight, setNavHeight] = useState(0);
+
+  useEffect(() => {
+    setNavHeight(window.innerHeight * 0.1);
+  }, []);
 
   return (
     <div 
@@ -25,7 +30,7 @@ const MobileNav = ({nav, closeNav}:Props) => {
           <Button name='intro'>
             <a href="#section-home"
               onClick={(e) => {
-                handleScroll(e, "section-home");
+                handleScroll(e, "section-home", navHeight);
                 closeNav();
               }}
             >
@@ -38,7 +43,7 @@ const MobileNav = ({nav, closeNav}:Props) => {
           <Button name='intro'>
             <a href="#section-about"
               onClick={(e) => {
-                handleScroll(e, "section-about");
+                handleScroll(e, "section-about", navHeight);
                 closeNav();
               }}
             >
@@ -50,7 +55,7 @@ const MobileNav = ({nav, closeNav}:Props) => {
           <Button name='intro'>
             <a href="#section-skills"
               onClick={(e) => {
-                handleScroll(e, "section-skills");
+                handleScroll(e, "section-skills", navHeight);
                 closeNav();
               }}
             >
@@ -62,7 +67,7 @@ const MobileNav = ({nav, closeNav}:Props) => {
           <Button name='intro'>
             <a href="#section-projects"
               onClick={(e) => {
-                handleScroll(e, "section-projects");
+                handleScroll(e, "section-projects", navHeight);
                 closeNav();
               }}
             >
@@ -74,7 +79,7 @@ const MobileNav = ({nav, closeNav}:Props) => {
           <Button name='intro'>
             <a href="#section-others"
               onClick={(e) => {
-                handleScroll(e, "section-others");
+                handleScroll(e, "section-others", navHeight);
                 closeNav();
               }}
             >
