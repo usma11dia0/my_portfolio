@@ -15,8 +15,14 @@ module.exports = {
       },
       screens: {
         // 幅に基づくブレークポイント
+        'xs': '480px',
+        '2xs': '530px',
+        '3xs': '576px',
         'sm': '640px',
+        '2sm':'668px',
+        '3sm':'690px',
         'md': '768px',
+        '2md': '825px',
         'lg': '1024px',
         'xl': '1280px',
         '2xl': '1536px',
@@ -26,6 +32,7 @@ module.exports = {
         'smh': {'raw': '(min-height: 640px)'},
         'mdh': {'raw': '(min-height: 768px)'},
         'lgh': {'raw': '(min-height: 900px)'},
+        '1lgh': {'raw': '(min-height: 1024px)'},
         'xlh': {'raw': '(min-height: 1280px)'},
         '2xlh': {'raw': '(min-height: 1536px)'},
       },

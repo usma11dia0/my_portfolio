@@ -66,7 +66,6 @@ const ProjectModal: React.FC<ModalProps> = ({
 
   const section = document.getElementById("section-projects");
   const sectionTop = section!.getBoundingClientRect().top;
-  console.log(sectionTop);
 
   return (
     <>
@@ -86,8 +85,9 @@ const ProjectModal: React.FC<ModalProps> = ({
           sm:h-[240%] sm:pt-[580px] sm:pb-[50px]
           lg:pt-24 lg:w-[100%] lg:h-[90%]
           mdh:pt-[770px] mdh:h-[2090px]
-          lgh:pt-[720px] lgh:h-[2200px]
-          xlh:pt-[600px]
+          lgh:pt-[780px] lgh:h-[2100px]
+          1lgh:pt-[780px] 1lgh:h-[2200px]
+          xlh:pt-[600px] xlh:h-[2100px]
           "
         >
           <Animator active={active}>
@@ -170,7 +170,13 @@ const ProjectModal: React.FC<ModalProps> = ({
                     </TextBasic>
                     <TextBasic className="
                       text-[16px] text-sf-blue min-h-[440px]
-                      md:min-h-[680px] 
+                      xs:min-h-[480px]
+                      2xs:min-h-[500px]
+                      3xs:min-h-[580px]
+                      2sm:min-h-[620px]
+                      3sm:min-h-[650px]
+                      md:min-h-[680px]
+                      2md:min-h-[700px] 
                       lg:min-h-[140px]
                       " 
                       enterSec={5}
