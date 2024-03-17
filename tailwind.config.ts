@@ -31,6 +31,7 @@ module.exports = {
         // 高さに基づくブレークポイント
         'smh': {'raw': '(min-height: 640px)'},
         'mdh': {'raw': '(min-height: 768px)'},
+        '1mdh': {'raw': '(min-height: 820px)'},
         'lgh': {'raw': '(min-height: 900px)'},
         '1lgh': {'raw': '(min-height: 1024px)'},
         'xlh': {'raw': '(min-height: 1280px)'},

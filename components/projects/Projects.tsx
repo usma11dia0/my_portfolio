@@ -13,7 +13,8 @@ const Projects = () => {
         <span className="text-[28px] sm:text-[33px] md:text-[45px] text-neon-blue">PROJECTS</span>
       </h1>
       <div className="
-        grid grid-cols-1 gap-[2rem] w-[80%] pt-[2rem] mx-auto 
+        grid grid-cols-1 gap-[2rem] w-[80%] pt-[2rem] mx-auto
+        md:pt-[4rem] 
         lg:grid-cols-2 lg:w-[80%]
         xl:grid-cols-3
        ">

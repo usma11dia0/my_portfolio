@@ -90,7 +90,7 @@ const Skills = () => {
   return (
     <div id="section-skills" className="
       relative bg-[#09101a] pt-[3rem] pb-[5rem] 
-      md:pt-[8.5rem]
+      md:pt-[8rem]
     ">
       <PuffsAndGridBG zIndex={0}/>
       <h1 className="heading">
@@ -105,7 +105,7 @@ const Skills = () => {
       <div className="
         w-[80%] pt-[2rem] mx-auto gap-[2rem] items-center
         grid grid-cols-1 2xl:grid-cols-3
-        md:pt-[1rem] 
+        md:pt-[4rem] 
         "
       >
         {/* Frontend Skill */}
