@@ -96,7 +96,7 @@ const Nav = ({openNav}:Props) => {
               w-[2rem] h-[2rem]
               text-[#1FFFFF]
               cursor-pointer 
-              xl:hidden
+              lg:hidden
             "/>
           </div>
         </Button>

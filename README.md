@@ -11,7 +11,6 @@ https://www.youtube.com/watch?v=ekUQ043k2TQ
 #Todo:
 文章の見直し(articles,AIイラスト)
 projects選択時のmodal画面
-⇒画像表示時のアニメーション追加
 　レスポンシブルデザイン対応
 
 READMEの充実化
@@ -23,6 +22,21 @@ https://arwes.dev/play?code=&type=predefined&sandbox=Audio%20Design%7C%40arwes%2
 
 デザイン参考：https://hodalab.com/portfolio/
 https://goworkship.com/magazine/neon-effects-webdesign/
+
+
+■レスポンシブデザイン対応
+縦が1024ピクセル、アスペクト比に応じた幅は以下のようになります：
+
+
+・対応サイズ
+
+・ノートPC： 
+幅：1024px　
+高さ：
+    4:3：約1365ピクセル
+    16:10：約1638ピクセル
+    16:9：約1820ピクセル
+
 
 
 

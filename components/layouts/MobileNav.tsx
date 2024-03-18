@@ -91,7 +91,7 @@ const MobileNav = ({nav, closeNav}:Props) => {
       <Button name="intro">
         <div
           onClick={closeNav}
-          className="absolute z-[1000000000] cursor-pointer top-[2rem] right-[2rem] w-[2rem] h-[2rem] text-[#1FFFFF]"
+          className="absolute z-[1000000000] cursor-pointer top-[2rem] right-[2rem] w-[2.5rem] h-[2.5rem] text-[#1FFFFF]"
         >
           <XMarkIcon />
         </div>

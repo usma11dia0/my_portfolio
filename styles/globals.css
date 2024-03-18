@@ -8,7 +8,7 @@
   .nav-link {
     @apply relative font-semibold text-white cursor-pointer 
           text-[17px] w-fit
-          hidden xl:block
+          hidden lg:block
           after:absolute after:block after:origin-center after:content-['']  
           after:h-[3px] after:w-full after:bg-[#1FFFFF]
           after:scale-x-0 after:hover:scale-x-100 
@@ -18,7 +18,7 @@
   .nav-link-mobile {
     @apply relative font-semibold text-white cursor-pointer
           text-[27px] mb-[2rem] w-fit    
-          xl:block 
+          lg:block 
           after:absolute after:block after:origin-center after:content-[''] 
           after:h-[3px] after:w-full after:bg-[#1FFFFF] 
           after:scale-x-0 after:hover:scale-x-100 
