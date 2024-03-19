@@ -24,8 +24,20 @@ const Hero = () => {
           transition={{duration: 1, ease: 'easeInOut'}}
           className='div'
         >
-          <h1 className="text-[30px] mt-[3.5rem] md:text-[50px] text-white font-bold">
-            Hi, I'm <span className="text-[30px] sm:text-[35px] md:text-[50px] text-[#1FFFFF]">usma11dia0</span>
+          <h1 className="mt-[3.5rem] text-[30px] text-white font-bold 
+            md:text-[50px] 
+            lg:text-[40px]
+            xl:text-[50px]
+          ">
+            Hi, I'm <span className="
+              text-[30px] text-[#1FFFFF]
+              sm:text-[35px] 
+              md:text-[50px] 
+              lg:text-[40px]
+              xl:text-[50px]
+              ">
+                usma11dia0
+              </span>
           </h1>
           <TextEffect />
           <p className="mt-[1.5rem] text-[16px] text-[#ffffff92]">
@@ -33,8 +45,9 @@ const Hero = () => {
           </p>
           <div className="
             mt-[2rem] flex flex-row space-y-6 items-center justify-center
-            sm:space-y-0 sm:mt-[5rem] sm:flex sm:flex-row sm:space-x-6"
-          >
+            sm:space-y-0 sm:mt-[5rem] sm:flex sm:flex-row sm:space-x-6
+            lg:space-y-0 lg:mt-[3rem] lg:flex lg:flex-row lg:space-x-6
+            ">
             <ProjectsBtn />
           </div>
         </motion.div>
