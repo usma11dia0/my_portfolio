@@ -26,7 +26,7 @@ const Hero = () => {
         >
           <h1 className="mt-[3.5rem] text-[30px] text-white font-bold 
             md:text-[50px] 
-            lg:text-[40px]
+            lg:text-[40px] lg:mt-[2rem]
             xl:text-[50px]
           ">
             Hi, I'm <span className="
@@ -40,13 +40,16 @@ const Hero = () => {
               </span>
           </h1>
           <TextEffect />
-          <p className="mt-[1.5rem] text-[16px] text-[#ffffff92]">
+          <p className="
+            mt-[1.5rem] text-[16px] text-[#ffffff92]
+            md:text-[20px]
+          ">
             Let me give you a quick introduction to who I am and share with you the fields I'm deeply passionate about working in.
           </p>
           <div className="
             mt-[2rem] flex flex-row space-y-6 items-center justify-center
             sm:space-y-0 sm:mt-[5rem] sm:flex sm:flex-row sm:space-x-6
-            lg:space-y-0 lg:mt-[3rem] lg:flex lg:flex-row lg:space-x-6
+            lg:space-y-0 lg:mt-[3rem] 
             ">
             <ProjectsBtn />
           </div>
@@ -60,11 +63,10 @@ const Hero = () => {
           className='div'
           >
           <div className="
-              relative hidden
+              relative hidden bg-[#55e6a5] rounded-full items-center 
               w-[500px] h-[500px] 
-              bg-[#55e6a5]
-              rounded-full 
-              lg:flex items-center
+              lg:flex lg:w-[400px] lg:h-[400px]
+              xl:w-[500px] xl:h-[500px] 
             ">
             <Image
               fill

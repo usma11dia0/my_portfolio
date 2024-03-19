@@ -13,9 +13,10 @@ const About = () => {
   return (
     <div id="section-about" className="
       bg-[#121121] 
-      pt-[4rem] 
+      pt-[4rem] pb-[8rem]
       sm:pt-[10rem] 
-      md:pt-[8rem] pb-[8rem]
+      md:pt-[8rem] 
+      lg:pt-[4rem] lg:pb-[8rem]
     ">
       <div className="
         grid grid-cols-1 xl:grid-cols-2 
@@ -45,26 +46,33 @@ const About = () => {
             </span>
           </h2>
           <div className="flex-col items-center space-y-10">
-            <div className="flex items-center space-x-5">
-              <span className="w-[60px] hidden md:block h-[5px] bg-slate-400 rounded-sm"></span>
+            <div className="
+              flex items-center space-x-5
+            ">
+              <span className="
+                w-[60px] hidden h-[5px] bg-slate-400 rounded-sm 
+                xl:block 
+              "></span>
               <TextDecipher className="
                 text-[16px] text-slate-300 w-[100%] min-h-[180px]
-                
+                md:text-[20px]
+                lg:min-h-[130px]
+                xl:min-h-[180px]
               ">
                 Web developer with several years of experience in building web applications, mobile applications, and web scraping. Proficient in leveraging latest technologies to create responsive, user-friendly, and scalable applications
               </TextDecipher>
             </div>
               <FrameNefrex>
-                <div className="p-8">
-                  <div className="py-2 text-[20px] text-neon-blue-without-flicker">QUALIFICATIONS</div>
-                  <div className="py-2">
-                    <TextDecipher className="text-[16px] text-sf-blue">- Fundamental Information Technology Engineer Examination (FE)</TextDecipher>
+                <div className="p-8 lg:p-9">
+                  <div className="py-2 text-[20px] lg:text-[24px] text-neon-blue-without-flicker">QUALIFICATIONS</div>
+                  <div className="py-2 lg:py-4">
+                    <TextDecipher className="text-[16px] lg:text-[20px] text-sf-blue">- Fundamental Information Technology Engineer Examination (FE)</TextDecipher>
                   </div>
-                  <div className="py-2">
-                    <TextDecipher className="text-[16px] text-sf-blue">- AWS Certified Solutions Architect - Associate</TextDecipher>
+                  <div className="py-2 lg:py-4">
+                    <TextDecipher className="text-[16px] lg:text-[20px] text-sf-blue">- AWS Certified Solutions Architect - Associate</TextDecipher>
                   </div>
-                  <div className="py-2">
-                    <TextDecipher className="text-[16px] text-sf-blue">- TOEIC 905</TextDecipher>
+                  <div className="py-2 lg:py-4">
+                    <TextDecipher className="text-[16px] lg:text-[20px] text-sf-blue">- TOEIC 905</TextDecipher>
                   </div>
                 </div>
               </FrameNefrex>
