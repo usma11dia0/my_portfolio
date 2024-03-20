@@ -15,11 +15,12 @@ const About = () => {
       bg-[#121121] 
       pt-[4rem] pb-[8rem]
       sm:pt-[10rem] 
-      md:pt-[8rem] 
-      lg:pt-[2.5rem]
+      md:pt-[8rem]
+      lg:pt-[2rem] 
+      2xl:pt-[2.5rem]
     ">
       <div className="
-        grid grid-cols-1 xl:grid-cols-2 
+        grid grid-cols-1 2xl:grid-cols-2 
         w-[80%] mx-auto gap-[3rem] items-center">
         {/* Left Side */}
         <motion.div
@@ -51,13 +52,13 @@ const About = () => {
             ">
               <span className="
                 w-[60px] hidden h-[5px] bg-slate-400 rounded-sm 
-                xl:block 
+                2xl:block 
               "></span>
               <TextDecipher className="
                 text-[16px] text-slate-300 w-[100%] min-h-[180px]
                 md:text-[20px]
                 lg:min-h-[130px]
-                xl:min-h-[180px]
+                2xl:min-h-[180px]
               ">
                 Web developer with several years of experience in building web applications, mobile applications, and web scraping. Proficient in leveraging latest technologies to create responsive, user-friendly, and scalable applications
               </TextDecipher>
@@ -92,7 +93,7 @@ const About = () => {
               justify-center
               mx-auto mt-[2rem]
               md:mx-0
-              xl:flex xl:w-[450px] xl:h-[450px] xl:mt-0
+              2xl:flex 2xl:w-[450px] 2xl:h-[450px] 2xl:mt-0
           ">
             <Image
               fill
