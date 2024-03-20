@@ -7,6 +7,7 @@ const Projects = () => {
     <div id="section-projects" className="
       relative bg-[#09101a] pt-[3rem] pb-[1rem] 
       md:pt-[8rem] 
+      lg:pt-[2.5rem]
     ">
       <MovingLinesBG zIndex={0}/>
       <h1 className="heading relative">

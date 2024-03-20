@@ -16,7 +16,7 @@ const About = () => {
       pt-[4rem] pb-[8rem]
       sm:pt-[10rem] 
       md:pt-[8rem] 
-      lg:pt-[4rem] lg:pb-[8rem]
+      lg:pt-[2.5rem]
     ">
       <div className="
         grid grid-cols-1 xl:grid-cols-2 

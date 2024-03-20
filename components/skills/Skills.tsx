@@ -91,6 +91,7 @@ const Skills = () => {
     <div id="section-skills" className="
       relative bg-[#09101a] pt-[3rem] pb-[5rem] 
       md:pt-[8rem]
+      lg:pt-[2.5rem]
     ">
       <PuffsAndGridBG zIndex={0}/>
       <h1 className="heading">
