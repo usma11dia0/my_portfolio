@@ -16,36 +16,33 @@ module.exports = {
       screens: {
         // 幅に基づくブレークポイント
         'xs': '480px',
-        '2xs': '530px',
-        '3xs': '576px',
         'sm': '640px',
-        '2sm':'668px',
-        '3sm':'690px',
         'md': '768px',
-        '2md': '825px',
-        '3md': '880px',
+        'mdAndLgh': {
+          'raw': '(min-width: 768px) and (max-width: 1023px) and (min-height: 1024px)'
+        },
+        'mdAnd2Lgh': {
+          'raw': '(min-width: 768px) and (max-width: 1023px) and (min-height: 1180px)'
+        },
         'lg': '1024px',
+        'lgAnd1xlh': {
+          'raw': '(min-width: 1024px) and (max-width: 1279px) and (min-height: 1366px)'
+        },
         'xl': '1280px',
+        'xlAnd2smh': {
+          'raw': '(min-width: 1280px) and (max-width: 1365px) and (min-height: 720px)'
+        },
         '1xl': '1366px',
+        '1xlAndMdh': {
+          'raw': '(min-width: 1366px) and (max-width: 1535px) and (min-height: 768px)'
+        },
+        '1xlAndLgh': {
+          'raw': '(min-width: 1366px) and (max-width: 1535px) and (min-height: 1024px)'
+        },
         '2xl': '1536px',
+        '2xlWidth': {'raw': '(min-width: 1536px)'},
         '3xl': '1820px',
         '4xl': '1960px',
-        // 高さに基づくブレークポイント
-        'smh': {'raw': '(min-height: 640px)'},
-        'mdh': {'raw': '(min-height: 768px)'},
-        '1mdh': {'raw': '(min-height: 820px)'},
-        'lgh': {'raw': '(min-height: 900px)'},
-        '1lgh': {'raw': '(min-height: 1024px)'},
-        '2lgh': {'raw': '(min-height: 1180px)'},
-        'xlh': {'raw': '(min-height: 1280px)'},
-        '1xlh': {'raw': '(min-height: 1366px)'},
-        '2xlh': {'raw': '(min-height: 1536px)'},
-        // その他ブレークポイント
-        'mdAnd1Lgh': {'raw': '(min-width: 768px) and (min-height: 1024px)'},
-        'mdAnd2Lgh': {'raw': '(min-width: 768px) and (min-height: 1180px)'},
-        'lgAnd1xlh': {'raw': '(min-width: 1024px) and (min-height: 1366px)'},
-        '1xlAndMdh': {'raw': '(min-width: 1366px) and (min-height: 768px)'},
-        '1xlAnd1lgh': {'raw': '(min-width: 1366px) and (min-height: 1024px)'},
       },
       spacing: {
         '15': '60px',

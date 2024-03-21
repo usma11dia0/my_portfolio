@@ -16,14 +16,13 @@ const About = () => {
       pt-[4rem] pb-[8rem]
       sm:pt-[10rem] 
       md:pt-[8rem]
-      mdAnd1Lgh:pt-[12rem]
+      mdAndLgh:pt-[12rem]
       mdAnd2Lgh:pb-[18rem]
       lg:pt-[2rem]
       lgAnd1xlh:pt-[17rem] lgAnd1xlh:pb-[22rem]
       1xlAndMdh:pt-[6rem] 1xlAndMdh:pb-[10rem]
-      1xlAnd1lgh:pt-[11rem]
-      2xl:pt-[2.5rem]
-
+      1xlAndLgh:pt-[11rem]
+      2xl:pt-[4rem]
     ">
       <div className="
         grid grid-cols-1 2xl:grid-cols-2 
@@ -99,7 +98,7 @@ const About = () => {
               justify-center
               mx-auto mt-[2rem]
               md:mx-0
-              2xl:flex 2xl:w-[450px] 2xl:h-[450px] 2xl:mt-0
+              2xl:flex 2xl:w-[500px] 2xl:h-[500px] 2xl:mt-30
           ">
             <Image
               fill

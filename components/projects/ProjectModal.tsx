@@ -72,7 +72,7 @@ const ProjectModal: React.FC<ModalProps> = ({
       <div
         className="
           fixed inset-0 z-50 
-          flex justify-center  items-center
+          flex justify-center items-center
           overflow-x-hidden overflow-y-auto 
           outline-none focus:outline-none
           bg-neutral-800/70
@@ -86,9 +86,9 @@ const ProjectModal: React.FC<ModalProps> = ({
           md:h-[235%] md:pt-[900px]
           mdAnd2Lgh:h-[210%] mdAnd2Lgh:pt-[900px]
           lg:h-[90%] lg:pt-24 lg:w-[100%] 
-          lgAnd1xlh:h-[182%] lgAnd1xlh:pt-[900px]
           xl:h-[2750px] xl:pt-[1100px]
-          1xlAnd1lgh:h-[290%] 1xlAnd1lgh:pt-[1200px]
+          1xlAndLgh:h-[290%] 1xlAndLgh:pt-[1200px]
+          2xl:h-[150%] 2xl:pt-[500px]
           "
         >
           <Animator active={active}>
@@ -107,9 +107,9 @@ const ProjectModal: React.FC<ModalProps> = ({
                     md:translate-y-152
                     lg:translate-x-14 lg:translate-y-152
                     xl:translate-x-20 xl:translate-y-165
-                    1xl:translate-y-170
-                    1xlAnd1lgh:translate-y-180
-                    2xl:translate-x-10 2xl:translate-y-6
+                    1xl:translate-y-160
+                    1xlAndLgh:translate-y-180
+                    2xl:translate-x-10 2xl:translate-y-10
                   ">
                     <ImageMotion active={active}>
                       {/* Main Image */}
@@ -136,6 +136,8 @@ const ProjectModal: React.FC<ModalProps> = ({
                           md:pl-0 md:w-[84%]
                           lg:pl-10
                           xl:pl-30
+                          1xlAndMdh:w-[100%]
+                          2xl:w-[100%] 2xl:pl-5
                           4xl:gap-2 4xl:pt-6 4xl:pl-10
                         "
                       >
@@ -159,6 +161,7 @@ const ProjectModal: React.FC<ModalProps> = ({
                     order-2 pt-0 z-[0] pl-12 pr-12
                     sm:pt-2
                     lg:order-2
+                    2xl:pt-8
                     "
                   >
                     <TextBasic className="
@@ -179,17 +182,13 @@ const ProjectModal: React.FC<ModalProps> = ({
                     <TextBasic className="
                       text-[16px] text-sf-blue min-h-[440px]
                       xs:min-h-[480px]
-                      2xs:min-h-[500px]
-                      3xs:min-h-[580px]
-                      2sm:min-h-[620px]
-                      3sm:min-h-[650px]
-                      mdAnd1Lgh:min-h-[700px]
-                      2md:min-h-[700px]
-                      3md:min-h-[840px]
+                      mdAndLgh:min-h-[700px]
                       lg:min-h-[750px]
                       lgAnd1xlh:min-h-[750px]
+                      xlAnd2smh:min-h-[850px]
                       1xlAndMdh:min-h-[870px]
-                      1xlAnd1lgh:text-[18px] 1xlAnd1lgh:min-h-[900px]
+                      1xlAndLgh:text-[18px] 1xlAndLgh:min-h-[900px]
+                      2xlWidth:min-h-[85px]
                       " 
                       enterSec={5}
                     >
@@ -339,12 +338,13 @@ const ProjectModal: React.FC<ModalProps> = ({
                         </a>
                       </FrameUnderline>
                     </div>
-                    <div className="pt-14"/>
+                    <div className="pt-14 2xl:pt-10"/>
                     {/* 主な使用技術 */}
                     <FrameLines theme={'frontEnd'}>
                       <div className="
                         p-4 pt-8 pb-6 min-h-[230px]
                         sm:p-8
+                        2xl:min-h-[180px] 2xl:p-6
                       ">
                           <TextBasic className="pb-3 text-neon-blue" enterSec={5}>
                             - 主な使用技術 - 

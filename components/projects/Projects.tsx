@@ -7,8 +7,9 @@ const Projects = () => {
     <div id="section-projects" className="
       relative bg-[#09101a] pt-[3rem] pb-[1rem] 
       md:pt-[8rem]
-      mdAnd1Lgh:pt-[4rem] 
       lg:pt-[2.5rem]
+      1xlAndMdh:pb-[6rem]
+      2xl:pt-[1.5rem]
     ">
       <MovingLinesBG zIndex={0}/>
       <h1 className="heading relative">
@@ -19,6 +20,7 @@ const Projects = () => {
         md:pt-[4rem] 
         lg:grid-cols-2 lg:w-[80%]
         xl:grid-cols-3
+        2xl:pt-[1rem]
        ">
         <ProjectCard 
           projectName='portfolio'
