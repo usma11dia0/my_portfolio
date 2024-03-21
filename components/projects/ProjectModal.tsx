@@ -85,9 +85,10 @@ const ProjectModal: React.FC<ModalProps> = ({
           sm:h-[240%] sm:pt-[580px] sm:pb-[50px]
           md:h-[235%] md:pt-[900px]
           mdAnd2Lgh:h-[210%] mdAnd2Lgh:pt-[900px]
-          lg:pt-24 lg:w-[100%] lg:h-[90%]
-          lgAnd1xlh:h-[182%] lgAnd1xlh:pt-[900px] 
-          xl:pt-[1100px] xl:h-[2750px]
+          lg:h-[90%] lg:pt-24 lg:w-[100%] 
+          lgAnd1xlh:h-[182%] lgAnd1xlh:pt-[900px]
+          xl:h-[2750px] xl:pt-[1100px]
+          1xlAnd1lgh:h-[290%] 1xlAnd1lgh:pt-[1200px]
           "
         >
           <Animator active={active}>
@@ -106,6 +107,8 @@ const ProjectModal: React.FC<ModalProps> = ({
                     md:translate-y-152
                     lg:translate-x-14 lg:translate-y-152
                     xl:translate-x-20 xl:translate-y-165
+                    1xl:translate-y-170
+                    1xlAnd1lgh:translate-y-180
                     2xl:translate-x-10 2xl:translate-y-6
                   ">
                     <ImageMotion active={active}>
@@ -185,6 +188,8 @@ const ProjectModal: React.FC<ModalProps> = ({
                       3md:min-h-[840px]
                       lg:min-h-[750px]
                       lgAnd1xlh:min-h-[750px]
+                      1xlAndMdh:min-h-[870px]
+                      1xlAnd1lgh:text-[18px] 1xlAnd1lgh:min-h-[900px]
                       " 
                       enterSec={5}
                     >
@@ -341,7 +346,6 @@ const ProjectModal: React.FC<ModalProps> = ({
                         p-4 pt-8 pb-6 min-h-[230px]
                         sm:p-8
                       ">
-                        {/* <TextBasic className="pb-4 text-[20px] text-neon-blue-without-flicker">Details</TextBasic> */}
                           <TextBasic className="pb-3 text-neon-blue" enterSec={5}>
                             - 主な使用技術 - 
                           </TextBasic>

@@ -20,8 +20,9 @@ const About = () => {
       mdAnd2Lgh:pb-[18rem]
       lg:pt-[2rem]
       lgAnd1xlh:pt-[17rem] lgAnd1xlh:pb-[22rem]
+      1xlAndMdh:pt-[6rem] 1xlAndMdh:pb-[10rem]
+      1xlAnd1lgh:pt-[11rem]
       2xl:pt-[2.5rem]
-      1xlAndMdh:pt-[6rem]
 
     ">
       <div className="

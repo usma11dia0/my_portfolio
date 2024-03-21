@@ -45,6 +45,7 @@ module.exports = {
         'mdAnd2Lgh': {'raw': '(min-width: 768px) and (min-height: 1180px)'},
         'lgAnd1xlh': {'raw': '(min-width: 1024px) and (min-height: 1366px)'},
         '1xlAndMdh': {'raw': '(min-width: 1366px) and (min-height: 768px)'},
+        '1xlAnd1lgh': {'raw': '(min-width: 1366px) and (min-height: 1024px)'},
       },
       spacing: {
         '15': '60px',
@@ -56,6 +57,7 @@ module.exports = {
         '150': '600px',
         '152': '608px',
         '165': '660px',
+        '180': '720px',
       },
       backgroundImage: {
         banner: 'url("/images/banner.jpg")',
