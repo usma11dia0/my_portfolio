@@ -6,7 +6,8 @@ const Projects = () => {
   return (
     <div id="section-projects" className="
       relative bg-[#09101a] pt-[3rem] pb-[1rem] 
-      md:pt-[8rem] 
+      md:pt-[8rem]
+      mdAnd1Lgh:pt-[4rem] 
       lg:pt-[2.5rem]
     ">
       <MovingLinesBG zIndex={0}/>

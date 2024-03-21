@@ -83,10 +83,11 @@ const ProjectModal: React.FC<ModalProps> = ({
         <div className="
           relative flex justify-center items-center z-[0] pt-[850px] pb-[50px] h-[2150px]
           sm:h-[240%] sm:pt-[580px] sm:pb-[50px]
+          md:h-[235%] md:pt-[900px]
+          mdAnd2Lgh:h-[210%] mdAnd2Lgh:pt-[900px]
           lg:pt-24 lg:w-[100%] lg:h-[90%]
-          mdh:pt-[770px] mdh:h-[2090px]
-          lgh:pt-[780px] lgh:h-[2250px]
-          xlh:pt-[600px] xlh:h-[2100px]
+          lgAnd1xlh:h-[182%] lgAnd1xlh:pt-[900px] 
+          xl:pt-[1100px] xl:h-[2750px]
           "
         >
           <Animator active={active}>
@@ -94,7 +95,7 @@ const ProjectModal: React.FC<ModalProps> = ({
               <DotsVariationBG active={active}>
                 <div className="
                   grid grid-cols-1 gap-10
-                  lg:grid-cols-2
+                  2xl:grid-cols-2
                   "
                   onClick={handleInsideClick}
                 >
@@ -102,7 +103,10 @@ const ProjectModal: React.FC<ModalProps> = ({
                   <div className="
                     order-1 z-[1] transform translate-x-10 translate-y-140
                     sm:translate-x-12 sm:translate-y-145
-                    lg:order-1 lg:translate-x-10 lg:translate-y-6
+                    md:translate-y-152
+                    lg:translate-x-14 lg:translate-y-152
+                    xl:translate-x-20 xl:translate-y-165
+                    2xl:translate-x-10 2xl:translate-y-6
                   ">
                     <ImageMotion active={active}>
                       {/* Main Image */}
@@ -116,7 +120,7 @@ const ProjectModal: React.FC<ModalProps> = ({
                           filter border border-dotted border-[hsl(180,75%,30%)]
                           w-[75%] h-full
                           sm:w-[85%]
-                          lg:w-[100%]
+                          2xl:w-[100%]
                         " 
                         style={{ filter: 'brightness(1.3)' }}
                       />
@@ -126,7 +130,9 @@ const ProjectModal: React.FC<ModalProps> = ({
                           grid grid-cols-2 gap-4
                           pt-6 pl-1 pb-5 w-[75%]
                           sm:w-[85%] sm:pt-10 sm:pl-0
-                          md:pl-6 md:w-[88%]
+                          md:pl-0 md:w-[84%]
+                          lg:pl-10
+                          xl:pl-30
                           4xl:gap-2 4xl:pt-6 4xl:pl-10
                         "
                       >
@@ -174,9 +180,11 @@ const ProjectModal: React.FC<ModalProps> = ({
                       3xs:min-h-[580px]
                       2sm:min-h-[620px]
                       3sm:min-h-[650px]
-                      md:min-h-[680px]
-                      2md:min-h-[700px] 
-                      lg:min-h-[140px]
+                      mdAnd1Lgh:min-h-[700px]
+                      2md:min-h-[700px]
+                      3md:min-h-[840px]
+                      lg:min-h-[750px]
+                      lgAnd1xlh:min-h-[750px]
                       " 
                       enterSec={5}
                     >

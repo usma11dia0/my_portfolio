@@ -91,6 +91,7 @@ const Skills = () => {
     <div id="section-skills" className="
       relative bg-[#09101a] pt-[3rem] pb-[5rem] 
       md:pt-[8rem]
+      mdAnd1Lgh:pt-[4rem]
       lg:pt-[2.5rem]
     ">
       <PuffsAndGridBG zIndex={0}/>
@@ -107,6 +108,7 @@ const Skills = () => {
         w-[80%] pt-[2rem] mx-auto gap-[2rem] items-center
         grid grid-cols-1 2xl:grid-cols-3
         md:pt-[4rem] 
+        xl:pt-[2rem]
         "
       >
         {/* Frontend Skill */}

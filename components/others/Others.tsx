@@ -7,6 +7,7 @@ const Others = () => {
     <div id="section-others" className="
       pt-[3rem] pb-[4rem] bg-[#02050a]
       md:pt-[8rem]
+      mdAnd1Lgh:pt-[4rem]
       lg:pt-[2.5rem]
     ">
       <h1 className="heading">
