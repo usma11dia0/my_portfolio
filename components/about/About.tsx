@@ -63,13 +63,15 @@ const About = () => {
             ">
               <span className="
                 w-[60px] hidden h-[5px] bg-slate-400 rounded-sm 
-                2xl:block 
+                2xl:block
               "></span>
               <TextDecipher className="
                 text-[16px] text-slate-300 w-[100%] min-h-[180px]
                 md:text-[20px]
                 lg:min-h-[130px]
-                2xl:min-h-[180px]
+                2xl:min-h-[180px] 2xl:text-[21px] 2xl:pt-2
+                3xl:text-[22px] 3xl:leading-relaxed
+                5xl:text-[24px] 5xl:leading-relaxed 5xl:pt-7
               ">
                 Web developer with several years of experience in building web applications, mobile applications, and web scraping. Proficient in leveraging latest technologies to create responsive, user-friendly, and scalable applications
               </TextDecipher>
