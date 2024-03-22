@@ -94,6 +94,8 @@ const Skills = () => {
       mdAndLgh:pt-[4rem]
       lg:pt-[2.5rem]
       2xlAndLgh:pt-[5rem]
+      3xl:pt-[7rem]
+      3xlAndMdh:pt-[2rem]
       4xl:pt-[5rem]
       5xl:pt-[3rem]
       5xlAnd1xl:pt-[12rem]
@@ -116,7 +118,7 @@ const Skills = () => {
         2xlAndLgh:pt-[5rem]
         3xl:pb-[20rem]
         4xl:pt-[5rem]
-        5xl:pt-[3rem]
+        5xl:pt-[2rem]
         "
       >
         {/* Frontend Skill */}

@@ -80,15 +80,16 @@ const ProjectModal: React.FC<ModalProps> = ({
           relative flex justify-center items-center z-[0] pt-[850px] pb-[50px] h-[2150px]
           sm:h-[240%] sm:pt-[580px] sm:pb-[50px]
           md:h-[235%] md:pt-[900px]
-          mdAnd2Lgh:h-[210%] mdAnd2Lgh:pt-[900px]
+          mdAnd2Lgh:h-[280vw] mdAnd2Lgh:pt-[820px]
           lg:h-[90%] lg:pt-24 lg:w-[100%] 
+          lgAnd1xlh:h-[205vw] lgAnd1xlh:pt-[550px]
           xl:h-[2750px] xl:pt-[1100px]
           1xlAndLgh:h-[290%] 1xlAndLgh:pt-[1200px]
           2xl:h-[150%] 2xl:pt-[500px]
           2xlAndLgh:h-[97%] 2xlAndLgh:pt-[230px]
           3xl:h-[56vw] 3xl:pt-[225px]
-          3xlAndLgh:h-[52vw] 3xlAndMdh:3xl:pt-[220px]
-          4xlAndLgh:h-[84%] 4xlAndLgh:pt-[200px]
+          3xlAndMdh:h-[53vw] 3xlAndMdh:3xl:pt-[220px]
+          4xl:h-[53vw] 4xlAndLgh:pt-[200px]
           5xl:h-[40vw] 5xl:pt-[180px]
           "
         >
@@ -135,14 +136,15 @@ const ProjectModal: React.FC<ModalProps> = ({
                           grid grid-cols-2 gap-4
                           pt-6 pl-1 pb-5 w-[75%]
                           sm:w-[85%] sm:pt-10 sm:pl-0
-                          md:pl-0 md:w-[84%]
+                          md:pl-8 md:w-[84%]
                           lg:pl-10
+                          lgAnd1xlh:pl-12
                           xl:pl-30
-                          1xlAndMdh:w-[100%]
+                          1xlAndMdh:w-[88%]
                           2xl:w-[100%] 2xl:pl-5
                           2xlAndLgh:pl-8
                           4xl:gap-2 4xl:pt-6 4xl:pl-10
-                          5xl:pl-0
+                          5xl:pl-40
                         "
                       >
                         <Button name="click" onClick={() => setMainImagePath(mainImageSrc)}>
@@ -169,7 +171,8 @@ const ProjectModal: React.FC<ModalProps> = ({
                     "
                   >
                     <TextBasic className="
-                      text-neon-blue-without-flicker text-[30px] leading-10
+                      text-neon-blue-without-flicker text-[26px] leading-10
+                      xs:text-[30px]
                       sm:text-[36px]
                       5xl:text-[40px]
                       "
@@ -178,7 +181,8 @@ const ProjectModal: React.FC<ModalProps> = ({
                       {projectName}
                     </TextBasic>
                     <TextBasic className="
-                      text-sf-blue text-[20px] pt-8 pb-5 
+                      text-sf-blue text-[16px] pt-8 pb-5 
+                      xs:text-[20px]
                       5xl:text-[24px]
                       "
                       enterSec={5}
@@ -186,8 +190,8 @@ const ProjectModal: React.FC<ModalProps> = ({
                       {projectSummary}
                     </TextBasic>
                     <TextBasic className="
-                      text-[16px] text-sf-blue min-h-[440px]
-                      xs:min-h-[480px]
+                      text-[14px] text-sf-blue min-h-[440px]
+                      xs:text-[16px] xs:min-h-[480px]
                       mdAndLgh:min-h-[700px]
                       lg:min-h-[750px]
                       lgAnd1xlh:min-h-[750px]
@@ -234,7 +238,8 @@ const ProjectModal: React.FC<ModalProps> = ({
                               projectURLLink ? (
                                 <Button name='fade'>
                                   <TextBasic className="
-                                    text-[14px] p-2 text-sf-blue
+                                    text-[12px] p-2 text-sf-blue
+                                    xs:text-[14px]
                                     sm:text-[16px]
                                     " 
                                     enterSec={5}
@@ -244,7 +249,8 @@ const ProjectModal: React.FC<ModalProps> = ({
                                 </Button>
                               ) : (
                                 <TextBasic className="
-                                  text-[14px] p-2 text-sf-blue
+                                  text-[12px] p-2 text-sf-blue
+                                  xs:text-[14px]
                                   sm:text-[16px]
                                 " 
                                 enterSec={5}
@@ -278,7 +284,8 @@ const ProjectModal: React.FC<ModalProps> = ({
                               projectDemoLink ? (
                                 <Button name='fade'>
                                   <TextBasic className="
-                                    text-[14px] p-2 text-sf-blue
+                                    text-[12px] p-2 text-sf-blue
+                                    xs:text-[14px]
                                     sm:text-[16px]
                                     "
                                     enterSec={5}
@@ -288,7 +295,8 @@ const ProjectModal: React.FC<ModalProps> = ({
                                 </Button>
                               ) : (
                                 <TextBasic className="
-                                  text-[14px] p-2 text-sf-blue
+                                  text-[12px] p-2 text-sf-blue
+                                  xs:text-[14px]
                                   sm:text-[16px]
                                   " 
                                   enterSec={5}
@@ -323,7 +331,8 @@ const ProjectModal: React.FC<ModalProps> = ({
                               projectGithubLink ? (
                                 <Button name='fade'>
                                   <TextBasic className="
-                                    text-[12px] p-2 text-sf-blue
+                                    text-[9px] p-2 text-sf-blue
+                                    xs:text-[12px]
                                     sm:text-[16px]
                                   " enterSec={5}
                                   >
@@ -332,7 +341,8 @@ const ProjectModal: React.FC<ModalProps> = ({
                                 </Button>
                               ) : (
                                 <TextBasic className="
-                                  text-[12px] p-2 text-sf-blue
+                                  text-[9px] p-2 text-sf-blue
+                                  xs:text-[12px]
                                   sm:text-[16px]
                                 " 
                                 enterSec={5}
@@ -345,7 +355,7 @@ const ProjectModal: React.FC<ModalProps> = ({
                         </a>
                       </FrameUnderline>
                     </div>
-                    <div className="pt-14 2xl:pt-10"/>
+                    <div className="pt-10 xs:pt-14 2xl:pt-10"/>
                     {/* 主な使用技術 */}
                     <FrameLines theme={'frontEnd'}>
                       <div className="
@@ -353,7 +363,7 @@ const ProjectModal: React.FC<ModalProps> = ({
                         sm:p-8
                         2xl:min-h-[180px] 2xl:p-6
                       ">
-                          <TextBasic className="pb-3 text-neon-blue" enterSec={5}>
+                          <TextBasic className="text-[16px] xs:text-[18px] pb-3 text-neon-blue" enterSec={5}>
                             - 主な使用技術 - 
                           </TextBasic>
                           <div className="
@@ -361,7 +371,7 @@ const ProjectModal: React.FC<ModalProps> = ({
                             sm:grid-cols-2 sm:pl-12
                           ">
                           {projectSkills.map((skill, index) => (
-                            <TextBasic key={index} className="text-sf-blue" enterSec={5}>
+                            <TextBasic key={index} className="text-[14px] xs:text-[18px] text-sf-blue" enterSec={5}>
                               ■ {skill}
                             </TextBasic>
                           ))}

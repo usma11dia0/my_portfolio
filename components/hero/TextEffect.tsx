@@ -14,7 +14,7 @@ const TextEffect = () => {
       ]}
       wrapper="span"
       className="
-        text-[2rem] text-[#55e6a5] font-bold uppercase
+        text-[1.8rem] text-[#55e6a5] font-bold uppercase
         sm:text-[2rem] 
         md:text-[3rem]
         lg:text-[2.5rem]

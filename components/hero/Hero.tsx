@@ -28,7 +28,7 @@ const Hero = () => {
           <h1 className="mt-[3.5rem] text-[30px] text-white font-bold 
             md:text-[50px] 
             lg:text-[40px] lg:mt-[2rem]
-            xl:text-[50px]
+            xl:text-[45px]
           ">
             Hi, I'm <span className="
               text-[30px] text-[#1FFFFF]

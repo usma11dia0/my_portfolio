@@ -7,10 +7,12 @@ const Projects = () => {
     <div id="section-projects" className="
       relative bg-[#09101a] pt-[3rem] pb-[8rem] 
       md:pt-[8rem]
+      mdAnd2Lgh:pt-[5rem]
       lg:pt-[2.5rem]
       2xl:pt-[1.5rem]
       2xlAndLgh:pt-[5rem]
-      3xl:pt-[3rem] 3xl:pb-[20rem]
+      3xl:pt-[7rem] 3xl:pb-[20rem]
+      3xlAndMdh:pt-[2rem]
       4xl:pt-[5rem]
       5xl:pt-[3rem]
       5xlAnd1xl:pt-[12rem]

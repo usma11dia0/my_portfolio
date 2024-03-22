@@ -42,11 +42,11 @@ module.exports = {
         '2xl': '1536px',
         '2xlCustom': {'raw': '(min-width: 1536px)'}, // TextBasicの箇所で2xlが適用されないため追加
         '2xlAndLgh': {
-          'raw': '(min-width: 1536px) and (max-width: 1819px) and (min-height: 1024px)'
+          'raw': '(min-width: 1536px) and (max-width: 1799px) and (min-height: 1024px)'
         },
         '3xl': '1800px',
-        '3xlAndLgh': {
-          'raw': '(min-width: 1800px) and (max-width: 1919px) and (min-height: 768px) and (max-height: 1279px)'
+        '3xlAndMdh': {
+          'raw': '(min-width: 1800px) and (max-width: 1919px) and (min-height: 768px) and (max-height: 1023px)'
         },
         '4xl': '1920px',
         '5xl': '2550px',
@@ -58,6 +58,7 @@ module.exports = {
         '15': '60px',
         '20': '80px',
         '30': '120px',
+        '40': '160px',
         '75': '300px',
         '140': '560px',
         '145': '580px',
