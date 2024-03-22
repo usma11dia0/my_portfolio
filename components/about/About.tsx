@@ -22,7 +22,12 @@ const About = () => {
       lgAnd1xlh:pt-[17rem] lgAnd1xlh:pb-[22rem]
       1xlAndMdh:pt-[6rem] 1xlAndMdh:pb-[10rem]
       1xlAndLgh:pt-[11rem]
-      2xl:pt-[4rem]
+      2xl:pt-[4rem] 2xl:pb-[15rem]
+      2xlAndLgh:pt-[10rem]
+      3xl:pt-[8rem] 3xl:pb-[20rem]
+      4xl:pt-[3rem]
+      5xl:pt-[6rem] 5xl:pb-[20rem]
+      5xlAnd1xl:pt-[20rem] 
     ">
       <div className="
         grid grid-cols-1 2xl:grid-cols-2 

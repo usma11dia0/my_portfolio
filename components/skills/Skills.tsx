@@ -93,6 +93,10 @@ const Skills = () => {
       md:pt-[8rem]
       mdAndLgh:pt-[4rem]
       lg:pt-[2.5rem]
+      2xlAndLgh:pt-[5rem]
+      4xl:pt-[5rem]
+      5xl:pt-[3rem]
+      5xlAnd1xl:pt-[12rem]
     ">
       <PuffsAndGridBG zIndex={0}/>
       <h1 className="heading">
@@ -105,10 +109,14 @@ const Skills = () => {
         </span>
       </h1>
       <div className="
-        w-[80%] pt-[2rem] mx-auto gap-[2rem] items-center
+        w-[80%] pt-[2rem] pb-[8rem] mx-auto gap-[2rem] items-center
         grid grid-cols-1 2xl:grid-cols-3
         md:pt-[4rem] 
         xl:pt-[2rem]
+        2xlAndLgh:pt-[5rem]
+        3xl:pb-[20rem]
+        4xl:pt-[5rem]
+        5xl:pt-[3rem]
         "
       >
         {/* Frontend Skill */}

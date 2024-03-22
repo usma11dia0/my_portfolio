@@ -14,7 +14,7 @@ module.exports = {
         '60': '0.6',
       },
       screens: {
-        // 幅に基づくブレークポイント
+        // 幅に基づくブレークポイント 
         'xs': '480px',
         'sm': '640px',
         'md': '768px',
@@ -40,9 +40,19 @@ module.exports = {
           'raw': '(min-width: 1366px) and (max-width: 1535px) and (min-height: 1024px)'
         },
         '2xl': '1536px',
-        '2xlWidth': {'raw': '(min-width: 1536px)'},
-        '3xl': '1820px',
-        '4xl': '1960px',
+        '2xlCustom': {'raw': '(min-width: 1536px)'}, // TextBasicの箇所で2xlが適用されないため追加
+        '2xlAndLgh': {
+          'raw': '(min-width: 1536px) and (max-width: 1819px) and (min-height: 1024px)'
+        },
+        '3xl': '1800px',
+        '3xlAndLgh': {
+          'raw': '(min-width: 1800px) and (max-width: 1919px) and (min-height: 768px) and (max-height: 1279px)'
+        },
+        '4xl': '1920px',
+        '5xl': '2550px',
+        '5xlAnd1xl': {
+          'raw': '(min-width: 2550px) and (min-height: 1440px)'
+        },
       },
       spacing: {
         '15': '60px',

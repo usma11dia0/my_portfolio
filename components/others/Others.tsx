@@ -5,10 +5,14 @@ import React from 'react'
 const Others = () => {
   return (
     <div id="section-others" className="
-      pt-[3rem] pb-[4rem] bg-[#02050a]
+      pt-[3rem] pb-[8rem] bg-[#02050a]
       md:pt-[8rem]
       mdAndLgh:pt-[4rem]
       lg:pt-[2.5rem]
+      2xlAndLgh:pt-[5rem]
+      4xl:pt-[5rem]
+      5xl:pt-[3rem]
+      5xlAnd1xl:pt-[12rem] 5xlAnd1xl:pb-[20rem]
     ">
       <h1 className="heading">
          <span className="text-[28px] sm:text-[33px] md:text-[45px] text-neon-blue"> Others</span>
@@ -16,6 +20,8 @@ const Others = () => {
       <div className="
         grid grid-cols-1 w-[80%] mt-[2.5rem] gap-[3rem] mx-auto
         md:mt-[4rem] 
+        4xl:pt-[5rem]
+        5xl:pt-[2rem]
         lg:grid-cols-2 
         xl:grid-cols-3">
         <div>

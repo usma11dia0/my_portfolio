@@ -11,7 +11,6 @@ import FrameLines from '../elements/frame/FrameLines';
 import { LinkIcon, VideoCameraIcon } from '@heroicons/react/20/solid';
 import FrameUnderline from '../elements/frame/FrameUnderLine';
 import ImageMotion from './ImageMotion';
-import { calculateScrollPosition } from '@/utils';
 
 interface ModalProps {
   isOpen?: boolean;
@@ -64,9 +63,6 @@ const ProjectModal: React.FC<ModalProps> = ({
     return null;
   }
 
-  const section = document.getElementById("section-projects");
-  const sectionTop = section!.getBoundingClientRect().top;
-
   return (
     <>
       <div
@@ -89,6 +85,11 @@ const ProjectModal: React.FC<ModalProps> = ({
           xl:h-[2750px] xl:pt-[1100px]
           1xlAndLgh:h-[290%] 1xlAndLgh:pt-[1200px]
           2xl:h-[150%] 2xl:pt-[500px]
+          2xlAndLgh:h-[97%] 2xlAndLgh:pt-[230px]
+          3xl:h-[56vw] 3xl:pt-[225px]
+          3xlAndLgh:h-[52vw] 3xlAndMdh:3xl:pt-[220px]
+          4xlAndLgh:h-[84%] 4xlAndLgh:pt-[200px]
+          5xl:h-[40vw] 5xl:pt-[180px]
           "
         >
           <Animator active={active}>
@@ -110,6 +111,7 @@ const ProjectModal: React.FC<ModalProps> = ({
                     1xl:translate-y-160
                     1xlAndLgh:translate-y-180
                     2xl:translate-x-10 2xl:translate-y-10
+                    5xl:translate-y-8
                   ">
                     <ImageMotion active={active}>
                       {/* Main Image */}
@@ -138,7 +140,9 @@ const ProjectModal: React.FC<ModalProps> = ({
                           xl:pl-30
                           1xlAndMdh:w-[100%]
                           2xl:w-[100%] 2xl:pl-5
+                          2xlAndLgh:pl-8
                           4xl:gap-2 4xl:pt-6 4xl:pl-10
+                          5xl:pl-0
                         "
                       >
                         <Button name="click" onClick={() => setMainImagePath(mainImageSrc)}>
@@ -167,6 +171,7 @@ const ProjectModal: React.FC<ModalProps> = ({
                     <TextBasic className="
                       text-neon-blue-without-flicker text-[30px] leading-10
                       sm:text-[36px]
+                      5xl:text-[40px]
                       "
                       enterSec={5}
                     >
@@ -174,6 +179,7 @@ const ProjectModal: React.FC<ModalProps> = ({
                     </TextBasic>
                     <TextBasic className="
                       text-sf-blue text-[20px] pt-8 pb-5 
+                      5xl:text-[24px]
                       "
                       enterSec={5}
                     >
@@ -188,7 +194,8 @@ const ProjectModal: React.FC<ModalProps> = ({
                       xlAnd2smh:min-h-[850px]
                       1xlAndMdh:min-h-[870px]
                       1xlAndLgh:text-[18px] 1xlAndLgh:min-h-[900px]
-                      2xlWidth:min-h-[85px]
+                      2xlCustom:min-h-[85px]
+                      5xl:text-[18px] 5xl:min-h-[170px]
                       " 
                       enterSec={5}
                     >

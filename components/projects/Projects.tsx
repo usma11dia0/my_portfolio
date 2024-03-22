@@ -5,11 +5,15 @@ import ProjectCard from './ProjectCard';
 const Projects = () => {
   return (
     <div id="section-projects" className="
-      relative bg-[#09101a] pt-[3rem] pb-[1rem] 
+      relative bg-[#09101a] pt-[3rem] pb-[8rem] 
       md:pt-[8rem]
       lg:pt-[2.5rem]
-      1xlAndMdh:pb-[6rem]
       2xl:pt-[1.5rem]
+      2xlAndLgh:pt-[5rem]
+      3xl:pt-[3rem] 3xl:pb-[20rem]
+      4xl:pt-[5rem]
+      5xl:pt-[3rem]
+      5xlAnd1xl:pt-[12rem]
     ">
       <MovingLinesBG zIndex={0}/>
       <h1 className="heading relative">
@@ -21,6 +25,11 @@ const Projects = () => {
         lg:grid-cols-2 lg:w-[80%]
         xl:grid-cols-3
         2xl:pt-[1rem]
+        2xlAndLgh:pt-[5rem]
+        3xl:pt-[3rem]
+        4xl:pt-[5rem]
+        5xl:pt-[3rem]
+        5xlAnd1xl:pt-[6rem]
        ">
         <ProjectCard 
           projectName='portfolio'

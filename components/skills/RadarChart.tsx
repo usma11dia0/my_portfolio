@@ -33,6 +33,7 @@ const RadarChart: React.FC<RadarProps> = (props) => {
       relative w-[350px] h-[350px] z-[1]
       sm:w-[460px] sm:h-[460px]
       2xl:w-[350px] 2xl:h-[350px]
+      3xl:w-[460px] 3xl:h-[460px]
     "
     >
       <Radar 
