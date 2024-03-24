@@ -88,11 +88,11 @@ const ProjectModal: React.FC<ModalProps> = ({
           lgAnd1xlh:h-[205vw] lgAnd1xlh:pt-[550px]
           xl:h-[2750px] xl:pt-[1100px]
           1xlAndLgh:h-[290%] 1xlAndLgh:pt-[1200px]
-          2xl:h-[150%] 2xl:pt-[500px]
+          2xl:h-[135%] 2xl:pt-[400px]
           2xlAndLgh:h-[97%] 2xlAndLgh:pt-[230px]
-          3xl:h-[56vw] 3xl:pt-[225px]
-          3xlAndMdh:h-[53vw] 3xlAndMdh:3xl:pt-[220px]
-          4xl:h-[53vw] 4xlAndLgh:pt-[200px]
+          3xl:h-[58vw] 3xl:pt-[200px]
+          3xlAndMdh:h-[53vw] 3xlAndMdh:3xl:pt-[165px]
+          4xl:h-[53vw] 4xlAndLgh:pt-[180px]
           5xl:h-[40vw] 5xl:pt-[180px]
           "
         >
@@ -117,7 +117,9 @@ const ProjectModal: React.FC<ModalProps> = ({
                     1xl:translate-y-160
                     1xlAndLgh:translate-y-180
                     2xl:translate-x-10 2xl:translate-y-10
-                    5xl:translate-y-8
+                    3xl:translate-y-8
+                    3xlAndMdh:translate-y-13
+                    5xl:translate-x-40 5xl:translate-y-8
                   ">
                     <ImageMotion active={active}>
                       {/* Main Image */}
@@ -132,6 +134,7 @@ const ProjectModal: React.FC<ModalProps> = ({
                           w-[75%] h-full
                           sm:w-[85%]
                           2xl:w-[100%]
+                          5xl:w-[75%]
                         " 
                         style={{ filter: brightness }}
                       />
@@ -147,10 +150,11 @@ const ProjectModal: React.FC<ModalProps> = ({
                           lgAnd1xlh:pl-12
                           xl:pl-30
                           1xlAndMdh:w-[90%]
-                          2xl:w-[100%] 2xl:pl-5
-                          2xlAndLgh:pl-8
-                          4xl:gap-2 4xl:pt-6 4xl:pl-10
-                          5xl:pl-40
+                          2xl:w-[100%] 2xl:pl-8
+                          2xlAndLgh:pl-11
+                          3xl:pl-20
+                          4xl:gap-2 4xl:pt-6 4xl:pl-18
+                          5xl:pl-15 5xl:w-[85%] 5xl:h-[70%]
                         "
                       >
                         <ModalSubImage src={mainImageSrc} onClick={() => setMainImagePath(mainImageSrc)} />
@@ -166,12 +170,14 @@ const ProjectModal: React.FC<ModalProps> = ({
                     sm:pt-2
                     lg:order-2
                     2xl:pt-8
+                    3xl:pt-11
                     "
                   >
                     <TextBasic className="
                       text-neon-blue-without-flicker text-[26px] leading-10
                       xs:text-[30px]
                       sm:text-[36px]
+                      3xl:text-[38px]
                       5xl:text-[40px]
                       "
                       enterSec={5}
@@ -181,6 +187,7 @@ const ProjectModal: React.FC<ModalProps> = ({
                     <TextBasic className="
                       text-sf-blue text-[16px] pt-8 pb-5 
                       xs:text-[20px]
+                      3xl:text-[22px]
                       5xl:text-[24px]
                       "
                       enterSec={5}
@@ -198,7 +205,9 @@ const ProjectModal: React.FC<ModalProps> = ({
                       1xlAndMdh:min-h-[900px]
                       1xlAndLgh:text-[18px] 1xlAndLgh:min-h-[900px]
                       2xlCustom:min-h-[85px]
-                      5xl:text-[18px] 5xl:min-h-[170px]
+                      3xl:min-h-[120px] 3xl:text-[18px] 3xl:leading-loose
+                      3xlAndMdh:min-h-[140px]
+                      5xl:text-[18px] 5xl:min-h-[140px]
                       " 
                       enterSec={5}
                     >
@@ -354,7 +363,7 @@ const ProjectModal: React.FC<ModalProps> = ({
                         </a>
                       </FrameUnderline>
                     </div>
-                    <div className="pt-10 xs:pt-9 2xl:pt-10"/>
+                    <div className="pt-10 xs:pt-9 2xl:pt-10 3xl:pt-12"/>
                     {/* 主な使用技術 */}
                     <FrameLines theme={'frontEnd'}>
                       <div className="
