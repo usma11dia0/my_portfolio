@@ -4,9 +4,10 @@ import { FrameSVGCorners, useFrameSVGAssemblingAnimation } from '@arwes/react-fr
 
 interface FrameCornersProps {
     children: ReactNode;
+    brightness: string;
 }
 
-const FrameCorners = ({children}: FrameCornersProps): ReactElement => {
+const FrameCorners = ({children, brightness}: FrameCornersProps): ReactElement => {
   const svgRef = useRef<SVGSVGElement | null>(null);
   const { onRender } = useFrameSVGAssemblingAnimation(svgRef);
 
@@ -21,7 +22,7 @@ const FrameCorners = ({children}: FrameCornersProps): ReactElement => {
       alignItems: 'center',
       border: '5px solid transparent',
       ':hover': {
-        filter: 'brightness(1.2)',
+        filter: brightness,
         border: '1px dotted hsl(180, 75%, 30%)',
         '[data-name=bg]': {
           color: 'hsl(180, 75%, 7%)'

@@ -1,22 +1,3 @@
-export interface ProjectImageSetType {
-  [key: string]: {
-    mainImageSrc: string;
-    subImageSrc1: string;
-    subImageSrc2: string;
-    subImageSrc3: string;
-  };
-}
-
-// 各プロジェクトの画像パス
- export const PROJECT_IMAGE_SET: ProjectImageSetType = {
-  "portfolio": {
-    "mainImageSrc": "/images/projects/portfolio/portfolio_main.png",
-    "subImageSrc1": "/images/projects/portfolio/portfolio_sub_1.png",
-    "subImageSrc2": "/images/projects/portfolio/portfolio_sub_2.png",
-    "subImageSrc3": "/images/projects/portfolio/portfolio_sub_3.png",
-  },
-}
-
 export interface ProjectPublicSetType {
   [key: string]: {
     "image": {
@@ -33,7 +14,8 @@ export interface ProjectPublicSetType {
       "projectDemoLink": string;
       "projectGithubLink": string;
       "projectSkills": string[];
-    }
+    },
+    "brightness": string;
   };
 }
 
@@ -55,6 +37,7 @@ export const PROJECT_PUBLIC_SET:ProjectPublicSetType  = {
       "projectGithubLink": "https://github.com/usma11dia0/my_portfolio",
       "projectSkills": ["Next.js", "TailWindCSS", "TypeScript", "Vercel", "Framer Motion", "ARWES"]
     },
+    "brightness": 'brightness(1.3)'
   },
   "japanese-quiz-app": {
     "image": {
@@ -70,7 +53,8 @@ export const PROJECT_PUBLIC_SET:ProjectPublicSetType  = {
       "projectURLLink": "",
       "projectDemoLink": "https://user-images.githubusercontent.com/30208963/192776306-37bb3e9f-31af-4a4e-bb04-457e62ca2ebf.gif",
       "projectGithubLink": "https://github.com/usma11dia0/japanese_quiz_app",
-      "projectSkills": ["React", "Redux Toolkit", "TypeScript", "Django", "Pytorch", "Firebase", "AWS"]
-    }
+      "projectSkills": ["React", "TypeScript", "Django", "Pytorch", "Firebase", "AWS"]
+    },
+    "brightness": 'brightness(1.05)'
   }
 }

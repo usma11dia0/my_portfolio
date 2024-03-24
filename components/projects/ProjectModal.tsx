@@ -37,6 +37,9 @@ const ProjectModal: React.FC<ModalProps> = ({
   const projectDemoLink = projectPublicSet['text']['projectDemoLink'];
   const projectGithubLink = projectPublicSet['text']['projectGithubLink'];
   const projectSkills = projectPublicSet['text']['projectSkills'];
+
+  //　画像の明るさ
+  const brightness = projectPublicSet['brightness']
    
   const [showModal, setShowModal] = useState(isOpen);
   const [active, setActive] = useState(true);
@@ -128,13 +131,13 @@ const ProjectModal: React.FC<ModalProps> = ({
                           sm:w-[85%]
                           2xl:w-[100%]
                         " 
-                        style={{ filter: 'brightness(1.3)' }}
+                        style={{ filter: brightness }}
                       />
                       {/* Sub Image */}
                       <div 
                         className="
                           grid grid-cols-2 gap-4
-                          pt-6 pl-2 pb-5 w-[70%]
+                          pt-6 pl-3 pb-5 w-[70%]
                           sm:w-[85%] sm:pt-10 sm:pl-0
                           md:pl-8 md:w-[84%]
                           lg:pl-10
@@ -190,7 +193,7 @@ const ProjectModal: React.FC<ModalProps> = ({
                       {projectSummary}
                     </TextBasic>
                     <TextBasic className="
-                      text-[14px] text-sf-blue min-h-[440px]
+                      text-[14px] text-sf-blue min-h-[470px]
                       xs:text-[16px] xs:min-h-[480px]
                       mdAndLgh:min-h-[700px]
                       lg:min-h-[750px]

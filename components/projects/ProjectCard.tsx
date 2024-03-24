@@ -29,6 +29,12 @@ const ProjectCard = ({
   const timerPlayId = useRef<number>();
   const timerStopId = useRef<number>();
 
+  // プロジェクトデータ読み込み
+  const projectPublicSet = PROJECT_PUBLIC_SET[projectName]
+  const mainImageSrc = PROJECT_PUBLIC_SET[projectName]['image']['mainImageSrc']
+  const brightness = PROJECT_PUBLIC_SET[projectName]['brightness']
+
+
   const toggleModal = () => {
     if (!isModalOpen) {
       setTimeout(() => {
@@ -83,10 +89,10 @@ const ProjectCard = ({
         md:h-[300px]
       ">
         <Animator active={active}>
-          <FrameCorners>
+          <FrameCorners brightness={brightness}>
             <Button name='click' onClick={toggleModal}>
               <div className="
-                relative w-[75vw] h-[50vh]
+                relative w-[75vw] h-[20vh]
                 md:w-[40vh] md:h-[35vh]
                 lg:w-[35vw] lg:h-[25vh]
                 xl:w-[25vw] xl:h-[25vh]
@@ -94,7 +100,7 @@ const ProjectCard = ({
               ">
               <Image
                 fill
-                src={PROJECT_PUBLIC_SET[projectName]['image']['mainImageSrc']}
+                src={mainImageSrc}
                 alt="portfolio"  
                 className="object-contain p-3"
                 sizes="(min-width: 768px) 300px, 200px"
@@ -105,7 +111,7 @@ const ProjectCard = ({
           <ProjectModal 
             isOpen={isModalOpen} 
             onClose={toggleModal} 
-            projectPublicSet={PROJECT_PUBLIC_SET[projectName]} 
+            projectPublicSet={projectPublicSet} 
           />
         </Animator>
       </div>
