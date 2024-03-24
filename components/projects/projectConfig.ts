@@ -54,23 +54,23 @@ export const PROJECT_PUBLIC_SET:ProjectPublicSetType  = {
       "projectDemoLink": "",
       "projectGithubLink": "https://github.com/usma11dia0/my_portfolio",
       "projectSkills": ["Next.js", "TailWindCSS", "TypeScript", "Vercel", "Framer Motion", "ARWES"]
-    }
+    },
   },
   "japanese-quiz-app": {
     "image": {
-      "mainImageSrc": "/images/projects/portfolio/japanese-quiz-app_main.png",
-      "subImageSrc1": "/images/projects/portfolio/japanese-quiz-app_sub_1.png",
-      "subImageSrc2": "/images/projects/portfolio/japanese-quiz-app_sub_2.png",
-      "subImageSrc3": "/images/projects/portfolio/japanese-quiz-app_sub_3.png",
+      "mainImageSrc": "/images/projects/japanese-quiz-app/japanese-quiz-app_main.png",
+      "subImageSrc1": "/images/projects/japanese-quiz-app/japanese-quiz-app_sub_1.png",
+      "subImageSrc2": "/images/projects/japanese-quiz-app/japanese-quiz-app_sub_2.png",
+      "subImageSrc3": "/images/projects/japanese-quiz-app/japanese-quiz-app_sub_3.png",
     },
     "text": {
       "projectName": "JAPANESE QUIZ APP",
       "projectSummary": "日本語の同音異義語を判別するクイズアプリ",
-      "projectDetails": "発音された同音異義語を当てる問題と、発生した発音が正確かどうかを判定する問題の二つを用意しています。自分の声を用いてモデルの学習から作成しており、発音の判定は自分の声以外だと精度が低いです。",
+      "projectDetails": "発音された同音異義語を当てる問題と、同音異義語の発声が正確かどうかを判定する問題の二種類を作成しました。",
       "projectURLLink": "",
-      "projectDemoLink": "",
-      "projectGithubLink": "",
-      "projectSkills": ["Next.js", "TailWindCSS", "TypeScript", "Vercel", "Framer Motion", "ARWES"]
+      "projectDemoLink": "https://user-images.githubusercontent.com/30208963/192776306-37bb3e9f-31af-4a4e-bb04-457e62ca2ebf.gif",
+      "projectGithubLink": "https://github.com/usma11dia0/japanese_quiz_app",
+      "projectSkills": ["React", "Redux Toolkit", "TypeScript", "Django", "Pytorch", "Firebase", "AWS"]
     }
   }
 }

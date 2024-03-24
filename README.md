@@ -10,11 +10,11 @@ https://www.youtube.com/watch?v=ekUQ043k2TQ
 
 #Todo:
 文章の見直し(articles,AIイラスト)
-projects選択時のmodal画面
-　レスポンシブルデザイン対応
-
-READMEの充実化
 デザイン見直し: 英語日本語切替対応
+・Modalなどの表記を確認、画像の固定化
+・画像サイズを統一
+・READMEの記載
+
 
 # ARWES
 https://arwes.dev/play?code=&type=predefined&sandbox=Audio%20Design%7C%40arwes%2Fbleeps%7CcreateBleep%7Cbasic&explorer=true
@@ -24,19 +24,16 @@ https://arwes.dev/play?code=&type=predefined&sandbox=Audio%20Design%7C%40arwes%2
 https://goworkship.com/magazine/neon-effects-webdesign/
 
 
-■レスポンシブデザイン対応
-縦が1024ピクセル、アスペクト比に応じた幅は以下のようになります：
-
-
-・対応サイズ
-
-・ノートPC： 
-幅：1024px　
-高さ：
-    4:3：約1365ピクセル
-    16:10：約1638ピクセル
-    16:9：約1820ピクセル
-
+スクショの際のDeveloperTool
+画像サイズ：1920×1080 75%
+element.style {
+    margin: 0px;
+    height: 30%;
+    width: 65%;
+    background-color: rgb(14, 14, 14);
+    transform: scale(0.90);
+    transform-origin: center;
+}
 
 
 

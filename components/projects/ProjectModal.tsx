@@ -134,7 +134,7 @@ const ProjectModal: React.FC<ModalProps> = ({
                       <div 
                         className="
                           grid grid-cols-2 gap-4
-                          pt-6 pl-1 pb-5 w-[75%]
+                          pt-6 pl-2 pb-5 w-[70%]
                           sm:w-[85%] sm:pt-10 sm:pl-0
                           md:pl-8 md:w-[84%]
                           lg:pl-10

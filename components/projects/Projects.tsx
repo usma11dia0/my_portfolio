@@ -38,7 +38,7 @@ const Projects = () => {
           fadeInSec={0}
         />
         <ProjectCard 
-          projectName='portfolio'
+          projectName='japanese-quiz-app'
           fadeInSec={0.2}
         />
         <ProjectCard 
