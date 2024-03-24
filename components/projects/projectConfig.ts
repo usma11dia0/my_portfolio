@@ -55,6 +55,6 @@ export const PROJECT_PUBLIC_SET:ProjectPublicSetType  = {
       "projectGithubLink": "https://github.com/usma11dia0/japanese_quiz_app",
       "projectSkills": ["React", "TypeScript", "Django", "Pytorch", "Firebase", "AWS"]
     },
-    "brightness": 'brightness(1.05)'
+    "brightness": 'brightness(1.0)'
   }
 }

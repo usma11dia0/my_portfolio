@@ -107,9 +107,11 @@ const ProjectModal: React.FC<ModalProps> = ({
                 >
                   {/* Left Side */}
                   <div className="
-                    order-1 z-[1] transform translate-x-10 translate-y-140
+                    order-1 z-[1] transform translate-x-9 translate-y-140
+                    xs:translate-x-12
                     sm:translate-x-12 sm:translate-y-145
                     md:translate-y-152
+                    mdAnd2Lgh:translate-y-165
                     lg:translate-x-14 lg:translate-y-152
                     xl:translate-x-20 xl:translate-y-165
                     1xl:translate-y-160
@@ -137,31 +139,24 @@ const ProjectModal: React.FC<ModalProps> = ({
                       <div 
                         className="
                           grid grid-cols-2 gap-4
-                          pt-6 pl-3 pb-5 w-[70%]
+                          pt-6 pl-4 pb-5 w-[70%]
                           sm:w-[85%] sm:pt-10 sm:pl-0
-                          md:pl-8 md:w-[84%]
+                          md:pl-8 md:w-[78%]
+                          mdAnd2Lgh:pl-14 mdAnd2Lgh:w-[75%] 
                           lg:pl-10
                           lgAnd1xlh:pl-12
                           xl:pl-30
-                          1xlAndMdh:w-[88%]
+                          1xlAndMdh:w-[90%]
                           2xl:w-[100%] 2xl:pl-5
                           2xlAndLgh:pl-8
                           4xl:gap-2 4xl:pt-6 4xl:pl-10
                           5xl:pl-40
                         "
                       >
-                        <Button name="click" onClick={() => setMainImagePath(mainImageSrc)}>
-                          <ModalSubImage src={mainImageSrc}/>
-                        </Button>
-                        <Button name="click" onClick={() => setMainImagePath(subImageSrc1)}>
-                          <ModalSubImage src={subImageSrc1}/>
-                        </Button>
-                        <Button name="click" onClick={() => setMainImagePath(subImageSrc2)}>
-                          <ModalSubImage src={subImageSrc2}/>
-                        </Button>
-                        <Button name="click" onClick={() => setMainImagePath(subImageSrc3)}>
-                          <ModalSubImage src={subImageSrc3}/>
-                        </Button>
+                        <ModalSubImage src={mainImageSrc} onClick={() => setMainImagePath(mainImageSrc)} />
+                        <ModalSubImage src={subImageSrc1} onClick={() => setMainImagePath(subImageSrc1)} />
+                        <ModalSubImage src={subImageSrc2} onClick={() => setMainImagePath(subImageSrc2)} />
+                        <ModalSubImage src={subImageSrc3} onClick={() => setMainImagePath(subImageSrc3)} />
                       </div>
                     </ImageMotion>
                   </div>
@@ -194,12 +189,13 @@ const ProjectModal: React.FC<ModalProps> = ({
                     </TextBasic>
                     <TextBasic className="
                       text-[14px] text-sf-blue min-h-[470px]
-                      xs:text-[16px] xs:min-h-[480px]
+                      xs:text-[16px] xs:min-h-[500px]
                       mdAndLgh:min-h-[700px]
+                      mdAnd2Lgh:min-h-[850px]
                       lg:min-h-[750px]
                       lgAnd1xlh:min-h-[750px]
                       xlAnd2smh:min-h-[850px]
-                      1xlAndMdh:min-h-[870px]
+                      1xlAndMdh:min-h-[900px]
                       1xlAndLgh:text-[18px] 1xlAndLgh:min-h-[900px]
                       2xlCustom:min-h-[85px]
                       5xl:text-[18px] 5xl:min-h-[170px]
@@ -358,7 +354,7 @@ const ProjectModal: React.FC<ModalProps> = ({
                         </a>
                       </FrameUnderline>
                     </div>
-                    <div className="pt-10 xs:pt-14 2xl:pt-10"/>
+                    <div className="pt-10 xs:pt-9 2xl:pt-10"/>
                     {/* 主な使用技術 */}
                     <FrameLines theme={'frontEnd'}>
                       <div className="
