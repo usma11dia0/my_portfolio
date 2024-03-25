@@ -4,11 +4,13 @@ import { motion, useInView } from "framer-motion";
 import { fadeIn } from "../../variants"; 
 import TextDecipher from '../elements/text/TextDecipher';
 import FrameNefrex from '../elements/frame/FrameNefrex';
+import { useTranslations } from 'next-intl';
 
 const About = () => {
 
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true })
+  const t = useTranslations('about')
 
   return (
     <div id="section-about" className="
@@ -73,21 +75,17 @@ const About = () => {
                 3xl:text-[22px] 3xl:leading-relaxed
                 5xl:text-[24px] 5xl:leading-relaxed 5xl:pt-7
               ">
-                Web developer with several years of experience in building web applications, mobile applications, and web scraping. Proficient in leveraging latest technologies to create responsive, user-friendly, and scalable applications
+                {t('details')}
               </TextDecipher>
             </div>
               <FrameNefrex>
                 <div className="p-8 lg:p-9">
-                  <div className="py-2 text-[20px] lg:text-[24px] text-neon-blue-without-flicker">QUALIFICATIONS</div>
-                  <div className="py-2 lg:py-4">
-                    <TextDecipher className="text-[16px] lg:text-[20px] text-sf-blue">- Fundamental Information Technology Engineer Examination (FE)</TextDecipher>
-                  </div>
-                  <div className="py-2 lg:py-4">
-                    <TextDecipher className="text-[16px] lg:text-[20px] text-sf-blue">- AWS Certified Solutions Architect - Associate</TextDecipher>
-                  </div>
-                  <div className="py-2 lg:py-4">
-                    <TextDecipher className="text-[16px] lg:text-[20px] text-sf-blue">- TOEIC 905</TextDecipher>
-                  </div>
+                  <div className="py-2 text-[20px] lg:text-[24px] text-neon-blue-without-flicker">QUALIFICATIONS</div>   
+                  {t.raw('qualifications').map((qualification: string, index: number) => (
+                    <div key={index} className="py-2 lg:py-4">
+                      <TextDecipher className="text-[16px] lg:text-[20px] text-sf-blue">- {qualification}</TextDecipher>
+                    </div>
+                  ))}
                 </div>
               </FrameNefrex>
           </div>
