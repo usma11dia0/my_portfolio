@@ -11,6 +11,7 @@ const Others = () => {
       lg:pt-[2.5rem]
       2xlAndLgh:pt-[5rem]
       3xl:pt-[7rem]
+      3xlAndMdh:pt-[2rem]
       4xl:pt-[5rem]
       5xl:pt-[3rem]
       5xlAnd1xl:pt-[12rem] 5xlAnd1xl:pb-[20rem]

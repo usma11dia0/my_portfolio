@@ -91,7 +91,7 @@ const ProjectModal: React.FC<ModalProps> = ({
           2xl:h-[135%] 2xl:pt-[400px]
           2xlAndLgh:h-[97%] 2xlAndLgh:pt-[230px]
           3xl:h-[58vw] 3xl:pt-[200px]
-          3xlAndMdh:h-[53vw] 3xlAndMdh:3xl:pt-[165px]
+          3xlAndMdh:h-[52vw] 3xlAndMdh:3xl:pt-[165px]
           4xl:h-[53vw] 4xlAndLgh:pt-[180px]
           5xl:h-[40vw] 5xl:pt-[180px]
           "

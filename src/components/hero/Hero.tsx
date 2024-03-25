@@ -5,8 +5,11 @@ import Image from 'next/image';
 import ProjectsBtn from './ProjectsBtn';
 import { motion } from "framer-motion";
 import { fadeIn } from "../../variants"; 
+import { useTranslations } from 'next-intl';
 
 const Hero = () => {
+  const t = useTranslations('hero')
+
   return (
     <div 
       className="
@@ -45,7 +48,7 @@ const Hero = () => {
             mt-[1.5rem] text-[16px] text-[#ffffff92]
             md:text-[20px]
           ">
-            Let me give you a quick introduction to who I am and share with you the fields I'm deeply passionate about working in.
+            {t('introduction')}
           </p>
           <div className="
             mt-[2rem] flex flex-row space-y-6 items-center justify-center

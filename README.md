@@ -11,8 +11,7 @@ https://www.youtube.com/watch?v=ekUQ043k2TQ
 #Todo:
 文章の見直し(articles,AIイラスト)
 デザイン見直し: 英語日本語切替対応
-・Modalなどの表記を確認、画像の固定化
-・画像サイズを統一
+コンタクトページの追加？
 ・READMEの記載
 
 
@@ -22,6 +21,10 @@ https://arwes.dev/play?code=&type=predefined&sandbox=Audio%20Design%7C%40arwes%2
 
 デザイン参考：https://hodalab.com/portfolio/
 https://goworkship.com/magazine/neon-effects-webdesign/
+
+
+# 多言語対応参考サイト
+https://github.com/vercel/next.js/tree/canary/examples/app-dir-i18n-routing
 
 
 スクショの際のDeveloperTool

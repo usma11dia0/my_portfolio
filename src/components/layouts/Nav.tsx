@@ -1,6 +1,8 @@
 import Button from '@/components/elements/button/Button';
 import { handleScroll } from '@/utils';
 import { Bars3Icon } from '@heroicons/react/20/solid';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import React, { useEffect, useRef, useState } from 'react'
 
 interface Props {
@@ -10,6 +12,7 @@ interface Props {
 const Nav = ({openNav}:Props) => {  
   const navRef = useRef<HTMLDivElement>(null);
   const [navHeight, setNavHeight] = useState(0);
+  const { locale, route } = useRouter();
   
   useEffect(() => {
     if (navRef.current) {
@@ -89,6 +92,15 @@ const Nav = ({openNav}:Props) => {
           >
             OTHERS
           </a>
+        </Button>
+        <Button name='intro'>
+          <Link
+            href={route}
+            className="nav-link"
+            locale={locale === "ja" ? "en" : "ja"}
+          >
+            {locale == "ja" ? "ENGLISH" : "日本語"}
+          </Link>
         </Button>
         <Button name='intro'>
           <div onClick={openNav}>

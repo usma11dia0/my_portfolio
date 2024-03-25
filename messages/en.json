@@ -1,0 +1,73 @@
+{
+  "hero": {
+    "introduction": "Welcome to usma11dia0's portfolio site. This site showcases my skill set and the projects I have worked on. (Please note that it includes audio, so be mindful of the volume.)"
+  },
+  "about": {
+    "details": "Under two years of engineering experience, engaged in agile development at a systems integrator with responsibilities including creating Single Page Application (SPA) interfaces and developing APIs using AWS. Additional experience gained in freelance projects, encompassing mobile app development, automation of transcription tasks with Excel VBA, and web scraping.",
+    "qualifications": ["Fundamental Information Technology Engineer Examination (FE)", "AWS Certified Solutions Architect - Associate", "TOEIC 905"]
+  },
+  "skills": {
+    "frontend": {
+      "HTML/CSS":"2 years of experience",
+      "JavaScript":"2 year of experience",
+      "TypeScript":"1 year of experience",
+      "Dart/Flutter":"1 year of experience",
+      "React":"1 year of experience",
+      "NextJS":"※currently studying"
+    },
+    "backend": {
+      "Python":"2 years of experience",
+      "FastAPI":"1 years of Experience",
+      "Rust":"※currently studying",
+      "PostgreSQL":"1 year Experience",
+      "Ruby":"a half year Experience",
+      "NodeJS":"a half year Experience"
+    },
+    "devOps": {
+      "AWS":"1 year Experience",
+      "GCP":"a half year Experience",
+      "Azure":"※currently studying",
+      "Docker":"1 year Experience",
+      "Git":"2 year Experience",
+      "Jira":"1 year Experience"
+    }
+  },
+  "projects": {
+    "portfolio": {
+      "image": {
+      "mainImageSrc": "/images/projects/portfolio/portfolio_main.png",
+      "subImageSrc1": "/images/projects/portfolio/portfolio_sub_1.png",
+      "subImageSrc2": "/images/projects/portfolio/portfolio_sub_2.png",
+      "subImageSrc3": "/images/projects/portfolio/portfolio_sub_3.png"
+      },
+      "text": {
+      "projectName": "usma11dia0's PORTFOLIO",
+      "projectSummary": "個人用のポートフォリオサイト",
+      "projectDetails": "ARMSというWebフレームワークを用いて、SF風のデザインに仕上げてみました。",
+      "projectURLLink": "",
+      "projectDemoLink": "",
+      "projectGithubLink": "https://github.com/usma11dia0/my_portfolio",
+      "projectSkills": ["Next.js", "TailWindCSS", "TypeScript", "Vercel", "Framer Motion", "ARWES"]
+      },
+      "brightness": "brightness(1.3)"
+    },
+    "japanese-quiz-app": {
+      "image": {
+      "mainImageSrc": "/images/projects/japanese-quiz-app/japanese-quiz-app_main.png",
+      "subImageSrc1": "/images/projects/japanese-quiz-app/japanese-quiz-app_sub_1.png",
+      "subImageSrc2": "/images/projects/japanese-quiz-app/japanese-quiz-app_sub_2.png",
+      "subImageSrc3": "/images/projects/japanese-quiz-app/japanese-quiz-app_sub_3.png"
+      },
+      "text": {
+      "projectName": "JAPANESE QUIZ APP",
+      "projectSummary": "日本語の同音異義語を判別するクイズアプリ",
+      "projectDetails": "発音された同音異義語を当てる問題と、同音異義語の発声が正確かどうかを判定する問題の二種類を作成しました。",
+      "projectURLLink": "",
+      "projectDemoLink": "https://user-images.githubusercontent.com/30208963/192776306-37bb3e9f-31af-4a4e-bb04-457e62ca2ebf.gif",
+      "projectGithubLink": "https://github.com/usma11dia0/japanese_quiz_app",
+      "projectSkills": ["React", "TypeScript", "Django", "Pytorch", "Firebase", "AWS"]
+      },
+      "brightness": "brightness(1.0)"
+    }
+  }
+}
