@@ -31,6 +31,7 @@ const FrameLines = ({children, theme}: FrameLinesProps): ReactElement => {
   return (
     <div css={{
       position: 'relative',
+      minWidth: '300px',
       zIndex: 1,
       '[data-name=bg]': {
         color: 'hsla(0, 50%, 10%, 0.3)'

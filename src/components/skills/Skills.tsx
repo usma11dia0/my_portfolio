@@ -9,6 +9,7 @@ import FrameLines from '../elements/frame/FrameLines';
 import TextBasic from '../elements/text/TextBasic';
 import { useBleeps } from '@arwes/react';
 import PuffsAndGridBG from '../elements/background/PuffsAndGridBG';
+import { useTranslations } from 'next-intl';
 
 type BleepsNames = 'looping';
 
@@ -35,6 +36,11 @@ const Skills = () => {
   const timerBackendStopId = useRef<number>();
   const timerDevOpsPlayId = useRef<number>();
   const timerDevOpsStopId = useRef<number>();
+
+  const t = useTranslations('skills');
+  const ft = t.raw('frontend');
+  const bt = t.raw('backend');
+  const dt = t.raw('devOps');
 
   // Frontendの表示状態に応じた副作用
   useEffect(() => {
@@ -147,12 +153,12 @@ const Skills = () => {
                     " 
                     enterSec={0.8}
                   >
-                    ■ HTML/CSS - 2 years of experience<br />
-                    ■ JavaScript - 2 year of experience<br />
-                    ■ TypeScript - 1 year of experience<br />
-                    ■ Dart/Flutter - 1 year of experience<br />
-                    ■ React - 1 year of experience<br />
-                    ■ Next.js - ※currently studying<br />
+                    ■ HTML/CSS - {ft['HTML/CSS']}<br />
+                    ■ JavaScript - {ft['JavaScript']}<br />
+                    ■ TypeScript - {ft['TypeScript']}<br />
+                    ■ Dart/Flutter - {ft['Dart/Flutter']}<br />
+                    ■ React - {ft['React']}<br />
+                    ■ Next.js - {ft['NextJs']}<br />
                   </TextBasic>
                 </div>
               </FrameLines>
@@ -185,12 +191,12 @@ const Skills = () => {
                     " 
                     enterSec={0.8}
                   >
-                    ■ Python - 2 years of experience<br />
-                    ■ FastAPI - 1 years of Experience<br />
-                    ■ Rust - ※currently studying<br />
-                    ■ PostgreSQL - 1 year Experience<br />
-                    ■ Ruby - a half year Experience<br />
-                    ■ Node.js - a half year Experience<br />
+                    ■ Python - {bt['Python']}<br />
+                    ■ FastAPI - {bt['FastAPI']}<br />
+                    ■ Rust - {bt['Rust']}<br />
+                    ■ PostgreSQL - {bt['PostgreSQL']}<br />
+                    ■ Ruby - {bt['Ruby']}<br />
+                    ■ Node.js - {bt['NodeJs']}<br />
                   </TextBasic>
                 </div>
               </FrameLines>
@@ -223,12 +229,12 @@ const Skills = () => {
                     " 
                     enterSec={0.8}
                   >
-                    ■ AWS - 1 year Experience<br />
-                    ■ GCP - a half year Experience<br />
-                    ■ Azure - ※currently studying<br />
-                    ■ Docker - 1 year Experience<br />
-                    ■ Git- 2 year Experience<br />
-                    ■ Jira - 1 year Experience<br />
+                    ■ AWS - {dt['AWS']}<br />
+                    ■ GCP - {dt['GCP']}<br />
+                    ■ Azure - {dt['Azure']}<br />
+                    ■ Docker - {dt['Docker']}<br />
+                    ■ Git- {dt['Git']}<br />
+                    ■ Jira - {dt['Jira']}<br />
                   </TextBasic>
                 </div>
               </FrameLines>

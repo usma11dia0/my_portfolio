@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { useCallback, useEffect, useState } from "react";
 import { Animator } from '@arwes/react';
-import { ProjectPublicSetType } from '@/components/projects/projectConfig';
+import { ProjectPublicSetType } from '@/components/projects/ProjectPublicSetType';
 import DotsVariationBG from '../elements/background/DotsVariationBG';
 import FrameKranox from '../elements/frame/FrameKranox';
 import TextBasic from '../elements/text/TextBasic';
@@ -174,7 +174,7 @@ const ProjectModal: React.FC<ModalProps> = ({
                     "
                   >
                     <TextBasic className="
-                      text-neon-blue-without-flicker text-[26px] leading-10
+                      text-neon-blue-without-flicker text-[26px] leading-10 pb-8
                       xs:text-[30px]
                       sm:text-[36px]
                       3xl:text-[38px]
@@ -185,7 +185,7 @@ const ProjectModal: React.FC<ModalProps> = ({
                       {projectName}
                     </TextBasic>
                     <TextBasic className="
-                      text-sf-blue text-[16px] pt-8 pb-5 
+                      text-sf-blue text-[16px] pb-5
                       xs:text-[20px]
                       3xl:text-[22px]
                       5xl:text-[24px]
@@ -364,7 +364,7 @@ const ProjectModal: React.FC<ModalProps> = ({
                       </FrameUnderline>
                     </div>
                     <div className="pt-10 xs:pt-9 2xl:pt-10 3xl:pt-12"/>
-                    {/* 主な使用技術 */}
+                    {/* Technologies */}
                     <FrameLines theme={'frontEnd'}>
                       <div className="
                         p-4 pt-8 pb-6 min-h-[230px]
@@ -372,7 +372,7 @@ const ProjectModal: React.FC<ModalProps> = ({
                         2xl:min-h-[180px] 2xl:p-6
                       ">
                           <TextBasic className="text-[16px] xs:text-[18px] pb-3 text-neon-blue" enterSec={5}>
-                            - 主な使用技術 - 
+                            - Technologies - 
                           </TextBasic>
                           <div className="
                             grid grid-cols-1 pl-0

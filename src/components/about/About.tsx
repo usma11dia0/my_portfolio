@@ -9,8 +9,8 @@ import { useTranslations } from 'next-intl';
 const About = () => {
 
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true })
-  const t = useTranslations('about')
+  const isInView = useInView(ref, { once: true });
+  const t = useTranslations('about');
 
   return (
     <div id="section-about" className="
@@ -83,7 +83,9 @@ const About = () => {
                   <div className="py-2 text-[20px] lg:text-[24px] text-neon-blue-without-flicker">QUALIFICATIONS</div>   
                   {t.raw('qualifications').map((qualification: string, index: number) => (
                     <div key={index} className="py-2 lg:py-4">
-                      <TextDecipher className="text-[16px] lg:text-[20px] text-sf-blue">- {qualification}</TextDecipher>
+                      <TextDecipher className="text-[16px] lg:text-[20px] text-sf-blue">
+                        - {qualification}
+                      </TextDecipher>
                     </div>
                   ))}
                 </div>

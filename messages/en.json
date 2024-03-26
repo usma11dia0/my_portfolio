@@ -42,8 +42,8 @@
       },
       "text": {
       "projectName": "usma11dia0's PORTFOLIO",
-      "projectSummary": "個人用のポートフォリオサイト",
-      "projectDetails": "ARMSというWebフレームワークを用いて、SF風のデザインに仕上げてみました。",
+      "projectSummary": "The site showcases my skill set and the projects",
+      "projectDetails": "Using ARWES to create a design with a sci-fi feel.",
       "projectURLLink": "",
       "projectDemoLink": "",
       "projectGithubLink": "https://github.com/usma11dia0/my_portfolio",
@@ -60,8 +60,8 @@
       },
       "text": {
       "projectName": "JAPANESE QUIZ APP",
-      "projectSummary": "日本語の同音異義語を判別するクイズアプリ",
-      "projectDetails": "発音された同音異義語を当てる問題と、同音異義語の発声が正確かどうかを判定する問題の二種類を作成しました。",
+      "projectSummary": "A quiz app for distinguishing Japanese homophones",
+      "projectDetails": "Created two types of questions: one for guessing pronounced homophones and another for judging the accuracy of the pronunciation of homophones.",
       "projectURLLink": "",
       "projectDemoLink": "https://user-images.githubusercontent.com/30208963/192776306-37bb3e9f-31af-4a4e-bb04-457e62ca2ebf.gif",
       "projectGithubLink": "https://github.com/usma11dia0/japanese_quiz_app",

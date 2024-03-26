@@ -2,11 +2,11 @@ import Image from 'next/image';
 import { fadeIn } from '@/variants';
 import { Animator, useBleeps } from '@arwes/react';
 import { motion, useInView } from 'framer-motion';
-import { PROJECT_PUBLIC_SET } from '@/components/projects/projectConfig';
 import React, { useEffect, useRef, useState } from 'react'
 import FrameCorners from '../elements/frame/FrameCorners';
 import Button from '../elements/button/Button';
 import ProjectModal from './ProjectModal';
+import { useTranslations } from 'next-intl';
 
 interface ProjectCardProps {
   projectName: string;
@@ -30,9 +30,10 @@ const ProjectCard = ({
   const timerStopId = useRef<number>();
 
   // プロジェクトデータ読み込み
-  const projectPublicSet = PROJECT_PUBLIC_SET[projectName]
-  const mainImageSrc = PROJECT_PUBLIC_SET[projectName]['image']['mainImageSrc']
-  const brightness = PROJECT_PUBLIC_SET[projectName]['brightness']
+  const t = useTranslations('projects')
+  const projectPublicSet = t.raw(`${projectName}`)
+  const mainImageSrc = projectPublicSet['image']['mainImageSrc']
+  const brightness = projectPublicSet['brightness']
 
 
   const toggleModal = () => {

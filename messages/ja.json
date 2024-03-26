@@ -13,7 +13,7 @@
       "TypeScript":"経験年数 1年",
       "Dart/Flutter":"経験年数 1年",
       "React":"経験年数 1年",
-      "NextJS":"現在勉強中"
+      "NextJs":"現在勉強中"
     },
     "backend": {
       "Python":"経験年数 2年",
@@ -21,7 +21,7 @@
       "Rust":"現在勉強中",
       "PostgreSQL":"経験年数 1年",
       "Ruby":"経験年数 半年",
-      "NodeJS":"経験年数 半年"
+      "NodeJs":"経験年数 半年"
     },
     "devOps": {
       "AWS":"経験年数 1年",
@@ -43,7 +43,7 @@
       "text": {
       "projectName": "usma11dia0's PORTFOLIO",
       "projectSummary": "個人用のポートフォリオサイト",
-      "projectDetails": "ARMSというWebフレームワークを用いて、SF風のデザインに仕上げてみました。",
+      "projectDetails": "ARWESというWebフレームワークを用いて、SF風のデザインに仕上げてみました。",
       "projectURLLink": "",
       "projectDemoLink": "",
       "projectGithubLink": "https://github.com/usma11dia0/my_portfolio",

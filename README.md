@@ -10,10 +10,14 @@ https://www.youtube.com/watch?v=ekUQ043k2TQ
 
 #Todo:
 文章の見直し(articles,AIイラスト)
-デザイン見直し: 英語日本語切替対応
 コンタクトページの追加？
-・READMEの記載
 
+未定の画面に対してデフォルトの画像や表記を指定する。
+
+ProjectButtonをもう少し変えた方が良い？
+⇒現在はテンプレのまま。
+
+・READMEの記載充実化
 
 # ARWES
 https://arwes.dev/play?code=&type=predefined&sandbox=Audio%20Design%7C%40arwes%2Fbleeps%7CcreateBleep%7Cbasic&explorer=true
