@@ -47,6 +47,8 @@ element.style {
     background-color: rgb(14, 14, 14);
     transform: scale(0.90);
     transform-origin: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 

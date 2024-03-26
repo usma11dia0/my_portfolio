@@ -158,9 +158,9 @@ const ProjectModal: React.FC<ModalProps> = ({
                         "
                       >
                         <ModalSubImage src={mainImageSrc} onClick={() => setMainImagePath(mainImageSrc)} />
-                        <ModalSubImage src={subImageSrc1} onClick={() => setMainImagePath(subImageSrc1)} />
-                        <ModalSubImage src={subImageSrc2} onClick={() => setMainImagePath(subImageSrc2)} />
-                        <ModalSubImage src={subImageSrc3} onClick={() => setMainImagePath(subImageSrc3)} />
+                        {subImageSrc1 && <ModalSubImage src={subImageSrc1} onClick={() => setMainImagePath(subImageSrc1)} />}
+                        {subImageSrc2 && <ModalSubImage src={subImageSrc2} onClick={() => setMainImagePath(subImageSrc2)} />}
+                        {subImageSrc3 && <ModalSubImage src={subImageSrc3} onClick={() => setMainImagePath(subImageSrc3)} />}
                       </div>
                     </ImageMotion>
                   </div>

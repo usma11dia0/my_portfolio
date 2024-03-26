@@ -67,25 +67,43 @@
       "projectGithubLink": "https://github.com/usma11dia0/japanese_quiz_app",
       "projectSkills": ["React", "TypeScript", "Django", "Pytorch", "Firebase", "AWS"]
       },
-      "brightness": "brightness(1.0)"
+      "brightness": "brightness(1.05)"
     },
     "empower-me": {
       "image": {
-      "mainImageSrc": "/images/projects/japanese-quiz-app/japanese-quiz-app_main.png",
-      "subImageSrc1": "/images/projects/japanese-quiz-app/japanese-quiz-app_sub_1.png",
-      "subImageSrc2": "/images/projects/japanese-quiz-app/japanese-quiz-app_sub_2.png",
-      "subImageSrc3": "/images/projects/japanese-quiz-app/japanese-quiz-app_sub_3.png"
+      "mainImageSrc": "/images/projects/empower-me/empower-me_main.png",
+      "subImageSrc1": "/images/projects/empower-me/empower-me_sub_1.png",
+      "subImageSrc2": "/images/projects/empower-me/empower-me_sub_2.png",
+      "subImageSrc3": "/images/projects/empower-me/empower-me_sub_3.png"
       },
       "text": {
-      "projectName": "JAPANESE QUIZ APP",
-      "projectSummary": "日本語の同音異義語を判別するクイズアプリ",
-      "projectDetails": "発音された同音異義語を当てる問題と、同音異義語の発声が正確かどうかを判定する問題の二種類を作成しました。",
+      "projectName": "Empower me",
+      "projectSummary": "クリニック予約/コスメ購入が出来るアプリ",
+      "projectDetails": "当アプリの画面実装/改修を担当させていただきました。URLからアプリをインストール出来るので、ぜひお試しください。",
       "projectURLLink": "https://empowerme-app.com/",
-      "projectDemoLink": "https://user-images.githubusercontent.com/30208963/192776306-37bb3e9f-31af-4a4e-bb04-457e62ca2ebf.gif",
+      "projectDemoLink": "https://github.com/usma11dia0/my_portfolio/assets/30208963/15d6e2f8-8ce5-4a4a-b021-93d2685b8ee4",
       "projectGithubLink": "",
-      "projectSkills": ["React", "TypeScript", "Django", "Pytorch", "Firebase", "AWS"]
+      "projectSkills": ["Flutter", "Firebase", "GCP", "Python", "Google Colab"]
       },
-      "brightness": "brightness(1.0)"
+      "brightness": "brightness(1.05)"
+    },
+    "purchase-order-posting": {
+      "image": {
+      "mainImageSrc": "/images/projects/purchase-order-posting/purchase-order-posting_main.png",
+      "subImageSrc1": "/images/projects/purchase-order-posting/purchase-order-posting_sub_1.png",
+      "subImageSrc2": "/images/projects/purchase-order-posting/purchase-order-posting_sub_2.png",
+      "subImageSrc3": ""
+      },
+      "text": {
+      "projectName": "発注書転記アプリ",
+      "projectSummary": "発注書転記+PDF作成を実行するExcelマクロVBA",
+      "projectDetails": "発注書(Excel)に記載されている内容を発注元店舗別に集計し、結果を一括でPDF化する処理をVBAで自動化しました。",
+      "projectURLLink": "",
+      "projectDemoLink": "",
+      "projectGithubLink": "https://github.com/usma11dia0/purchase_order_posting_example",
+      "projectSkills": ["Excel VBA"]
+      },
+      "brightness": "brightness(1.05)"
     }
   }
 }

@@ -42,11 +42,11 @@ const Projects = () => {
           fadeInSec={0.2}
         />
         <ProjectCard 
-          projectName='portfolio'
+          projectName='empower-me'
           fadeInSec={0.4}
         />
         <ProjectCard 
-          projectName='portfolio'
+          projectName='purchase-order-posting'
           fadeInSec={0.6}
         />
         {/* <ProjectCard 

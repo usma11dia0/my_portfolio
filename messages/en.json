@@ -68,6 +68,24 @@
       "projectSkills": ["React", "TypeScript", "Django", "Pytorch", "Firebase", "AWS"]
       },
       "brightness": "brightness(1.0)"
+    },
+    "empower-me": {
+      "image": {
+      "mainImageSrc": "/images/projects/empower-me/empower-me_main.png",
+      "subImageSrc1": "/images/projects/empower-me/empower-me_sub_1.png",
+      "subImageSrc2": "/images/projects/empower-me/empower-me_sub_2.png",
+      "subImageSrc3": "/images/projects/empower-me/empower-me_sub_3.png"
+      },
+      "text": {
+      "projectName": "Empower me",
+      "projectSummary": "An app for clinic appointments and cosmetic purchases",
+      "projectDetails": "Responsible for the implementation and renovation of the app's interface. The app can be installed via URL.",
+      "projectURLLink": "https://empowerme-app.com/",
+      "projectDemoLink": "https://github.com/usma11dia0/my_portfolio/assets/30208963/15d6e2f8-8ce5-4a4a-b021-93d2685b8ee4",
+      "projectGithubLink": "",
+      "projectSkills": ["Flutter", "Firebase", "GCP", "Python", "Google Colab"]
+      },
+      "brightness": "brightness(1.05)"
     }
   }
 }
