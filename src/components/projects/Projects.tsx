@@ -49,14 +49,14 @@ const Projects = () => {
           projectName='portfolio'
           fadeInSec={0.6}
         />
-        <ProjectCard 
+        {/* <ProjectCard 
           projectName='portfolio'
           fadeInSec={0.8}
         />
         <ProjectCard 
           projectName='portfolio'
           fadeInSec={1}
-        />
+        /> */}
       </div>
     </div>
   );

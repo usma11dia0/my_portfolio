@@ -19,6 +19,13 @@ ProjectButtonをもう少し変えた方が良い？
 
 ・READMEの記載充実化
 
+・お問い合わせフォーム作成
+①SendGridを用いる場合
+https://zenn.dev/peishim/articles/c403e61b9898b0
+
+・vercelデプロイ方法
+https://www.youtube.com/watch?v=AiiGjB2AxqA
+
 # ARWES
 https://arwes.dev/play?code=&type=predefined&sandbox=Audio%20Design%7C%40arwes%2Fbleeps%7CcreateBleep%7Cbasic&explorer=true
 
