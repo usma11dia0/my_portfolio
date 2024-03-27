@@ -1,23 +1,16 @@
 #参考URL：https://www.youtube.com/watch?v=6jFFkGU-ZBU
 #fontの設定方法：15:30～
 
-#react-chartjsにおけるレーダーチャートの描画方法
-https://www.youtube.com/watch?v=Hp3bS8sUSHY
-
-# Next.jsのディレクトリ構成ベストプラクティス
-https://www.youtube.com/watch?v=ekUQ043k2TQ
-
-
 #Todo:
-文章の見直し(articles,AIイラスト)
-コンタクトページの追加？
-
-未定の画面に対してデフォルトの画像や表記を指定する。
-
-ProjectButtonをもう少し変えた方が良い？
-⇒現在はテンプレのまま。
-
+・文章の見直し(articles,AIイラスト)
+・favion作成
 ・READMEの記載充実化
+・vercelデプロイ
+・ProjectButton変更
+・発注書転記のdemo
+・Webスクレイピングのproject追加 (当ポートフォリオから情報を抽出するスクレイピングを作成?)
+・お問い合わせフォームの作成
+
 
 ・お問い合わせフォーム作成
 ①SendGridを用いる場合

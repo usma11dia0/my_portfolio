@@ -35,57 +35,112 @@
   "projects": {
     "portfolio": {
       "image": {
-      "mainImageSrc": "/images/projects/portfolio/portfolio_main.png",
-      "subImageSrc1": "/images/projects/portfolio/portfolio_sub_1.png",
-      "subImageSrc2": "/images/projects/portfolio/portfolio_sub_2.png",
-      "subImageSrc3": "/images/projects/portfolio/portfolio_sub_3.png"
+        "mainImageSrc": "/images/projects/portfolio/portfolio_main.png",
+        "subImageSrc1": "/images/projects/portfolio/portfolio_sub_1.png",
+        "subImageSrc2": "/images/projects/portfolio/portfolio_sub_2.png",
+        "subImageSrc3": "/images/projects/portfolio/portfolio_sub_3.png"
       },
       "text": {
-      "projectName": "usma11dia0's PORTFOLIO",
-      "projectSummary": "The site showcases my skill set and the projects",
-      "projectDetails": "Using ARWES to create a design with a sci-fi feel.",
-      "projectURLLink": "",
-      "projectDemoLink": "",
-      "projectGithubLink": "https://github.com/usma11dia0/my_portfolio",
-      "projectSkills": ["Next.js", "TailWindCSS", "TypeScript", "Vercel", "Framer Motion", "ARWES"]
+        "projectName": "usma11dia0's PORTFOLIO",
+        "projectSummary": "The site showcases my skill set and the projects",
+        "projectDetails": "Using ARWES to create a design with a sci-fi feel.",
+        "projectURLLink": "",
+        "projectDemoLink": "",
+        "projectGithubLink": "https://github.com/usma11dia0/my_portfolio",
+        "projectSkills": ["Next.js", "TailWindCSS", "TypeScript", "Vercel", "Framer Motion", "ARWES"]
       },
       "brightness": "brightness(1.3)"
     },
     "japanese-quiz-app": {
       "image": {
-      "mainImageSrc": "/images/projects/japanese-quiz-app/japanese-quiz-app_main.png",
-      "subImageSrc1": "/images/projects/japanese-quiz-app/japanese-quiz-app_sub_1.png",
-      "subImageSrc2": "/images/projects/japanese-quiz-app/japanese-quiz-app_sub_2.png",
-      "subImageSrc3": "/images/projects/japanese-quiz-app/japanese-quiz-app_sub_3.png"
+        "mainImageSrc": "/images/projects/japanese-quiz-app/japanese-quiz-app_main.png",
+        "subImageSrc1": "/images/projects/japanese-quiz-app/japanese-quiz-app_sub_1.png",
+        "subImageSrc2": "/images/projects/japanese-quiz-app/japanese-quiz-app_sub_2.png",
+        "subImageSrc3": "/images/projects/japanese-quiz-app/japanese-quiz-app_sub_3.png"
       },
       "text": {
-      "projectName": "JAPANESE QUIZ APP",
-      "projectSummary": "A quiz app for distinguishing Japanese homophones",
-      "projectDetails": "Created two types of questions: one for guessing pronounced homophones and another for judging the accuracy of the pronunciation of homophones.",
-      "projectURLLink": "",
-      "projectDemoLink": "https://user-images.githubusercontent.com/30208963/192776306-37bb3e9f-31af-4a4e-bb04-457e62ca2ebf.gif",
-      "projectGithubLink": "https://github.com/usma11dia0/japanese_quiz_app",
-      "projectSkills": ["React", "TypeScript", "Django", "Pytorch", "Firebase", "AWS"]
+        "projectName": "JAPANESE QUIZ APP",
+        "projectSummary": "A quiz app for distinguishing Japanese homophones",
+        "projectDetails": "Created two types of questions: one for guessing pronounced homophones and another for judging the accuracy of the pronunciation of homophones.",
+        "projectURLLink": "",
+        "projectDemoLink": "https://user-images.githubusercontent.com/30208963/192776306-37bb3e9f-31af-4a4e-bb04-457e62ca2ebf.gif",
+        "projectGithubLink": "https://github.com/usma11dia0/japanese_quiz_app",
+        "projectSkills": ["React", "TypeScript", "Django", "Pytorch", "Firebase", "AWS"]
       },
       "brightness": "brightness(1.0)"
     },
     "empower-me": {
       "image": {
-      "mainImageSrc": "/images/projects/empower-me/empower-me_main.png",
-      "subImageSrc1": "/images/projects/empower-me/empower-me_sub_1.png",
-      "subImageSrc2": "/images/projects/empower-me/empower-me_sub_2.png",
-      "subImageSrc3": "/images/projects/empower-me/empower-me_sub_3.png"
+        "mainImageSrc": "/images/projects/empower-me/empower-me_main.png",
+        "subImageSrc1": "/images/projects/empower-me/empower-me_sub_1.png",
+        "subImageSrc2": "/images/projects/empower-me/empower-me_sub_2.png",
+        "subImageSrc3": "/images/projects/empower-me/empower-me_sub_3.png"
       },
       "text": {
-      "projectName": "Empower me",
-      "projectSummary": "An app for clinic appointments and cosmetic purchases",
-      "projectDetails": "Responsible for the implementation and renovation of the app's interface. The app can be installed via URL.",
-      "projectURLLink": "https://empowerme-app.com/",
-      "projectDemoLink": "https://github.com/usma11dia0/my_portfolio/assets/30208963/15d6e2f8-8ce5-4a4a-b021-93d2685b8ee4",
-      "projectGithubLink": "",
-      "projectSkills": ["Flutter", "Firebase", "GCP", "Python", "Google Colab"]
+        "projectName": "Empower me",
+        "projectSummary": "An app for clinic appointments and cosmetic purchases",
+        "projectDetails": "Responsible for the implementation and renovation of the app's interface. The app can be installed via URL.",
+        "projectURLLink": "https://empowerme-app.com/",
+        "projectDemoLink": "https://github.com/usma11dia0/my_portfolio/assets/30208963/15d6e2f8-8ce5-4a4a-b021-93d2685b8ee4",
+        "projectGithubLink": "",
+        "projectSkills": ["Flutter", "Firebase", "GCP", "Python", "Google Colab"]
+      },
+      "brightness": "brightness(1.05)"
+    },
+    "purchase-order-posting": {
+      "image": {
+        "mainImageSrc": "/images/projects/purchase-order-posting/purchase-order-posting_main.png",
+        "subImageSrc1": "/images/projects/purchase-order-posting/purchase-order-posting_sub_1.png",
+        "subImageSrc2": "/images/projects/purchase-order-posting/purchase-order-posting_sub_2.png",
+        "subImageSrc3": ""
+      },
+      "text": {
+        "projectName": "Purchase Order Transcription App",
+        "projectSummary": "Transcription of Purchase Order Contents + PDF Creation",
+        "projectDetails": "Automated the process of aggregating the contents listed in the purchase order (Excel) by ordering store and converting the results into a PDF using VBA.",
+        "projectURLLink": "",
+        "projectDemoLink": "",
+        "projectGithubLink": "https://github.com/usma11dia0/purchase_order_posting_example",
+        "projectSkills": ["Excel VBA"]
       },
       "brightness": "brightness(1.05)"
     }
+  },
+  "others": {
+    "zenn":{
+      "image": {
+        "mainImageSrc": "/images/others/zenn_main.png"
+      },
+      "text": {
+        "otherName": "Articles in Zenn",
+        "otherDetails": "Posting Technical Articles",
+        "otherURLLink": "https://zenn.dev/usma11dia0"
+      },
+      "brightness":"brightness(85%)"
+    },
+    "ai-arts":{
+      "image": {
+        "mainImageSrc": "/images/others/ai-arts_main.png"
+      },
+      "text": {
+        "otherName": "AI Arts",
+        "otherDetails":"Created using Stable Diffusion WebUI",
+        "otherURLLink": ""
+      },
+      "brightness":"brightness(100%)"
+    },
+    "coming-soon":{
+      "image": {
+        "mainImageSrc": "/images/others/coming-soon_main.png"
+      },
+      "text": {
+        "otherName": "Under Preparation",
+        "otherDetails": "ー",
+        "otherURLLink": ""
+      },
+      "brightness":"brightness(100%)"
+    }
   }
 }
+
+

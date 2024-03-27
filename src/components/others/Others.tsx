@@ -1,8 +1,14 @@
 import { ChatBubbleLeftRightIcon, UserCircleIcon } from '@heroicons/react/20/solid'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import React from 'react'
+import OtherCard from './OtherCard'
 
 const Others = () => {
+
+  const t = useTranslations('others')
+  // const projectPublicSet = t.raw(`${projectName}`)
+
   return (
     <div id="section-others" className="
       pt-[3rem] pb-[8rem] bg-[rgb(2,5,10)]
@@ -26,87 +32,9 @@ const Others = () => {
         5xl:pt-[2rem]
         lg:grid-cols-2 
         xl:grid-cols-3">
-        <div>
-          <div className="relative w-[100%] h-[400px]">
-            <Image
-              fill
-              src="/images/blog1.jpg" 
-              alt="blog"
-              className="object-cover"
-              sizes="(min-width: 1280px) 33.3vw, (min-width: 1024px) 50vw, 100vw"
-            />
-          </div>
-          <div className="relative text-center w-[90%] p-[2rem] mt-[-1rem] mx-auto bg-[#09101a]">
-            <div className="relative px-[2rem] py-[1rem] mt-[-3rem] w-fit mx-auto text-[17px] bg-[#55e6a5] text-black font-semibold">
-              Articles in Zenn
-            </div>
-            <div className="flex flex-col justify-center md:flex-row items-center  mt-[1rem] space-x-4">
-              <div className="flex items-center space-x-3">
-                <UserCircleIcon className="w-[1.5rem] mx-auto h-[1.5rem] text-[#55e6a5]"/>
-                <p className="text-white">By Sajal</p>
-              </div>
-              <div className="flex items-center space-x-3">
-                <ChatBubbleLeftRightIcon className="w-[1.5rem] mx-auto h-[1.5rem] text-[#55e6a5]"/>
-                <p className="text-white">Comments (12)</p>
-              </div>
-            </div>
-            <p className="mt-[1rem] text-white text-[18px] font-semibold">Next js Fullstack Development</p>
-          </div>
-        </div>
-        <div>
-          <div className="relative w-[100%] h-[400px]">
-            <Image
-              fill
-              src="/images/blog2.jpg" 
-              alt="blog"
-              className="object-cover"
-              sizes="(min-width: 1280px) 33.3vw, (min-width: 1024px) 50vw, 100vw"
-            />
-          </div>
-          <div className="relative text-center w-[90%] p-[2rem] mt-[-1rem] mx-auto bg-[#09101a]">
-            <div className="relative px-[2rem] py-[1rem] mt-[-3rem] w-fit mx-auto text-[17px] bg-[#55e6a5] text-black font-semibold">
-              AI Illustration
-            </div>
-            <div className="flex flex-col justify-center md:flex-row items-center  mt-[1rem] space-x-4">
-              <div className="flex items-center space-x-3">
-                <UserCircleIcon className="w-[1.5rem] mx-auto h-[1.5rem] text-[#55e6a5]"/>
-                <p className="text-white">By Sajal</p>
-              </div>
-              <div className="flex items-center space-x-3">
-                <ChatBubbleLeftRightIcon className="w-[1.5rem] mx-auto h-[1.5rem] text-[#55e6a5]"/>
-                <p className="text-white">Comments (12)</p>
-              </div>
-            </div>
-            <p className="mt-[1rem] text-white text-[18px] font-semibold">Next js Fullstack Development</p>
-          </div>
-        </div>
-        <div>
-          <div className="relative w-[100%] h-[400px]">
-            <Image
-              fill
-              src="/images/blog3.jpg" 
-              alt="blog" 
-              className="object-cover"
-              sizes="(min-width: 1280px) 33.3vw, (min-width: 1024px) 50vw, 100vw"
-            />
-          </div>
-          <div className="relative text-center w-[90%] p-[2rem] mt-[-1rem] mx-auto bg-[#09101a]">
-            <div className="relative px-[2rem] py-[1rem] mt-[-3rem] w-fit mx-auto text-[17px] bg-[#55e6a5] text-black font-semibold">
-              ???
-            </div>
-            <div className="flex flex-col justify-center md:flex-row items-center  mt-[1rem] space-x-4">
-              <div className="flex items-center space-x-3">
-                <UserCircleIcon className="w-[1.5rem] mx-auto h-[1.5rem] text-[#55e6a5]"/>
-                <p className="text-white">By Sajal</p>
-              </div>
-              <div className="flex items-center space-x-3">
-                <ChatBubbleLeftRightIcon className="w-[1.5rem] mx-auto h-[1.5rem] text-[#55e6a5]"/>
-                <p className="text-white">Comments (12)</p>
-              </div>
-            </div>
-            <p className="mt-[1rem] text-white text-[18px] font-semibold">Next js Fullstack Development</p>
-          </div>
-        </div>
+          <OtherCard other={"zenn"}/>
+          <OtherCard other={"ai-arts"}/>
+          <OtherCard other={"coming-soon"}/>
       </div>
     </div>
   )

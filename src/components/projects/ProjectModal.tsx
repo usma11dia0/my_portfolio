@@ -11,6 +11,7 @@ import FrameLines from '../elements/frame/FrameLines';
 import { LinkIcon, VideoCameraIcon } from '@heroicons/react/20/solid';
 import FrameUnderline from '../elements/frame/FrameUnderLine';
 import ImageMotion from './ImageMotion';
+import LinkButton from '../elements/button/LinkButton';
 
 interface ModalProps {
   isOpen?: boolean;
@@ -225,143 +226,11 @@ const ProjectModal: React.FC<ModalProps> = ({
                       grid grid-cols-2 gap-6 justify-start
                       sm:pl-4
                     ">
-                      <FrameUnderline link={projectURLLink}>
-                        <a 
-                          href={projectURLLink || "#"} 
-                          onClick={(e) => {
-                            if (!projectURLLink) {
-                              e.preventDefault();
-                            }
-                          }}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <div className="flex items-center pl-2">
-                            <LinkIcon
-                              className="pl-0"
-                              color='white'
-                              style={{ width: "20px", height: "20px" }}
-                            />
-                            {
-                              projectURLLink ? (
-                                <Button name='fade'>
-                                  <TextBasic className="
-                                    text-[12px] p-2 text-sf-blue
-                                    xs:text-[14px]
-                                    sm:text-[16px]
-                                    " 
-                                    enterSec={5}
-                                  >
-                                    URL
-                                  </TextBasic>
-                                </Button>
-                              ) : (
-                                <TextBasic className="
-                                  text-[12px] p-2 text-sf-blue
-                                  xs:text-[14px]
-                                  sm:text-[16px]
-                                " 
-                                enterSec={5}
-                                >
-                                  URL
-                                </TextBasic>
-                              )
-                            }
-                          </div>
-                        </a>
-                      </FrameUnderline>
+                      <LinkButton name={"URL"} link={projectURLLink} />
                       {/* <div className='pl-8'/> */}
-                      <FrameUnderline link={projectDemoLink}>
-                        <a 
-                          href={projectDemoLink || "#"} 
-                          onClick={(e) => {
-                            if (!projectDemoLink) {
-                              e.preventDefault();
-                            }
-                          }}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <div className="flex items-center pl-2">
-                            <VideoCameraIcon
-                              className="pl-0"
-                              color='white'
-                              style={{ width: "20px", height: "20px" }}
-                            />
-                            {
-                              projectDemoLink ? (
-                                <Button name='fade'>
-                                  <TextBasic className="
-                                    text-[12px] p-2 text-sf-blue
-                                    xs:text-[14px]
-                                    sm:text-[16px]
-                                    "
-                                    enterSec={5}
-                                  >
-                                    DEMO
-                                  </TextBasic>
-                                </Button>
-                              ) : (
-                                <TextBasic className="
-                                  text-[12px] p-2 text-sf-blue
-                                  xs:text-[14px]
-                                  sm:text-[16px]
-                                  " 
-                                  enterSec={5}
-                                >
-                                  DEMO
-                                </TextBasic>
-                              )
-                            }
-                          </div>
-                        </a>
-                      </FrameUnderline>
+                      <LinkButton name={"DEMO"} link={projectDemoLink} /> 
                       {/* <div className='pl-8'/> */}
-                      <FrameUnderline link={projectGithubLink}>
-                        <a 
-                          href={projectGithubLink || "#"} 
-                          onClick={(e) => {
-                            if (!projectGithubLink) {
-                              e.preventDefault();
-                            }
-                          }}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <div className="flex items-center pl-2">
-                            <Image
-                              src="/images/github-mark-white.svg"
-                              alt="GitHub"
-                              width={20}
-                              height={20}
-                            />
-                            {
-                              projectGithubLink ? (
-                                <Button name='fade'>
-                                  <TextBasic className="
-                                    text-[9px] p-2 text-sf-blue
-                                    xs:text-[12px]
-                                    sm:text-[16px]
-                                  " enterSec={5}
-                                  >
-                                    GITHUB
-                                  </TextBasic>
-                                </Button>
-                              ) : (
-                                <TextBasic className="
-                                  text-[9px] p-2 text-sf-blue
-                                  xs:text-[12px]
-                                  sm:text-[16px]
-                                " 
-                                enterSec={5}
-                                >
-                                  GITHUB
-                                </TextBasic>
-                              )
-                            }
-                          </div>
-                        </a>
-                      </FrameUnderline>
+                      <LinkButton name={"GITHUB"} link={projectGithubLink} /> 
                     </div>
                     <div className="pt-10 xs:pt-9 2xl:pt-10 3xl:pt-12"/>
                     {/* Technologies */}
