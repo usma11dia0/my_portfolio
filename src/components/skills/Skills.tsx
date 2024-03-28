@@ -118,7 +118,7 @@ const Skills = () => {
       </h1>
       <div className="
         w-[80%] pt-[2rem] pb-[8rem] mx-auto gap-[2rem] items-center
-        grid grid-cols-1 2xl:grid-cols-3
+        grid grid-cols-1 1xl:grid-cols-3
         md:pt-[4rem] 
         xl:pt-[2rem]
         2xlAndLgh:pt-[5rem]
@@ -140,7 +140,7 @@ const Skills = () => {
           <div className="
             flex flex-col items-center
             lg:flex-row lg:items-center lg:justify-center
-            2xl:flex-col"
+            1xl:flex-col"
           >
             <RadarChart options={options} data={chartFrontendData}/>
             <div className="p-3" />
@@ -178,7 +178,7 @@ const Skills = () => {
           <div className="
             flex flex-col items-center
             lg:flex-row  lg:items-center lg:justify-center
-            2xl:flex-col"
+            1xl:flex-col"
           >
             <RadarChart options={options} data={chartBackendData}/>
             <div className="p-3" />
@@ -216,7 +216,7 @@ const Skills = () => {
           <div className="
             flex flex-col items-center
             lg:flex-row lg:items-center lg:justify-center
-            2xl:flex-col"
+            1xl:flex-col"
           >
             <RadarChart options={options} data={chartDevOpsData}/>
             <div className="p-3" />

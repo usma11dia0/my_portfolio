@@ -38,21 +38,21 @@ URL：https://usma11dia0-portfolio.vercel.app/
 │  │  └─projects 
 │  └─sounds
 └─src　　　　　　　     
-    ├─components　　　　　
-    │  ├─about
-    │  ├─elements　　　#共通して使用するコンポーネント
-    │  │  ├─background
-    │  │  ├─button
-    │  │  ├─frame
-    │  │  └─text
-    │  ├─hero　　
-    │  ├─layouts　　　 #ヘッダーやフッターなどレイアウト関連のコンポーネント
-    │  ├─others
-    │  ├─projects
-    │  ├─services
-    │  └─skills
-    ├─pages    
-    └─styles          #Tailwind CSS,Framer Motion関連のファイルを格納
+  ├─components　　　　　
+  │  ├─about
+  │  ├─elements　　　#共通して使用するコンポーネント
+  │  │  ├─background
+  │  │  ├─button
+  │  │  ├─frame
+  │  │  └─text
+  │  ├─hero　　
+  │  ├─layouts　　　 #ヘッダーやフッターなどレイアウト関連のコンポーネント
+  │  ├─others
+  │  ├─projects
+  │  ├─services
+  │  └─skills
+  ├─pages    
+  └─styles          #Tailwind CSS,Framer Motion関連のファイルを格納
 ```
 
 ### 対応スクリーンサイズ
