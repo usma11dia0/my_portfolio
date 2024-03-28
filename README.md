@@ -1,17 +1,14 @@
 # usma11dia0's Portfolio
-下記リンク先のポートフォリオにて使用した技術・フレームワークの詳細です。
-問い合わせ等は下記のアドレスへお願いいたします。
-
-ポートフォリオ URL：
-問い合わせ先：usma11dia0@gmail.com
+下記リンク先のポートフォリオにて使用した技術・フレームワークの詳細です。  
+URL：  
 
 ## 主な使用技術
-<img src="https://img.shields.io/badge/-Next.js-000000.svg?logo=next.js&style=for-the-badge">
-<img src="https://img.shields.io/badge/-TailwindCSS-000000.svg?logo=tailwindcss&style=for-the-badge">
-
-<!-- Firebase -->
-<!-- ARWES -->
+<!-- Next.js -->
+<img src="https://img.shields.io/badge/Next.js-v14.1.0-blue.svg?logo=next.js&style=for-the-badge">
+<!-- TailWind CSS -->
+<img src="https://img.shields.io/badge/TailwindCSS-v3.4.1-blue.svg?logo=tailwindcss&style=for-the-badge">
 <!-- TypeScript -->
+<img src="https://img.shields.io/badge/Typescript-v5.3.3-blue.svg?logo=typescript&style=for-the-badge">
 <!-- Vercel -->
 
 ## 環境
@@ -84,10 +81,14 @@
 | 2650×1440       | 
 
 ## 開発環境構築手順
-１．
+#### １．Node.jsのversionを指定  
+`nvm use 21.1.0`
 
+#### ２．開発用の依存関係をインストール    
+`npm install` 
 
-
+#### ３．Next.jsの開発サーバーを起動  
+`npm run dev`
 
 ### Todoリスト
 - favion作成
