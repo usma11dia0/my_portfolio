@@ -42,7 +42,7 @@ const Nav = ({openNav}:Props) => {
           text-white font-bold
           "
         >
-          usma11dia0's
+          {"usma11dia0's"}
           <span className='text-[20px] sm:text-[25px] py-4 px-2 text-neon-blue'>PORTFOLIO</span>
         </h1>
         <Button name='intro'>

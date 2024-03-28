@@ -33,7 +33,8 @@ const Hero = () => {
             lg:text-[40px] lg:mt-[2rem]
             xl:text-[45px]
           ">
-            Hi, I'm <span className="
+            {"Hi, I'm"} 
+            <span className="
               text-[30px] text-[#1FFFFF]
               sm:text-[35px] 
               md:text-[50px] 
