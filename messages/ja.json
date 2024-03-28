@@ -115,7 +115,8 @@
         "otherName": "記事作成",
         "otherDetails": "Zennへ記事投稿",
         "otherURLLink": "https://zenn.dev/usma11dia0"
-      }
+      },
+      "brightness":"brightness(85%)"
     },
     "ai-arts":{
       "image": {
@@ -125,7 +126,8 @@
         "otherName": "AIアート",
         "otherDetails": "Stable Diffusion WebUIを利用",
         "otherURLLink": ""
-      }
+      },
+      "brightness":"brightness(100%)"
     },
     "coming-soon":{
       "image": {
@@ -135,7 +137,8 @@
         "otherName": "準備中",
         "otherDetails": "ー",
         "otherURLLink": ""
-      }
+      },
+      "brightness":"brightness(100%)"
     }
   }
 }

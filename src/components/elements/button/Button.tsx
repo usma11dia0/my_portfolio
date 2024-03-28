@@ -5,9 +5,9 @@ type BleepsNames
   = 'click' | 'intro' | 'error' | 'transmission' | 'expand' | 'hover' | 'fade';
 
 interface ButtonProps {
-  name: BleepsNames
-  children: ReactNode
-  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void
+  name: BleepsNames;
+  children: ReactNode;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 const Button = (props: ButtonProps): ReactElement => {
@@ -24,7 +24,15 @@ const Button = (props: ButtonProps): ReactElement => {
   };
   
 
-  return <button onClick={onClickHandler} onMouseEnter={onMouseEnter}>{children}</button>;
+  return ( 
+    <button 
+      onClick={onClickHandler} 
+      onMouseEnter={onMouseEnter}
+      className="custom-cursor"
+    >
+      {children}
+    </button>
+  );
 };
 
 export default Button

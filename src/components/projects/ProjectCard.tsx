@@ -85,7 +85,7 @@ const ProjectCard = ({
       className='div'
     >
       <div className="
-        relative cursor-pointer
+        relative 
         w-[100%] h-[200px] 
         md:h-[300px]
       ">

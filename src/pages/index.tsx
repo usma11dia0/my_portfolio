@@ -9,6 +9,7 @@ import Services from '@/components/services/Services';
 import Skills from '@/components/skills/Skills';
 import React, { useState } from 'react'
 import { GetStaticPropsContext } from 'next';
+import MouseMoveCrosshair from '@/components/elements/background/MouseMoveCrossHair';
 
 const HomePage = () => {
 
@@ -17,20 +18,22 @@ const HomePage = () => {
   const closeNav = () => setNav(false)
 
   return (
-    <div id="section-home" className="overflow-x-hidden">
-      <div>
-        <MobileNav nav={nav} closeNav={closeNav}/>
-        <Nav openNav={openNav}/>
-        <Hero />
-        <div className="relative z-[30]">
-          <About />
-          {/* <Services /> */}
-          <Skills />
-          <Projects />
-          <Articles />
-          <Footer />
+    <div id="section-home" className="overflow-x-hidden none-cursor">
+      <MouseMoveCrosshair>
+        <div>
+          <MobileNav nav={nav} closeNav={closeNav}/>
+          <Nav openNav={openNav}/>
+          <Hero />
+          <div className="relative z-[30]">
+            <About />
+            {/* <Services /> */}
+            <Skills />
+            <Projects />
+            <Articles />
+            <Footer />
+          </div>
         </div>
-      </div>
+      </MouseMoveCrosshair>
     </div>
   );
 }

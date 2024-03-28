@@ -6,7 +6,7 @@
 
 @layer components {
   .nav-link {
-    @apply relative font-semibold text-white cursor-pointer 
+    @apply relative font-semibold text-white  
           text-[17px] w-fit
           hidden lg:block
           after:absolute after:block after:origin-center after:content-['']  
@@ -16,7 +16,7 @@
   };
 
   .nav-link-mobile {
-    @apply relative font-semibold text-white cursor-pointer
+    @apply relative font-semibold text-white 
           text-[27px] mb-[2rem] w-fit    
           lg:block 
           after:absolute after:block after:origin-center after:content-[''] 
@@ -108,5 +108,20 @@
     50%, 100% {
         filter: drop-shadow(-2px 4px 4px #091243) drop-shadow(0 0 10px #00D0FF) drop-shadow(0 0 20px #00D0FF) drop-shadow(0 0 30px #00D0FF) drop-shadow(0 0 40px #00D0FF) drop-shadow(0 0 55px #00D0FF) drop-shadow(0 0 75px #00D0FF);
     }
+  }
 }
+
+@layer utilities {
+  .crosshair-v {
+    @apply fixed bg-[hsla(180,100%,75%,0.4)] w-0.5 h-screen z-[1000] pointer-events-none;
+  }
+  .crosshair-h {
+    @apply fixed bg-[hsla(180,100%,75%,0.4)] h-0.5 w-screen z-[1000] pointer-events-none;
+  }
+  .custom-cursor {
+    cursor: url("/Cross.cur"), auto;
+  };
+  .none-cursor {
+    cursor: none;
+  };
 }

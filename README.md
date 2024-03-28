@@ -1,88 +1,101 @@
-#参考URL：https://www.youtube.com/watch?v=6jFFkGU-ZBU
-#fontの設定方法：15:30～
+# usma11dia0's Portfolio
+下記リンク先のポートフォリオにて使用した技術・フレームワークの詳細です。
+問い合わせ等は下記のアドレスへお願いいたします。
 
-#Todo:
-・文章の見直し(articles,AIイラスト)
-・favion作成
-・READMEの記載充実化
-・vercelデプロイ
-・ProjectButton変更
-・発注書転記のdemo
-・Webスクレイピングのproject追加 (当ポートフォリオから情報を抽出するスクレイピングを作成?)
-・お問い合わせフォームの作成
+ポートフォリオ URL：
+問い合わせ先：usma11dia0@gmail.com
 
+## 主な使用技術
+<img src="https://img.shields.io/badge/-Next.js-000000.svg?logo=next.js&style=for-the-badge">
+<img src="https://img.shields.io/badge/-TailwindCSS-000000.svg?logo=tailwindcss&style=for-the-badge">
 
-・お問い合わせフォーム作成
-①SendGridを用いる場合
-https://zenn.dev/peishim/articles/c403e61b9898b0
+<!-- Firebase -->
+<!-- ARWES -->
+<!-- TypeScript -->
+<!-- Vercel -->
 
-・vercelデプロイ方法
-https://www.youtube.com/watch?v=AiiGjB2AxqA
+## 環境
+| 言語・フレームワーク    | バージョン      |
+| --------------------- | -------------- |
+| Next.js               | 14.1.0         |
+| Node.js               | 21.1.0　       |
+| TypeScript            | 5.3.3　        |
+| chart.js              | 4.4.2     　   |
+| Framer Motion         | 13.4.6         |
+| TailWind CSS          | 3.4.1          |
+| ARWES                 | 1.0.0-alpha.23 |
 
-# ARWES
-https://arwes.dev/play?code=&type=predefined&sandbox=Audio%20Design%7C%40arwes%2Fbleeps%7CcreateBleep%7Cbasic&explorer=true
+※上記以外はpackage.jsonを参照してください。
 
-
-デザイン参考：https://hodalab.com/portfolio/
-https://goworkship.com/magazine/neon-effects-webdesign/
-
-
-# 多言語対応参考サイト
-https://github.com/vercel/next.js/tree/canary/examples/app-dir-i18n-routing
-
-
-スクショの際のDeveloperTool
-画像サイズ：1920×1080 75%
-element.style {
-    margin: 0px;
-    height: 30%;
-    width: 65%;
-    background-color: rgb(14, 14, 14);
-    transform: scale(0.90);
-    transform-origin: center;
-    overflow-x: hidden;
-    overflow-y: hidden;
-}
-
-
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## ディレクトリ構成
+```text
+├─.next
+├─messages　          # 多言語対応(日本語,英語)のための言語ファイルを格納
+├─node_modules
+├─public              # 静的ファイルを格納
+│  ├─demo
+│  ├─images
+│  │  ├─others
+│  │  └─projects 
+│  └─sounds
+└─src　　　　　　　     
+    ├─components　　　　　
+    │  ├─about
+    │  ├─elements　　　#共通して使用するコンポーネント
+    │  │  ├─background
+    │  │  ├─button
+    │  │  ├─frame
+    │  │  └─text
+    │  ├─hero　　
+    │  ├─layouts　　　 #ヘッダーやフッターなどレイアウト関連のコンポーネント
+    │  ├─others
+    │  ├─projects
+    │  ├─services
+    │  └─skills
+    ├─pages    
+    └─styles          #Tailwind CSS,Framer Motion関連のファイルを格納
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 対応スクリーンサイズ
+※下記以外については、レイアウトが崩れてしまう可能性があります。
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+| Size            | 
+| ----------------| 
+| 360×640         |   　　　　                
+| 360×720         |           　               
+| 375×667         | 
+| 375×812       　|  
+| 390×844         | 
+| 414×896         | 
+| 1280×720        |  
+| 1280×800        |  
+| 1366×768        |  
+| 1368×912        |  
+| 1440×900        |  
+| 1512×982        |  
+| 1536×864        |  
+| 1680×1050       | 
+| 1800×1169       |  
+| 1912×958        | 
+| 1920×1080       |  
+| 1920×1200       |  
+| 2552×958        |  
+| 2560×1080       |  
+| 2650×1440       | 
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## 開発環境構築手順
+１．
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Todoリスト
+- favion作成
+- 使用技術のSheild作成
+- カーソルを合わせると十字線が表示される。
+- vercelデプロイ
+- ProjectButton変更
+- 発注書転記アプリのdemo追加
+- Webスクレイピングのproject追加 (当ポートフォリオから情報を抽出するスクレイピングを作成?)
+- お問い合わせフォームの作成
+- Adobe illustlaterでカーソルアイコンを作成

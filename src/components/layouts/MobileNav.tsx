@@ -24,7 +24,7 @@ const MobileNav = ({nav, closeNav}:Props) => {
       className={`
         fixed 
         ${navAnimation} transform transition-all dulation-300 
-        top-0 left-0 right-0 bottom-0 z-[1000000] 
+        top-0 left-0 right-0 bottom-0 z-[100] 
         bg-[#09101a]`}
     >
       <div className="w-[100vw] h-[100vh] flex flex-col items-center justify-center">
@@ -104,7 +104,7 @@ const MobileNav = ({nav, closeNav}:Props) => {
       <Button name="intro">
         <div
           onClick={closeNav}
-          className="absolute z-[1000000000] cursor-pointer top-[2rem] right-[2rem] w-[2.5rem] h-[2.5rem] text-[#1FFFFF]"
+          className="absolute z-[1000000000]  top-[2rem] right-[2rem] w-[2.5rem] h-[2.5rem] text-[#1FFFFF]"
         >
           <XMarkIcon />
         </div>

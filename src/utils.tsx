@@ -14,7 +14,7 @@ export const handleScroll = (
   };
 
 
-  // 固定ヘッダーの高さを考慮してセクションまでスクロールする位置を計算する関数
+// 固定ヘッダーの高さを考慮してセクションまでスクロールする位置を計算する関数
 export function calculateScrollPosition(sectionId: string, headerHeight: number): number {
   const section = document.getElementById(sectionId);
   if (!section) {
