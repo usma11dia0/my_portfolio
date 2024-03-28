@@ -3,13 +3,15 @@
 URL：  
 
 ## 主な使用技術
-<!-- Next.js -->
-<img src="https://img.shields.io/badge/Next.js-v14.1.0-blue.svg?logo=next.js&style=for-the-badge">
-<!-- TailWind CSS -->
-<img src="https://img.shields.io/badge/TailwindCSS-v3.4.1-blue.svg?logo=tailwindcss&style=for-the-badge">
-<!-- TypeScript -->
-<img src="https://img.shields.io/badge/Typescript-v5.3.3-blue.svg?logo=typescript&style=for-the-badge">
-<!-- Vercel -->
+<p>
+  <!-- Next.js -->
+  <img src="https://img.shields.io/badge/Next.js-v14.1.0-blue.svg?logo=next.js&style=for-the-badge">
+  <!-- TailWind CSS -->
+  <img src="https://img.shields.io/badge/TailwindCSS-v3.4.1-blue.svg?logo=tailwindcss&style=for-the-badge">
+  <!-- TypeScript -->
+  <img src="https://img.shields.io/badge/Typescript-v5.3.3-blue.svg?logo=typescript&style=for-the-badge">
+  <!-- Vercel -->
+</p>
 
 ## 環境
 | 言語・フレームワーク    | バージョン      |
