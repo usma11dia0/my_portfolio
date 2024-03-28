@@ -39,8 +39,8 @@ module.exports = {
         '1xlAndLgh': {
           'raw': '(min-width: 1366px) and (max-width: 1535px) and (min-height: 1024px)'
         },
-        '2xl': '1536px',
-        '2xlCustom': {'raw': '(min-width: 1536px)'}, // TextBasicの箇所で2xlが適用されないため追加
+        '1.5xl': '1440px',
+        '2xlCustom': {'raw': '(min-width: 1536px)'}, // 2xlが適用されないため追加
         '2xlAndLgh': {
           'raw': '(min-width: 1536px) and (max-width: 1799px) and (min-height: 1024px)'
         },

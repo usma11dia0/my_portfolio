@@ -95,8 +95,8 @@ URL：https://usma11dia0-portfolio.vercel.app/
 `npm run dev`
 
 ### Todoリスト
-- modal表示時のothers URLボタン修正
-- ノートPCのレイアウト変更
+- 参考URL 掲載
+- ノートPCのレイアウト変更 (タイトルとパネル間調整、SkillをGrid-col-3)
 - favion作成
 - 携帯閲覧時に十字線を削除
 - Adobe illustlaterでカーソルアイコンを作成 ※通常・フォーカスの2種類    

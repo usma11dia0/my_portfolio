@@ -5,11 +5,8 @@ import { ProjectPublicSetType } from '@/components/projects/ProjectPublicSetType
 import DotsVariationBG from '../elements/background/DotsVariationBG';
 import FrameKranox from '../elements/frame/FrameKranox';
 import TextBasic from '../elements/text/TextBasic';
-import Button from '../elements/button/Button';
 import ModalSubImage from './ModalSubImage';
 import FrameLines from '../elements/frame/FrameLines';
-import { LinkIcon, VideoCameraIcon } from '@heroicons/react/20/solid';
-import FrameUnderline from '../elements/frame/FrameUnderLine';
 import ImageMotion from './ImageMotion';
 import LinkButton from '../elements/button/LinkButton';
 
@@ -88,9 +85,11 @@ const ProjectModal: React.FC<ModalProps> = ({
           lg:h-[90%] lg:pt-24 lg:w-[100%] 
           lgAnd1xlh:h-[205vw] lgAnd1xlh:pt-[550px]
           xl:h-[2750px] xl:pt-[1100px]
+          1xl:h-[58vw] 1xl:pt-[130px]
+          1.5xl:h-[59vw]
           1xlAndLgh:h-[290%] 1xlAndLgh:pt-[1200px]
-          2xl:h-[135%] 2xl:pt-[400px]
-          2xlAndLgh:h-[97%] 2xlAndLgh:pt-[230px]
+          2xlCustom:h-[58vw] 2xlCustom:pt-[140px]
+          2xlAndLgh:h-[61vw] 2xlAndLgh:pt-[230px]
           3xl:h-[58vw] 3xl:pt-[200px]
           3xlAndMdh:h-[52vw] 3xlAndMdh:3xl:pt-[165px]
           4xl:h-[53vw] 4xlAndLgh:pt-[180px]
@@ -102,7 +101,7 @@ const ProjectModal: React.FC<ModalProps> = ({
               <DotsVariationBG active={active}>
                 <div className="
                   grid grid-cols-1 gap-10
-                  2xl:grid-cols-2
+                  1xl:grid-cols-2
                   "
                   onClick={handleInsideClick}
                 >
@@ -115,10 +114,12 @@ const ProjectModal: React.FC<ModalProps> = ({
                     mdAnd2Lgh:translate-y-165
                     lg:translate-x-14 lg:translate-y-152
                     xl:translate-x-20 xl:translate-y-165
-                    1xl:translate-y-160
+                    1xl:translate-y-9
+                    1.5xl:translate-y-12
                     1xlAndLgh:translate-y-180
-                    2xl:translate-x-10 2xl:translate-y-10
-                    3xl:translate-y-8
+                    2xlCustom:translate-x-10 2xlCustom:translate-y-15
+                    2xlAndLgh:translate-y-10
+                    3xl:translate-y-10
                     3xlAndMdh:translate-y-13
                     5xl:translate-x-40 5xl:translate-y-8
                   ">
@@ -134,7 +135,7 @@ const ProjectModal: React.FC<ModalProps> = ({
                           filter border border-dotted border-[hsl(180,75%,30%)]
                           w-[75%] h-full
                           sm:w-[85%]
-                          2xl:w-[100%]
+                          1xl:w-[100%]
                           5xl:w-[75%]
                         " 
                         style={{ filter: brightness }}
@@ -150,6 +151,7 @@ const ProjectModal: React.FC<ModalProps> = ({
                           lg:pl-10
                           lgAnd1xlh:pl-12
                           xl:pl-30
+                          1xl:pl-15
                           1xlAndMdh:w-[90%]
                           2xl:w-[100%] 2xl:pl-8
                           2xlAndLgh:pl-11
@@ -170,7 +172,7 @@ const ProjectModal: React.FC<ModalProps> = ({
                     order-2 pt-0 z-[0] pl-12 pr-12
                     sm:pt-2
                     lg:order-2
-                    2xl:pt-8
+                    1xl:pt-8 1xl:pl-10
                     3xl:pt-11
                     "
                   >
@@ -178,8 +180,10 @@ const ProjectModal: React.FC<ModalProps> = ({
                       text-neon-blue-without-flicker text-[26px] leading-10 pb-8
                       xs:text-[30px]
                       sm:text-[36px]
-                      3xl:text-[38px]
-                      5xl:text-[40px]
+                      1xl:pb-4
+                      2xlAndLgh:text-[38px] 2xlAndLgh:pb-8
+                      3xl:text-[38px] 3xl:pb-8
+                      5xl:text-[44px]
                       "
                       enterSec={5}
                     >
@@ -188,8 +192,9 @@ const ProjectModal: React.FC<ModalProps> = ({
                     <TextBasic className="
                       text-sf-blue text-[16px] pb-5
                       xs:text-[20px]
+                      2xlAndLgh:text-[22px]
                       3xl:text-[22px]
-                      5xl:text-[24px]
+                      5xl:text-[28px]
                       "
                       enterSec={5}
                     >
@@ -203,12 +208,14 @@ const ProjectModal: React.FC<ModalProps> = ({
                       lg:min-h-[750px]
                       lgAnd1xlh:min-h-[750px]
                       xlAnd2smh:min-h-[850px]
-                      1xlAndMdh:min-h-[900px]
+                      1xl:min-h-[65px]
+                      1.5xl:min-h-[100px]
                       1xlAndLgh:text-[18px] 1xlAndLgh:min-h-[900px]
                       2xlCustom:min-h-[85px]
-                      3xl:min-h-[120px] 3xl:text-[18px] 3xl:leading-loose
-                      3xlAndMdh:min-h-[140px]
-                      5xl:text-[18px] 5xl:min-h-[140px]
+                      2xlAndLgh:min-h-[160px] 2xlAndLgh:text-[20px] 2xlAndLgh:leading-loose
+                      3xl:min-h-[180px] 3xl:text-[20px] 3xl:leading-loose
+                      3xlAndMdh:min-h-[180px]
+                      5xl:text-[22px] 5xl:min-h-[160px]
                       " 
                       enterSec={5}
                     >
@@ -217,6 +224,8 @@ const ProjectModal: React.FC<ModalProps> = ({
                     {/* Link */}
                     <TextBasic className="
                       text-[19px] pt-10 pb-5 text-sf-blue
+                      1xl:pt-5
+                      5xl:text-[22px]
                       " 
                       enterSec={5}
                     >
@@ -225,6 +234,7 @@ const ProjectModal: React.FC<ModalProps> = ({
                     <div className="
                       grid grid-cols-2 gap-6 justify-start
                       sm:pl-4
+                      1xl:gap-3
                     ">
                       <LinkButton name={"URL"} link={projectURLLink} />
                       {/* <div className='pl-8'/> */}
@@ -238,17 +248,26 @@ const ProjectModal: React.FC<ModalProps> = ({
                       <div className="
                         p-4 pt-8 pb-6 min-h-[230px]
                         sm:p-8
+                        1xl:p-3 1xl:min-h-[150px]
                         2xl:min-h-[180px] 2xl:p-6
                       ">
-                          <TextBasic className="text-[16px] xs:text-[18px] pb-3 text-neon-blue" enterSec={5}>
+                          <TextBasic className="
+                            text-[16px] pb-3 text-neon-blue
+                            xs:text-[18px]  
+                            5xl:text-[22px]" enterSec={5}>
                             - Technologies - 
                           </TextBasic>
                           <div className="
                             grid grid-cols-1 pl-0
                             sm:grid-cols-2 sm:pl-12
+                            5xl:gap-3 5xl:pb-2
                           ">
                           {projectSkills.map((skill, index) => (
-                            <TextBasic key={index} className="text-[14px] xs:text-[18px] text-sf-blue" enterSec={5}>
+                            <TextBasic key={index} className="
+                              text-[14px] text-sf-blue 
+                              xs:text-[18px]
+                              5xl:text-[20px] 
+                              " enterSec={5}>
                               ■ {skill}
                             </TextBasic>
                           ))}

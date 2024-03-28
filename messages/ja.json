@@ -61,7 +61,7 @@
       "text": {
         "projectName": "日本語同音異義語クイズ",
         "projectSummary": "日本語の同音異義語を判別するクイズアプリ",
-        "projectDetails": "発音された同音異義語を当てる問題と、同音異義語の発声が正確かどうかを判定する問題の二種類を作成しました。",
+        "projectDetails": "同音異義語を当てる問題と、発声が正確かどうかを判定する問題の二種類を作成しました。",
         "projectURLLink": "",
         "projectDemoLink": "https://user-images.githubusercontent.com/30208963/192776306-37bb3e9f-31af-4a4e-bb04-457e62ca2ebf.gif",
         "projectGithubLink": "https://github.com/usma11dia0/japanese_quiz_app",

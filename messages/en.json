@@ -60,8 +60,8 @@
       },
       "text": {
         "projectName": "JAPANESE QUIZ APP",
-        "projectSummary": "A quiz app for distinguishing Japanese homophones",
-        "projectDetails": "Created two types of questions: one for guessing pronounced homophones and another for judging the accuracy of the pronunciation of homophones.",
+        "projectSummary": "A quiz app about Japanese homophones",
+        "projectDetails": "Provide quizzes that guessing pronounced homophones or  judging the accuracy of their pronunciation.",
         "projectURLLink": "",
         "projectDemoLink": "https://user-images.githubusercontent.com/30208963/192776306-37bb3e9f-31af-4a4e-bb04-457e62ca2ebf.gif",
         "projectGithubLink": "https://github.com/usma11dia0/japanese_quiz_app",
@@ -78,7 +78,7 @@
       },
       "text": {
         "projectName": "Empower me",
-        "projectSummary": "An app for clinic appointments and cosmetic purchases",
+        "projectSummary": "An app for cosmetic medicine",
         "projectDetails": "Responsible for the implementation and renovation of the app's interface. The app can be installed via URL.",
         "projectURLLink": "https://empowerme-app.com/",
         "projectDemoLink": "https://github.com/usma11dia0/my_portfolio/assets/30208963/15d6e2f8-8ce5-4a4a-b021-93d2685b8ee4",
@@ -95,8 +95,8 @@
         "subImageSrc3": ""
       },
       "text": {
-        "projectName": "Purchase Order Transcription App",
-        "projectSummary": "Transcription of Purchase Order Contents + PDF Creation",
+        "projectName": "Purchase Order Transcription",
+        "projectSummary": "Transcription of Purchase Order Contents",
         "projectDetails": "Automated the process of aggregating the contents listed in the purchase order (Excel) by ordering store and converting the results into a PDF using VBA.",
         "projectURLLink": "",
         "projectDemoLink": "",
