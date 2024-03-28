@@ -71,6 +71,8 @@ URL：https://usma11dia0-portfolio.vercel.app/
 | 1366×768        |  
 | 1368×912        |  
 | 1440×900        |  
+| 1487×878        |
+| 1504×1003       |
 | 1512×982        |  
 | 1536×864        |  
 | 1680×1050       | 
@@ -93,12 +95,13 @@ URL：https://usma11dia0-portfolio.vercel.app/
 `npm run dev`
 
 ### Todoリスト
+- modal表示時のothers URLボタン修正
+- ノートPCのレイアウト変更
 - favion作成
-- 使用技術のSheild作成
-- カーソルを合わせると十字線が表示される。
-- vercelデプロイ
+- 携帯閲覧時に十字線を削除
+- Adobe illustlaterでカーソルアイコンを作成 ※通常・フォーカスの2種類    
 - ProjectButton変更
+- カスタムドメイン設定 
 - 発注書転記アプリのdemo追加
-- Webスクレイピングのproject追加 (当ポートフォリオから情報を抽出するスクレイピングを作成?)
+- Webスクレイピングのproject追加 (当ポートフォリオから情報を抽出するスクレイピングを作成)
 - お問い合わせフォームの作成
-- Adobe illustlaterでカーソルアイコンを作成

@@ -60,11 +60,15 @@ const OtherCard = ({ other }: OtherCardProps) => {
             mt-[0rem] text-white text-[18px] font-semibold">
             {otherDetails}
           </p>
-          <LinkButton name={"URL"} link={otherURLLink} />
+          <div style={{ position: 'relative', zIndex: 10 }}>
+            <LinkButton name={"URL"} link={otherURLLink} />
+          </div>
         </div>
       </div>
     </div>
   )
 }
+
+
 
 export default OtherCard;
