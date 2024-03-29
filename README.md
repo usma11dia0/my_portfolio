@@ -96,8 +96,6 @@ URL：https://usma11dia0-portfolio.vercel.app/
 
 ### Todoリスト
 - 参考URL 掲載
-- ノートPCのレイアウト変更 (AboutをGrid-col-2, タイトルとパネル間調整)
-- 携帯閲覧時に十字線を削除
 - LinkButtonのhover判定修正
 - favion作成
 - Adobe illustlaterでカーソルアイコンを作成 ※通常・フォーカスの2種類    
@@ -108,8 +106,7 @@ URL：https://usma11dia0-portfolio.vercel.app/
 - お問い合わせフォームの作成
 
 
-
-| Size            | breakpoint |
+<!-- | Size            | breakpoint |
 | ----------------| ---------- |
 | 360×640         |   　　　　                
 | 360×720         |           　               
@@ -133,4 +130,4 @@ URL：https://usma11dia0-portfolio.vercel.app/
 | 1920×1200       | 4xl | 
 | 2552×958        | 5xl | 
 | 2560×1080       | 5xl | 
-| 2650×1440       | 5xl |
+| 2650×1440       | 5xl | -->

@@ -17,8 +17,8 @@ const MouseMoveCrosshair = ({ children }: MouseMoveCrosshairProps): React.JSX.El
 
   return (
     <>
-      <div className="crosshair-v" id="verticalLine"></div>
-      <div className="crosshair-h" id="horizontalLine"></div>
+      <div className="crosshair-v hidden xl:flex" id="verticalLine"></div>
+      <div className="crosshair-h hidden xl:flex" id="horizontalLine"></div>
       <div onMouseMove={handleMouseMove} className="w-full h-full top-0 left-0">
         {children}
       </div>
