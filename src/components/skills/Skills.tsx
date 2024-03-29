@@ -99,6 +99,9 @@ const Skills = () => {
       md:pt-[8rem]
       mdAndLgh:pt-[4rem]
       lg:pt-[2.5rem]
+      1xlAndMdh:pt-[0.5rem]
+      1xlAnd1Mdh:pt-[2rem] 1xlAnd1Mdh:pb-[10rem]
+      1.5xl:pt-[2rem]
       2xlAndLgh:pt-[5rem]
       3xl:pt-[7rem]
       3xlAndMdh:pt-[2rem]
@@ -121,10 +124,11 @@ const Skills = () => {
         grid grid-cols-1 1xl:grid-cols-3
         md:pt-[4rem] 
         xl:pt-[2rem]
+        1xlAnd1Mdh:pt-[2rem]
         2xlAndLgh:pt-[5rem]
         3xl:pb-[20rem]
         4xl:pt-[5rem]
-        5xl:pt-[2rem]
+        5xl:pt-[1rem]
         "
       >
         {/* Frontend Skill */}

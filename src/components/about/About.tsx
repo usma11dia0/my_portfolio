@@ -21,10 +21,11 @@ const About = () => {
       mdAndLgh:pt-[12rem]
       mdAnd2Lgh:pb-[28rem]
       lg:pt-[2rem]
-      lgAnd1xlh:pt-[17rem] lgAnd1xlh:pb-[22rem]
-      1xlAndMdh:pt-[6rem] 1xlAndMdh:pb-[16rem]
+      lgAnd1xlh:pt-[17rem] lgAnd1xlh:pb-[25rem]
+      1xl:pt-[2rem] 1xl:pb-[15rem]
+      1xlAndMdh:pt-[2rem] 1xlAndMdh:pb-[16rem]
+      1xlAnd1Mdh:pt-[5rem] 1xlAnd1Mdh:pb-[25rem]
       1xlAndLgh:pt-[11rem]
-      2xl:pt-[4rem] 2xl:pb-[15rem]
       2xlAndLgh:pt-[10rem]
       3xl:pt-[10rem] 3xl:pb-[20rem]
       3xlAndMdh:pt-[6rem]
@@ -33,7 +34,7 @@ const About = () => {
       5xlAnd1xl:pt-[20rem] 
     ">
       <div className="
-        grid grid-cols-1 2xl:grid-cols-2 
+        grid grid-cols-1 1xl:grid-cols-2 
         w-[80%] mx-auto gap-[3rem] items-center">
         {/* Left Side */}
         <motion.div
@@ -79,10 +80,10 @@ const About = () => {
               </TextDecipher>
             </div>
               <FrameNefrex>
-                <div className="p-8 lg:p-9">
+                <div className="p-8 lg:p-9 1xl:p-7">
                   <div className="py-2 text-[20px] lg:text-[24px] text-neon-blue-without-flicker">QUALIFICATIONS</div>   
                   {t.raw('qualifications').map((qualification: string, index: number) => (
-                    <div key={index} className="py-2 lg:py-4">
+                    <div key={index} className="py-2 lg:py-4 1xl:py-2">
                       <TextDecipher className="text-[16px] lg:text-[20px] text-sf-blue">
                         - {qualification}
                       </TextDecipher>
@@ -106,7 +107,7 @@ const About = () => {
               justify-center
               mx-auto mt-[2rem]
               md:mx-0
-              2xl:flex 2xl:w-[500px] 2xl:h-[500px] 2xl:mt-30
+              1xl:flex 1xl:w-[500px] 1xl:h-[500px] 1xl:mt-25
           ">
             <Image
               fill

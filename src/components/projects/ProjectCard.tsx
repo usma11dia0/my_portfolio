@@ -88,6 +88,8 @@ const ProjectCard = ({
         relative 
         w-[100%] h-[200px] 
         md:h-[300px]
+        1xlAndMdh:h-[250px]
+        1.5xl:h-[280px]
       ">
         <Animator active={active}>
           <FrameCorners brightness={brightness}>
@@ -97,7 +99,7 @@ const ProjectCard = ({
                 md:w-[40vh] md:h-[35vh]
                 lg:w-[35vw] lg:h-[25vh]
                 xl:w-[25vw] xl:h-[25vh]
-                5xl:w-[22vw] 5xl:h-[20vh]
+                5xl:w-[18vw] 5xl:h-[22vw]
               ">
               <Image
                 fill

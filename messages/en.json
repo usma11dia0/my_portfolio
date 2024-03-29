@@ -124,7 +124,7 @@
       },
       "text": {
         "otherName": "AI Arts",
-        "otherDetails":"Created using Stable Diffusion WebUI",
+        "otherDetails":"Created by Stable Diffusion WebUI",
         "otherURLLink": ""
       },
       "brightness":"brightness(100%)"

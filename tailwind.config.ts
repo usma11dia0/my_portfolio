@@ -36,6 +36,9 @@ module.exports = {
         '1xlAndMdh': {
           'raw': '(min-width: 1366px) and (max-width: 1535px) and (min-height: 768px)'
         },
+        '1xlAnd1Mdh': {
+          'raw': '(min-width: 1366px) and (max-width: 1535px) and (min-height: 912px)'
+        },
         '1xlAndLgh': {
           'raw': '(min-width: 1366px) and (max-width: 1535px) and (min-height: 1024px)'
         },
@@ -58,6 +61,7 @@ module.exports = {
         '0.1': '0.1px',
         '15': '60px',
         '20': '80px',
+        '25': '100px',
         '30': '120px',
         '40': '160px',
         '75': '300px',

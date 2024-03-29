@@ -15,7 +15,10 @@ const Others = () => {
       md:pt-[8rem]
       mdAndLgh:pt-[4rem]
       lg:pt-[2.5rem]
-      2xlAndLgh:pt-[5rem]
+      1xlAndMdh:pt-[1rem]
+      1xlAnd1Mdh:pt-[2rem]
+      1.5xl:pt-[2rem]
+      2xlAndLgh:pt-[5rem] 2xlAndLgh:pb-[18rem]
       3xl:pt-[7rem]
       3xlAndMdh:pt-[2rem]
       4xl:pt-[5rem]
@@ -27,8 +30,13 @@ const Others = () => {
       </h1>
       <div className="
         grid grid-cols-1 w-[80%] mt-[2.5rem] gap-[3rem] mx-auto
-        md:mt-[4rem] 
-        4xl:pt-[5rem]
+        md:mt-[4rem]
+        1xlAndMdh:mt-[2rem]
+        1xlAnd1Mdh:pt-[2rem]
+        1.5xl:pt-[2rem]
+        2xlCustom:pt-[0rem]
+        2xlAndLgh:pt-[2rem]
+        4xl:pt-[3rem]
         5xl:pt-[2rem]
         lg:grid-cols-2 
         xl:grid-cols-3">

@@ -34,8 +34,8 @@ const OtherCard = ({ other }: OtherCardProps) => {
         />
       </div>
       <div className="
-        relative text-center w-[70%] p-[1rem] mt-[-1rem] mx-auto
-        md:p-[2rem] md:w-[90%]
+        relative text-center w-[70%] p-[1rem] mt-[-4rem] mx-auto
+        md:p-[1rem] md:w-[90%]
         "
         style={{
           backgroundColor: 'hsl(180, 75%, 7%)',
@@ -53,11 +53,11 @@ const OtherCard = ({ other }: OtherCardProps) => {
         </div>
         <div className="
           flex flex-col justify-center items-center space-y-2
-          md:flex-row mt-[1rem] md:space-x-10 md:space-y-0
+          1.5xl:flex-row mt-[1rem] 1.5xl:space-x-10 1.5xl:space-y-0
           "
         >
           <p className="
-            mt-[0rem] text-white text-[18px] font-semibold">
+            mt-[0rem] text-white text-[16px] font-semibold">
             {otherDetails}
           </p>
           <div style={{ position: 'relative', zIndex: 10 }}>
