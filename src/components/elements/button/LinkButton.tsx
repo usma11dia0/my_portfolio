@@ -11,51 +11,59 @@ interface LinkButtonProps {
 
 const LinkButton = ({ name, link }: LinkButtonProps) => {
   return (
-    <FrameUnderline link={link}>
-      <a 
-        href={link || "#"} 
-        onClick={(e) => {
-          if (!link) {
-            e.preventDefault();
-          }
-        }}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+    link ? (
+      <Button name="fade">
+        <FrameUnderline link={link}>
+          <a 
+            href={link || "#"} 
+            onClick={(e) => {
+              if (!link) {
+                e.preventDefault();
+              }
+            }}
+            target="_blank"
+            rel="noopener noreferrer"
+            className='custom-cursor'
+          >
+            <div className="flex items-center pl-2">
+              <LinkIcon
+                className="pl-0"
+                color='white'
+                style={{ width: "20px", height: "20px" }}
+              />
+              <TextBasic className="
+                text-[12px] p-2 text-sf-blue
+                xs:text-[14px]
+                sm:text-[16px]
+                " 
+                enterSec={5}
+              >
+                {name}
+              </TextBasic>
+            </div>
+          </a>
+        </FrameUnderline>
+      </Button>
+    ) : (
+      <FrameUnderline link={link}>
         <div className="flex items-center pl-2">
           <LinkIcon
             className="pl-0"
             color='white'
             style={{ width: "20px", height: "20px" }}
           />
-          {
-            link ? (
-              <Button name='fade'>
-                <TextBasic className="
-                  text-[12px] p-2 text-sf-blue
-                  xs:text-[14px]
-                  sm:text-[16px]
-                  " 
-                  enterSec={5}
-                >
-                  {name}
-                </TextBasic>
-              </Button>
-            ) : (
-              <TextBasic className="
-                text-[12px] p-2 text-sf-blue
-                xs:text-[14px]
-                sm:text-[16px]
-              " 
-              enterSec={5}
-              >
-                {name}
-              </TextBasic>
-            )
-          }
+          <TextBasic className="
+            text-[12px] p-2 text-sf-blue
+            xs:text-[14px]
+            sm:text-[16px]
+            " 
+            enterSec={5}
+          >
+            {name}
+          </TextBasic>
         </div>
-      </a>
-    </FrameUnderline>
+      </FrameUnderline>
+    )
   )
 }
 
