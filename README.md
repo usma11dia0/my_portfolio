@@ -94,12 +94,14 @@ URL：https://usma11dia0-portfolio.vercel.app/
 #### ３．Next.jsの開発サーバーを起動  
 `npm run dev`
 
+## 参考URL
+https://www.youtube.com/watch?v=6jFFkGU-ZBU
+https://www.youtube.com/watch?v=qp0-L_M3Ad4
+https://arwes.dev/
+
+
 ### Todoリスト
-- 参考URL 掲載
-- LinkButtonのhover判定修正
 - favion作成
-- Adobe illustlaterでカーソルアイコンを作成 ※通常・フォーカスの2種類    
-- ProjectButton変更
 - カスタムドメイン設定 
 - 発注書転記アプリのdemo追加
 - Webスクレイピングのproject追加 (当ポートフォリオから情報を抽出するスクレイピングを作成)

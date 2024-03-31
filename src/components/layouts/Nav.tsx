@@ -47,7 +47,7 @@ const Nav = ({openNav}:Props) => {
         </h1>
         <Button name='intro'>
           <a href="#section-home"
-            className="nav-link custom-cursor"
+            className="nav-link cursor-rock"
             onClick={(e) => handleScroll(e, "section-home", navHeight)}
           >
             HOME
@@ -55,7 +55,7 @@ const Nav = ({openNav}:Props) => {
         </Button>
         <Button name='intro'>
           <a href="#section-about" 
-            className="nav-link custom-cursor"
+            className="nav-link cursor-rock"
             onClick={(e) => handleScroll(e, "section-about", navHeight)}
           >
             ABOUT
@@ -71,7 +71,7 @@ const Nav = ({openNav}:Props) => {
         </Button> */}
         <Button name='intro'>
           <a href="#section-skills"
-            className="nav-link custom-cursor"
+            className="nav-link cursor-rock"
             onClick={(e) => handleScroll(e, "section-skills", navHeight)}
           >
             SKILLS
@@ -79,7 +79,7 @@ const Nav = ({openNav}:Props) => {
         </Button>
         <Button name='intro'>
           <a href="#section-projects"
-            className="nav-link custom-cursor"
+            className="nav-link cursor-rock"
             onClick={(e) => handleScroll(e, "section-projects", navHeight)}
           >
             PROJECTS
@@ -87,7 +87,7 @@ const Nav = ({openNav}:Props) => {
         </Button>
         <Button name='intro'>
           <a href="#section-others"
-            className="nav-link custom-cursor"
+            className="nav-link cursor-rock"
             onClick={(e) => handleScroll(e, "section-others", navHeight)}
           >
             OTHERS
@@ -96,7 +96,7 @@ const Nav = ({openNav}:Props) => {
         <Button name='intro'>
           <Link
             href={route}
-            className="nav-link custom-cursor"
+            className="nav-link cursor-rock"
             locale={locale === "ja" ? "en" : "ja"}
           >
             {locale == "ja" ? "ENGLISH" : "日本語"}
@@ -105,7 +105,7 @@ const Nav = ({openNav}:Props) => {
         <Button name='intro'>
           <div onClick={openNav}>
             <Bars3Icon className="
-              w-[2rem] h-[2rem] text-[#1FFFFF] custom-cursor
+              w-[2rem] h-[2rem] text-[#1FFFFF] cursor-rock
               lg:hidden
             "/>
           </div>

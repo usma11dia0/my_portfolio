@@ -28,7 +28,7 @@ const Button = (props: ButtonProps): ReactElement => {
     <button 
       onClick={onClickHandler} 
       onMouseEnter={onMouseEnter}
-      className="custom-cursor"
+      className="cursor-rock"
     >
       {children}
     </button>

@@ -23,7 +23,7 @@ const LinkButton = ({ name, link }: LinkButtonProps) => {
             }}
             target="_blank"
             rel="noopener noreferrer"
-            className='custom-cursor'
+            className='cursor-rock'
           >
             <div className="flex items-center pl-2">
               <LinkIcon

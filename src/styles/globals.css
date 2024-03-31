@@ -113,15 +113,15 @@
 
 @layer utilities {
   .crosshair-v {
-    @apply fixed bg-[hsla(180,100%,75%,0.4)] w-0.5 h-screen z-[1000] pointer-events-none;
+    @apply fixed bg-[hsla(180,100%,75%,0.2)] w-0.5 h-screen z-[1000] pointer-events-none;
   }
   .crosshair-h {
-    @apply fixed bg-[hsla(180,100%,75%,0.4)] h-0.5 w-screen z-[1000] pointer-events-none;
+    @apply fixed bg-[hsla(180,100%,75%,0.2)] h-0.5 w-screen z-[1000] pointer-events-none;
   }
-  .custom-cursor {
-    cursor: url("/Cross.cur"), auto;
-  };
-  .none-cursor {
-    cursor: none;
-  };
+  .cursor-unrock {
+    cursor: url("/cursor_unlock_32_32.png") 16 16, auto;
+  }
+  .cursor-rock {
+    cursor: url("/cursor_lock_64_64.png") 32 32, auto;
+  }
 }

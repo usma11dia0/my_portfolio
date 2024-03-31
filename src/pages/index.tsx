@@ -18,7 +18,7 @@ const HomePage = () => {
   const closeNav = () => setNav(false)
 
   return (
-    <div id="section-home" className="overflow-x-hidden none-cursor">
+    <div id="section-home" className="overflow-x-hidden cursor-unrock">
       <MouseMoveCrosshair>
         <div>
           <MobileNav nav={nav} closeNav={closeNav}/>
