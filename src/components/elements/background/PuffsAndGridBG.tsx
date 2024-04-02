@@ -30,7 +30,7 @@ const PuffsAndGridBG = ({zIndex}: PuffsAndGridBGProps): ReactElement => {
         />
         <Puffs
           color='hsla(180, 100%, 75%, 0.5)'
-          quantity={200}
+          quantity={50}
           padding={20}
           xOffset={[50, -100]}
           yOffset={[50, -100]}

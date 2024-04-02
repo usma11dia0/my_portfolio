@@ -28,8 +28,8 @@ const MovingLinesBG = ({zIndex}: MovingLinesBGProps): ReactElement => {
           distance={45}
         />
         <MovingLines
-          lineColor='hsla(180, 100%, 75%, 0.2)'
-          distance={5}
+          lineColor='hsla(180, 100%, 75%, 0.3)'
+          distance={100}
         />
       </div>
     </Animator>
