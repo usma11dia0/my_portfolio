@@ -139,7 +139,5 @@
 
   .radar-chart-container canvas {
     position: relative !important;
-    width: auto !important;
-    height: auto !important;
   }
 }
