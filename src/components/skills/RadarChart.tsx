@@ -30,7 +30,7 @@ const RadarChart: React.FC<RadarProps> = (props) => {
 
   return (
     <div className="
-      relative w-[350px] h-[350px] z-[1]
+      radar-chart-container w-[350px] h-[350px] z-[1]
       sm:w-[460px] sm:h-[460px]
       1xl:w-[350px] 1xl:h-[350px]
       1.5xl:w-[400px] 1.5xl:h-[400px] 
