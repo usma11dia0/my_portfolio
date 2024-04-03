@@ -72,6 +72,8 @@ const ProjectCard = ({
       clearTimeout(timerPlayId.current);
       clearTimeout(timerStopId.current);
     }
+    // `active` と `bleeps.expand` は依存関係から除外
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isInView]);
 
   return (

@@ -53,6 +53,8 @@ const ProjectModal: React.FC<ModalProps> = ({
       onClose();
       setMainImagePath(mainImagePath);
     }, 0)
+    // `mainImagePath` は依存関係から除外
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [onClose]);
 
   // モーダル内側がクリックされた際は、イベントの伝播を停止

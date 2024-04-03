@@ -42,56 +42,36 @@ const Skills = () => {
   const bt = t.raw('backend');
   const dt = t.raw('devOps');
 
-  // Frontendの表示状態に応じた副作用
-  useEffect(() => {
-    if (isInViewFrontend) {
-      setTimeout(() => setChartFrontendData(DATA_FRONTEND), 150);
-      setTimeout(() => setActiveFrontend(true), 900);
-      timerFrontendPlayId.current = window.setTimeout(() => bleeps.looping?.play(), 1300);
-      timerFrontendStopId.current = window.setTimeout(() => bleeps.looping?.stop(), 2300);
-    }
-
-    return () => {
-      setActiveFrontend(false);
-      setChartFrontendData(DATA_INIT);
-      clearTimeout(timerFrontendPlayId.current);
-      clearTimeout(timerFrontendStopId.current);
-    };
-  }, [isInViewFrontend]);
-
-  // Backendの表示状態に応じた副作用
-  useEffect(() => {
-    if (isInViewBackend) {
-      setTimeout(() => setChartBackendData(DATA_BACKEND), 150);
-      setTimeout(() => setActiveBackend(true), 900);
-      timerBackendPlayId.current = window.setTimeout(() => bleeps.looping?.play(), 1300);
-      timerBackendStopId.current = window.setTimeout(() => bleeps.looping?.stop(), 2300);
-    }
-
-    return () => {
-      setActiveBackend(false);
-      setChartBackendData(DATA_INIT);
-      clearTimeout(timerBackendPlayId.current);
-      clearTimeout(timerBackendStopId.current);
-    };
-  }, [isInViewBackend]);
-
-  // DevOpsの表示状態に応じた副作用
-  useEffect(() => {
-    if (isInViewDevOps) {
-      setTimeout(() => setChartDevOpsData(DATA_DEVOPS), 150);
-      setTimeout(() => setActiveDevOps(true), 900);
-      timerDevOpsPlayId.current = window.setTimeout(() => bleeps.looping?.play(), 1300);
-      timerDevOpsStopId.current = window.setTimeout(() => bleeps.looping?.stop(), 2300);
-    }
-
-    return () => {
-      setActiveDevOps(false);
-      setChartDevOpsData(DATA_INIT);
-      clearTimeout(timerDevOpsPlayId.current);
-      clearTimeout(timerDevOpsStopId.current);
-    };
-  }, [isInViewDevOps]);
+  function useSkillEffect(
+    isInView: boolean, 
+    setData: React.Dispatch<React.SetStateAction<ChartData<"radar", (number | null)[], unknown>>>, 
+    data: ChartData<"radar", (number | null)[], unknown>, 
+    setActive: React.Dispatch<React.SetStateAction<boolean>>, 
+    timerPlayIdRef: React.MutableRefObject<number | undefined>, 
+    timerStopIdRef: React.MutableRefObject<number | undefined>
+    ) {
+    useEffect(() => {
+      if (isInView) {
+        setTimeout(() => setData(data), 150);
+        setTimeout(() => setActive(true), 900);
+        timerPlayIdRef.current = window.setTimeout(() => bleeps.looping?.play(), 1300);
+        timerStopIdRef.current = window.setTimeout(() => bleeps.looping?.stop(), 2300);
+      }
+  
+      return () => {
+        setActive(false);
+        setData(DATA_INIT);
+        clearTimeout(timerPlayIdRef.current);
+        clearTimeout(timerStopIdRef.current);
+      };
+      // `bleeps.looping` は依存関係から除外
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [isInView, setData, data, setActive, timerPlayIdRef, timerStopIdRef]);
+  }
+  
+  useSkillEffect(isInViewFrontend, setChartFrontendData, DATA_FRONTEND, setActiveFrontend, timerFrontendPlayId, timerFrontendStopId);
+  useSkillEffect(isInViewBackend, setChartBackendData, DATA_BACKEND, setActiveBackend, timerBackendPlayId, timerBackendStopId);
+  useSkillEffect(isInViewDevOps, setChartDevOpsData, DATA_DEVOPS, setActiveDevOps, timerDevOpsPlayId, timerDevOpsStopId);
 
   return (
     <div id="section-skills" className="
