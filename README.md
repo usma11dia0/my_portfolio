@@ -1,6 +1,6 @@
 # usma11dia0's Portfolio
 下記リンク先のポートフォリオにて使用した技術・フレームワークの詳細です。  
-URL：https://usma11dia0-portfolio.vercel.app/
+URL：https://www.usma11dia0.com/
 
 ## 主な使用技術
 <p>
