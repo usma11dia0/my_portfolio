@@ -22,6 +22,7 @@ const HomePage = () => {
     <>
       <Head>
         <title>{"usma11dia0's portfolio"}</title>
+        <meta name="description" content="introduce my skill set and products" />
       </Head>
       <div id="section-home" className="overflow-x-hidden cursor-unrock">
         <MouseMoveCrosshair>
