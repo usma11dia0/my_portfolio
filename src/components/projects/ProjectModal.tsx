@@ -80,22 +80,7 @@ const ProjectModal: React.FC<ModalProps> = ({
       >
         {/*body*/}
         <div className="
-          relative flex justify-center items-center z-[0] pt-[850px] pb-[50px] h-[2150px]
-          sm:h-[240%] sm:pt-[580px] sm:pb-[50px]
-          md:h-[235%] md:pt-[900px]
-          mdAnd2Lgh:h-[280vw] mdAnd2Lgh:pt-[820px]
-          lg:h-[90%] lg:pt-24 lg:w-[100%] 
-          lgAnd1xlh:h-[205vw] lgAnd1xlh:pt-[550px]
-          xl:h-[2750px] xl:pt-[1100px]
-          1xl:h-[58vw] 1xl:pt-[130px]
-          1.5xl:h-[57vw]
-          1xlAndLgh:h-[290%] 1xlAndLgh:pt-[1200px]
-          2xlCustom:h-[58vw] 2xlCustom:pt-[140px]
-          2xlAndLgh:h-[61vw] 2xlAndLgh:pt-[230px]
-          3xl:h-[58vw] 3xl:pt-[200px]
-          3xlAndMdh:h-[52vw] 3xlAndMdh:3xl:pt-[165px]
-          4xl:h-[53vw] 4xlAndLgh:pt-[180px]
-          5xl:h-[40vw] 5xl:pt-[180px]
+          relative flex justify-center items-center z-[0] pt-[850px] pb-[50px]
           "
         >
           <Animator active={active}>
@@ -109,21 +94,7 @@ const ProjectModal: React.FC<ModalProps> = ({
                 >
                   {/* Left Side */}
                   <div className="
-                    order-1 z-[1] transform translate-x-9 translate-y-140
-                    xs:translate-x-12
-                    sm:translate-x-12 sm:translate-y-145
-                    md:translate-y-152
-                    mdAnd2Lgh:translate-y-165
-                    lg:translate-x-14 lg:translate-y-152
-                    xl:translate-x-20 xl:translate-y-165
-                    1xl:translate-y-9
-                    1.5xl:translate-y-12
-                    1xlAndLgh:translate-y-180
-                    2xlCustom:translate-x-10 2xlCustom:translate-y-15
-                    2xlAndLgh:translate-y-10
-                    3xl:translate-y-10
-                    3xlAndMdh:translate-y-13
-                    5xl:translate-x-40 5xl:translate-y-8
+                    order-1 z-[1]
                   ">
                     <ImageMotion active={active}>
                       {/* Main Image */}
@@ -149,17 +120,6 @@ const ProjectModal: React.FC<ModalProps> = ({
                           pt-6 pl-4 pb-5 w-[70%]
                           sm:w-[85%] sm:pt-10 sm:pl-0
                           md:pl-8 md:w-[78%]
-                          mdAnd2Lgh:pl-14 mdAnd2Lgh:w-[75%] 
-                          lg:pl-10
-                          lgAnd1xlh:pl-12
-                          xl:pl-30
-                          1xl:pl-15
-                          1xlAndMdh:w-[90%]
-                          2xl:w-[100%] 2xl:pl-8
-                          2xlAndLgh:pl-11
-                          3xl:pl-20
-                          4xl:gap-2 4xl:pt-6 4xl:pl-18
-                          5xl:pl-15 5xl:w-[85%] 5xl:h-[70%]
                         "
                       >
                         <ModalSubImage src={mainImageSrc} onClick={() => setMainImagePath(mainImageSrc)} />
@@ -204,20 +164,6 @@ const ProjectModal: React.FC<ModalProps> = ({
                     </TextBasic>
                     <TextBasic className="
                       text-[14px] text-sf-blue min-h-[470px]
-                      xs:text-[16px] xs:min-h-[500px]
-                      mdAndLgh:min-h-[700px]
-                      mdAnd2Lgh:min-h-[850px]
-                      lg:min-h-[750px]
-                      lgAnd1xlh:min-h-[750px]
-                      xlAnd2smh:min-h-[850px]
-                      1xl:min-h-[65px]
-                      1.5xl:min-h-[100px]
-                      1xlAndLgh:text-[18px] 1xlAndLgh:min-h-[900px]
-                      2xlCustom:min-h-[85px]
-                      2xlAndLgh:min-h-[160px] 2xlAndLgh:text-[20px] 2xlAndLgh:leading-loose
-                      3xl:min-h-[180px] 3xl:text-[20px] 3xl:leading-loose
-                      3xlAndMdh:min-h-[180px]
-                      5xl:text-[22px] 5xl:min-h-[160px]
                       " 
                       enterSec={5}
                     >
