@@ -25,7 +25,7 @@ const ProjectsBtn = () => {
           onClick={(e) => handleScroll(e, "section-projects", navHeight)}
           style={{ position: 'absolute'}}
         >
-          <Button name='error'>
+          <Button name='error' aria-label="move to projects">
             <ChevronDoubleDownIcon
               className="
                 svg-neon-blue svg-neon-blue:hover
