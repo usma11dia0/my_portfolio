@@ -24,6 +24,7 @@ const ProjectsBtn = () => {
         <a href="section-projects"
           onClick={(e) => handleScroll(e, "section-projects", navHeight)}
           style={{ position: 'absolute'}}
+          aria-label="Link for moving to projects"
         >
           <Button name='error' aria-label="move to projects">
             <ChevronDoubleDownIcon

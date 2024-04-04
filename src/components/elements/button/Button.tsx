@@ -29,6 +29,7 @@ const Button = (props: ButtonProps): ReactElement => {
       onClick={onClickHandler} 
       onMouseEnter={onMouseEnter}
       className="cursor-rock"
+      area-label="Sound Button"
     >
       {children}
     </button>
