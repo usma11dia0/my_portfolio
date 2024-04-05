@@ -80,7 +80,8 @@ const ProjectModal: React.FC<ModalProps> = ({
       >
         {/*body*/}
         <div className="
-          relative flex justify-center items-center z-[0] pt-[850px] pb-[50px]
+          relative flex justify-center items-center z-[0]
+          w-[80vw] h-[80vh] m-auto
           "
         >
           <Animator active={active}>
@@ -108,7 +109,7 @@ const ProjectModal: React.FC<ModalProps> = ({
                           filter border border-dotted border-[hsl(180,75%,30%)]
                           w-[75%] h-full
                           sm:w-[85%]
-                          1xl:w-[100%]
+                          1xl:w-[50%]
                           5xl:w-[75%]
                         " 
                         style={{ filter: brightness }}
@@ -163,7 +164,7 @@ const ProjectModal: React.FC<ModalProps> = ({
                       {projectSummary}
                     </TextBasic>
                     <TextBasic className="
-                      text-[14px] text-sf-blue min-h-[470px]
+                      text-[14px] text-sf-blue
                       " 
                       enterSec={5}
                     >

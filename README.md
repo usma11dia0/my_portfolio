@@ -101,10 +101,11 @@ https://arwes.dev/
 
 
 <!-- ### Todoリスト
-- カスタムドメイン設定 
+- https://redux.js.org/tutorials/essentials/part-2-app-structureを読む
 - 発注書転記アプリのdemo追加
 - Webスクレイピングのproject追加 (当ポートフォリオから情報を抽出するスクレイピングを作成)
 - お問い合わせフォームの作成 -->
+
 
 <!-- ※要対応
 新規追加
