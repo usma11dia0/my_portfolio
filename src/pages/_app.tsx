@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import { BleepsProvider } from '@arwes/react';
 import {NextIntlClientProvider} from 'next-intl';
 import {useRouter} from 'next/router';
+import { Provider } from 'react-redux'
 
 import { bleepsSettings } from "./_appConfig";
 
