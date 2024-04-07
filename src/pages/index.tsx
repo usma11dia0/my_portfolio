@@ -10,7 +10,12 @@ import Skills from '@/components/skills/Skills';
 import React, { useState } from 'react'
 import { GetStaticPropsContext } from 'next';
 import MouseMoveCrosshair from '@/components/elements/background/MouseMoveCrossHair';
-import Head from "next/head";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "usma11dia0's portfolio",
+  description: "introduce my skill set and products" 
+}
 
 const HomePage = () => {
 
@@ -20,10 +25,6 @@ const HomePage = () => {
 
   return (
     <>
-      <Head>
-        <title>{"usma11dia0's portfolio"}</title>
-        <meta name="description" content="introduce my skill set and products" />
-      </Head>
       <div id="section-home" className="overflow-x-hidden cursor-unrock">
         <MouseMoveCrosshair>
           <div>
