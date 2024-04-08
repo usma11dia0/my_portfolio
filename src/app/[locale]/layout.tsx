@@ -1,11 +1,7 @@
-'use client'
-
 import type { Metadata } from 'next'
-import { BleepsProvider } from '@arwes/react';
+import { NextIntlClientProvider, useMessages } from 'next-intl';
 
-import { bleepsSettings } from "./config";
-
-const metadata: Metadata = {
+export const metadata: Metadata = {
   icons: {
     icon: '/favicon.png',
   },
@@ -20,13 +16,15 @@ export default function LocaleLayout({
     children: React.ReactNode;
     params: {locale: string};
   }) {
-    // const router = useRouter();
+
+    const messages = useMessages();
+
     return (
       <html lang={locale}>
         <body className="font-primary">
-          <BleepsProvider {...bleepsSettings}>
+          <NextIntlClientProvider locale={locale} messages={messages}>
             {children}
-          </BleepsProvider>
+          </NextIntlClientProvider>
         </body>
       </html>
     )

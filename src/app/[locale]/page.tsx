@@ -1,5 +1,9 @@
 'use client'
 
+import { BleepsProvider } from '@arwes/react';
+import { Metadata } from 'next';
+import React, { useState } from 'react'
+
 import About from '@/components/about/About';
 import Articles from '@/components/others/Others';
 import Footer from '@/components/layouts/Footer';
@@ -9,9 +13,8 @@ import Nav from '@/components/layouts/Nav';
 import Projects from '@/components/projects/Projects';
 import Services from '@/components/services/Services';
 import Skills from '@/components/skills/Skills';
-import React, { useState } from 'react'
 import MouseMoveCrosshair from '@/components/elements/background/MouseMoveCrossHair';
-import { Metadata } from 'next';
+import { bleepsSettings } from "./config";
 
 const metadata: Metadata = {
   title: "usma11dia0's portfolio",
@@ -26,6 +29,7 @@ export default function Page () {
 
   return (
     <>
+     <BleepsProvider {...bleepsSettings}>
       <div id="section-home" className="overflow-x-hidden cursor-unrock">
         <MouseMoveCrosshair>
           <div>
@@ -43,6 +47,7 @@ export default function Page () {
           </div>
         </MouseMoveCrosshair>
       </div>
+      </BleepsProvider>
     </>
   );
 }
