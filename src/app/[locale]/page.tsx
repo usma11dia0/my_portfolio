@@ -1,3 +1,5 @@
+'use client'
+
 import About from '@/components/about/About';
 import Articles from '@/components/others/Others';
 import Footer from '@/components/layouts/Footer';
@@ -8,16 +10,15 @@ import Projects from '@/components/projects/Projects';
 import Services from '@/components/services/Services';
 import Skills from '@/components/skills/Skills';
 import React, { useState } from 'react'
-import { GetStaticPropsContext } from 'next';
 import MouseMoveCrosshair from '@/components/elements/background/MouseMoveCrossHair';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: "usma11dia0's portfolio",
   description: "introduce my skill set and products" 
 }
 
-const HomePage = () => {
+export default function Page () {
 
   const [nav, setNav] = useState(false)
   const openNav = () => setNav(true)
@@ -45,17 +46,3 @@ const HomePage = () => {
     </>
   );
 }
-
-export async function getStaticProps({locale}: GetStaticPropsContext) {
-  return {
-    props: {
-      // You can get the messages from anywhere you like. The recommended
-      // pattern is to put them in JSON files separated by locale and read
-      // the desired one based on the `locale` received from Next.js.
-      messages: (await import(`../../messages/${locale}.json`)).default
-    }
-  };
-}
-
-
-export default HomePage

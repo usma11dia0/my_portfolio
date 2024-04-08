@@ -1,10 +1,11 @@
-import { Metadata } from 'next'
+'use client'
 
-import { bleepsSettings } from "../../pages/_appConfig";
-import { useRouter } from 'next/router';
+import type { Metadata } from 'next'
 import { BleepsProvider } from '@arwes/react';
 
-export const metadata: Metadata = {
+import { bleepsSettings } from "./config";
+
+const metadata: Metadata = {
   icons: {
     icon: '/favicon.png',
   },

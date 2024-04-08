@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react'
 import Button from '../elements/button/Button';
 import { handleScroll } from '@/utils';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 
 interface Props {
   nav: boolean;
@@ -13,7 +12,11 @@ interface Props {
 const MobileNav = ({nav, closeNav}:Props) => {
   const navAnimation = nav ? 'translate-x-0' :'translate-x-[-100%]';
   const [navHeight, setNavHeight] = useState(0);
-  const { locale, route } = useRouter();
+
+  // Todo:一時的にroute, localeを直接指定
+  const route= '/'
+  const locale = 'ja'
+  
 
   useEffect(() => {
     setNavHeight(window.innerHeight * 0.1);
