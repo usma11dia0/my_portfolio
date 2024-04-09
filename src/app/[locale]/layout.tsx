@@ -1,5 +1,7 @@
-import type { Metadata } from 'next'
+import type { Metadata } from 'next';
 import { NextIntlClientProvider, useMessages } from 'next-intl';
+
+import '../../styles/globals.css';
 
 export const metadata: Metadata = {
   icons: {

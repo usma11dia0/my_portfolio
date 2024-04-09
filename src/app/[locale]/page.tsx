@@ -1,7 +1,7 @@
 'use client'
 
+import Head from 'next/head'
 import { BleepsProvider } from '@arwes/react';
-import { Metadata } from 'next';
 import React, { useState } from 'react'
 
 import About from '@/components/about/About';
@@ -16,19 +16,17 @@ import Skills from '@/components/skills/Skills';
 import MouseMoveCrosshair from '@/components/elements/background/MouseMoveCrossHair';
 import { bleepsSettings } from "./config";
 
-const metadata: Metadata = {
-  title: "usma11dia0's portfolio",
-  description: "introduce my skill set and products" 
-}
-
 export default function Page () {
-
   const [nav, setNav] = useState(false)
   const openNav = () => setNav(true)
   const closeNav = () => setNav(false)
 
   return (
     <>
+     <Head>
+      <title>{"usma11dia0's portfolio"}</title>
+      <meta name="description" content="introduce my skill set and products" />
+     </Head>
      <BleepsProvider {...bleepsSettings}>
       <div id="section-home" className="overflow-x-hidden cursor-unrock">
         <MouseMoveCrosshair>
