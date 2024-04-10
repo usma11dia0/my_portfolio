@@ -4,8 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 @layer components {
   .nav-link {
     @apply relative font-semibold text-white  
