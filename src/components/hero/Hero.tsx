@@ -35,14 +35,14 @@ const Hero = () => {
           ">
             {"Hi, I'm"} 
             <span className="
-              text-[30px] text-[#1FFFFF]
+              text-[30px] text-[#1FFFFF] ml-3
               sm:text-[35px] 
               md:text-[50px] 
               lg:text-[40px]
               xl:text-[50px]
               ">
-                usma11dia0
-              </span>
+              usma11dia0
+            </span>
           </h1>
           <TextEffect />
           <p className="
