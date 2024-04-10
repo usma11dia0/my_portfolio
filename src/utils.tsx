@@ -13,7 +13,6 @@ export const handleScroll = (
     });
   };
 
-
 // 固定ヘッダーの高さを考慮してセクションまでスクロールする位置を計算する関数
 export function calculateScrollPosition(sectionId: string, headerHeight: number): number {
   const section = document.getElementById(sectionId);
@@ -27,4 +26,8 @@ export function calculateScrollPosition(sectionId: string, headerHeight: number)
   const position = sectionTop + scrollTop - headerHeight; // ヘッダーの高さを考慮したスクロール位置
 
   return position;
+}
+
+export default function LocalSwitcher() {
+  
 }

@@ -1,21 +1,20 @@
+import { Bars3Icon } from '@heroicons/react/20/solid';
+import React, { useEffect, useRef, useState } from 'react'
+import Link from 'next/link';
+import {useLocale} from 'next-intl';
+
 import Button from '@/components/elements/button/Button';
 import { handleScroll } from '@/utils';
-import { Bars3Icon } from '@heroicons/react/20/solid';
-import Link from 'next/link';
-import React, { useEffect, useRef, useState } from 'react'
 
 interface Props {
   openNav:()=> void;
 }
 
-const Nav = ({openNav}:Props) => {  
+const Nav = ({openNav}:Props) => {
   const navRef = useRef<HTMLDivElement>(null);
   const [navHeight, setNavHeight] = useState(0);
+  const locale = useLocale();
 
-  // Todo:一時的にroute, localeを直接指定
-  const route= '/'
-  const locale = 'ja'
-  
   useEffect(() => {
     if (navRef.current) {
       const rect = navRef.current.getBoundingClientRect();
@@ -96,13 +95,25 @@ const Nav = ({openNav}:Props) => {
           </a>
         </Button>
         <Button name='intro'>
-          <Link
-            href={route}
-            className="nav-link cursor-rock"
-            locale={locale === "ja" ? "en" : "ja"}
-          >
-            {locale == "ja" ? "ENGLISH" : "日本語"}
-          </Link>
+          {
+            locale ==="ja" ? (
+              <Link
+                locale="en"
+                href="/en"
+                className="nav-link cursor-rock"
+              >
+                {"ENGLISH"}
+              </Link>
+            ) : (
+              <Link
+                locale="ja"
+                href="/ja"
+                className="nav-link cursor-rock"
+              >
+                {"日本語"}
+              </Link>
+            )
+          }
         </Button>
         <Button name='intro'>
           <div onClick={openNav}>
