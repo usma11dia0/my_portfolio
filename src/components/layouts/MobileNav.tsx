@@ -1,9 +1,11 @@
-import { XMarkIcon } from '@heroicons/react/20/solid'
-import React, { useEffect, useState } from 'react'
-import Button from '../elements/button/Button';
-import { handleScroll } from '@/utils';
+import { XMarkIcon } from '@heroicons/react/20/solid';
+import React from 'react';
 import Link from 'next/link';
+
+import { handleScroll } from '@/utils';
+import Button from '../elements/button/Button';
 import { useLocale } from 'next-intl';
+import { useAppSelector } from '@/lib/hooks';
 
 interface Props {
   nav: boolean;
@@ -12,15 +14,11 @@ interface Props {
 
 const MobileNav = ({nav, closeNav}:Props) => {
   const navAnimation = nav ? 'translate-x-0' :'translate-x-[-100%]';
-  const [navHeight, setNavHeight] = useState(0);
   const locale = useLocale();
-  
-  useEffect(() => {
-    setNavHeight(window.innerHeight * 0.1);
-  }, []);
+  const navHeight = useAppSelector((state) => state.layouts.navHeight);
 
   return (
-    <div 
+    <div
       className={`
         fixed 
         ${navAnimation} transform transition-all dulation-300 
