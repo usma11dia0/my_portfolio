@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { NextIntlClientProvider, useMessages } from 'next-intl';
 
 import '../../styles/globals.css';
+import StoreProvider from '../StoreProvider';
 
 export const metadata: Metadata = {
   icons: {
@@ -24,9 +25,11 @@ export default function LocaleLayout({
     return (
       <html lang={locale}>
         <body className="font-primary">
-          <NextIntlClientProvider locale={locale} messages={messages}>
-            {children}
-          </NextIntlClientProvider>
+          <StoreProvider>
+            <NextIntlClientProvider locale={locale} messages={messages}>
+              {children}
+            </NextIntlClientProvider>
+          </StoreProvider>
         </body>
       </html>
     )

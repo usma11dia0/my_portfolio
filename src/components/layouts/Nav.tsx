@@ -1,10 +1,12 @@
 import { Bars3Icon } from '@heroicons/react/20/solid';
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import Link from 'next/link';
 import {useLocale} from 'next-intl';
 
 import Button from '@/components/elements/button/Button';
 import { handleScroll } from '@/utils';
+import { useAppDispatch, useAppSelector } from '@/lib/hooks';
+import { setNavHeight } from '@/lib/features/layouts/layoutsSlice';
 
 interface Props {
   openNav:()=> void;
@@ -12,19 +14,20 @@ interface Props {
 
 const Nav = ({openNav}:Props) => {
   const navRef = useRef<HTMLDivElement>(null);
-  const [navHeight, setNavHeight] = useState(0);
   const locale = useLocale();
+  const dispatch = useAppDispatch();
+  const navHeight = useAppSelector((state) => state.layouts.navHeight);
 
   useEffect(() => {
     if (navRef.current) {
       const rect = navRef.current.getBoundingClientRect();
-      setNavHeight(rect.height);
+      dispatch(setNavHeight(rect.height));
     }
   }, []);
   
   return (
     <div
-      ref={navRef} 
+      ref={navRef}
       className="
         fixed  z-[100] top-0
         w-[100%] h-[12vh]
