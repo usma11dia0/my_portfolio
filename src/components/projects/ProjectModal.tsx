@@ -9,6 +9,7 @@ import ModalSubImage from './ModalSubImage';
 import FrameLines from '../elements/frame/FrameLines';
 import ImageMotion from './ImageMotion';
 import LinkButton from '../elements/button/LinkButton';
+import { useAppSelector } from '@/lib/hooks';
 
 interface ModalProps {
   isOpen?: boolean;
@@ -42,6 +43,7 @@ const ProjectModal: React.FC<ModalProps> = ({
   const [showModal, setShowModal] = useState(isOpen);
   const [active, setActive] = useState(true);
   const [mainImagePath, setMainImagePath] =useState<string>(mainImageSrc);
+  const navHeight = useAppSelector((state) => state.layouts.navHeight);
 
   useEffect(() => {
     setShowModal(isOpen);
@@ -81,21 +83,22 @@ const ProjectModal: React.FC<ModalProps> = ({
         {/*body*/}
         <div className="
           relative flex justify-center items-center z-[0]
-          w-[80vw] h-[80vh] m-auto
+          w-[100vw] h-[80vh]
           "
+          style={{ marginTop: navHeight }}
         >
           <Animator active={active}>
             <FrameKranox>
               <DotsVariationBG active={active}>
                 <div className="
                   grid grid-cols-1 gap-10
-                  1xl:grid-cols-2
+                  1xl:grid-cols-12 1xl:gap-5
                   "
                   onClick={handleInsideClick}
                 >
                   {/* Left Side */}
                   <div className="
-                    order-1 z-[1]
+                    order-1 z-[1] col-span-7
                   ">
                     <ImageMotion active={active}>
                       {/* Main Image */}
@@ -105,9 +108,9 @@ const ProjectModal: React.FC<ModalProps> = ({
                         width={800} 
                         height={800}
                         className="
-                          object-contain relative 
+                          object-contain relative
                           filter border border-dotted border-[hsl(180,75%,30%)]
-                          w-[75%] h-full
+                          w-[75%] h-full ml-10
                           sm:w-[85%]
                           1xl:w-[50%]
                           5xl:w-[75%]
@@ -117,10 +120,8 @@ const ProjectModal: React.FC<ModalProps> = ({
                       {/* Sub Image */}
                       <div 
                         className="
-                          grid grid-cols-2 gap-4
-                          pt-6 pl-4 pb-5 w-[70%]
-                          sm:w-[85%] sm:pt-10 sm:pl-0
-                          md:pl-8 md:w-[78%]
+                          grid grid-cols-2 gap-5
+                          pt-6 pl-subImagePl pb-5 w-[53%]
                         "
                       >
                         <ModalSubImage src={mainImageSrc} onClick={() => setMainImagePath(mainImageSrc)} />
@@ -132,10 +133,10 @@ const ProjectModal: React.FC<ModalProps> = ({
                   </div>
                   {/* Right Side */}
                   <div className="
-                    order-2 pt-0 z-[0] pl-12 pr-12
+                    order-2 pt-0 z-[0] pl-12 pr-12 col-span-5
                     sm:pt-2
                     lg:order-2
-                    1xl:pt-8 1xl:pl-10
+                    1xl:pt-8 1xl:pl-0
                     3xl:pt-11
                     "
                   >

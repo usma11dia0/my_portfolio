@@ -71,6 +71,7 @@ module.exports = {
         '152': '608px',
         '165': '660px',
         '180': '720px',
+        'subImagePl': '6.35vw',
       },
       backgroundImage: {
         banner: 'url("/images/banner.jpg")',
