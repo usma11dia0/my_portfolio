@@ -82,8 +82,7 @@ const ProjectModal: React.FC<ModalProps> = ({
       >
         {/*body*/}
         <div className="
-          relative flex justify-center items-center z-[0]
-          w-[100vw] h-[80vh]
+          relative flex justify-center items-center z-[0] h-[80vh]
           "
           style={{ marginTop: navHeight }}
         >
@@ -98,7 +97,8 @@ const ProjectModal: React.FC<ModalProps> = ({
                 >
                   {/* Left Side */}
                   <div className="
-                    order-1 z-[1] col-span-7
+                    hidden order-1 z-[1] col-span-6 gap-5
+                    1xl:flex 
                   ">
                     <ImageMotion active={active}>
                       {/* Main Image */}
@@ -110,10 +110,7 @@ const ProjectModal: React.FC<ModalProps> = ({
                         className="
                           object-contain relative
                           filter border border-dotted border-[hsl(180,75%,30%)]
-                          w-[75%] h-full ml-10
-                          sm:w-[85%]
-                          1xl:w-[50%]
-                          5xl:w-[75%]
+                          w-[50%] h-full ml-10 mt-8
                         " 
                         style={{ filter: brightness }}
                       />
@@ -133,21 +130,15 @@ const ProjectModal: React.FC<ModalProps> = ({
                   </div>
                   {/* Right Side */}
                   <div className="
-                    order-2 pt-0 z-[0] pl-12 pr-12 col-span-5
-                    sm:pt-2
+                    order-2 pt-5 z-[0] pl-12 pr-12 col-span-6
+                    sm:pt-5
                     lg:order-2
-                    1xl:pt-8 1xl:pl-0
-                    3xl:pt-11
                     "
                   >
                     <TextBasic className="
                       text-neon-blue-without-flicker text-[26px] leading-10 pb-8
                       xs:text-[30px]
                       sm:text-[36px]
-                      1xl:pb-4
-                      2xlAndLgh:text-[38px] 2xlAndLgh:pb-8
-                      3xl:text-[38px] 3xl:pb-8
-                      5xl:text-[44px]
                       "
                       enterSec={5}
                     >
@@ -156,9 +147,6 @@ const ProjectModal: React.FC<ModalProps> = ({
                     <TextBasic className="
                       text-sf-blue text-[16px] pb-5
                       xs:text-[20px]
-                      2xlAndLgh:text-[22px]
-                      3xl:text-[22px]
-                      5xl:text-[28px]
                       "
                       enterSec={5}
                     >
@@ -192,11 +180,11 @@ const ProjectModal: React.FC<ModalProps> = ({
                       {/* <div className='pl-8'/> */}
                       <LinkButton name={"GITHUB"} link={projectGithubLink} /> 
                     </div>
-                    <div className="pt-10 xs:pt-9 2xl:pt-10 3xl:pt-12"/>
+                    <div className="pt-10 xs:pt-9"/>
                     {/* Technologies */}
                     <FrameLines theme={'frontEnd'}>
                       <div className="
-                        p-4 pt-8 pb-6 min-h-[230px]
+                        p-4 pt-8 pb-6
                         sm:p-8
                         1xl:p-3 1xl:min-h-[150px]
                         2xl:min-h-[180px] 2xl:p-6

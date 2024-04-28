@@ -42,7 +42,7 @@ const ImageMotion = ({children, active}: ImageMotionProps): ReactElement => {
             transition: { duration: 0.1 } // アンマウント時のアニメーションの持続時間を設定
           }}
           style={{
-            position: "absolute",
+            position: "relative",
             top: "50%",
             left: "50%",
             x: "-50%",
