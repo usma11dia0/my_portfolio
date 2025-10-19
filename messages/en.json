@@ -4,7 +4,7 @@
   },
   "about": {
     "details": "Engaged in agile development at a SI with responsibilities including creating SPA interfaces and developing APIs using AWS. Additional experience gained in freelance projects, encompassing mobile app development, automation of transcription tasks with Excel VBA, and web scraping.",
-    "qualifications": ["Fundamental Information Technology Engineer Examination (FE)", "AWS Certified Solutions Architect - Associate", "TOEIC 905"]
+    "qualifications": ["Applied Information Technology Engineer Examination(AP)", "AWS Certified Solutions Architect - Associate", "TOEIC 905"]
   },
   "skills": {
     "frontend": {
@@ -79,7 +79,7 @@
       "text": {
         "projectName": "Empower me",
         "projectSummary": "An app for cosmetic medicine",
-        "projectDetails": "Responsible for the implementation and renovation of the app's interface. The app can be installed via URL.",
+        "projectDetails": "Responsible for the implementation and renovation of the app's interface.※The app is no longer available.",
         "projectURLLink": "https://empowerme-app.com/",
         "projectDemoLink": "https://github.com/usma11dia0/my_portfolio/assets/30208963/15d6e2f8-8ce5-4a4a-b021-93d2685b8ee4",
         "projectGithubLink": "",

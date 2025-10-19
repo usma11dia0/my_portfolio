@@ -4,7 +4,7 @@
   },
   "about": {
     "details": "エンジニア歴2年未満。SIerにてアジャイル開発に携わり、SPAの画面作成やAWSによるAPI開発を担当しました。また、副業でモバイルアプリ開発やExcelVBAによる転記業務自動化・Webスクレイピングなど様々な業務を経験してきました。",
-    "qualifications": ["基本情報技術者", "AWS Certified Solutions Architect - Associate", "TOEIC 905"]
+    "qualifications": ["応用情報技術者", "AWS Certified Solutions Architect - Associate", "TOEIC 905"]
   },
   "skills": {
     "frontend": {
@@ -79,7 +79,7 @@
       "text": {
         "projectName": "Empower me",
         "projectSummary": "クリニック予約/コスメ購入が出来るアプリ",
-        "projectDetails": "当アプリの画面実装/改修を担当させていただきました。URLからアプリをインストール出来るので、ぜひお試しください。",
+        "projectDetails": "当アプリの画面実装/改修を担当させていただきました。※アプリの配信は終了しました。",
         "projectURLLink": "https://empowerme-app.com/",
         "projectDemoLink": "https://github.com/usma11dia0/my_portfolio/assets/30208963/15d6e2f8-8ce5-4a4a-b021-93d2685b8ee4",
         "projectGithubLink": "",
